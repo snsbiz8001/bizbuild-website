@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>비즈빌드 | 창업, 망하기 전에 확인하는 3분 자가진단</title>
+
+  <!-- ===== SEO / 공유 메타 (검색·카톡·SNS 공유 시 노출) ===== -->
+  <meta name="description" content="25년 자영업·프랜차이즈 실전이 만든 창업 자가진단. 3분이면 방향·고객·자금 리스크를 확인하고 망할 창업을 막습니다." />
+  <meta name="theme-color" content="#0A163A" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="창업, 시작하기 전에 '망하지 않을지'부터 확인하십시오" />
+  <meta property="og:description" content="25년 실전이 만든 3분 자가진단. 방향·고객·자금 리스크를 3분 만에 확인하세요." />
+  <!-- og:image, og:url 은 도메인·대표이미지 확정 후 채워 넣기 -->
+
+  <style>
+    /* =========================================================
+       브랜드 토큰 (여기 값만 바꾸면 전체 색이 바뀝니다)
+       ========================================================= */
+    :root{
+      --navy:      #0A163A;   /* 브랜드 네이비 */
+      --navy-deep: #060E28;   /* 더 진한 네이비 (섹션 대비용) */
+      --gold:      #C9A961;   /* 브랜드 골드 */
+      --gold-lift: #D8BC7E;   /* 골드 호버 */
+      --white:     #FFFFFF;
+      --slate:     #B8C0D4;   /* 본문 보조 텍스트 (네이비 위) */
+      --slate-dim: #98A2BD;   /* 신뢰 문구 (더 옅게) */
+
+      --font: "Apple SD Gothic Neo","Pretendard","Malgun Gothic","맑은 고딕",
+              system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    }
+
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    html{ -webkit-text-size-adjust:100%; }
+    body{ font-family:var(--font); background:var(--navy); color:var(--white);
+          line-height:1.6; -webkit-font-smoothing:antialiased; }
+
+    /* ===== 상단 바 ===== */
+    .site-header{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:18px 22px; max-width:1120px; margin:0 auto;
+    }
+    .brand{ font-size:19px; font-weight:700; letter-spacing:-0.5px; color:var(--white); }
+    .brand span{ color:var(--gold); }
+    .header-link{
+      font-size:14px; font-weight:600; color:var(--gold);
+      text-decoration:none; padding:6px 4px;
+    }
+    .header-link:hover{ color:var(--gold-lift); }
+
+    /* ===== HERO ===== */
+    .hero{
+      min-height:calc(100vh - 72px);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align:center;
+      padding:56px 22px 72px;
+      max-width:760px; margin:0 auto;
+    }
+    .hero__eyebrow{
+      font-size:12px; font-weight:600; letter-spacing:2.4px;
+      color:var(--gold); margin-bottom:22px;
+    }
+    .hero__title{
+      font-weight:700; color:var(--white);
+      font-size:clamp(27px, 6.4vw, 46px);
+      line-height:1.34; letter-spacing:-0.6px;
+      margin-bottom:20px; word-break:keep-all;
+    }
+    /* 시그니처: '망하지 않을지' 골드 하이라이트 (진단 마크) */
+    .hero__mark{
+      background:linear-gradient(to top,
+                 rgba(201,169,97,0.34) 0 0.34em, transparent 0.34em);
+      padding:0 0.04em;
+    }
+    .hero__sub{
+      font-size:clamp(15px, 2.4vw, 18px);
+      color:var(--slate); line-height:1.7;
+      max-width:460px; margin:0 auto 32px; word-break:keep-all;
+    }
+    .hero__cta{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      min-height:54px; padding:12px 28px;
+      background:var(--gold); color:var(--navy);
+      font-size:clamp(15px, 3.6vw, 17px); font-weight:700; text-decoration:none;
+      line-height:1.35; text-align:center; word-break:keep-all;
+      border-radius:10px;
+      transition:transform .15s ease, background-color .15s ease;
+    }
+    .hero__cta:hover{ background:var(--gold-lift); transform:translateY(-2px); }
+    .hero__cta:focus-visible{ outline:3px solid var(--gold-lift); outline-offset:3px; }
+    .hero__trust{
+      font-size:13px; color:var(--slate-dim); margin-top:18px;
+    }
+
+    /* ===== 진입 애니메이션 (한 번의 정돈된 등장) ===== */
+    @keyframes riseIn{ from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:none;} }
+    .hero__eyebrow,.hero__title,.hero__sub,.hero__cta-wrap,.hero__trust{
+      animation:riseIn .7s cubic-bezier(.2,.7,.2,1) both;
+    }
+    .hero__title{ animation-delay:.07s; }
+    .hero__sub{ animation-delay:.15s; }
+    .hero__cta-wrap{ animation-delay:.23s; }
+    .hero__trust{ animation-delay:.31s; }
+    @media (prefers-reduced-motion: reduce){
+      *{ animation:none !important; transition:none !important; }
+    }
+
+    /* ===== 데스크톱 여백 보정 ===== */
+    @media (min-width:768px){
+      .site-header{ padding:22px 40px; }
+      .hero{ padding-top:40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= 상단 바 ================= -->
+  <header class="site-header">
+    <div class="brand">Biz<span>Build</span></div>
+    <a class="header-link" href="https://changup-quiz.netlify.app/">3분 진단 →</a>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="hero__eyebrow">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</p>
+
+    <h1 class="hero__title" id="hero-title">
+      창업, 시작하기 전에<br>
+      '<span class="hero__mark">망하지 않을지</span>'부터 확인하십시오
+    </h1>
+
+    <p class="hero__sub">
+      25년 자영업·프랜차이즈 실전이 만든 자가진단.<br>
+      3분이면 당신 사업의 방향·고객·자금 리스크가 보입니다.
+    </p>
+
+    <div class="hero__cta-wrap">
+      <!-- 3분 판정 퀴즈로 연결 -->
+      <a class="hero__cta" href="https://changup-quiz.netlify.app/">
+        창업 실패 자가 진단 - 3분 판정 <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <p class="hero__trust">직접 운영 사업 기반 · 데이터로 검증하는 진단</p>
+  </section>
+
+  <!-- =========================================================
+       이후 섹션 (다음 단계에서 순서대로 제작)
+       2. 문제 정의  — 방향/고객/시스템 없음
+       3. 솔루션      — 비즈빌드 3단계
+       4. 신뢰·차별점
+       5. 가치 사다리 — 무료진단→9.9만→59만
+       6. 작동 증거   — 상권분석기 등
+       7. 최종 CTA    — 퀴즈로 재유입 (폼 없음)
+       8. 푸터
+       ========================================================= -->
+
+</body>
+</html>
