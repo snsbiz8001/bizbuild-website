@@ -208,6 +208,58 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   .vb-grid{grid-template-columns:1fr;}
 }
 
+/* ── 문제정의: 사업이 망하는 3가지 이유 ── */
+#why-fail{
+  padding:120px 5%;
+  background:linear-gradient(180deg,var(--navy-mid) 0%,var(--navy) 100%);
+}
+.wf-intro{
+  max-width:720px;margin:20px auto 0;
+  font-size:16px;color:var(--gray);line-height:1.9;
+}
+.wf-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+}
+.wf-card{
+  background:var(--navy-mid);
+  border:1px solid rgba(201,169,97,0.15);
+  border-radius:12px;padding:44px 36px;
+  position:relative;overflow:hidden;
+  transition:all 0.3s;
+}
+.wf-card:hover{
+  border-color:rgba(201,169,97,0.5);
+  transform:translateY(-6px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+}
+.wf-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold-dim),var(--gold));
+  opacity:0;transition:opacity 0.3s;
+}
+.wf-card:hover::before{opacity:1;}
+.wf-num{
+  font-family:'Noto Serif KR',serif;
+  font-size:44px;font-weight:900;color:var(--gold);
+  line-height:1;margin-bottom:20px;
+}
+.wf-title{
+  font-family:'Noto Serif KR',serif;
+  font-size:21px;font-weight:700;color:var(--white);
+  margin-bottom:14px;
+}
+.wf-desc{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:28px;}
+.wf-brand{
+  font-size:12px;color:var(--gold-dim);letter-spacing:0.5px;
+  border-top:1px solid rgba(255,255,255,0.06);
+  padding-top:18px;
+}
+@media(max-width:900px){
+  .wf-grid{grid-template-columns:1fr;}
+}
+
 /* ── 3단계 시스템 섹션 ── */
 #system{
   padding:120px 5%;
@@ -549,6 +601,35 @@ footer{
         무료 자가진단 시작하기 →
       </a>
       <p class="vb-subtext">판정은 창업설계에서 시작합니다 → <a href="stage1.html">창업설계 자세히 보기</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 문제정의: 사업이 망하는 3가지 이유 -->
+<section id="why-fail">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">Why Businesses Fail</div>
+    <h2 class="section-title">사업이 망하는 이유는 <span class="accent">딱 세 가지</span>입니다</h2>
+    <p class="wf-intro">창업 후 5년 내 폐업률은 60%를 넘습니다. 이유는 놀랍도록 단순합니다 — 방향이 없거나, 고객이 없거나, 돈이 막히거나. 비즈빌드는 이 셋을 하나의 시스템으로 해결합니다.</p>
+  </div>
+  <div class="wf-grid">
+    <div class="wf-card fade-up">
+      <div class="wf-num">01</div>
+      <h3 class="wf-title">방향을 설계합니다</h3>
+      <p class="wf-desc">검증 없이 시작하면 아무리 열심히 해도 제자리입니다.</p>
+      <div class="wf-brand">창업설계전략연구소</div>
+    </div>
+    <div class="wf-card fade-up" style="transition-delay:0.15s">
+      <div class="wf-num">02</div>
+      <h3 class="wf-title">고객을 유입합니다</h3>
+      <p class="wf-desc">열심히 만들어도 손님이 오지 않으면 매출이 없습니다.</p>
+      <div class="wf-brand">마켓플로우</div>
+    </div>
+    <div class="wf-card fade-up" style="transition-delay:0.3s">
+      <div class="wf-num">03</div>
+      <h3 class="wf-title">자금을 연결합니다</h3>
+      <p class="wf-desc">좋은 계획도 자금이 막히면 실행할 수 없습니다.</p>
+      <div class="wf-brand">정책자금</div>
     </div>
   </div>
 </section>
