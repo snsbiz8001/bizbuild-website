@@ -16,6 +16,7 @@
   --gold:#C9A961;
   --gold-light:#E8CB82;
   --gold-dim:#8B6F3A;
+  --cta-blue:#1D4E89;
   --white:#FFFFFF;
   --gray:#B0B8C8;
   --gray-light:#E8EBF0;
@@ -127,12 +128,35 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .problem-inner{max-width:1100px;margin:0 auto;}
 .problem-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;text-align:center;margin-bottom:16px;line-height:1.4;}
 .problem-inner .prob-sub{text-align:center;color:var(--gray);font-size:16px;margin-bottom:64px;line-height:1.8;}
-.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.problem-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
 .problem-card{background:rgba(10,22,58,0.6);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:36px 28px;}
 .problem-card .p-icon{font-size:32px;margin-bottom:16px;}
 .problem-card h3{font-size:16px;font-weight:700;color:var(--white);margin-bottom:10px;}
 .problem-card p{font-size:14px;color:var(--gray);line-height:1.8;}
 .problem-card .p-tag{display:inline-block;font-size:10px;letter-spacing:2px;color:var(--gold-dim);background:rgba(201,169,97,0.08);border-radius:100px;padding:3px 10px;margin-bottom:16px;}
+
+/* ── 판정 시스템 ── */
+#verdict{padding:100px 5%;background:var(--navy);}
+.verdict-inner{max-width:1100px;margin:0 auto;}
+.verdict-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;text-align:center;margin-bottom:56px;line-height:1.4;}
+.verdict-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.verdict-card{background:var(--navy-mid);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:36px 28px;text-align:center;}
+.verdict-card p{font-size:14px;color:var(--gray);line-height:1.8;}
+.v-dot{width:12px;height:12px;border-radius:50%;margin:0 auto 16px;}
+.v-label{font-size:16px;font-weight:700;letter-spacing:1px;margin-bottom:14px;}
+.verdict-card.v-go{border-color:rgba(29,158,117,0.35);}
+.verdict-card.v-go .v-dot{background:#1D9E75;}
+.verdict-card.v-go .v-label{color:#1D9E75;}
+.verdict-card.v-hold{border-color:rgba(201,169,97,0.35);}
+.verdict-card.v-hold .v-dot{background:var(--gold);}
+.verdict-card.v-hold .v-label{color:var(--gold);}
+.verdict-card.v-stop{border-color:rgba(226,75,74,0.35);}
+.verdict-card.v-stop .v-dot{background:#E24B4A;}
+.verdict-card.v-stop .v-label{color:#E24B4A;}
+.verdict-cta{margin-top:56px;text-align:center;}
+.btn-cta-blue{display:inline-block;background:var(--cta-blue);color:var(--white);font-weight:700;font-size:16px;padding:16px 40px;border-radius:8px;transition:all 0.3s;}
+.btn-cta-blue:hover{filter:brightness(1.1);transform:translateY(-2px);}
+.verdict-note{margin-top:16px;font-size:13px;color:var(--gray);}
 
 /* ── 시스템 소개 ── */
 #overview{padding:100px 5%;background:var(--navy);}
@@ -280,6 +304,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 }
 @media(max-width:768px){
   .problem-grid{grid-template-columns:1fr;}
+  .verdict-grid{grid-template-columns:1fr;}
   .target-grid{grid-template-columns:1fr;}
   .outcomes-grid{grid-template-columns:1fr;}
   .reviews-grid{grid-template-columns:1fr;}
@@ -319,7 +344,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <li><a href="index.html#trust">마켓플로우</a></li>
     <li><a href="index.html#trust">정책자금</a></li>
     <li><a href="index.html#reviews">인사이트</a></li>
-    <li><a href="https://changup-jandan.netlify.app" target="_blank" class="nav-cta">무료 자가진단</a></li>
+    <li><a href="https://changup-quiz.netlify.app" target="_blank" class="nav-cta">무료 자가진단</a></li>
   </ul>
   <div class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -368,26 +393,61 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
   <div class="problem-inner">
     <div class="eyebrow fade-up" style="justify-content:center;">Why This Matters</div>
     <h2 class="fade-up">창업 실패의 90%는<br>설계 없이 오픈한 데서 시작됩니다</h2>
-    <p class="prob-sub fade-up">많은 분들이 창업을 준비할 때 이런 실수를 합니다</p>
+    <p class="prob-sub fade-up">살아남은 사람과 망한 사람의 차이는 아이템이 아니었습니다</p>
     <div class="problem-grid">
       <div class="problem-card fade-up">
         <div class="p-tag">MISTAKE 01</div>
-        <div class="p-icon">📍</div>
-        <h3>감으로 고른 입지</h3>
-        <p>유동인구가 많아 보여서, 지인이 추천해서, 임대료가 싸서 — 검증 없이 들어간 입지는 6개월 뒤 폐업 원인이 됩니다.</p>
+        <div class="p-icon">🎯</div>
+        <h3>잘못된 아이템 선택</h3>
+        <p>시장과 고객 이해 없이 트렌드만 보고 아이템을 정합니다.</p>
       </div>
       <div class="problem-card fade-up" style="transition-delay:0.15s">
         <div class="p-tag">MISTAKE 02</div>
-        <div class="p-icon">💸</div>
-        <h3>수익 계산 없는 오픈</h3>
-        <p>하루 몇 명이 와야 손익분기를 넘는지도 모른 채 문을 엽니다. 매달 고정비 앞에서 막막함만 남습니다.</p>
+        <div class="p-icon">📊</div>
+        <h3>검증 안 된 사업 구조</h3>
+        <p>수익구조·손익분기점·자금 생존기간을 계산하지 않고 시작합니다.</p>
       </div>
       <div class="problem-card fade-up" style="transition-delay:0.3s">
         <div class="p-tag">MISTAKE 03</div>
-        <div class="p-icon">📋</div>
-        <h3>자금 계획 없는 창업</h3>
-        <p>인테리어, 집기, 초기 재고, 운영 3개월치 — 실제로 얼마가 필요한지 계산하지 않고 진입해 초기에 자금난을 겪습니다.</p>
+        <div class="p-icon">⚠️</div>
+        <h3>본사 말만 믿는 선택</h3>
+        <p>프랜차이즈 본사는 잘 되는 케이스만 말합니다. 망하는 케이스는 영업자료에 없습니다.</p>
       </div>
+      <div class="problem-card fade-up" style="transition-delay:0.45s">
+        <div class="p-tag">MISTAKE 04</div>
+        <div class="p-icon">💸</div>
+        <h3>준비 안 된 실행</h3>
+        <p>퇴직금이라는 마지막 자금을 기준 없이 투입합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 판정 시스템 -->
+<section id="verdict">
+  <div class="verdict-inner">
+    <div class="eyebrow fade-up" style="justify-content:center;">3분 무료 창업 실패 자가진단</div>
+    <h2 class="fade-up">지금 이 선택, 해도 되는 상태입니까?</h2>
+    <div class="verdict-grid">
+      <div class="verdict-card v-go fade-up">
+        <div class="v-dot"></div>
+        <div class="v-label">가능</div>
+        <p>기본 준비 됨<br>놓친 부분 점검 필요</p>
+      </div>
+      <div class="verdict-card v-hold fade-up" style="transition-delay:0.15s">
+        <div class="v-dot"></div>
+        <div class="v-label">보류</div>
+        <p>조건 미충족<br>수정 후 가능</p>
+      </div>
+      <div class="verdict-card v-stop fade-up" style="transition-delay:0.3s">
+        <div class="v-dot"></div>
+        <div class="v-label">금지</div>
+        <p>지금 구조로는<br>6개월 내 소진</p>
+      </div>
+    </div>
+    <div class="verdict-cta fade-up">
+      <a href="https://changup-quiz.netlify.app" target="_blank" class="btn-cta-blue">지금 바로 3분 자가진단 받기</a>
+      <p class="verdict-note">무료 · 10개 질문 · 즉시 결과</p>
     </div>
   </div>
 </section>
@@ -768,7 +828,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <h2 class="fade-up">고민만 하다,<br>또 1년이 지나갑니다</h2>
     <p class="fade-up">막연한 불안은 설계되지 않으면 사라지지 않습니다.<br>지금 내 창업이 가능한지, 3분 자가진단으로 먼저 확인하세요.</p>
     <div class="cta-btns fade-up">
-      <a href="https://changup-jandan.netlify.app" target="_blank" class="btn-primary">무료 창업 자가진단 시작하기 →</a>
+      <a href="https://changup-quiz.netlify.app" target="_blank" class="btn-primary">무료 창업 자가진단 시작하기 →</a>
       <a href="mailto:snsbiz8001@gmail.com" class="btn-outline">수강 문의하기</a>
     </div>
     <p class="cta-note">무료 · 3분 소요 · 강매 없음</p>
@@ -796,7 +856,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     </div>
     <div class="footer-col">
       <h4>상담</h4>
-      <a href="https://changup-jandan.netlify.app" target="_blank">무료 자가진단</a>
+      <a href="https://changup-quiz.netlify.app" target="_blank">무료 자가진단</a>
       <a href="#">상담 신청</a>
       <a href="https://blog.naver.com/snsbiz81" target="_blank">네이버 블로그</a>
     </div>
