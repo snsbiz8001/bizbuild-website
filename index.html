@@ -19,6 +19,7 @@
   --white:#FFFFFF;
   --gray:#B0B8C8;
   --gray-light:#E8EBF0;
+  --cta-blue:#1D4E89;
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
@@ -149,6 +150,62 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   inset:-12px;border-radius:16px;
   border:1px solid rgba(201,169,97,0.15);
   pointer-events:none;
+}
+
+/* ── 판정 3단계 브리지 섹션 ── */
+#verdict-bridge{
+  padding:100px 5%;
+  background:linear-gradient(180deg,var(--navy) 0%,var(--navy-mid) 100%);
+}
+.vb-inner{max-width:1100px;margin:0 auto;}
+.vb-eyebrow{
+  font-size:12px;letter-spacing:3px;color:var(--gold);
+  text-transform:uppercase;text-align:center;margin-bottom:16px;
+}
+.vb-title{
+  font-family:'Noto Serif KR',serif;
+  font-size:clamp(26px,3.6vw,40px);font-weight:700;
+  line-height:1.3;text-align:center;margin-bottom:56px;
+}
+.vb-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  margin-bottom:48px;
+}
+.vb-card{
+  background:var(--navy-mid);
+  border:1px solid var(--vb-color,rgba(201,169,97,0.15));
+  border-radius:12px;padding:36px 28px;
+  position:relative;transition:transform 0.3s,box-shadow 0.3s;
+}
+.vb-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,0.3);}
+.vb-dot{
+  width:14px;height:14px;border-radius:50%;
+  background:var(--vb-color);margin-bottom:18px;
+  box-shadow:0 0 16px var(--vb-color);
+}
+.vb-label{
+  font-family:'Noto Serif KR',serif;
+  font-size:22px;font-weight:700;color:var(--vb-color);
+  margin-bottom:12px;
+}
+.vb-desc{font-size:14px;color:var(--gray);line-height:1.7;}
+.vb-cta{text-align:center;}
+.btn-cta-blue{
+  background:var(--cta-blue);color:var(--white);
+  padding:17px 38px;border-radius:4px;
+  font-size:15px;font-weight:700;text-decoration:none;
+  letter-spacing:0.3px;transition:all 0.2s;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn-cta-blue:hover{
+  background:#245ba3;transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(29,78,137,0.35);
+}
+.vb-subtext{margin-top:20px;font-size:13px;color:var(--gray);}
+.vb-subtext a{color:var(--gray-light);text-decoration:underline;transition:color 0.2s;}
+.vb-subtext a:hover{color:var(--gold);}
+@media(max-width:900px){
+  .vb-grid{grid-template-columns:1fr;}
 }
 
 /* ── 3단계 시스템 섹션 ── */
@@ -461,6 +518,37 @@ footer{
     </div>
     <div class="hero-image fade-up" style="transition-delay:0.2s">
       <img src="images/main.png" alt="김건우 대표">
+    </div>
+  </div>
+</section>
+
+<!-- 판정 3단계 브리지 -->
+<section id="verdict-bridge">
+  <div class="vb-inner">
+    <div class="vb-eyebrow fade-up">3분 무료 창업 실패 자가진단</div>
+    <h2 class="vb-title fade-up">지금 이 선택, <span style="color:var(--gold);">해도 되는 상태</span>입니까?</h2>
+    <div class="vb-grid">
+      <div class="vb-card fade-up" style="--vb-color:#1D9E75;">
+        <div class="vb-dot"></div>
+        <div class="vb-label">가능</div>
+        <p class="vb-desc">기본 준비 됨 · 놓친 부분 점검 필요</p>
+      </div>
+      <div class="vb-card fade-up" style="--vb-color:#C9A961;transition-delay:0.15s;">
+        <div class="vb-dot"></div>
+        <div class="vb-label">보류</div>
+        <p class="vb-desc">조건 미충족 · 수정 후 가능</p>
+      </div>
+      <div class="vb-card fade-up" style="--vb-color:#E24B4A;transition-delay:0.3s;">
+        <div class="vb-dot"></div>
+        <div class="vb-label">금지</div>
+        <p class="vb-desc">지금 구조로는 · 6개월 내 소진</p>
+      </div>
+    </div>
+    <div class="vb-cta fade-up">
+      <a href="https://changup-quiz.netlify.app" target="_blank" rel="noopener" class="btn-cta-blue">
+        무료 자가진단 시작하기 →
+      </a>
+      <p class="vb-subtext">판정은 창업설계에서 시작합니다 → <a href="stage1.html">창업설계 자세히 보기</a></p>
     </div>
   </div>
 </section>
