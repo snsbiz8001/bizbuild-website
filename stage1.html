@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>1단계 창업설계시스템 — 비즈빌드</title>
-<meta name="description" content="퇴사를 앞두고 있다면, 가게를 열기 전에 설계부터. 입지·수익구조·자금까지, 문 열기 전에 검증하는 8주 마스터클래스.">
+<meta name="description" content="퇴사를 앞두고 있다면, 가게를 열기 전에 설계부터. 입지·수익구조·자금까지, 문 열기 전에 검증하는 4주 창업설계 패키지.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -170,23 +170,19 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .pillar h4{font-size:15px;font-weight:700;margin-bottom:4px;}
 .pillar p{font-size:13px;color:var(--gray);line-height:1.7;}
 
-/* ── 커리큘럼 ── */
+/* ── 3단계 로드맵 ── */
 #curriculum{padding:100px 5%;background:var(--navy-mid);}
-.curriculum-inner{max-width:900px;margin:0 auto;}
-.curriculum-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;text-align:center;margin-bottom:12px;}
-.curriculum-inner .curr-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
-.curr-list{display:flex;flex-direction:column;gap:2px;}
-.curr-item{
-  display:grid;grid-template-columns:80px 1fr auto;
-  align-items:center;gap:24px;padding:28px 32px;
-  background:rgba(10,22,58,0.5);border:1px solid rgba(255,255,255,0.05);
-  border-radius:8px;transition:all 0.3s;
-}
-.curr-item:hover{background:rgba(15,31,80,0.8);border-color:rgba(201,169,97,0.25);transform:translateX(6px);}
-.curr-item .week{font-size:11px;letter-spacing:2px;color:var(--gold-dim);font-weight:700;white-space:nowrap;}
-.curr-item h3{font-size:16px;font-weight:700;margin-bottom:4px;}
-.curr-item p{font-size:13px;color:var(--gray);line-height:1.7;}
-.curr-item .tag{font-size:10px;letter-spacing:1.5px;color:var(--gold);background:rgba(201,169,97,0.1);border-radius:100px;padding:4px 12px;white-space:nowrap;}
+.roadmap-inner{max-width:1100px;margin:0 auto;}
+.roadmap-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;text-align:center;margin-bottom:56px;line-height:1.4;}
+.roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;}
+.roadmap-card{display:flex;flex-direction:column;background:var(--navy);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:36px 28px;text-align:center;}
+.roadmap-card .step-num{display:inline-block;font-size:11px;letter-spacing:2px;color:var(--gold-dim);background:rgba(201,169,97,0.08);border-radius:100px;padding:4px 14px;margin:0 auto 16px;}
+.roadmap-card h3{font-size:18px;font-weight:700;color:var(--white);margin-bottom:12px;}
+.roadmap-card .step-price{font-size:26px;font-weight:700;color:var(--gold);margin-bottom:16px;}
+.roadmap-card p{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:16px;flex-grow:1;}
+.roadmap-card .step-time{font-size:12px;color:var(--gray);margin-bottom:20px;}
+.roadmap-card .step-note{font-size:13px;color:var(--gray);font-style:italic;}
+.roadmap-featured{background:var(--navy-mid);border:1.5px solid var(--cta-blue);box-shadow:0 8px 32px rgba(29,78,137,0.25);}
 
 /* ── 대상 ── */
 #target{padding:100px 5%;background:var(--navy);}
@@ -314,8 +310,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
   .nav-menu{display:none;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(10,22,58,0.98);padding:20px;border-bottom:1px solid rgba(201,169,97,0.2);}
   .nav-menu.open{display:flex;}
   .hamburger{display:flex;}
-  .curr-item{grid-template-columns:60px 1fr;gap:16px;}
-  .curr-item .tag{display:none;}
+  .roadmap-grid{grid-template-columns:1fr;}
   .hero-stats{gap:28px;}
 }
 @media(max-width:480px){
@@ -362,27 +357,27 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
       <span class="stage-name">창업설계시스템</span>
     </div>
     <h1 class="fade-up">열기 전에 설계하세요<br><span class="accent">열고 나서 배우면 늦습니다</span></h1>
-    <p class="hero-sub fade-up">퇴사를 앞두고 있거나, 창업을 준비 중이라면 — 입지, 수익구조, 자금까지<br>문 열기 전에 검증하는 8주 라이브 마스터클래스입니다.</p>
+    <p class="hero-sub fade-up">퇴사를 앞두고 있거나, 창업을 준비 중이라면 — 입지, 수익구조, 자금까지<br>문 열기 전에 검증하는 4주 1:1 창업설계 패키지입니다.</p>
     <div class="hero-cta-row fade-up">
       <a href="#cta" class="btn-primary">수강 신청하기 →</a>
       <a href="#curriculum" class="btn-outline">커리큘럼 보기</a>
     </div>
     <div class="hero-stats fade-up">
       <div class="hero-stat">
-        <div class="num">8주</div>
-        <div class="lbl">라이브 마스터클래스</div>
+        <div class="num">4주</div>
+        <div class="lbl">1:1 창업설계 패키지</div>
       </div>
       <div class="hero-stat">
-        <div class="num">20명</div>
-        <div class="lbl">기수당 소수 정원</div>
+        <div class="num">1:1</div>
+        <div class="lbl">개인 맞춤 진행</div>
       </div>
       <div class="hero-stat">
         <div class="num">25년+</div>
         <div class="lbl">현역 자영업 강사</div>
       </div>
       <div class="hero-stat">
-        <div class="num">기수제</div>
-        <div class="lbl">함께 설계하는 구조</div>
+        <div class="num">4주</div>
+        <div class="lbl">완결 설계</div>
       </div>
     </div>
   </div>
@@ -459,9 +454,9 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <div class="overview-grid">
       <div class="overview-text fade-up">
         <h2>창업은 설계가 90%,<br>실행은 10%입니다</h2>
-        <p>비즈빌드 1단계 창업설계시스템은 예비창업자가 가장 많이 실수하는 4가지 영역을 8주 동안 단계적으로 설계하는 프로그램입니다.</p>
+        <p>비즈빌드 1단계 창업설계시스템은 예비창업자가 가장 많이 실수하는 4가지 영역을 4주 동안 단계적으로 설계하는 프로그램입니다.</p>
         <p>감이 아닌 수치로, 기대가 아닌 검증으로 — 문을 열기 전에 내 사업이 가능한지를 확인합니다.</p>
-        <p>마스터클래스가 끝날 때, 당신은 실제로 실행 가능한 창업 설계서를 손에 쥐게 됩니다.</p>
+        <p>4주 설계가 끝날 때, 당신은 실제로 실행 가능한 창업 설계서를 손에 쥐게 됩니다.</p>
       </div>
       <div class="overview-pillars fade-up" style="transition-delay:0.2s">
         <div class="pillar">
@@ -499,74 +494,33 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 
 <!-- 커리큘럼 -->
 <section id="curriculum">
-  <div class="curriculum-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">8-Week Curriculum</div>
-    <h2 class="fade-up">8주, 창업 설계를 완성합니다</h2>
-    <p class="curr-sub fade-up">매주 한 가지 핵심 주제를 라이브로 강의하고, 그 주 과제로 내 사업에 직접 적용합니다</p>
-    <div class="curr-list">
-      <div class="curr-item fade-up">
-        <div class="week">WEEK 1</div>
-        <div>
-          <h3>창업의 현실 진단</h3>
-          <p>왜 자영업은 3년 안에 절반이 폐업하는가 — 실패 구조를 먼저 이해합니다.</p>
-        </div>
-        <div class="tag">오리엔테이션</div>
+  <div class="roadmap-inner">
+    <div class="eyebrow fade-up" style="justify-content:center;">3-Step System</div>
+    <h2 class="fade-up">3단계로 설계합니다</h2>
+    <div class="roadmap-grid">
+      <div class="roadmap-card roadmap-featured fade-up">
+        <div class="step-num">STEP 1</div>
+        <h3>3분 자가진단</h3>
+        <div class="step-price">무료</div>
+        <p>지금 상태가 가능·보류·금지인지 즉시 확인</p>
+        <div class="step-time">소요 3분</div>
+        <a href="https://changup-quiz.netlify.app" target="_blank" class="btn-cta-blue">3분 자가진단 시작하기 →</a>
       </div>
-      <div class="curr-item fade-up" style="transition-delay:0.06s">
-        <div class="week">WEEK 2</div>
-        <div>
-          <h3>업종 선택 기준</h3>
-          <p>트렌드, 내 역량, 시장 포화도 — 내가 해야 할 업종을 고르는 4가지 기준.</p>
-        </div>
-        <div class="tag">업종 분석</div>
+      <div class="roadmap-card fade-up" style="transition-delay:0.15s">
+        <div class="step-num">STEP 2</div>
+        <h3>창업 판정 리포트</h3>
+        <div class="step-price">9.9만원</div>
+        <p>가장 위험한 선택 Top 5, 절대 금지 리스트, 현실적 옵션 2~3안</p>
+        <div class="step-time">24시간 내 전달</div>
+        <div class="step-note">STEP 1 진단 먼저 진행해주세요</div>
       </div>
-      <div class="curr-item fade-up" style="transition-delay:0.12s">
-        <div class="week">WEEK 3</div>
-        <div>
-          <h3>입지 분석 실전</h3>
-          <p>상권 분석 툴 사용법과 현장에서 확인해야 할 체크포인트를 배웁니다.</p>
-        </div>
-        <div class="tag">입지 검증</div>
-      </div>
-      <div class="curr-item fade-up" style="transition-delay:0.18s">
-        <div class="week">WEEK 4</div>
-        <div>
-          <h3>수익 구조 계산</h3>
-          <p>일 매출 목표, 객단가, 회전율, 손익분기점 — 내 숫자를 직접 완성합니다.</p>
-        </div>
-        <div class="tag">수익성 분석</div>
-      </div>
-      <div class="curr-item fade-up" style="transition-delay:0.24s">
-        <div class="week">WEEK 5</div>
-        <div>
-          <h3>창업 비용 전체 산출</h3>
-          <p>인테리어, 집기, 재고, 보증금, 운영 준비금 — 실제로 필요한 금액을 계산합니다.</p>
-        </div>
-        <div class="tag">자금 계획</div>
-      </div>
-      <div class="curr-item fade-up" style="transition-delay:0.3s">
-        <div class="week">WEEK 6</div>
-        <div>
-          <h3>정책자금 활용 전략</h3>
-          <p>소진공, 신용보증기금, 지자체 지원금 — 내가 받을 수 있는 자금을 확인합니다.</p>
-        </div>
-        <div class="tag">정책자금</div>
-      </div>
-      <div class="curr-item fade-up" style="transition-delay:0.36s">
-        <div class="week">WEEK 7</div>
-        <div>
-          <h3>오픈 전 100일 로드맵</h3>
-          <p>업종 확정부터 오픈일까지 — 순서와 타이밍을 놓치지 않는 실행 계획.</p>
-        </div>
-        <div class="tag">실행 계획</div>
-      </div>
-      <div class="curr-item fade-up" style="transition-delay:0.42s">
-        <div class="week">WEEK 8</div>
-        <div>
-          <h3>창업 설계서 완성 &amp; 발표</h3>
-          <p>7주간 쌓은 내용을 하나의 창업 설계서로 정리하고 피드백을 받습니다.</p>
-        </div>
-        <div class="tag">최종 완성</div>
+      <div class="roadmap-card fade-up" style="transition-delay:0.3s">
+        <div class="step-num">STEP 3</div>
+        <h3>창업설계 4주 패키지</h3>
+        <div class="step-price">59만원</div>
+        <p>자금계획·손익분석·운영시스템·리스크관리 1:1 진행</p>
+        <div class="step-time">4주 진행</div>
+        <div class="step-note">STEP 1 진단 먼저 진행해주세요</div>
       </div>
     </div>
   </div>
@@ -582,7 +536,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
       <div class="target-card fade-up">
         <div class="t-check">✓</div>
         <div>
-          <h4>퇴사를 앞두고 창업을 준비 중인 분</h4>
+          <h4>퇴직금 1억 이상, 퇴사를 앞두고 창업을 준비 중인 분</h4>
           <p>직장을 나오기 전에 창업의 현실을 제대로 알고 싶은 분. 준비 없이 뛰어들지 않고 싶은 분.</p>
         </div>
       </div>
@@ -618,7 +572,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <section id="outcomes">
   <div class="outcomes-inner">
     <div class="eyebrow fade-up" style="justify-content:center;">What You Will Get</div>
-    <h2 class="fade-up">8주 후, 손에 쥐는 것들</h2>
+    <h2 class="fade-up">4주 후, 손에 쥐는 것들</h2>
     <p class="out-sub fade-up">수강 완료 시점에 갖게 되는 실질적인 결과물</p>
     <div class="outcomes-grid">
       <div class="outcome-card fade-up">
@@ -640,8 +594,8 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <div class="includes-block fade-up">
       <h3>수강에 포함되는 것들</h3>
       <div class="includes-list">
-        <div class="inc-item">8주 라이브 마스터클래스 (실시간)</div>
-        <div class="inc-item">수업 녹화본 (기수 종료 후 30일)</div>
+        <div class="inc-item">4주 1:1 창업설계 패키지 (실시간)</div>
+        <div class="inc-item">수업 녹화본 (수강 종료 후 30일)</div>
         <div class="inc-item">창업 설계 워크북 (PDF)</div>
         <div class="inc-item">입지 분석 체크리스트 템플릿</div>
         <div class="inc-item">수익성 계산 스프레드시트</div>
@@ -685,7 +639,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <div class="reviews-grid">
       <div class="review-card fade-up">
         <div class="review-quote">"</div>
-        <p class="review-text">막연하게 카페를 하고 싶다는 마음만 있었는데, 8주 동안 수익 계산을 직접 해보니 어디서, 어떻게 해야 할지가 보였습니다. 무엇보다 설계서가 생기니 가족 설득이 쉬워졌어요.</p>
+        <p class="review-text">막연하게 카페를 하고 싶다는 마음만 있었는데, 4주 동안 수익 계산을 직접 해보니 어디서, 어떻게 해야 할지가 보였습니다. 무엇보다 설계서가 생기니 가족 설득이 쉬워졌어요.</p>
         <div class="review-author">
           <div class="review-avatar">김</div>
           <div>
@@ -729,29 +683,29 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <div class="pd-grid">
       <div class="pd-item fade-up">
         <div class="pd-label">형태</div>
-        <div class="pd-value">라이브 마스터클래스</div>
-        <div class="pd-note">Zoom 실시간 강의 · 기수제 운영</div>
+        <div class="pd-value">1:1 맞춤 컨설팅</div>
+        <div class="pd-note">Zoom 1:1 세션 · 개인별 일정 조율</div>
       </div>
       <div class="pd-item fade-up" style="transition-delay:0.1s">
         <div class="pd-label">기간</div>
-        <div class="pd-value">8주 과정</div>
-        <div class="pd-note">매주 1회 · 회당 90~120분</div>
+        <div class="pd-value">4주 과정</div>
+        <div class="pd-note">주 1회 1:1 세션 · 회당 90분</div>
       </div>
       <div class="pd-item fade-up" style="transition-delay:0.15s">
-        <div class="pd-label">정원</div>
-        <div class="pd-value">기수당 20명</div>
-        <div class="pd-note">소수 정원으로 질문·피드백 보장</div>
+        <div class="pd-label">진행방식</div>
+        <div class="pd-value">1:1 전담 진행</div>
+        <div class="pd-note">담당 컨설턴트가 처음부터 끝까지 전담</div>
       </div>
       <div class="pd-item fade-up" style="transition-delay:0.2s">
         <div class="pd-label">수강료</div>
-        <div class="pd-value">상담 후 안내</div>
+        <div class="pd-value">59만원</div>
         <div class="pd-note">조기 신청 할인 · 분납 가능 문의</div>
       </div>
     </div>
     <div class="next-period fade-up">
-      <div class="np-label">NEXT COHORT</div>
-      <div class="np-date">모집 일정은 상담 시 안내됩니다</div>
-      <div class="np-note">정원 20명 · 선착순 마감 · 현재 기수 준비 중</div>
+      <div class="np-label">HOW TO START</div>
+      <div class="np-date">STEP 1 무료 진단부터 시작하세요</div>
+      <div class="np-note">진단 완료 후 담당자가 안내해 드립니다</div>
     </div>
   </div>
 </section>
@@ -787,7 +741,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
           <span class="faq-arrow">▼</span>
         </div>
         <div class="faq-a">
-          <div class="faq-a-inner">네, 전 과정이 Zoom 온라인 라이브로 진행됩니다. 전국 어디서나 수강 가능하며, 불가피하게 참석하지 못한 회차는 녹화본으로 확인하실 수 있습니다 (기수 종료 후 30일 제공).</div>
+          <div class="faq-a-inner">네, 전 과정이 Zoom 온라인 라이브로 진행됩니다. 전국 어디서나 수강 가능하며, 불가피하게 참석하지 못한 회차는 녹화본으로 확인하실 수 있습니다 (수강 종료 후 30일 제공).</div>
         </div>
       </div>
       <div class="faq-item fade-up" style="transition-delay:0.18s">
@@ -796,7 +750,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
           <span class="faq-arrow">▼</span>
         </div>
         <div class="faq-a">
-          <div class="faq-a-inner">가능합니다. 강의 일정은 직장인 수강생을 배려해 주로 평일 저녁 또는 주말에 편성됩니다. 정확한 일정은 기수 모집 시 안내됩니다.</div>
+          <div class="faq-a-inner">가능합니다. 강의 일정은 직장인 수강생을 배려해 주로 평일 저녁 또는 주말에 편성됩니다. 정확한 일정은 진단 완료 후 순차 안내드립니다.</div>
         </div>
       </div>
       <div class="faq-item fade-up" style="transition-delay:0.24s">
@@ -805,7 +759,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
           <span class="faq-arrow">▼</span>
         </div>
         <div class="faq-a">
-          <div class="faq-a-inner">오픈 2~3개월 전이라면 입지·자금·오픈 준비 로드맵 파트에서 충분히 도움을 받으실 수 있습니다. 다만 8주 전 과정을 최대한 활용하려면 오픈 6개월 전 시작하시는 것이 이상적입니다.</div>
+          <div class="faq-a-inner">오픈 2~3개월 전이라면 입지·자금·오픈 준비 로드맵 파트에서 충분히 도움을 받으실 수 있습니다. 다만 4주 전 과정을 최대한 활용하려면 오픈 6개월 전 시작하시는 것이 이상적입니다.</div>
         </div>
       </div>
       <div class="faq-item fade-up" style="transition-delay:0.3s">
