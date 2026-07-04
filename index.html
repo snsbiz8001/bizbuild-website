@@ -20,6 +20,9 @@
   --gray:#B0B8C8;
   --gray-light:#E8EBF0;
   --cta-blue:#1D4E89;
+  --label-color:var(--gold);
+  --label-weight:600;
+  --label-size:13px;
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
@@ -95,7 +98,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
 }
 .hero-text .eyebrow{
-  font-size:12px;letter-spacing:3px;color:var(--gold);
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2px;color:var(--label-color);opacity:1;
   text-transform:uppercase;margin-bottom:24px;
   display:flex;align-items:center;gap:12px;
 }
@@ -161,7 +164,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .vb-inner{max-width:1100px;margin:0 auto;}
 .vb-eyebrow{
-  font-size:12px;letter-spacing:3px;color:var(--gold);
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2px;color:var(--label-color);opacity:1;
   text-transform:uppercase;text-align:center;margin-bottom:16px;
 }
 .vb-title{
@@ -219,6 +222,8 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   max-width:720px;margin:20px auto 0;
   font-size:16px;color:var(--gray);line-height:1.9;
 }
+.wf-intro span{display:block;}
+.wf-intro .wf-highlight{color:var(--gold);}
 .wf-grid{
   max-width:1200px;margin:0 auto;
   display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
@@ -254,7 +259,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .wf-desc{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:28px;}
 .wf-brand{
-  font-size:12px;color:var(--gold-dim);letter-spacing:0.5px;
+  font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);opacity:1;letter-spacing:0.5px;
   border-top:1px solid rgba(255,255,255,0.06);
   padding-top:18px;
 }
@@ -269,7 +274,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .section-header{text-align:center;margin-bottom:72px;}
 .section-eyebrow{
-  font-size:11px;letter-spacing:4px;color:var(--gold);
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2.5px;color:var(--label-color);opacity:1;
   text-transform:uppercase;margin-bottom:16px;
 }
 .section-title{
@@ -303,7 +308,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .system-card:hover::before{opacity:1;}
 .card-step{
-  font-size:11px;letter-spacing:3px;color:var(--gold-dim);
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2px;color:var(--label-color);opacity:1;
   text-transform:uppercase;margin-bottom:20px;
 }
 .card-num{
@@ -323,7 +328,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .card-desc{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:32px;}
 .card-type{
-  font-size:12px;color:var(--gold-dim);
+  font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);opacity:1;
   border-top:1px solid rgba(255,255,255,0.06);
   padding-top:20px;margin-bottom:24px;
 }
@@ -363,7 +368,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   padding:8px 16px;border-radius:4px;
 }
 .trust-content .eyebrow{
-  font-size:11px;letter-spacing:4px;color:var(--gold);
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2.5px;color:var(--label-color);opacity:1;
   text-transform:uppercase;margin-bottom:20px;
 }
 .trust-content h2{
@@ -497,7 +502,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .cta-inner{position:relative;z-index:2;max-width:700px;margin:0 auto;}
 .cta-inner .eyebrow{
-  font-size:11px;letter-spacing:4px;color:var(--gold);
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2.5px;color:var(--label-color);opacity:1;
   text-transform:uppercase;margin-bottom:24px;
 }
 .cta-inner h2{
@@ -704,7 +709,11 @@ footer{
   <div class="section-header fade-up">
     <div class="section-eyebrow">Why Businesses Fail</div>
     <h2 class="section-title">사업이 망하는 이유는 <span class="accent">딱 세 가지</span>입니다</h2>
-    <p class="wf-intro">창업 후 5년 내 폐업률은 60%를 넘습니다. 이유는 놀랍도록 단순합니다 — 방향이 없거나, 고객이 없거나, 돈이 막히거나. 비즈빌드는 이 셋을 하나의 시스템으로 해결합니다.</p>
+    <p class="wf-intro">
+      <span>창업 후 5년 내 폐업률은 60%를 넘습니다. 이유는 놀랍도록 단순합니다.</span>
+      <span class="wf-highlight">방향이 없거나, 고객이 없거나, 돈이 막히거나.</span>
+      <span>비즈빌드는 이 셋을 하나의 시스템으로 해결합니다.</span>
+    </p>
   </div>
   <div class="wf-grid">
     <div class="wf-card fade-up">
