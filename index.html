@@ -559,6 +559,46 @@ footer{
 /* ── 스크롤 애니메이션 ── */
 .fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.7s,transform 0.7s;}
 .fade-up.visible{opacity:1;transform:translateY(0);}
+
+/* ── 카톡 상담 플로팅 버튼 ── */
+.kakao-float-btn{
+  position:fixed;
+  bottom:24px;
+  right:24px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  background:#0A163A;
+  color:#C9A961;
+  border:1px solid #C9A961;
+  border-radius:999px;
+  padding:12px 20px;
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 4px 16px rgba(0,0,0,0.25);
+  transition:transform 0.2s ease;
+}
+.kakao-float-btn:hover{
+  transform:scale(1.05);
+}
+.kakao-float-icon{
+  font-size:16px;
+  line-height:1;
+}
+@media(max-width:480px){
+  .kakao-float-btn{
+    bottom:16px;
+    right:16px;
+    padding:9px 14px;
+    font-size:12px;
+    gap:4px;
+  }
+  .kakao-float-icon{
+    font-size:13px;
+  }
+}
 </style>
 </head>
 <body>
@@ -976,5 +1016,9 @@ function toggleMenu(){
   menu.style.borderBottom='1px solid rgba(201,169,97,0.2)';
 }
 </script>
+<a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener" class="kakao-float-btn" aria-label="카카오톡 상담 채널로 이동">
+  <span class="kakao-float-icon" aria-hidden="true">💬</span>
+  <span>카톡 상담</span>
+</a>
 </body>
 </html>
