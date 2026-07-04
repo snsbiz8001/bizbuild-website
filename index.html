@@ -539,7 +539,8 @@ footer{
 /* ── 반응형 ── */
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr;gap:48px;}
-  .hero-image{display:none;}
+  .hero-image{max-width:260px;margin:0 auto;order:2;}
+  .hero-text{order:1;}
   .system-grid{grid-template-columns:1fr;}
   .trust-inner{grid-template-columns:1fr;}
   .reviews-grid{grid-template-columns:1fr;}
@@ -548,7 +549,8 @@ footer{
   .hamburger{display:flex;}
 }
 @media(max-width:600px){
-  .hero-badges{grid-template-columns:1fr 1fr;}
+  .hero-badges{grid-template-columns:1fr;gap:12px;margin-top:36px;padding-top:28px;}
+  .badge-item{text-align:left;}
   .trust-stats{grid-template-columns:1fr 1fr;}
   .footer-inner{grid-template-columns:1fr;}
 }
