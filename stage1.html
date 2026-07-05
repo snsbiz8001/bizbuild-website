@@ -220,7 +220,8 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 #instructor{padding:100px 5%;background:var(--navy);}
 .instructor-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:60px;align-items:center;}
 .inst-photo-wrap{text-align:center;}
-.inst-avatar{width:180px;height:180px;border-radius:50%;background:var(--navy-mid);border:3px solid rgba(201,169,97,0.3);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:64px;}
+.inst-avatar{width:180px;height:180px;max-width:180px;border-radius:50%;background:var(--navy-mid);border:3px solid rgba(201,169,97,0.3);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:64px;overflow:hidden;}
+.inst-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
 .inst-name-tag{display:inline-block;margin-top:20px;font-size:13px;color:var(--gray);background:var(--navy-mid);border:1px solid rgba(201,169,97,0.15);border-radius:100px;padding:6px 18px;}
 .inst-content .eyebrow{justify-content:flex-start;}
 .inst-content h2{font-family:'Noto Serif KR',serif;font-size:clamp(24px,2.5vw,36px);font-weight:700;line-height:1.4;margin-bottom:20px;}
@@ -613,7 +614,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <section id="instructor">
   <div class="instructor-inner">
     <div class="inst-photo-wrap fade-up">
-      <div class="inst-avatar">👤</div>
+      <div class="inst-avatar"><img src="images/main.jpg" alt="김건우 대표"></div>
       <div class="inst-name-tag">김건우 대표</div>
     </div>
     <div class="inst-content fade-up" style="transition-delay:0.15s">
