@@ -54,7 +54,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   border-radius:8px;padding:8px 0;min-width:200px;
   box-shadow:0 8px 32px rgba(0,0,0,0.4);margin-top:8px;
 }
-.nav-menu .dropdown:hover .dropdown-menu{display:block;}
+.nav-menu .dropdown.open .dropdown-menu{display:block;}
 .nav-menu .dropdown-menu a{
   display:block;padding:10px 20px;font-size:13px;
   border-bottom:1px solid rgba(255,255,255,0.05);
@@ -754,7 +754,7 @@ footer{
       <div class="card-target">운영 중인 소상공인</div>
       <p class="card-desc">장사는 하는데 손님이 없다면, 문제는 노력이 아니라 구조. 매출구조·고객흐름·마케팅을 다시 설계해, 고객이 들어오는 흐름을 만듭니다.</p>
       <div class="card-type">📈 자영업자·소상공인의 매출 구조를 설계합니다</div>
-      <a href="https://changup-quiz.netlify.app" target="_blank" class="card-link">2단계 자세히 보기 →</a>
+      <a href="stage2.html" class="card-link">2단계 자세히 보기 →</a>
     </div>
     <div class="system-card fade-up" style="transition-delay:0.3s">
       <div class="card-num">3</div>
@@ -763,7 +763,7 @@ footer{
       <div class="card-target">다점포·프랜차이즈 준비</div>
       <p class="card-desc">매장 하나는 성공했는데 두 번째가 두렵다면, 필요한 건 시스템. 표준화·교육·자동화·위임을 갖춰, 사장 없이도 돌아가는 확장 구조를 만듭니다.</p>
       <div class="card-type">🏢 다점포·프랜차이즈 확장을 설계합니다</div>
-      <a href="https://changup-quiz.netlify.app" target="_blank" class="card-link">3단계 자세히 보기 →</a>
+      <a href="stage3.html" class="card-link">3단계 자세히 보기 →</a>
     </div>
   </div>
   <div class="system-bottom fade-up">
@@ -1002,6 +1002,19 @@ document.querySelectorAll('.faq-item .faq-q').forEach(btn=>{
 window.addEventListener('resize',()=>{
   document.querySelectorAll('.faq-item.open .faq-a').forEach(a=>{
     a.style.maxHeight=a.scrollHeight+'px';
+  });
+});
+
+// nav 드롭다운 클릭 토글
+document.querySelectorAll('.nav-menu .dropdown > a').forEach(function(toggle){
+  toggle.addEventListener('click',function(e){
+    e.preventDefault();
+    toggle.parentElement.classList.toggle('open');
+  });
+});
+document.addEventListener('click',function(e){
+  document.querySelectorAll('.nav-menu .dropdown.open').forEach(function(dd){
+    if(!dd.contains(e.target))dd.classList.remove('open');
   });
 });
 

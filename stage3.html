@@ -51,7 +51,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   border-radius:8px;padding:8px 0;min-width:200px;
   box-shadow:0 8px 32px rgba(0,0,0,0.4);margin-top:8px;
 }
-.nav-menu .dropdown:hover .dropdown-menu{display:block;}
+.nav-menu .dropdown.open .dropdown-menu{display:block;}
 .nav-menu .dropdown-menu a{
   display:block;padding:10px 20px;font-size:13px;
   border-bottom:1px solid rgba(255,255,255,0.05);
@@ -831,6 +831,17 @@ const observer=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
 },{threshold:0.08});
 document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+document.querySelectorAll('.nav-menu .dropdown > a').forEach(function(toggle){
+  toggle.addEventListener('click',function(e){
+    e.preventDefault();
+    toggle.parentElement.classList.toggle('open');
+  });
+});
+document.addEventListener('click',function(e){
+  document.querySelectorAll('.nav-menu .dropdown.open').forEach(function(dd){
+    if(!dd.contains(e.target))dd.classList.remove('open');
+  });
+});
 function toggleMenu(){document.getElementById('navMenu').classList.toggle('open');}
 function toggleFaq(el){
   const item=el.parentElement;
