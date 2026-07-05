@@ -104,12 +104,12 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .hero-inner{position:relative;z-index:2;max-width:880px;width:100%;text-align:center;}
 .hero-stage-badge{
   display:inline-flex;align-items:center;gap:12px;
-  background:rgba(201,169,97,0.12);border:1px solid rgba(201,169,97,0.3);
-  border-radius:100px;padding:8px 20px;margin-bottom:36px;
+  background:transparent;border:1.5px solid #C9A961;
+  border-radius:30px;padding:10px 22px;margin-bottom:36px;
 }
-.hero-stage-badge .stage-num{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:700;}
-.hero-stage-badge .stage-dot{width:4px;height:4px;background:var(--gold-dim);border-radius:50%;}
-.hero-stage-badge .stage-name{font-size:12px;color:var(--gray);letter-spacing:1px;}
+.hero-stage-badge .stage-num{font-size:14px !important;letter-spacing:0.15em;color:#E0C078 !important;font-weight:700 !important;opacity:1 !important;}
+.hero-stage-badge .stage-dot{width:5px;height:5px;background:#C9A961;border-radius:50%;}
+.hero-stage-badge .stage-name{font-size:17px !important;color:#C9A961 !important;letter-spacing:1px;font-weight:700 !important;opacity:1 !important;}
 .hero-inner h1{
   font-family:'Noto Serif KR',serif;
   font-size:clamp(36px,5vw,60px);font-weight:900;
@@ -635,42 +635,42 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <!-- 후기 -->
 <section id="reviews">
   <div class="reviews-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">Student Reviews</div>
-    <h2 class="fade-up">수강생 후기</h2>
-    <p class="rev-sub fade-up">1단계를 거친 분들의 실제 이야기입니다</p>
+    <div class="eyebrow fade-up" style="justify-content:center;">Consulting Insight</div>
+    <h2 class="fade-up">창업 상담 현장에서 가장 많이 만난 3가지</h2>
+    <p class="rev-sub fade-up">25년간 가맹 상담을 하며 반복해서 본 예비창업자의 착각입니다. 창업설계는 이걸 시작 전에 잡습니다.</p>
     <div class="reviews-grid">
       <div class="review-card fade-up">
-        <div class="review-quote">"</div>
-        <p class="review-text">막연하게 카페를 하고 싶다는 마음만 있었는데, 4주 동안 수익 계산을 직접 해보니 어디서, 어떻게 해야 할지가 보였습니다. 무엇보다 설계서가 생기니 가족 설득이 쉬워졌어요.</p>
-        <div class="review-author">
-          <div class="review-avatar">김</div>
+        <div class="review-author" style="margin-bottom:20px;">
+          <div class="review-avatar">1</div>
           <div>
-            <div class="review-name">김○○</div>
-            <div class="review-role">카페 창업 준비 · 직장인</div>
+            <div class="review-name">상담 현장</div>
+            <div class="review-role">"뭘 창업할지부터 모르겠어요"</div>
           </div>
         </div>
+        <p class="review-text">아이템부터 정하려다 정작 '어떤 고객의 어떤 문제를 푸는지'를 안 봅니다. 유행 아이템을 좇다 시장이 이미 포화인 걸 뒤늦게 압니다.</p>
+        <p class="review-text" style="color:var(--gold);margin-bottom:0;">→ 창업설계 후: 내 자본·성향·시장에 맞는 아이템을 데이터로 판정합니다. 감이 아니라 '이 아이템이 실행 가능한가'를 숫자로 확인합니다.</p>
       </div>
       <div class="review-card fade-up" style="transition-delay:0.15s">
-        <div class="review-quote">"</div>
-        <p class="review-text">입지 분석을 혼자 했을 때는 그냥 '유동인구가 많다'는 느낌뿐이었는데, 데이터로 보니 완전히 달랐습니다. 1순위로 생각했던 자리를 바꿀 수 있었어요. 그게 가장 큰 수확이었습니다.</p>
-        <div class="review-author">
-          <div class="review-avatar">박</div>
+        <div class="review-author" style="margin-bottom:20px;">
+          <div class="review-avatar">2</div>
           <div>
-            <div class="review-name">박○○</div>
-            <div class="review-role">외식업 예비창업자</div>
+            <div class="review-name">상담 현장</div>
+            <div class="review-role">"이 자리 괜찮을까요?"</div>
           </div>
         </div>
+        <p class="review-text">유동인구만 보고 계약합니다. 임대료·경쟁 매장·업종 적합성을 따지지 않아, 목은 좋은데 남는 게 없는 자리를 잡습니다.</p>
+        <p class="review-text" style="color:var(--gold);margin-bottom:0;">→ 창업설계 후: 입지·수익구조·경쟁 밀도를 상권 데이터로 검증한 뒤 계약합니다. 계약 전에 '이 자리로 손익이 나오는가'를 봅니다.</p>
       </div>
       <div class="review-card fade-up" style="transition-delay:0.3s">
-        <div class="review-quote">"</div>
-        <p class="review-text">정책자금 수업이 정말 유익했습니다. 신청 가능한 지원금이 있는 줄도 몰랐는데, 준비만 잘 하면 자기자본 부담을 상당히 줄일 수 있다는 걸 알게 됐어요.</p>
-        <div class="review-author">
-          <div class="review-avatar">이</div>
+        <div class="review-author" style="margin-bottom:20px;">
+          <div class="review-avatar">3</div>
           <div>
-            <div class="review-name">이○○</div>
-            <div class="review-role">퇴직 후 창업 준비</div>
+            <div class="review-name">상담 현장</div>
+            <div class="review-role">"자본금 얼마 있어야 해요?"</div>
           </div>
         </div>
+        <p class="review-text">초기 창업비용만 계산하고 운영자금을 빠뜨립니다. 오픈은 했는데 3개월 버틸 현금이 없어 무너집니다.</p>
+        <p class="review-text" style="color:var(--gold);margin-bottom:0;">→ 창업설계 후: 창업비용·운영자금·손익분기점까지 숫자로 설계합니다. '언제부터 흑자인가'를 알고 시작합니다.</p>
       </div>
     </div>
   </div>
