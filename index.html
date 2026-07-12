@@ -39,7 +39,9 @@ nav{
   transition:all 0.3s;
 }
 nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4);}
-.nav-logo img{height:44px;}
+.brand-logo{display:inline-flex;flex-direction:column;line-height:1;text-decoration:none;}
+.brand-logo-main{font-family:'Noto Serif KR',serif;font-weight:700;font-size:27px;color:#D4AF5F;letter-spacing:0.2px;}
+.brand-logo-sub{font-family:'Noto Sans KR',sans-serif;font-size:8px;color:#D4AF5F;opacity:0.7;letter-spacing:1.5px;margin-top:3px;white-space:nowrap;}
 .nav-menu{display:flex;gap:36px;list-style:none;align-items:center;}
 .nav-menu a{
   color:var(--gray-light);font-size:14px;font-weight:500;
@@ -97,6 +99,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .hero-text .eyebrow::before{
   content:'';width:32px;height:1px;background:var(--gold);
 }
+.hero-slogan-ko{font-family:'Noto Sans KR',sans-serif;font-size:16px;font-weight:500;color:#D8DEE8;letter-spacing:-0.2px;margin-bottom:10px;}
 .hero-text h1{
   font-family:'Noto Serif KR',serif;
   font-size:clamp(32px,4vw,56px);font-weight:900;
@@ -517,7 +520,8 @@ footer{
   display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;
   margin-bottom:48px;
 }
-.footer-brand img{height:36px;margin-bottom:16px;}
+.footer-brand .brand-logo{margin-bottom:16px;}
+.footer-brand .brand-logo-main{font-size:24px;}
 .footer-brand p{font-size:13px;color:var(--gray);line-height:1.8;}
 .footer-col h4{
   font-size:12px;letter-spacing:2px;color:var(--gold);
@@ -568,19 +572,21 @@ footer{
   display:flex;
   align-items:center;
   gap:6px;
-  background:#152C5B;
-  color:#D4AF5F;
-  border:1px solid #D4AF5F;
+  background:#FEE500;
+  color:#3C1E1E;
+  border:none;
   border-radius:999px;
   padding:12px 20px;
-  font-size:14px;
-  font-weight:600;
+  font-size:15px;
+  font-weight:700;
   text-decoration:none;
-  box-shadow:0 4px 16px rgba(0,0,0,0.25);
-  transition:transform 0.2s ease;
+  box-shadow:0 4px 14px rgba(0,0,0,0.3);
+  transition:transform 0.2s ease,background 0.2s ease,box-shadow 0.2s ease;
 }
 .kakao-float-btn:hover{
-  transform:scale(1.05);
+  background:#FFE94D;
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(0,0,0,0.35);
 }
 .kakao-float-icon{
   font-size:16px;
@@ -605,10 +611,9 @@ footer{
 <!-- 네비게이션 -->
 <nav id="navbar">
   <div class="nav-logo">
-    <a href="#hero"><img src="images/logo.png" alt="BizBuild"></a>
+    <a href="#hero" class="brand-logo"><span class="brand-logo-main">BizBuild</span><span class="brand-logo-sub">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</span></a>
   </div>
   <ul class="nav-menu">
-    <li><a href="#hero">비즈빌드</a></li>
     <li class="dropdown">
       <a href="#system">비즈빌드 사업설계전략연구소 ▾</a>
       <div class="dropdown-menu">
@@ -632,6 +637,7 @@ footer{
   <div class="hero-bg"></div>
   <div class="hero-inner">
     <div class="hero-text fade-up">
+      <div class="hero-slogan-ko">당신의 사업을 구축하라, 당신의 미래를 설계하라</div>
       <div class="eyebrow">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</div>
       <h1>퇴직금 1억 5천, 준비 없이 시작하면<br><span class="accent">6개월이면 사라집니다.</span></h1>
       <p>저는 창업을 권유하지 않습니다. 망할 창업을 계약 전에 막습니다.<br>3분이면 지금 상태가 가능인지 금지인지 확인됩니다.</p>
@@ -939,9 +945,8 @@ footer{
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="images/logo.png" alt="BizBuild">
-      <p>자영업 25년 실전과 프랜차이즈 본부 운영 노하우로,<br>창업·사업·증식의 전 과정을 시스템으로 설계합니다.</p>
-      <p style="margin-top:16px;font-size:12px;color:#666;">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</p>
+      <div class="brand-logo"><span class="brand-logo-main">BizBuild</span><span class="brand-logo-sub">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</span></div>
+      <p>창업을 판정하고, 사업을 설계하며,<br>지속 가능한 성장을 설계하는 비즈니스 시스템</p>
     </div>
     <div class="footer-col">
       <h4>시스템</h4>
