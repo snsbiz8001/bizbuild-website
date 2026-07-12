@@ -3,23 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3단계 증식설계시스템 — 비즈빌드</title>
-<meta name="description" content="1개 매장은 성공했다면, 다음은 사장 없이 도는 확장입니다. 표준화·교육·자동화·위임으로 2호점·프랜차이즈 확장 구조를 설계하는 증식설계시스템.">
+<title>3단계 증식설계 — 비즈빌드</title>
+<meta name="description" content="1개 매장은 성공했다면, 다음은 사장 없이 도는 확장입니다. 표준화·교육·자동화·위임으로 2호점·프랜차이즈 확장 구조를 설계하는 증식설계.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
-  --navy:#1A2E5A;
-  --navy-mid:#0F1F50;
-  --navy-light:#162660;
-  --gold:#C9A961;
+  --navy:#152C5B;
+  --navy-mid:#0E1F45;
+  --navy-light:#1E3A6E;
+  --gold:#D4AF5F;
   --gold-light:#E8CB82;
   --gold-dim:#8B6F3A;
-  --cta-blue:#1D4E89;
+  --cta-blue:#2E9BD6;
   --white:#FFFFFF;
-  --gray:#B0B8C8;
+  --gray:#D8DEE8;
   --gray-light:#E8EBF0;
+  --label-size:14px;
+  --label-weight:700;
+  --label-color:#D4AF5F;
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
@@ -27,7 +30,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--wh
 /* ── 네비게이션 ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
-  background:rgba(10,22,58,0.95);
+  background:rgba(21,44,91,0.95);
   backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(201,169,97,0.2);
   padding:0 5%;
@@ -35,7 +38,7 @@ nav{
   height:72px;
   transition:all 0.3s;
 }
-nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4);}
+nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4);}
 .nav-logo img{height:44px;}
 .nav-menu{display:flex;gap:36px;list-style:none;align-items:center;}
 .nav-menu a{
@@ -72,7 +75,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 /* ── 공통 유틸 ── */
 .fade-up{opacity:0;transform:translateY(28px);transition:all 0.7s ease;}
 .fade-up.visible{opacity:1;transform:none;}
-.eyebrow{font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.eyebrow{font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:0.5px;color:var(--label-color);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:12px;}
 .eyebrow::before{content:'';width:32px;height:1px;background:var(--gold);}
 .btn-primary{
   display:inline-block;
@@ -96,7 +99,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   min-height:100vh;
   display:flex;align-items:center;justify-content:center;
   padding:140px 5% 100px;
-  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,#0A163A 100%);
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,#152C5B 100%);
   position:relative;overflow:hidden;
 }
 .hero-bg-radial{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 30% 50%,rgba(201,169,97,0.07) 0%,transparent 70%);}
@@ -104,15 +107,15 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .hero-inner{position:relative;z-index:2;max-width:880px;width:100%;text-align:center;}
 .hero-stage-badge{
   display:inline-flex;align-items:center;gap:12px;
-  background:transparent;border:1.5px solid #C9A961;
+  background:transparent;border:1.5px solid #D4AF5F;
   border-radius:30px;padding:10px 22px;margin-bottom:36px;
 }
 .hero-stage-badge .stage-num{font-size:14px !important;letter-spacing:0.15em;color:#E0C078 !important;font-weight:700 !important;opacity:1 !important;}
-.hero-stage-badge .stage-dot{width:5px;height:5px;background:#C9A961;border-radius:50%;}
-.hero-stage-badge .stage-name{font-size:17px !important;color:#C9A961 !important;letter-spacing:1px;font-weight:700 !important;opacity:1 !important;}
+.hero-stage-badge .stage-dot{width:5px;height:5px;background:#D4AF5F;border-radius:50%;}
+.hero-stage-badge .stage-name{font-size:17px !important;color:#D4AF5F !important;letter-spacing:1px;font-weight:700 !important;opacity:1 !important;}
 .hero-inner h1{
   font-family:'Noto Serif KR',serif;
-  font-size:clamp(36px,5vw,60px);font-weight:900;
+  font-size:clamp(36px,5vw,60px);font-weight:900;letter-spacing:-0.2px;
   line-height:1.3;margin-bottom:28px;color:var(--white);
 }
 .hero-inner h1 .accent{color:var(--gold);}
@@ -128,33 +131,33 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 /* ── 문제 제기 ── */
 #problem{padding:100px 5%;background:var(--navy-mid);}
 .problem-inner{max-width:1100px;margin:0 auto;}
-.problem-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;text-align:center;margin-bottom:16px;line-height:1.4;}
+.problem-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:16px;line-height:1.4;}
 .problem-inner .prob-sub{text-align:center;color:var(--gray);font-size:16px;margin-bottom:64px;line-height:1.8;}
 .problem-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
-.problem-card{background:rgba(10,22,58,0.6);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:36px 28px;}
+.problem-card{background:rgba(21,44,91,0.6);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:36px 28px;}
 .problem-card .p-icon{font-size:32px;margin-bottom:16px;}
 .problem-card h3{font-size:16px;font-weight:700;color:var(--white);margin-bottom:10px;}
-.problem-card p{font-size:14px;color:var(--gray);line-height:1.8;}
-.problem-card .p-tag{display:inline-block;font-size:10px;letter-spacing:2px;color:var(--gold-dim);background:rgba(201,169,97,0.08);border-radius:100px;padding:3px 10px;margin-bottom:16px;}
+.problem-card p{font-size:16px;color:var(--gray);line-height:1.8;letter-spacing:-0.2px;}
+.problem-card .p-tag{display:inline-block;font-size:14px;font-weight:700;letter-spacing:0.5px;color:var(--label-color);background:rgba(201,169,97,0.08);border-radius:100px;padding:3px 10px;margin-bottom:16px;}
 
 /* ── 판정 시스템 ── */
 #verdict{padding:100px 5%;background:var(--navy);}
 .verdict-inner{max-width:1100px;margin:0 auto;}
-.verdict-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;text-align:center;margin-bottom:56px;line-height:1.4;}
+.verdict-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:56px;line-height:1.4;}
 .verdict-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .verdict-card{background:var(--navy-mid);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:36px 28px;text-align:center;}
-.verdict-card p{font-size:14px;color:var(--gray);line-height:1.8;}
+.verdict-card p{font-size:16px;color:var(--gray);line-height:1.7;letter-spacing:-0.2px;}
 .v-dot{width:12px;height:12px;border-radius:50%;margin:0 auto 16px;}
-.v-label{font-size:16px;font-weight:700;letter-spacing:1px;margin-bottom:14px;}
-.verdict-card.v-go{border-color:rgba(29,158,117,0.35);}
-.verdict-card.v-go .v-dot{background:#1D9E75;}
-.verdict-card.v-go .v-label{color:#1D9E75;}
-.verdict-card.v-hold{border-color:rgba(201,169,97,0.35);}
-.verdict-card.v-hold .v-dot{background:var(--gold);}
-.verdict-card.v-hold .v-label{color:var(--gold);}
-.verdict-card.v-stop{border-color:rgba(226,75,74,0.35);}
-.verdict-card.v-stop .v-dot{background:#E24B4A;}
-.verdict-card.v-stop .v-label{color:#E24B4A;}
+.v-label{font-family:'Noto Serif KR',serif;font-size:22px;font-weight:700;margin-bottom:12px;}
+.verdict-card.v-go{border-color:#1E7A5A;}
+.verdict-card.v-go .v-dot{background:#1E7A5A;}
+.verdict-card.v-go .v-label{color:#3DBF90;}
+.verdict-card.v-hold{border-color:#D4952F;}
+.verdict-card.v-hold .v-dot{background:#D4952F;}
+.verdict-card.v-hold .v-label{color:#F0B95A;}
+.verdict-card.v-stop{border-color:#B23B3B;}
+.verdict-card.v-stop .v-dot{background:#B23B3B;}
+.verdict-card.v-stop .v-label{color:#E56A6A;}
 .verdict-cta{margin-top:56px;text-align:center;}
 .btn-cta-blue{display:inline-block;background:var(--cta-blue);color:var(--white);font-weight:700;font-size:16px;padding:16px 40px;border-radius:8px;transition:all 0.3s;}
 .btn-cta-blue:hover{filter:brightness(1.1);transform:translateY(-2px);}
@@ -164,8 +167,8 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 #overview{padding:100px 5%;background:var(--navy);}
 .overview-inner{max-width:1100px;margin:0 auto;}
 .overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:60px;}
-.overview-text h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,40px);font-weight:700;line-height:1.4;margin-bottom:24px;}
-.overview-text p{font-size:15px;color:var(--gray);line-height:1.9;margin-bottom:18px;}
+.overview-text h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-0.2px;line-height:1.4;margin-bottom:24px;}
+.overview-text p{font-size:16px;color:var(--gray);line-height:1.9;margin-bottom:18px;letter-spacing:-0.2px;}
 .overview-pillars{display:flex;flex-direction:column;gap:16px;}
 .pillar{display:flex;align-items:flex-start;gap:16px;padding:20px 24px;background:var(--navy-mid);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;}
 .pillar .p-num{font-size:11px;letter-spacing:2px;color:var(--gold-dim);margin-top:2px;white-space:nowrap;}
@@ -175,13 +178,13 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 /* ── 3단계 로드맵 ── */
 #curriculum{padding:100px 5%;background:var(--navy-mid);}
 .roadmap-inner{max-width:1100px;margin:0 auto;}
-.roadmap-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;text-align:center;margin-bottom:56px;line-height:1.4;}
+.roadmap-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:56px;line-height:1.4;}
 .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;}
 .roadmap-card{display:flex;flex-direction:column;background:var(--navy);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:36px 28px;text-align:center;}
 .roadmap-card .step-num{display:inline-block;font-size:11px;letter-spacing:2px;color:var(--gold-dim);background:rgba(201,169,97,0.08);border-radius:100px;padding:4px 14px;margin:0 auto 16px;}
 .roadmap-card h3{font-size:18px;font-weight:700;color:var(--white);margin-bottom:12px;}
 .roadmap-card .step-price{font-size:26px;font-weight:700;color:var(--gold);margin-bottom:16px;}
-.roadmap-card p{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:16px;flex-grow:1;}
+.roadmap-card p{font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:16px;flex-grow:1;letter-spacing:-0.2px;}
 .roadmap-card .step-time{font-size:12px;color:var(--gray);margin-bottom:20px;}
 .roadmap-card .step-note{font-size:13px;color:var(--gray);font-style:italic;}
 .roadmap-featured{background:var(--navy-mid);border:1.5px solid var(--cta-blue);box-shadow:0 8px 32px rgba(29,78,137,0.25);}
@@ -189,7 +192,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 /* ── 대상 ── */
 #target{padding:100px 5%;background:var(--navy);}
 .target-inner{max-width:1100px;margin:0 auto;text-align:center;}
-.target-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,40px);font-weight:700;margin-bottom:12px;}
+.target-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-0.2px;margin-bottom:12px;}
 .target-inner .target-sub{color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
 .target-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;text-align:left;}
 .target-card{display:flex;align-items:flex-start;gap:18px;padding:28px;background:var(--navy-mid);border:1px solid rgba(201,169,97,0.12);border-radius:10px;transition:all 0.3s;}
@@ -202,7 +205,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 /* ── 성과 및 포함 내용 ── */
 #outcomes{padding:100px 5%;background:linear-gradient(180deg,var(--navy-mid) 0%,var(--navy) 100%);}
 .outcomes-inner{max-width:1100px;margin:0 auto;}
-.outcomes-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,40px);font-weight:700;text-align:center;margin-bottom:12px;}
+.outcomes-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:12px;}
 .outcomes-inner .out-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
 .outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .outcome-card{background:var(--navy-mid);border:1px solid rgba(201,169,97,0.12);border-radius:12px;padding:36px 28px;text-align:center;transition:all 0.3s;}
@@ -223,8 +226,8 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .inst-avatar{width:180px;height:180px;border-radius:50%;background:var(--navy-mid);border:3px solid rgba(201,169,97,0.3);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:64px;}
 .inst-name-tag{display:inline-block;margin-top:20px;font-size:13px;color:var(--gray);background:var(--navy-mid);border:1px solid rgba(201,169,97,0.15);border-radius:100px;padding:6px 18px;}
 .inst-content .eyebrow{justify-content:flex-start;}
-.inst-content h2{font-family:'Noto Serif KR',serif;font-size:clamp(24px,2.5vw,36px);font-weight:700;line-height:1.4;margin-bottom:20px;}
-.inst-content p{font-size:15px;color:var(--gray);line-height:1.9;margin-bottom:14px;}
+.inst-content h2{font-family:'Noto Serif KR',serif;font-size:clamp(24px,2.5vw,36px);font-weight:700;letter-spacing:-0.2px;line-height:1.4;margin-bottom:20px;}
+.inst-content p{font-size:16px;color:var(--gray);line-height:1.9;margin-bottom:14px;letter-spacing:-0.2px;}
 .inst-stats{display:flex;gap:32px;flex-wrap:wrap;margin-top:28px;}
 .inst-stat .n{font-size:22px;font-weight:700;color:var(--gold);}
 .inst-stat .l{font-size:11px;color:var(--gray);margin-top:4px;letter-spacing:0.5px;}
@@ -232,13 +235,13 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 /* ── 후기 ── */
 #reviews{padding:100px 5%;background:var(--navy-mid);}
 .reviews-inner{max-width:1100px;margin:0 auto;}
-.reviews-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;text-align:center;margin-bottom:12px;}
+.reviews-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:12px;}
 .reviews-inner .rev-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.review-card{background:rgba(10,22,58,0.6);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:32px;transition:all 0.3s;}
+.review-card{background:rgba(21,44,91,0.6);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:32px;transition:all 0.3s;}
 .review-card:hover{border-color:rgba(201,169,97,0.3);}
 .review-quote{font-size:40px;color:rgba(201,169,97,0.25);line-height:1;margin-bottom:-8px;}
-.review-text{font-size:14px;color:var(--gray-light);line-height:1.9;margin-bottom:24px;}
+.review-text{font-size:16px;color:var(--gray-light);line-height:1.9;margin-bottom:24px;letter-spacing:-0.2px;}
 .review-author{display:flex;align-items:center;gap:12px;}
 .review-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy-light);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:var(--gold);flex-shrink:0;}
 .review-name{font-size:13px;font-weight:700;}
@@ -247,7 +250,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 /* ── 프로그램 상세 ── */
 #program-details{padding:100px 5%;background:var(--navy);}
 .pd-inner{max-width:900px;margin:0 auto;}
-.pd-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;text-align:center;margin-bottom:12px;}
+.pd-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:12px;}
 .pd-inner .pd-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
 .pd-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:40px;}
 .pd-item{padding:28px;background:var(--navy-mid);border:1px solid rgba(255,255,255,0.06);border-radius:10px;}
@@ -262,11 +265,11 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 /* ── FAQ ── */
 #faq{padding:100px 5%;background:var(--navy-mid);}
 .faq-inner{max-width:760px;margin:0 auto;}
-.faq-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;text-align:center;margin-bottom:12px;}
+.faq-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:12px;}
 .faq-inner .faq-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
 .faq-list{display:flex;flex-direction:column;gap:4px;}
 .faq-item{border:1px solid rgba(255,255,255,0.06);border-radius:8px;overflow:hidden;}
-.faq-q{padding:22px 28px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:15px;font-weight:600;background:rgba(10,22,58,0.4);transition:background 0.2s;}
+.faq-q{padding:22px 28px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:15px;font-weight:600;background:rgba(21,44,91,0.4);transition:background 0.2s;}
 .faq-q:hover{background:rgba(15,31,80,0.6);}
 .faq-q .faq-arrow{color:var(--gold);font-size:18px;transition:transform 0.3s;flex-shrink:0;margin-left:16px;}
 .faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
@@ -309,7 +312,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
   .pd-grid{grid-template-columns:1fr;}
   .includes-list{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;}
-  .nav-menu{display:none;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(10,22,58,0.98);padding:20px;border-bottom:1px solid rgba(201,169,97,0.2);}
+  .nav-menu{display:none;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(21,44,91,0.98);padding:20px;border-bottom:1px solid rgba(201,169,97,0.2);}
   .nav-menu.open{display:flex;}
   .hamburger{display:flex;}
   .roadmap-grid{grid-template-columns:1fr;}
@@ -331,17 +334,17 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
   <ul class="nav-menu" id="navMenu">
     <li><a href="index.html">비즈빌드</a></li>
     <li class="dropdown">
-      <a href="#">창업설계전략연구소 ▾</a>
+      <a href="#">비즈빌드 사업설계전략연구소 ▾</a>
       <div class="dropdown-menu">
-        <a href="stage1.html">1단계 창업설계시스템</a>
-        <a href="stage2.html">2단계 사업설계시스템</a>
-        <a href="stage3.html" style="color:var(--gold);">3단계 증식설계시스템</a>
+        <a href="stage1.html">1단계 창업판정</a>
+        <a href="stage2.html">2단계 사업설계</a>
+        <a href="stage3.html" style="color:var(--gold);">3단계 증식설계</a>
       </div>
     </li>
     <li><a href="index.html#trust">마켓플로우</a></li>
     <li><a href="index.html#trust">정책자금</a></li>
     <li><a href="index.html#reviews">인사이트</a></li>
-    <li><a href="https://changup-quiz.netlify.app" target="_blank" class="nav-cta nav-cta-blue">무료 자가진단</a></li>
+    <li><a href="https://quiz.bizbuild.kr" target="_blank" class="nav-cta nav-cta-blue">무료 자가진단</a></li>
   </ul>
   <div class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -356,7 +359,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <div class="hero-stage-badge fade-up">
       <span class="stage-num">STAGE 03</span>
       <span class="stage-dot"></span>
-      <span class="stage-name">증식설계시스템</span>
+      <span class="stage-name">증식설계</span>
     </div>
     <h1 class="fade-up">내가 없으면 안 돌아가는 가게는<br><span class="accent">두 번째를 못 냅니다</span></h1>
     <p class="hero-sub fade-up">1개 매장은 성공했다면 — 표준화·교육·자동화·위임으로<br>사장 없이 도는 확장 구조를 설계합니다.</p>
@@ -388,30 +391,30 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <!-- 문제 제기 -->
 <section id="problem">
   <div class="problem-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">Why This Matters</div>
+    <div class="eyebrow fade-up" style="justify-content:center;">왜 중요한가</div>
     <h2 class="fade-up">다점포 확장 실패의 90%는<br>시스템이 없어서입니다</h2>
     <p class="prob-sub fade-up">혼자 잘하는 것과 시스템으로 여러 개를 키우는 것은 다릅니다</p>
     <div class="problem-grid">
       <div class="problem-card fade-up">
-        <div class="p-tag">MISTAKE 01</div>
+        <div class="p-tag">실수 01</div>
         <div class="p-icon">🎯</div>
         <h3>표준화 없음</h3>
         <p>매장마다 품질·운영이 제각각입니다.</p>
       </div>
       <div class="problem-card fade-up" style="transition-delay:0.15s">
-        <div class="p-tag">MISTAKE 02</div>
+        <div class="p-tag">실수 02</div>
         <div class="p-icon">📊</div>
         <h3>교육 시스템 없음</h3>
         <p>사람을 뽑아도 대표만큼 하지 못합니다.</p>
       </div>
       <div class="problem-card fade-up" style="transition-delay:0.3s">
-        <div class="p-tag">MISTAKE 03</div>
+        <div class="p-tag">실수 03</div>
         <div class="p-icon">⚠️</div>
         <h3>자동화 없음</h3>
         <p>관리가 전부 수작업이라, 매장이 늘수록 과부하가 걸립니다.</p>
       </div>
       <div class="problem-card fade-up" style="transition-delay:0.45s">
-        <div class="p-tag">MISTAKE 04</div>
+        <div class="p-tag">실수 04</div>
         <div class="p-icon">💸</div>
         <h3>위임 구조 없음</h3>
         <p>대표가 모든 걸 쥐고 있어 2호점을 못 냅니다.</p>
@@ -428,7 +431,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <div class="verdict-grid">
       <div class="verdict-card v-go fade-up">
         <div class="v-dot"></div>
-        <div class="v-label">가능</div>
+        <div class="v-label">진행</div>
         <p>4요소 갖춤<br>확장 가능</p>
       </div>
       <div class="verdict-card v-hold fade-up" style="transition-delay:0.15s">
@@ -438,12 +441,12 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
       </div>
       <div class="verdict-card v-stop fade-up" style="transition-delay:0.3s">
         <div class="v-dot"></div>
-        <div class="v-label">위험</div>
+        <div class="v-label">중단</div>
         <p>지금 늘리면<br>1호점까지 위험</p>
       </div>
     </div>
     <div class="verdict-cta fade-up">
-      <a href="https://changup-quiz.netlify.app" target="_blank" class="btn-cta-blue">지금 바로 3분 자가진단 받기</a>
+      <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">지금 바로 3분 자가진단 받기</a>
       <p class="verdict-note">무료 · 10개 질문 · 즉시 결과</p>
     </div>
   </div>
@@ -452,11 +455,11 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <!-- 시스템 소개 -->
 <section id="overview">
   <div class="overview-inner">
-    <div class="eyebrow fade-up">What is This System</div>
+    <div class="eyebrow fade-up">증식설계란</div>
     <div class="overview-grid">
       <div class="overview-text fade-up">
         <h2>확장은 운이 아니라<br>시스템에서 나옵니다</h2>
-        <p>비즈빌드 3단계 증식설계시스템은 1개 매장을 성공시킨 사업자가 2호점·프랜차이즈로 확장할 때 반드시 갖춰야 할 4가지 시스템을 4주 동안 설계하는 프로그램입니다.</p>
+        <p>비즈빌드 3단계 증식설계는 1개 매장을 성공시킨 사업자가 2호점·프랜차이즈로 확장할 때 반드시 갖춰야 할 4가지 시스템을 4주 동안 설계하는 프로그램입니다.</p>
         <p>대표의 감이 아닌 표준으로, 사람이 아닌 구조로 — 내가 없어도 매장이 돌아가는지를 확인합니다.</p>
         <p>4주 설계가 끝날 때, 당신은 표준화·교육·자동화·위임이 정리된 확장 설계서를 손에 쥐게 됩니다.</p>
       </div>
@@ -497,7 +500,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <!-- 커리큘럼 -->
 <section id="curriculum">
   <div class="roadmap-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">3-Step System</div>
+    <div class="eyebrow fade-up" style="justify-content:center;">3단계 시스템</div>
     <h2 class="fade-up">3단계로 설계합니다</h2>
     <div class="roadmap-grid">
       <div class="roadmap-card roadmap-featured fade-up">
@@ -506,7 +509,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
         <div class="step-price">무료</div>
         <p>지금 확장 준비도가 가능·보류·위험인지 즉시 확인</p>
         <div class="step-time">소요 3분</div>
-        <a href="https://changup-quiz.netlify.app" target="_blank" class="btn-cta-blue">3분 자가진단 시작하기 →</a>
+        <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">3분 자가진단 시작하기 →</a>
       </div>
       <div class="roadmap-card fade-up" style="transition-delay:0.15s">
         <div class="step-num">STEP 2</div>
@@ -531,7 +534,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <!-- 대상 -->
 <section id="target">
   <div class="target-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">Who This Is For</div>
+    <div class="eyebrow fade-up" style="justify-content:center;">추천 대상</div>
     <h2 class="fade-up">이런 분들을 위해 만들었습니다</h2>
     <p class="target-sub fade-up">1개 매장의 성공을 여러 개로 복제하고 싶은 분들</p>
     <div class="target-grid">
@@ -565,7 +568,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
       </div>
     </div>
     <div class="not-for fade-up">
-      ※ 아직 1개 매장 매출이 안정되지 않았다면 <a href="stage2.html" style="color:var(--gold);text-decoration:none;"><strong>2단계 사업설계시스템</strong></a>이 먼저입니다
+      ※ 아직 1개 매장 매출이 안정되지 않았다면 <a href="stage2.html" style="color:var(--gold);text-decoration:none;"><strong>2단계 사업설계</strong></a>가 먼저입니다
     </div>
   </div>
 </section>
@@ -573,7 +576,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <!-- 성과 및 포함 내용 -->
 <section id="outcomes">
   <div class="outcomes-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">What You Will Get</div>
+    <div class="eyebrow fade-up" style="justify-content:center;">제공 내용</div>
     <h2 class="fade-up">4주 후, 손에 쥐는 것들</h2>
     <p class="out-sub fade-up">수강 완료 시점에 갖게 되는 실질적인 결과물</p>
     <div class="outcomes-grid">
@@ -617,7 +620,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
       <div class="inst-name-tag">김건우 대표</div>
     </div>
     <div class="inst-content fade-up" style="transition-delay:0.15s">
-      <div class="eyebrow">About the Designer</div>
+      <div class="eyebrow">설계자 소개</div>
       <h2>매장 하나를 시스템으로 바꿔<br>여러 개로 키워 본 사람이 설계합니다</h2>
       <p>저는 지금도 매장을 운영하면서, 프랜차이즈 가맹본부를 함께 키웁니다.</p>
       <p>경영학을 전공했지만, 진짜 배움은 25년간 현장에서 얻었습니다. 직영점을 늘리고, 가맹점을 붙이고, 대표 없이도 돌아가는 매장을 만들던 시간 — 책에는 없는 그 과정을 직접 통과했습니다.</p>
@@ -635,7 +638,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <!-- 후기 -->
 <section id="reviews">
   <div class="reviews-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">Student Reviews</div>
+    <div class="eyebrow fade-up" style="justify-content:center;">수강 후기</div>
     <h2 class="fade-up">수강생 후기</h2>
     <p class="rev-sub fade-up">증식설계로 2호점·다점포 확장에 성공한 분들의 실제 이야기입니다</p>
     <div class="reviews-grid">
@@ -679,7 +682,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <!-- 프로그램 상세 -->
 <section id="program-details">
   <div class="pd-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">Program Details</div>
+    <div class="eyebrow fade-up" style="justify-content:center;">프로그램 상세</div>
     <h2 class="fade-up">프로그램 안내</h2>
     <p class="pd-sub fade-up">수강 전에 확인하세요</p>
     <div class="pd-grid">
@@ -725,7 +728,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
           <span class="faq-arrow">▼</span>
         </div>
         <div class="faq-a">
-          <div class="faq-a-inner">네, 1호점이 안정적으로 돌아가고 있다면 확장 준비를 시작하기 가장 좋은 시점입니다. 다만 아직 1호점 매출이 정체돼 있다면, 확장보다 2단계 사업설계시스템으로 매출 구조를 먼저 잡는 것이 순서입니다.</div>
+          <div class="faq-a-inner">네, 1호점이 안정적으로 돌아가고 있다면 확장 준비를 시작하기 가장 좋은 시점입니다. 다만 아직 1호점 매출이 정체돼 있다면, 확장보다 2단계 사업설계로 매출 구조를 먼저 잡는 것이 순서입니다.</div>
         </div>
       </div>
       <div class="faq-item fade-up" style="transition-delay:0.06s">
@@ -770,7 +773,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
           <span class="faq-arrow">▼</span>
         </div>
         <div class="faq-a">
-          <div class="faq-a-inner">네, 증식설계시스템은 직영 다점포부터 가맹본부 구축까지 이어지도록 설계되어 있습니다. 4주 과정에서 표준화·교육·자동화·위임 구조를 갖춘 뒤, 가맹사업을 준비하는 분들께는 가맹본부 설계로 이어지는 후속 과정을 별도 안내드립니다.</div>
+          <div class="faq-a-inner">네, 증식설계는 직영 다점포부터 가맹본부 구축까지 이어지도록 설계되어 있습니다. 4주 과정에서 표준화·교육·자동화·위임 구조를 갖춘 뒤, 가맹사업을 준비하는 분들께는 가맹본부 설계로 이어지는 후속 과정을 별도 안내드립니다.</div>
         </div>
       </div>
     </div>
@@ -780,11 +783,11 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <!-- 최종 CTA -->
 <section id="cta">
   <div class="cta-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">Start Here</div>
+    <div class="eyebrow fade-up" style="justify-content:center;">지금 시작하기</div>
     <h2 class="fade-up">확장을 미루는 사이,<br>경쟁자가 먼저 2호점을 냅니다</h2>
     <p class="fade-up">좋은 자리도, 좋은 사람도 나를 기다려 주지 않습니다.<br>지금 내 매장이 늘려도 되는 구조인지, 3분 자가진단으로 먼저 확인하세요.</p>
     <div class="cta-btns fade-up">
-      <a href="https://changup-quiz.netlify.app" target="_blank" class="btn-cta-blue">무료 자가진단 시작하기 →</a>
+      <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">무료 자가진단 시작하기 →</a>
       <a href="https://pf.kakao.com/_egHPX" target="_blank" class="btn-outline">수강 문의하기</a>
     </div>
     <p class="cta-note">무료 · 3분 소요 · 강매 없음</p>
@@ -800,9 +803,9 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     </div>
     <div class="footer-col">
       <h4>프로그램</h4>
-      <a href="stage1.html">창업설계시스템</a>
-      <a href="#">사업설계시스템</a>
-      <a href="#">증식설계시스템</a>
+      <a href="stage1.html">창업판정</a>
+      <a href="#">사업설계</a>
+      <a href="#">증식설계</a>
     </div>
     <div class="footer-col">
       <h4>서비스</h4>
@@ -812,7 +815,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     </div>
     <div class="footer-col">
       <h4>상담</h4>
-      <a href="https://changup-quiz.netlify.app" target="_blank">무료 자가진단</a>
+      <a href="https://quiz.bizbuild.kr" target="_blank">무료 자가진단</a>
       <a href="https://pf.kakao.com/_egHPX" target="_blank">상담 신청</a>
       <a href="https://blog.naver.com/snsbiz81" target="_blank">네이버 블로그</a>
     </div>

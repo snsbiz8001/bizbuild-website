@@ -10,19 +10,19 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
-  --navy:#1A2E5A;
-  --navy-mid:#0F1F50;
-  --navy-light:#162660;
-  --gold:#C9A961;
+  --navy:#152C5B;
+  --navy-mid:#0E1F45;
+  --navy-light:#1E3A6E;
+  --gold:#D4AF5F;
   --gold-light:#E8CB82;
   --gold-dim:#8B6F3A;
   --white:#FFFFFF;
-  --gray:#B0B8C8;
+  --gray:#D8DEE8;
   --gray-light:#E8EBF0;
-  --cta-blue:#1D4E89;
-  --label-color:var(--gold);
-  --label-weight:600;
-  --label-size:13px;
+  --cta-blue:#2E9BD6;
+  --label-color:#D4AF5F;
+  --label-weight:700;
+  --label-size:14px;
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
@@ -30,7 +30,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--wh
 /* ── 네비게이션 ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
-  background:rgba(10,22,58,0.95);
+  background:rgba(21,44,91,0.95);
   backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(201,169,97,0.2);
   padding:0 5%;
@@ -38,7 +38,7 @@ nav{
   height:72px;
   transition:all 0.3s;
 }
-nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4);}
+nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4);}
 .nav-logo img{height:44px;}
 .nav-menu{display:flex;gap:36px;list-style:none;align-items:center;}
 .nav-menu a{
@@ -90,7 +90,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
 }
 .hero-text .eyebrow{
-  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2px;color:var(--label-color);opacity:1;
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:0.5px;color:var(--label-color);opacity:1;
   text-transform:uppercase;margin-bottom:24px;
   display:flex;align-items:center;gap:12px;
 }
@@ -156,12 +156,12 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .vb-inner{max-width:1100px;margin:0 auto;}
 .vb-eyebrow{
-  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2px;color:var(--label-color);opacity:1;
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:0.5px;color:var(--label-color);opacity:1;
   text-transform:uppercase;text-align:center;margin-bottom:16px;
 }
 .vb-title{
   font-family:'Noto Serif KR',serif;
-  font-size:clamp(26px,3.6vw,40px);font-weight:700;
+  font-size:clamp(26px,3.6vw,40px);font-weight:700;letter-spacing:-0.2px;
   line-height:1.3;text-align:center;margin-bottom:56px;
 }
 .vb-grid{
@@ -185,7 +185,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   font-size:22px;font-weight:700;color:var(--vb-color);
   margin-bottom:12px;
 }
-.vb-desc{font-size:14px;color:var(--gray);line-height:1.7;}
+.vb-desc{font-size:16px;color:var(--gray);line-height:1.7;letter-spacing:-0.2px;}
 .vb-cta{text-align:center;}
 .btn-cta-blue{
   background:var(--cta-blue);color:var(--white);
@@ -246,10 +246,10 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .wf-title{
   font-family:'Noto Serif KR',serif;
-  font-size:21px;font-weight:700;color:var(--white);
+  font-size:21px;font-weight:700;letter-spacing:-0.2px;color:var(--white);
   margin-bottom:14px;
 }
-.wf-desc{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:28px;}
+.wf-desc{font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:28px;letter-spacing:-0.2px;}
 .wf-brand{
   font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);opacity:1;letter-spacing:0.5px;
   border-top:1px solid rgba(255,255,255,0.06);
@@ -266,12 +266,12 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .section-header{text-align:center;margin-bottom:72px;}
 .section-eyebrow{
-  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2.5px;color:var(--label-color);opacity:1;
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:0.5px;color:var(--label-color);opacity:1;
   text-transform:uppercase;margin-bottom:16px;
 }
 .section-title{
   font-family:'Noto Serif KR',serif;
-  font-size:clamp(28px,4vw,44px);font-weight:700;
+  font-size:clamp(28px,4vw,44px);font-weight:700;letter-spacing:-0.2px;
   line-height:1.3;
 }
 .section-title .accent{color:var(--gold);}
@@ -300,7 +300,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .system-card:hover::before{opacity:1;}
 .card-step{
-  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2px;color:var(--label-color);opacity:1;
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:0.5px;color:var(--label-color);opacity:1;
   text-transform:uppercase;margin-bottom:20px;
 }
 .card-num{
@@ -310,7 +310,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .card-title{
   font-family:'Noto Serif KR',serif;
-  font-size:22px;font-weight:700;margin-bottom:12px;color:var(--white);
+  font-size:22px;font-weight:700;letter-spacing:-0.2px;margin-bottom:12px;color:var(--white);
 }
 .card-target{
   font-size:12px;color:var(--gold);
@@ -318,7 +318,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   display:inline-block;padding:4px 12px;border-radius:20px;
   margin-bottom:20px;letter-spacing:0.5px;
 }
-.card-desc{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:32px;}
+.card-desc{font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:32px;letter-spacing:-0.2px;}
 .card-type{
   font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);opacity:1;
   border-top:1px solid rgba(255,255,255,0.06);
@@ -335,7 +335,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   text-align:center;margin-top:56px;
   padding-top:48px;border-top:1px solid rgba(201,169,97,0.1);
 }
-.system-bottom p{color:var(--gray);font-size:15px;margin-bottom:20px;}
+.system-bottom p{color:var(--gray);font-size:16px;margin-bottom:20px;letter-spacing:-0.2px;}
 
 /* ── 대표 신뢰 섹션 ── */
 #trust{
@@ -360,17 +360,17 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   padding:8px 16px;border-radius:4px;
 }
 .trust-content .eyebrow{
-  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2.5px;color:var(--label-color);opacity:1;
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:0.5px;color:var(--label-color);opacity:1;
   text-transform:uppercase;margin-bottom:20px;
 }
 .trust-content h2{
   font-family:'Noto Serif KR',serif;
-  font-size:clamp(26px,3.5vw,40px);font-weight:700;
+  font-size:clamp(26px,3.5vw,40px);font-weight:700;letter-spacing:-0.2px;
   line-height:1.3;margin-bottom:28px;
 }
 .trust-content p{
-  font-size:15px;line-height:1.9;color:var(--gray);
-  margin-bottom:16px;
+  font-size:16px;line-height:1.9;color:var(--gray);
+  margin-bottom:16px;letter-spacing:-0.2px;
 }
 .trust-stats{
   display:grid;grid-template-columns:repeat(2,1fr);gap:20px;
@@ -408,8 +408,8 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   font-family:serif;line-height:1;margin-bottom:16px;
 }
 .review-text{
-  font-size:14px;line-height:1.9;color:var(--gray);
-  margin-bottom:24px;font-style:italic;
+  font-size:16px;line-height:1.9;color:var(--gray);
+  margin-bottom:24px;font-style:italic;letter-spacing:-0.2px;
 }
 .review-author{
   display:flex;align-items:center;gap:12px;
@@ -448,7 +448,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   display:flex;align-items:center;justify-content:space-between;gap:16px;
   padding:24px 28px;text-align:left;
   font-family:'Noto Sans KR',sans-serif;
-  font-size:16px;font-weight:700;color:var(--white);
+  font-size:16px;font-weight:700;color:var(--white);letter-spacing:-0.2px;
   line-height:1.6;transition:color 0.2s;
 }
 .faq-q:hover{color:var(--gold);}
@@ -470,7 +470,7 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .faq-a p{
   padding:0 28px 26px;margin:0;
-  font-size:14.5px;line-height:1.9;color:var(--gray);
+  font-size:16px;line-height:1.9;color:var(--gray);letter-spacing:-0.2px;
 }
 .faq-cta{
   max-width:820px;margin:48px auto 0;text-align:center;
@@ -494,12 +494,12 @@ nav.scrolled{background:rgba(10,22,58,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .cta-inner{position:relative;z-index:2;max-width:700px;margin:0 auto;}
 .cta-inner .eyebrow{
-  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:2.5px;color:var(--label-color);opacity:1;
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:0.5px;color:var(--label-color);opacity:1;
   text-transform:uppercase;margin-bottom:24px;
 }
 .cta-inner h2{
   font-family:'Noto Serif KR',serif;
-  font-size:clamp(28px,4vw,48px);font-weight:900;
+  font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-0.2px;
   line-height:1.25;margin-bottom:20px;
 }
 .cta-inner p{font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:44px;}
@@ -568,9 +568,9 @@ footer{
   display:flex;
   align-items:center;
   gap:6px;
-  background:#0A163A;
-  color:#C9A961;
-  border:1px solid #C9A961;
+  background:#152C5B;
+  color:#D4AF5F;
+  border:1px solid #D4AF5F;
   border-radius:999px;
   padding:12px 20px;
   font-size:14px;
@@ -610,17 +610,17 @@ footer{
   <ul class="nav-menu">
     <li><a href="#hero">비즈빌드</a></li>
     <li class="dropdown">
-      <a href="#system">창업설계전략연구소 ▾</a>
+      <a href="#system">비즈빌드 사업설계전략연구소 ▾</a>
       <div class="dropdown-menu">
-        <a href="stage1.html">1단계 창업설계시스템</a>
-        <a href="stage2.html">2단계 사업설계시스템</a>
-        <a href="stage3.html">3단계 증식설계시스템</a>
+        <a href="stage1.html">1단계 창업판정</a>
+        <a href="stage2.html">2단계 사업설계</a>
+        <a href="stage3.html">3단계 증식설계</a>
       </div>
     </li>
     <li><a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener">마켓플로우</a></li>
     <li><a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener">정책자금</a></li>
     <li><a href="https://blog.naver.com/snsbiz81" target="_blank" rel="noopener">인사이트</a></li>
-    <li><a href="https://changup-quiz.netlify.app" target="_blank" rel="noopener" class="nav-cta nav-cta-blue">무료 진단·상담</a></li>
+    <li><a href="https://quiz.bizbuild.kr" target="_blank" rel="noopener" class="nav-cta nav-cta-blue">무료 진단·상담</a></li>
   </ul>
   <div class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -636,7 +636,7 @@ footer{
       <h1>퇴직금 1억 5천, 준비 없이 시작하면<br><span class="accent">6개월이면 사라집니다.</span></h1>
       <p>저는 창업을 권유하지 않습니다. 망할 창업을 계약 전에 막습니다.<br>3분이면 지금 상태가 가능인지 금지인지 확인됩니다.</p>
       <div class="hero-btns">
-        <a href="https://changup-quiz.netlify.app" target="_blank" class="btn-cta-blue">
+        <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">
           무료 자가진단 시작하기 →
         </a>
       </div>
@@ -674,22 +674,22 @@ footer{
     <div class="vb-grid">
       <div class="vb-card fade-up" style="--vb-color:#1D9E75;">
         <div class="vb-dot"></div>
-        <div class="vb-label">가능</div>
+        <div class="vb-label">진행</div>
         <p class="vb-desc">기본 준비 됨 · 놓친 부분 점검 필요</p>
       </div>
-      <div class="vb-card fade-up" style="--vb-color:#C9A961;transition-delay:0.15s;">
+      <div class="vb-card fade-up" style="--vb-color:#D4AF5F;transition-delay:0.15s;">
         <div class="vb-dot"></div>
         <div class="vb-label">보류</div>
         <p class="vb-desc">조건 미충족 · 수정 후 가능</p>
       </div>
       <div class="vb-card fade-up" style="--vb-color:#E24B4A;transition-delay:0.3s;">
         <div class="vb-dot"></div>
-        <div class="vb-label">금지</div>
+        <div class="vb-label">중단</div>
         <p class="vb-desc">지금 구조로는 · 6개월 내 소진</p>
       </div>
     </div>
     <div class="vb-cta fade-up">
-      <a href="https://changup-quiz.netlify.app" target="_blank" rel="noopener" class="btn-cta-blue">
+      <a href="https://quiz.bizbuild.kr" target="_blank" rel="noopener" class="btn-cta-blue">
         무료 자가진단 시작하기 →
       </a>
       <p class="vb-subtext">판정은 창업설계에서 시작합니다 → <a href="stage1.html">창업설계 자세히 보기</a></p>
@@ -700,7 +700,7 @@ footer{
 <!-- 문제정의: 사업이 망하는 3가지 이유 -->
 <section id="why-fail">
   <div class="section-header fade-up">
-    <div class="section-eyebrow">Why Businesses Fail</div>
+    <div class="section-eyebrow">사업이 망하는 이유</div>
     <h2 class="section-title">사업이 망하는 이유는 <span class="accent">딱 세 가지</span>입니다</h2>
     <p class="wf-intro">
       <span>창업 후 5년 내 폐업률은 60%를 넘습니다. 이유는 놀랍도록 단순합니다.</span>
@@ -713,7 +713,7 @@ footer{
       <div class="wf-num">01</div>
       <h3 class="wf-title">방향을 설계합니다</h3>
       <p class="wf-desc">검증 없이 시작하면 아무리 열심히 해도 제자리입니다.</p>
-      <div class="wf-brand">창업설계전략연구소</div>
+      <div class="wf-brand">비즈빌드 사업설계전략연구소</div>
     </div>
     <div class="wf-card fade-up" style="transition-delay:0.15s">
       <div class="wf-num">02</div>
@@ -733,7 +733,7 @@ footer{
 <!-- 3단계 시스템 -->
 <section id="system">
   <div class="section-header fade-up">
-    <div class="section-eyebrow">BizBuild 3-Stage System</div>
+    <div class="section-eyebrow">비즈빌드 3단계 시스템</div>
     <h2 class="section-title">당신은 지금 <span class="accent">어느 단계</span>입니까?</h2>
     <p class="section-sub">창업 → 사업 → 증식, 단계마다 설계가 다릅니다</p>
   </div>
@@ -741,7 +741,7 @@ footer{
     <div class="system-card fade-up">
       <div class="card-num">1</div>
       <div class="card-step">Stage 01</div>
-      <h3 class="card-title">창업설계시스템</h3>
+      <h3 class="card-title">창업판정</h3>
       <div class="card-target">예비창업자</div>
       <p class="card-desc">퇴사를 앞두고 있다면, 가게를 열기 전에 설계부터. 입지·수익구조·자금까지 검증해, 가능·보류·금지로 결론 냅니다. 감이 아니라 데이터로, 계약 전에.</p>
       <div class="card-type">📦 4주 1:1 창업설계 패키지</div>
@@ -750,7 +750,7 @@ footer{
     <div class="system-card fade-up" style="transition-delay:0.15s">
       <div class="card-num">2</div>
       <div class="card-step">Stage 02</div>
-      <h3 class="card-title">사업설계시스템</h3>
+      <h3 class="card-title">사업설계</h3>
       <div class="card-target">운영 중인 소상공인</div>
       <p class="card-desc">장사는 하는데 손님이 없다면, 문제는 노력이 아니라 구조. 매출구조·고객흐름·마케팅을 다시 설계해, 고객이 들어오는 흐름을 만듭니다.</p>
       <div class="card-type">📈 자영업자·소상공인의 매출 구조를 설계합니다</div>
@@ -759,7 +759,7 @@ footer{
     <div class="system-card fade-up" style="transition-delay:0.3s">
       <div class="card-num">3</div>
       <div class="card-step">Stage 03</div>
-      <h3 class="card-title">증식설계시스템</h3>
+      <h3 class="card-title">증식설계</h3>
       <div class="card-target">다점포·프랜차이즈 준비</div>
       <p class="card-desc">매장 하나는 성공했는데 두 번째가 두렵다면, 필요한 건 시스템. 표준화·교육·자동화·위임을 갖춰, 사장 없이도 돌아가는 확장 구조를 만듭니다.</p>
       <div class="card-type">🏢 다점포·프랜차이즈 확장을 설계합니다</div>
@@ -768,7 +768,7 @@ footer{
   </div>
   <div class="system-bottom fade-up">
     <p>어느 단계인지 모르겠다면?</p>
-    <a href="https://changup-quiz.netlify.app" target="_blank" class="btn-cta-blue">
+    <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">
       무료 창업 자가진단으로 내 단계 확인하기 →
     </a>
   </div>
@@ -781,7 +781,7 @@ footer{
       <img src="images/main.jpg" alt="김건우 대표">
     </div>
     <div class="trust-content fade-up" style="transition-delay:0.2s">
-      <div class="eyebrow">About the Designer</div>
+      <div class="eyebrow">설계자 소개</div>
       <h2>25년째 현장에 있는<br>사람이 설계합니다</h2>
       <p>저는 지금도 가게를 운영합니다.</p>
       <p>경영학을 전공했지만, 진짜 배움은 25년간 현장에서 얻었습니다. 매출이 흔들리던 시기, 사람이 빠져나가던 아침, 고정비 앞에서의 막막함 — 책에는 없는 그 시간들을 직접 통과했습니다.</p>
@@ -811,7 +811,7 @@ footer{
 <!-- 후기 섹션 -->
 <section id="reviews">
   <div class="section-header fade-up">
-    <div class="section-eyebrow">Success Stories</div>
+    <div class="section-eyebrow">성공 사례</div>
     <h2 class="section-title">먼저 설계한 <span class="accent">사람들의 이야기</span></h2>
   </div>
   <div class="reviews-grid">
@@ -918,17 +918,17 @@ footer{
   </div>
   <div class="faq-cta fade-up">
     <p>더 궁금하시면, 말보다 진단이 빠릅니다</p>
-    <a href="https://changup-quiz.netlify.app" target="_blank" rel="noopener" class="btn-cta-blue">무료 자가진단 시작하기 →</a>
+    <a href="https://quiz.bizbuild.kr" target="_blank" rel="noopener" class="btn-cta-blue">무료 자가진단 시작하기 →</a>
   </div>
 </section>
 
 <!-- 최종 CTA -->
 <section id="cta">
   <div class="cta-inner">
-    <div class="eyebrow fade-up">Start Here</div>
+    <div class="eyebrow fade-up">지금 시작하기</div>
     <h2 class="fade-up">고민만 하다,<br>또 1년이 지나갑니다</h2>
     <p class="fade-up">막연한 불안은 진단되지 않으면 사라지지 않습니다.<br>내 사업의 현재 위치를 확인하는 데 딱 3분이면 됩니다.</p>
-    <a href="https://changup-quiz.netlify.app" target="_blank" class="btn-cta-blue fade-up">
+    <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue fade-up">
       무료 창업 자가진단 시작하기 →
     </a>
     <p class="cta-note">무료 · 3분 소요 · 강매 없음</p>
@@ -945,9 +945,9 @@ footer{
     </div>
     <div class="footer-col">
       <h4>시스템</h4>
-      <a href="stage1.html">창업설계시스템</a>
-      <a href="stage2.html">사업설계시스템</a>
-      <a href="stage3.html">증식설계시스템</a>
+      <a href="stage1.html">창업판정</a>
+      <a href="stage2.html">사업설계</a>
+      <a href="stage3.html">증식설계</a>
     </div>
     <div class="footer-col">
       <h4>서비스</h4>
@@ -957,7 +957,7 @@ footer{
     </div>
     <div class="footer-col">
       <h4>상담</h4>
-      <a href="https://changup-quiz.netlify.app" target="_blank">무료 자가진단</a>
+      <a href="https://quiz.bizbuild.kr" target="_blank">무료 자가진단</a>
       <a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener">상담 신청</a>
       <a href="https://blog.naver.com/snsbiz81" target="_blank">네이버 블로그</a>
     </div>
@@ -1026,7 +1026,7 @@ function toggleMenu(){
   menu.style.position='fixed';
   menu.style.top='72px';
   menu.style.left='0';menu.style.right='0';
-  menu.style.background='rgba(10,22,58,0.98)';
+  menu.style.background='rgba(21,44,91,0.98)';
   menu.style.padding='20px';
   menu.style.borderBottom='1px solid rgba(201,169,97,0.2)';
 }
