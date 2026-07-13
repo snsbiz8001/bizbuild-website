@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>1단계 창업판정 — 비즈빌드</title>
-<meta name="description" content="퇴사를 앞두고 있다면, 가게를 열기 전에 설계부터. 입지·수익구조·자금까지, 문 열기 전에 검증하는 4주 창업설계 패키지.">
+<meta name="description" content="퇴사를 앞두고 있다면, 가게를 열기 전에 설계부터. 입지·수익구조·자금까지, 문 열기 전에 검증하는 4주 창업설계 스쿨.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -229,7 +229,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .instructor-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:60px;align-items:center;}
 .inst-photo-wrap{text-align:center;}
 .inst-avatar{width:180px;height:180px;max-width:180px;border-radius:50%;background:var(--navy-mid);border:3px solid rgba(201,169,97,0.3);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:64px;overflow:hidden;}
-.inst-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;}
+.inst-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:50%;}
 .inst-name-tag{display:inline-block;margin-top:20px;font-size:13px;color:var(--gray);background:var(--navy-mid);border:1px solid rgba(201,169,97,0.15);border-radius:100px;padding:6px 18px;}
 .inst-content .eyebrow{justify-content:flex-start;}
 .inst-content h2{font-family:'Noto Serif KR',serif;font-size:clamp(24px,2.5vw,36px);font-weight:700;letter-spacing:-0.2px;line-height:1.4;margin-bottom:20px;}
@@ -298,11 +298,11 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 .footer-brand .brand-logo{margin-bottom:16px;}
 .footer-brand .brand-logo-main{font-size:24px;}
 .footer-brand p{font-size:13px;color:var(--gray);line-height:1.8;}
-.footer-col h4{font-size:13px;font-weight:700;color:var(--white);margin-bottom:16px;letter-spacing:0.5px;}
-.footer-col a{display:block;font-size:13px;color:var(--gray);text-decoration:none;margin-bottom:10px;transition:color 0.2s;}
+.footer-col h4{font-size:15px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:20px;}
+.footer-col a{display:block;font-size:15px;color:#D8DEE8;text-decoration:none;margin-bottom:10px;transition:color 0.2s;}
 .footer-col a:hover{color:var(--gold);}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:24px;}
-.footer-bottom p{font-size:12px;color:var(--gray);opacity:0.5;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:24px;padding-right:180px;}
+.footer-bottom p{font-size:12px;color:var(--gray);opacity:0.5;line-height:1.8;}
 
 /* ── 반응형 ── */
 @media(max-width:960px){
@@ -319,6 +319,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
   .pd-grid{grid-template-columns:1fr;}
   .includes-list{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;}
+  .footer-bottom{padding-right:0;}
   .nav-menu{display:none;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(21,44,91,0.98);padding:20px;border-bottom:1px solid rgba(201,169,97,0.2);}
   .nav-menu.open{display:flex;}
   .hamburger{display:flex;}
@@ -411,15 +412,15 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
       <span class="stage-name">창업판정</span>
     </div>
     <h1 class="fade-up">설계하고 열면 <span class="accent">사업</span>,<br>열고 나서 배우면 <span class="accent">수업</span></h1>
-    <p class="hero-sub fade-up">퇴사를 앞두고 있거나, 창업을 준비 중이라면 — 입지, 수익구조, 자금까지<br>문 열기 전에 검증하는 4주 1:1 창업설계 패키지입니다.</p>
+    <p class="hero-sub fade-up">퇴사를 앞두고 있거나, 창업을 준비 중이라면 — 입지, 수익구조, 자금까지<br>문 열기 전에 검증하는 4주 1:1 창업설계 스쿨입니다.</p>
     <div class="hero-cta-row fade-up">
-      <a href="#cta" class="btn-primary">수강 신청하기 →</a>
+      <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">무료 자가진단 시작하기 →</a>
       <a href="#curriculum" class="btn-outline">커리큘럼 보기</a>
     </div>
     <div class="hero-stats fade-up">
       <div class="hero-stat">
         <div class="num">4주</div>
-        <div class="lbl">1:1 창업설계 패키지</div>
+        <div class="lbl">1:1 창업설계 스쿨</div>
       </div>
       <div class="hero-stat">
         <div class="num">1:1</div>
@@ -430,8 +431,8 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
         <div class="lbl">현역 자영업 강사</div>
       </div>
       <div class="hero-stat">
-        <div class="num">4주</div>
-        <div class="lbl">완결 설계</div>
+        <div class="num">59만</div>
+        <div class="lbl">창업설계 스쿨</div>
       </div>
     </div>
   </div>
@@ -509,7 +510,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
       <div class="overview-text fade-up">
         <h2>창업은 설계가 90%,<br>실행은 10%입니다</h2>
         <p>비즈빌드 1단계 창업판정은 예비창업자가 가장 많이 실수하는 4가지 영역을 4주 동안 단계적으로 설계하는 프로그램입니다.</p>
-        <p>감이 아닌 수치로, 기대가 아닌 검증으로 — 문을 열기 전에 내 사업이 가능한지를 확인합니다.</p>
+        <p>감이 아닌 수치로, 기대가 아닌 검증으로 — 문을 열기 전에 내 사업이 진행 가능한지를 확인합니다.</p>
         <p>4주 설계가 끝날 때, 당신은 실제로 실행 가능한 창업 설계서를 손에 쥐게 됩니다.</p>
       </div>
       <div class="overview-pillars fade-up" style="transition-delay:0.2s">
@@ -556,21 +557,21 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
         <div class="step-num">STEP 1</div>
         <h3>3분 자가진단</h3>
         <div class="step-price">무료</div>
-        <p>지금 상태가 가능·보류·금지인지 즉시 확인</p>
+        <p>지금 상태가 진행·보류·중단인지 즉시 확인</p>
         <div class="step-time">소요 3분</div>
         <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">3분 자가진단 시작하기 →</a>
       </div>
       <div class="roadmap-card fade-up" style="transition-delay:0.15s">
         <div class="step-num">STEP 2</div>
-        <h3>창업 판정 리포트</h3>
+        <h3>창업판정 리포트</h3>
         <div class="step-price">9.9만원</div>
-        <p>가장 위험한 선택 Top 5, 절대 금지 리스트, 현실적 옵션 2~3안</p>
+        <p>가장 위험한 선택 Top 5, 절대 중단 리스트, 현실적 옵션 2~3안</p>
         <div class="step-time">24시간 내 전달</div>
         <div class="step-note">STEP 1 진단 먼저 진행해주세요</div>
       </div>
       <div class="roadmap-card fade-up" style="transition-delay:0.3s">
         <div class="step-num">STEP 3</div>
-        <h3>창업설계 4주 패키지</h3>
+        <h3>창업설계 스쿨</h3>
         <div class="step-price">59만원</div>
         <p>자금계획·손익분석·운영시스템·리스크관리 1:1 진행</p>
         <div class="step-time">4주 진행</div>
@@ -648,7 +649,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <div class="includes-block fade-up">
       <h3>수강에 포함되는 것들</h3>
       <div class="includes-list">
-        <div class="inc-item">4주 1:1 창업설계 패키지 (실시간)</div>
+        <div class="inc-item">4주 1:1 창업설계 스쿨 (실시간)</div>
         <div class="inc-item">수업 녹화본 (수강 종료 후 30일)</div>
         <div class="inc-item">창업 설계 워크북 (PDF)</div>
         <div class="inc-item">입지 분석 체크리스트 템플릿</div>
@@ -689,7 +690,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
   <div class="reviews-inner">
     <div class="eyebrow fade-up" style="justify-content:center;">상담 인사이트</div>
     <h2 class="fade-up">창업 상담 현장에서 가장 많이 만난 3가지</h2>
-    <p class="rev-sub fade-up">25년간 가맹 상담을 하며 반복해서 본 예비창업자의 착각입니다. 창업설계는 이걸 시작 전에 잡습니다.</p>
+    <p class="rev-sub fade-up">25년간 가맹 상담을 하며 반복해서 본 예비창업자의 착각입니다. 창업판정은 이걸 시작 전에 잡습니다.</p>
     <div class="reviews-grid">
       <div class="review-card fade-up">
         <div class="review-author" style="margin-bottom:20px;">
@@ -700,7 +701,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
           </div>
         </div>
         <p class="review-text">아이템부터 정하려다 정작 '어떤 고객의 어떤 문제를 푸는지'를 안 봅니다. 유행 아이템을 좇다 시장이 이미 포화인 걸 뒤늦게 압니다.</p>
-        <p class="review-text" style="color:var(--gold);margin-bottom:0;">→ 창업설계 후: 내 자본·성향·시장에 맞는 아이템을 데이터로 판정합니다. 감이 아니라 '이 아이템이 실행 가능한가'를 숫자로 확인합니다.</p>
+        <p class="review-text" style="color:var(--gold);margin-bottom:0;">→ 창업판정 후: 내 자본·성향·시장에 맞는 아이템을 데이터로 판정합니다. 감이 아니라 '이 아이템이 실행 가능한가'를 숫자로 확인합니다.</p>
       </div>
       <div class="review-card fade-up" style="transition-delay:0.15s">
         <div class="review-author" style="margin-bottom:20px;">
@@ -711,7 +712,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
           </div>
         </div>
         <p class="review-text">유동인구만 보고 계약합니다. 임대료·경쟁 매장·업종 적합성을 따지지 않아, 목은 좋은데 남는 게 없는 자리를 잡습니다.</p>
-        <p class="review-text" style="color:var(--gold);margin-bottom:0;">→ 창업설계 후: 입지·수익구조·경쟁 밀도를 상권 데이터로 검증한 뒤 계약합니다. 계약 전에 '이 자리로 손익이 나오는가'를 봅니다.</p>
+        <p class="review-text" style="color:var(--gold);margin-bottom:0;">→ 창업판정 후: 입지·수익구조·경쟁 밀도를 상권 데이터로 검증한 뒤 계약합니다. 계약 전에 '이 자리로 손익이 나오는가'를 봅니다.</p>
       </div>
       <div class="review-card fade-up" style="transition-delay:0.3s">
         <div class="review-author" style="margin-bottom:20px;">
@@ -722,7 +723,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
           </div>
         </div>
         <p class="review-text">초기 창업비용만 계산하고 운영자금을 빠뜨립니다. 오픈은 했는데 3개월 버틸 현금이 없어 무너집니다.</p>
-        <p class="review-text" style="color:var(--gold);margin-bottom:0;">→ 창업설계 후: 창업비용·운영자금·손익분기점까지 숫자로 설계합니다. '언제부터 흑자인가'를 알고 시작합니다.</p>
+        <p class="review-text" style="color:var(--gold);margin-bottom:0;">→ 창업판정 후: 창업비용·운영자금·손익분기점까지 숫자로 설계합니다. '언제부터 흑자인가'를 알고 시작합니다.</p>
       </div>
     </div>
   </div>
@@ -809,7 +810,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
       </div>
       <div class="faq-item fade-up" style="transition-delay:0.24s">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <span>이미 가오픈을 앞두고 있는데 들어도 되나요?</span>
+          <span>이미 오픈(가오픈)을 앞두고 있는데 들어도 되나요?</span>
           <span class="faq-arrow">▼</span>
         </div>
         <div class="faq-a">
@@ -834,7 +835,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
   <div class="cta-inner">
     <div class="eyebrow fade-up" style="justify-content:center;">지금 시작하기</div>
     <h2 class="fade-up">고민만 하다,<br>또 1년이 지나갑니다</h2>
-    <p class="fade-up">막연한 불안은 설계되지 않으면 사라지지 않습니다.<br>지금 내 창업이 가능한지, 3분 자가진단으로 먼저 확인하세요.</p>
+    <p class="fade-up">막연한 불안은 설계되지 않으면 사라지지 않습니다.<br>지금 내 창업이 진행 가능한지, 3분 자가진단으로 먼저 확인하세요.</p>
     <div class="cta-btns fade-up">
       <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">무료 창업 자가진단 시작하기 →</a>
       <a href="mailto:snsbiz8001@gmail.com" class="btn-outline">수강 문의하기</a>

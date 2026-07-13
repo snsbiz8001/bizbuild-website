@@ -129,7 +129,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .btn-secondary:hover{border-color:var(--gold);background:rgba(201,169,97,0.08);}
 .hero-badges{
-  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;
   margin-top:52px;padding-top:44px;
   border-top:1px solid rgba(201,169,97,0.15);
 }
@@ -335,8 +335,8 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .card-link:hover{gap:12px;}
 .system-bottom{
-  text-align:center;margin-top:56px;
-  padding-top:48px;border-top:1px solid rgba(201,169,97,0.1);
+  text-align:center;margin-top:40px;
+  padding-top:32px;border-top:1px solid rgba(201,169,97,0.1);
 }
 .system-bottom p{color:var(--gray);font-size:16px;margin-bottom:20px;letter-spacing:-0.2px;}
 
@@ -352,6 +352,8 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .trust-photo{position:relative;}
 .trust-photo img{
   width:100%;max-width:360px;
+  aspect-ratio:3/4;
+  object-fit:cover;object-position:center center;
   border-radius:12px;
   border:1px solid rgba(201,169,97,0.2);
 }
@@ -480,7 +482,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   max-width:820px;margin:48px auto 0;text-align:center;
   padding-top:40px;border-top:1px solid rgba(201,169,97,0.12);
 }
-.faq-cta p{font-size:16px;color:var(--gray-light);margin-bottom:20px;}
+.faq-cta p{font-size:16px;color:var(--gray-light);margin-bottom:0;}
 @media(max-width:640px){
   .faq-q{padding:20px 18px;font-size:15px;}
   .faq-a p{padding:0 18px 22px;font-size:14px;}
@@ -536,10 +538,9 @@ footer{
 .footer-bottom{
   border-top:1px solid rgba(255,255,255,0.06);
   padding-top:28px;
-  display:flex;justify-content:space-between;align-items:center;
-  flex-wrap:wrap;gap:12px;
+  padding-right:180px;
 }
-.footer-bottom p{font-size:12px;color:var(--gray);opacity:0.5;}
+.footer-bottom p{font-size:12px;color:var(--gray);opacity:0.5;line-height:1.8;}
 
 /* ── 반응형 ── */
 @media(max-width:900px){
@@ -550,6 +551,7 @@ footer{
   .trust-inner{grid-template-columns:1fr;}
   .reviews-grid{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;}
+  .footer-bottom{padding-right:0;}
   .nav-menu{display:none;}
   .hamburger{display:flex;}
 }
@@ -642,7 +644,7 @@ footer{
       <div class="hero-slogan-ko">당신의 사업을 구축하라, 당신의 미래를 설계하라</div>
       <div class="eyebrow">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</div>
       <h1>퇴직금 1억 5천, 준비 없이 시작하면<br><span class="accent">6개월이면 사라집니다.</span></h1>
-      <p>저는 창업을 권유하지 않습니다. 망할 창업을 계약 전에 막습니다.<br>3분이면 지금 상태가 가능인지 금지인지 확인됩니다.</p>
+      <p>저는 창업을 권유하지 않습니다. 망할 창업을 계약 전에 막습니다.<br>3분이면 지금 시작해도 되는지, 진행인지 중단인지 확인됩니다.</p>
       <div class="hero-btns">
         <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">
           무료 자가진단 시작하기 →
@@ -651,20 +653,16 @@ footer{
       <p class="hero-note">무료 · 3분 · 강매 없음</p>
       <div class="hero-badges">
         <div class="badge-item">
-          <div class="num">25+</div>
+          <div class="num">25년+</div>
           <div class="label">자영업 실전경험</div>
         </div>
         <div class="badge-item">
-          <div class="num">4+</div>
+          <div class="num">4개+</div>
           <div class="label">직영점 운영</div>
         </div>
         <div class="badge-item">
-          <div class="num">FC</div>
-          <div class="label">프랜차이즈 본부 COO</div>
-        </div>
-        <div class="badge-item">
-          <div class="num">★★★</div>
-          <div class="label">사업시스템 설계자</div>
+          <div class="num">FC 본부</div>
+          <div class="label">프랜차이즈 COO·CMO</div>
         </div>
       </div>
     </div>
@@ -700,7 +698,7 @@ footer{
       <a href="https://quiz.bizbuild.kr" target="_blank" rel="noopener" class="btn-cta-blue">
         무료 자가진단 시작하기 →
       </a>
-      <p class="vb-subtext">판정은 창업설계에서 시작합니다 → <a href="stage1.html">창업설계 자세히 보기</a></p>
+      <p class="vb-subtext">판정은 창업판정 단계에서 시작합니다 → <a href="stage1.html">창업판정 자세히 보기</a></p>
     </div>
   </div>
 </section>
@@ -751,8 +749,8 @@ footer{
       <div class="card-step">Stage 01</div>
       <h3 class="card-title">창업판정</h3>
       <div class="card-target">예비창업자</div>
-      <p class="card-desc">퇴사를 앞두고 있다면, 가게를 열기 전에 설계부터. 입지·수익구조·자금까지 검증해, 가능·보류·금지로 결론 냅니다. 감이 아니라 데이터로, 계약 전에.</p>
-      <div class="card-type">📦 4주 1:1 창업설계 패키지</div>
+      <p class="card-desc">퇴사를 앞두고 있다면, 가게를 열기 전에 설계부터. 입지·수익구조·자금까지 검증해, 진행·보류·중단으로 결론 냅니다. 감이 아니라 데이터로, 계약 전에.</p>
+      <div class="card-type">📦 4주 1:1 창업설계 스쿨</div>
       <a href="stage1.html" class="card-link">1단계 자세히 보기 →</a>
     </div>
     <div class="system-card fade-up" style="transition-delay:0.15s">
@@ -872,7 +870,7 @@ footer{
         <span class="faq-icon" aria-hidden="true"></span>
       </button>
       <div class="faq-a">
-        <p>자가진단은 무료입니다. 이후 단계별 과정(창업설계·사업설계·증식설계) 비용은 진단 결과에 따라 필요한 단계가 달라지므로, 진단 후 상담에서 본인에게 맞는 과정만 안내드립니다. 필요 없는 과정을 권하지 않습니다.</p>
+        <p>자가진단은 무료입니다. 이후 단계별 과정(창업판정·사업설계·증식설계) 비용은 진단 결과에 따라 필요한 단계가 달라지므로, 진단 후 상담에서 본인에게 맞는 과정만 안내드립니다. 필요 없는 과정을 권하지 않습니다.</p>
       </div>
     </div>
     <div class="faq-item">
@@ -890,7 +888,7 @@ footer{
         <span class="faq-icon" aria-hidden="true"></span>
       </button>
       <div class="faq-a">
-        <p>늦지 않았습니다. 운영 중이라면 창업설계가 아니라 2단계 사업설계 대상입니다. 매출이 정체됐다면 문제는 노력이 아니라 구조입니다. 매출구조·고객흐름·마케팅을 다시 설계하는 것부터 시작합니다.</p>
+        <p>늦지 않았습니다. 운영 중이라면 1단계 창업판정이 아니라 2단계 사업설계 대상입니다. 매출이 정체됐다면 문제는 노력이 아니라 구조입니다. 매출구조·고객흐름·마케팅을 다시 설계하는 것부터 시작합니다.</p>
       </div>
     </div>
     <div class="faq-item">
@@ -899,7 +897,7 @@ footer{
         <span class="faq-icon" aria-hidden="true"></span>
       </button>
       <div class="faq-a">
-        <p>단계별로 다릅니다. 1단계 창업설계는 라이브 강의, 2단계 사업설계는 영상 강의와 월간 Q&amp;A, 3단계 증식설계는 1:1 밀착 컨설팅으로 진행합니다. 어디에 계시든 참여할 수 있습니다.</p>
+        <p>단계별로 다릅니다. 1단계 창업판정은 라이브 강의, 2단계 사업설계는 영상 강의와 월간 Q&amp;A, 3단계 증식설계는 1:1 밀착 컨설팅으로 진행합니다. 어디에 계시든 참여할 수 있습니다.</p>
       </div>
     </div>
     <div class="faq-item">
@@ -914,7 +912,6 @@ footer{
   </div>
   <div class="faq-cta fade-up">
     <p>더 궁금하시면, 말보다 진단이 빠릅니다</p>
-    <a href="https://quiz.bizbuild.kr" target="_blank" rel="noopener" class="btn-cta-blue">무료 자가진단 시작하기 →</a>
   </div>
 </section>
 
