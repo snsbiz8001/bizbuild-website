@@ -402,6 +402,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   border:1px solid rgba(201,169,97,0.1);
   border-radius:12px;padding:32px;
   transition:border-color 0.3s;
+  display:flex;flex-direction:column;
 }
 .review-card:hover{border-color:rgba(201,169,97,0.3);}
 .review-quote{
@@ -415,6 +416,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .review-author{
   display:flex;align-items:center;gap:12px;
   border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;
+  margin-top:auto;
 }
 .review-highlight{font-size:14px;font-weight:700;color:#E0C078;}
 .review-avatar{
@@ -819,7 +821,6 @@ footer{
   <div class="reviews-grid">
     <div class="review-card fade-up">
       <div class="review-stage">검증된 경험</div>
-      <div class="review-quote">"</div>
       <p class="review-text">직접 매장을 운영하고 프랜차이즈 본부에서 가맹점 운영·마케팅을 총괄했습니다. 이론이 아니라 열고·모으고·늘려본 사람의 관점으로 설계합니다.</p>
       <div class="review-author">
         <div class="review-highlight">25년 현장 경력</div>
@@ -827,7 +828,6 @@ footer{
     </div>
     <div class="review-card fade-up" style="transition-delay:0.15s">
       <div class="review-stage">검증된 방법</div>
-      <div class="review-quote">"</div>
       <p class="review-text">창업판정 → 사업설계 → 증식설계. 시작 가능성부터 확장 구조까지, 감이 아니라 숫자로 판정하는 3단계 시스템으로 접근합니다.</p>
       <div class="review-author">
         <div class="review-highlight">데이터 기반 3단계 설계</div>
@@ -835,7 +835,6 @@ footer{
     </div>
     <div class="review-card fade-up" style="transition-delay:0.3s">
       <div class="review-stage">정직한 시작</div>
-      <div class="review-quote">"</div>
       <p class="review-text">지어낸 후기 대신, 지금 함께할 첫 기수를 모십니다. 초기 수강생일수록 더 밀착해서 함께 설계합니다.</p>
       <div class="review-author">
         <div class="review-highlight">1기 모집 중</div>
