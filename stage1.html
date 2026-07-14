@@ -268,6 +268,29 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .next-period .np-date{font-size:24px;font-weight:700;margin-bottom:8px;}
 .next-period .np-note{font-size:16px;color:var(--gray);}
 
+/* ── 4주 커리큘럼 상세 ── */
+#curriculum-detail{padding:100px 5%;background:var(--navy);}
+.cd-inner{max-width:1100px;margin:0 auto;}
+.cd-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:12px;}
+.cd-inner .cd-sub{text-align:center;color:var(--gray);font-size:16px;margin-bottom:56px;line-height:1.8;}
+.cd-weeks{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.cd-week{background:var(--navy-mid);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:32px;}
+.cd-week-head{border-bottom:1px solid rgba(201,169,97,0.15);padding-bottom:18px;margin-bottom:20px;}
+.cd-week-num{margin-bottom:10px;}
+.cd-week-head h3{font-family:'Noto Serif KR',serif;font-size:22px;font-weight:700;color:var(--white);letter-spacing:-0.2px;margin-bottom:8px;}
+.cd-week-q{font-size:16px;color:var(--gold);}
+.cd-block{margin-bottom:18px;}
+.cd-block:last-child{margin-bottom:0;}
+.cd-block-label{margin-bottom:8px;}
+.cd-block ul{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.cd-block ul li{position:relative;padding-left:16px;font-size:16px;color:var(--gray);line-height:1.7;letter-spacing:-0.2px;}
+.cd-block ul li::before{content:'·';position:absolute;left:3px;color:var(--gold);font-weight:700;}
+.cd-block>p{font-size:16px;color:var(--gray);line-height:1.7;letter-spacing:-0.2px;}
+.cd-verdict-box{margin-top:18px;padding:16px 18px;background:rgba(178,59,59,0.12);border:1px solid rgba(178,59,59,0.5);border-left:4px solid #B23B3B;border-radius:8px;font-size:16px;color:var(--gray-light);line-height:1.7;letter-spacing:-0.2px;}
+.cd-final{margin-top:40px;padding:36px;text-align:center;background:rgba(201,169,97,0.06);border:1px solid rgba(201,169,97,0.2);border-radius:12px;}
+.cd-final-label{margin-bottom:12px;}
+.cd-final-title{font-family:'Noto Serif KR',serif;font-size:28px;font-weight:700;color:var(--gold);letter-spacing:-0.2px;}
+
 /* ── FAQ ── */
 #faq{padding:100px 5%;background:var(--navy-mid);}
 .faq-inner{max-width:760px;margin:0 auto;}
@@ -322,6 +345,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
   .outcomes-grid{grid-template-columns:1fr;}
   .reviews-grid{grid-template-columns:1fr;}
   .pd-grid{grid-template-columns:1fr;}
+  .cd-weeks{grid-template-columns:1fr;}
   .includes-list{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;}
   .footer-bottom{padding-right:0;}
@@ -582,6 +606,123 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4주 커리큘럼 상세 -->
+<section id="curriculum-detail">
+  <div class="cd-inner">
+    <div class="eyebrow fade-up" style="justify-content:center;">4주 커리큘럼 상세</div>
+    <h2 class="fade-up">4주, 이렇게 설계합니다</h2>
+    <p class="cd-sub fade-up">4개 핵심 영역을 매주 하나씩 — 세션 · 과제 · 산출물로 완성합니다</p>
+    <div class="cd-weeks">
+
+      <div class="cd-week fade-up">
+        <div class="cd-week-head">
+          <div class="cd-week-num label-std">1주차</div>
+          <h3>업종 · 입지 분석</h3>
+          <div class="cd-week-q">"무엇을, 어디서 할 것인가"</div>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">세션</div>
+          <ul>
+            <li>내 조건 진단으로 업종 좁히기</li>
+            <li>업종 선택 기준(진입장벽 · 마진 · 난이도 · 트렌드)</li>
+            <li>데이터 기반 입지 검증</li>
+          </ul>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">과제</div>
+          <p>후보 입지 2~3곳 상권 데이터 수집</p>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">산출물</div>
+          <p>업종 확정 + 입지 후보 검증표</p>
+        </div>
+      </div>
+
+      <div class="cd-week fade-up" style="transition-delay:0.1s">
+        <div class="cd-week-head">
+          <div class="cd-week-num label-std">2주차</div>
+          <h3>수익 구조 설계</h3>
+          <div class="cd-week-q">"이 매장이 살아남는가"</div>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">세션</div>
+          <ul>
+            <li>손익분기점 계산</li>
+            <li>객단가 × 회전율로 일매출 추정</li>
+            <li>생존 임계선(원가 · 인건비 · 임대료율)</li>
+            <li>3시나리오</li>
+          </ul>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">과제</div>
+          <p>내 매장 손익 시뮬레이션 작성</p>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">산출물</div>
+          <p>손익 시나리오표</p>
+        </div>
+        <div class="cd-verdict-box">숫자가 생존선을 못 넘으면 여기서 '보류 · 중단' 판정 — 망할 창업을 막는 것이 핵심 역할입니다.</div>
+      </div>
+
+      <div class="cd-week fade-up" style="transition-delay:0.15s">
+        <div class="cd-week-head">
+          <div class="cd-week-num label-std">3주차</div>
+          <h3>자금 계획 수립</h3>
+          <div class="cd-week-q">"얼마가 들고, 어떻게 조달하는가"</div>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">세션</div>
+          <ul>
+            <li>초기 투자비 항목별 산출</li>
+            <li>운영자금 3~6개월</li>
+            <li>정책자금 활용 전략</li>
+            <li>자기자본 vs 차입</li>
+          </ul>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">과제</div>
+          <p>자금 조달 계획 초안</p>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">산출물</div>
+          <p>창업 비용 명세서 + 자금 조달 계획</p>
+        </div>
+      </div>
+
+      <div class="cd-week fade-up" style="transition-delay:0.2s">
+        <div class="cd-week-head">
+          <div class="cd-week-num label-std">4주차</div>
+          <h3>오픈 전 준비 로드맵</h3>
+          <div class="cd-week-q">"실행 순서를 확정한다"</div>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">세션</div>
+          <ul>
+            <li>오픈일 D-day 역산 스케줄</li>
+            <li>항목별 체크리스트</li>
+            <li>초기 고객확보 첫 세팅</li>
+            <li>4주 산출물 통합</li>
+          </ul>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">과제</div>
+          <p>오픈 준비 체크리스트 완성</p>
+        </div>
+        <div class="cd-block">
+          <div class="cd-block-label label-std">산출물</div>
+          <p>오픈 준비 체크리스트 + 창업 실행 계획서(최종 통합본)</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cd-final fade-up">
+      <div class="cd-final-label label-std">4주 뒤 손에 쥐는 것</div>
+      <div class="cd-final-title">창업 실행 계획서 1부</div>
     </div>
   </div>
 </section>
