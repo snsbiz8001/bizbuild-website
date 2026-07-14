@@ -20,9 +20,9 @@
   --white:#FFFFFF;
   --gray:#D8DEE8;
   --gray-light:#E8EBF0;
-  --label-size:14px;
-  --label-weight:700;
-  --label-color:#D4AF5F;
+  --label-size:16px;
+  --label-weight:800;
+  --label-color:#E0BD6E;
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
@@ -81,7 +81,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .fade-up{opacity:0;transform:translateY(28px);transition:all 0.7s ease;}
 .fade-up.visible{opacity:1;transform:none;}
 .eyebrow{font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:0.5px;color:var(--label-color);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:12px;}
-.eyebrow::before{content:'';width:32px;height:1px;background:var(--gold);}
+.label-std{font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);letter-spacing:0.02em;}
 .btn-primary{
   display:inline-block;
   background:var(--gold);color:var(--navy);
@@ -164,21 +164,21 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .verdict-card.v-stop .v-dot{background:#B23B3B;}
 .verdict-card.v-stop .v-label{color:#E56A6A;}
 .verdict-cta{margin-top:56px;text-align:center;}
-.btn-cta-blue{display:inline-block;background:var(--cta-blue);color:var(--white);font-weight:700;font-size:16px;padding:16px 40px;border-radius:8px;transition:all 0.3s;}
+.btn-cta-blue{display:inline-block;background:var(--cta-blue);color:var(--white);font-weight:700;font-size:17px;padding:18px 42px;border-radius:4px;transition:all 0.3s;}
 .btn-cta-blue:hover{filter:brightness(1.1);transform:translateY(-2px);}
-.verdict-note{margin-top:16px;font-size:13px;color:var(--gray);}
+.verdict-note{margin-top:16px;font-size:15px;color:#B8C2D4;}
 
 /* ── 시스템 소개 ── */
 #overview{padding:100px 5%;background:var(--navy);}
 .overview-inner{max-width:1100px;margin:0 auto;}
 .overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:60px;}
 .overview-text h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-0.2px;line-height:1.4;margin-bottom:24px;}
-.overview-text p{font-size:16px;color:var(--gray);line-height:1.9;margin-bottom:18px;letter-spacing:-0.2px;}
+.overview-text p{font-size:16px;color:var(--gray);line-height:1.9;margin-bottom:18px;letter-spacing:-0.2px;word-break:keep-all;}
 .overview-pillars{display:flex;flex-direction:column;gap:16px;}
 .pillar{display:flex;align-items:flex-start;gap:16px;padding:20px 24px;background:var(--navy-mid);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;}
-.pillar .p-num{font-size:11px;letter-spacing:2px;color:var(--gold-dim);margin-top:2px;white-space:nowrap;}
+.pillar .p-num{font-size:15px;font-weight:700;letter-spacing:0.05em;color:#E0C078;opacity:1;margin-top:2px;white-space:nowrap;}
 .pillar h4{font-size:15px;font-weight:700;margin-bottom:4px;}
-.pillar p{font-size:13px;color:var(--gray);line-height:1.7;}
+.pillar p{font-size:15px;color:var(--gray);line-height:1.7;word-break:keep-all;}
 
 /* ── 3단계 로드맵 ── */
 #curriculum{padding:100px 5%;background:var(--navy-mid);}
@@ -186,12 +186,12 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .roadmap-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:56px;line-height:1.4;}
 .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;}
 .roadmap-card{display:flex;flex-direction:column;background:var(--navy);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:36px 28px;text-align:center;}
-.roadmap-card .step-num{display:inline-block;font-size:11px;letter-spacing:2px;color:var(--gold-dim);background:rgba(201,169,97,0.08);border-radius:100px;padding:4px 14px;margin:0 auto 16px;}
+.roadmap-card .step-num{display:inline-block;font-size:15px;font-weight:700;letter-spacing:0.08em;color:#E0C078;opacity:1;background:rgba(201,169,97,0.08);border-radius:100px;padding:4px 14px;margin:0 auto 16px;}
 .roadmap-card h3{font-size:18px;font-weight:700;color:var(--white);margin-bottom:12px;}
 .roadmap-card .step-price{font-size:26px;font-weight:700;color:var(--gold);margin-bottom:16px;}
 .roadmap-card p{font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:16px;flex-grow:1;letter-spacing:-0.2px;}
-.roadmap-card .step-time{font-size:12px;color:var(--gray);margin-bottom:20px;}
-.roadmap-card .step-note{font-size:13px;color:var(--gray);font-style:italic;}
+.roadmap-card .step-time{font-size:15px;color:var(--gray);margin-bottom:20px;}
+.roadmap-card .step-note{font-size:15px;color:var(--gray);font-style:italic;}
 .roadmap-featured{background:var(--navy-mid);border:1.5px solid var(--cta-blue);box-shadow:0 8px 32px rgba(29,78,137,0.25);}
 
 /* ── 대상 ── */
@@ -205,7 +205,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .target-card .t-check{width:32px;height:32px;border-radius:50%;background:rgba(201,169,97,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;}
 .target-card h4{font-size:15px;font-weight:700;margin-bottom:6px;}
 .target-card p{font-size:13px;color:var(--gray);line-height:1.7;}
-.not-for{margin-top:40px;padding:24px 32px;background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);border-radius:8px;font-size:13px;color:var(--gray);text-align:center;}
+.not-for{margin-top:40px;padding:24px 32px;background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);border-radius:8px;font-size:16px;color:#D8DEE8;text-align:center;}
 
 /* ── 성과 및 포함 내용 ── */
 #outcomes{padding:100px 5%;background:linear-gradient(180deg,var(--navy-mid) 0%,var(--navy) 100%);}
@@ -217,18 +217,19 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .outcome-card:hover{border-color:rgba(201,169,97,0.4);transform:translateY(-6px);}
 .outcome-card .o-icon{font-size:36px;margin-bottom:16px;}
 .outcome-card h3{font-size:16px;font-weight:700;margin-bottom:10px;}
-.outcome-card p{font-size:15px;color:var(--gray);line-height:1.9;}
+.outcome-card p{font-size:15px;color:var(--gray);line-height:1.9;word-break:keep-all;}
 .includes-block{margin-top:60px;padding:44px;background:rgba(201,169,97,0.05);border:1px solid rgba(201,169,97,0.15);border-radius:12px;}
 .includes-block h3{font-size:17px;font-weight:700;margin-bottom:24px;text-align:center;}
 .includes-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
-.inc-item{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--gray-light);}
-.inc-item::before{content:'✓';color:var(--gold);font-weight:700;font-size:14px;}
+.inc-item{display:flex;align-items:center;gap:12px;font-size:16px;color:#E8EBF0;}
+.inc-item::before{content:'✓';color:var(--gold);font-weight:700;font-size:16px;}
 
 /* ── 강사 신뢰 ── */
 #instructor{padding:100px 5%;background:var(--navy);}
 .instructor-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:60px;align-items:center;}
 .inst-photo-wrap{text-align:center;}
-.inst-avatar{width:180px;height:180px;border-radius:50%;background:var(--navy-mid);border:3px solid rgba(201,169,97,0.3);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:64px;}
+.inst-avatar{width:180px;height:180px;max-width:180px;border-radius:50%;background:var(--navy-mid);border:3px solid rgba(201,169,97,0.3);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:64px;overflow:hidden;}
+.inst-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:50%;}
 .inst-name-tag{display:inline-block;margin-top:20px;font-size:13px;color:var(--gray);background:var(--navy-mid);border:1px solid rgba(201,169,97,0.15);border-radius:100px;padding:6px 18px;}
 .inst-content .eyebrow{justify-content:flex-start;}
 .inst-content h2{font-family:'Noto Serif KR',serif;font-size:clamp(24px,2.5vw,36px);font-weight:700;letter-spacing:-0.2px;line-height:1.4;margin-bottom:20px;}
@@ -249,8 +250,8 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .review-text{font-size:16px;color:var(--gray-light);line-height:1.9;margin-bottom:24px;letter-spacing:-0.2px;}
 .review-author{display:flex;align-items:center;gap:12px;}
 .review-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy-light);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:var(--gold);flex-shrink:0;}
-.review-name{font-size:13px;font-weight:700;}
-.review-role{font-size:11px;color:var(--gold-dim);margin-top:2px;}
+.review-name{font-size:15px;font-weight:700;color:#E0C078;opacity:1;}
+.review-role{font-size:15px;font-weight:600;color:#E0C078;opacity:1;margin-top:2px;}
 
 /* ── 프로그램 상세 ── */
 #program-details{padding:100px 5%;background:var(--navy);}
@@ -259,13 +260,13 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .pd-inner .pd-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
 .pd-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:40px;}
 .pd-item{padding:28px;background:var(--navy-mid);border:1px solid rgba(255,255,255,0.06);border-radius:10px;}
-.pd-item .pd-label{font-size:11px;letter-spacing:3px;color:var(--gold-dim);margin-bottom:8px;}
+.pd-item .pd-label{font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);letter-spacing:0.02em;margin-bottom:8px;}
 .pd-item .pd-value{font-size:20px;font-weight:700;color:var(--white);}
-.pd-item .pd-note{font-size:13px;color:var(--gray);margin-top:6px;line-height:1.7;}
+.pd-item .pd-note{font-size:16px;color:var(--gray);margin-top:6px;line-height:1.7;}
 .next-period{padding:36px;text-align:center;background:rgba(201,169,97,0.06);border:1px solid rgba(201,169,97,0.2);border-radius:12px;}
-.next-period .np-label{font-size:12px;letter-spacing:3px;color:var(--gold);margin-bottom:12px;}
+.next-period .np-label{font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);letter-spacing:0.02em;margin-bottom:12px;}
 .next-period .np-date{font-size:24px;font-weight:700;margin-bottom:8px;}
-.next-period .np-note{font-size:13px;color:var(--gray);}
+.next-period .np-note{font-size:16px;color:var(--gray);}
 
 /* ── FAQ ── */
 #faq{padding:100px 5%;background:var(--navy-mid);}
