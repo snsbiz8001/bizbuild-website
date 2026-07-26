@@ -228,8 +228,8 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 #instructor{padding:100px 5%;background:var(--navy);}
 .instructor-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:60px;align-items:center;}
 .inst-photo-wrap{text-align:center;}
-.inst-avatar{width:180px;height:180px;max-width:180px;border-radius:50%;background:var(--navy-mid);border:3px solid rgba(201,169,97,0.3);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:64px;overflow:hidden;}
-.inst-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:50%;}
+.inst-avatar{width:180px;height:180px;max-width:180px;flex:0 0 180px;border-radius:50%;background:var(--navy-mid);border:3px solid rgba(201,169,97,0.3);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:64px;overflow:hidden;}
+.inst-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;border-radius:50%;}
 .inst-name-tag{display:inline-block;margin-top:20px;font-size:13px;color:var(--gray);background:var(--navy-mid);border:1px solid rgba(201,169,97,0.15);border-radius:100px;padding:6px 18px;}
 .inst-content .eyebrow{justify-content:flex-start;}
 .inst-content h2{font-family:'Noto Serif KR',serif;font-size:clamp(24px,2.5vw,36px);font-weight:700;letter-spacing:-0.2px;line-height:1.4;margin-bottom:20px;}
@@ -315,7 +315,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;}
 .cta-note{font-size:12px;color:var(--gray);opacity:0.6;letter-spacing:0.5px;}
 .cta-badge{display:inline-flex;align-items:center;gap:14px;background:var(--navy-mid);border:1px solid rgba(201,169,97,0.15);border-radius:100px;padding:10px 22px 10px 10px;margin-bottom:24px;}
-.cta-badge img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:center 20%;border:2px solid rgba(201,169,97,0.3);}
+.cta-badge img{width:48px;height:48px;flex:0 0 48px;border-radius:50%;overflow:hidden;object-fit:cover;object-position:center 15%;display:block;border:2px solid rgba(201,169,97,0.3);}
 .cta-badge-text{text-align:left;}
 .cta-badge-name{font-size:15px;font-weight:700;color:var(--white);}
 .cta-badge-meta{font-size:12px;color:var(--gray);margin-top:2px;}
@@ -481,8 +481,8 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
         <a href="stage3.html">3단계 증식설계</a>
       </div>
     </li>
-    <li><a href="index.html#trust">마켓플로우</a></li>
-    <li><a href="index.html#trust">정책자금</a></li>
+    <li><a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">마켓플로우</a></li>
+    <li><a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">정책자금</a></li>
     <li><a href="index.html#reviews">인사이트</a></li>
     <li><a href="https://quiz.bizbuild.kr" target="_blank" class="nav-cta nav-cta-blue">무료 자가진단</a></li>
   </ul>
@@ -501,7 +501,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
       <span class="stage-dot"></span>
       <span class="stage-name">창업판정</span>
     </div>
-    <h1 class="fade-up">설계하고 열면 <span class="accent">사업</span>,<br>열고 나서 배우면 <span class="accent">수업</span></h1>
+    <h1 class="fade-up"><span class="accent">창업자금</span>을 투자하기 전,<br>시작 가능성부터 <span class="accent">판정</span>합니다</h1>
     <p class="hero-sub fade-up">퇴사를 앞두고 있거나, 창업을 준비 중이라면 — 입지, 수익구조, 자금까지<br>문 열기 전에 검증하는 4주 1:1 창업설계 스쿨입니다.</p>
     <div class="hero-cta-row fade-up">
       <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">창업판정 시작하기 →</a>
@@ -521,8 +521,8 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
         <div class="lbl">현역 자영업 강사</div>
       </div>
       <div class="hero-stat">
-        <div class="num">59만</div>
-        <div class="lbl">창업설계 스쿨</div>
+        <div class="num">3단계</div>
+        <div class="lbl">판정·설계·증식</div>
       </div>
     </div>
   </div>
@@ -587,7 +587,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     </div>
     <div class="verdict-cta fade-up">
       <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">창업판정 시작하기 →</a>
-      <p class="verdict-note">무료 · 10개 질문 · 즉시 결과</p>
+      <p class="verdict-note">무료 · 3분 · 강매 없음</p>
     </div>
   </div>
 </section>
@@ -997,7 +997,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
           <span class="faq-arrow">▼</span>
         </div>
         <div class="faq-a">
-          <div class="faq-a-inner">됩니다. 2주차 '업종 선택 기준' 수업에서 본인 조건에 맞는 업종을 고르는 프레임워크를 배웁니다. 업종 미결정 상태로 입과하셔서 프로그램 내에서 결정하시는 분도 많습니다.</div>
+          <div class="faq-a-inner">됩니다. 1주차 '업종 · 입지 분석' 세션에서 본인 조건에 맞는 업종을 고르는 프레임워크를 배웁니다. 업종 미결정 상태로 입과하셔서 프로그램 내에서 결정하시는 분도 많습니다.</div>
         </div>
       </div>
       <div class="faq-item fade-up" style="transition-delay:0.12s">
@@ -1055,9 +1055,9 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     </div>
     <div class="cta-btns fade-up">
       <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">창업판정 시작하기 →</a>
-      <a href="mailto:grant@bizbuild.kr" class="btn-outline">수강 문의하기</a>
+      <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener" class="btn-outline">상담 문의하기</a>
     </div>
-    <p class="cta-note">무료 · 3분 소요 · 강매 없음</p>
+    <p class="cta-note">무료 · 3분 · 강매 없음</p>
   </div>
 </section>
 
@@ -1071,19 +1071,19 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <div class="footer-col">
       <h4>프로그램</h4>
       <a href="stage1.html">창업판정</a>
-      <a href="#">사업설계</a>
-      <a href="#">증식설계</a>
+      <a href="stage2.html">사업설계</a>
+      <a href="stage3.html">증식설계</a>
     </div>
     <div class="footer-col">
       <h4>서비스</h4>
-      <a href="#">마켓플로우</a>
-      <a href="#">정책자금</a>
-      <a href="#">인사이트</a>
+      <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">마켓플로우</a>
+      <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">정책자금</a>
+      <a href="https://blog.naver.com/snsbiz81" target="_blank" rel="noopener">인사이트</a>
     </div>
     <div class="footer-col">
       <h4>상담</h4>
       <a href="https://quiz.bizbuild.kr" target="_blank">무료 자가진단</a>
-      <a href="#">상담 신청</a>
+      <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">상담 신청</a>
       <a href="https://blog.naver.com/snsbiz81" target="_blank">네이버 블로그</a>
     </div>
   </div>
