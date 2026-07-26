@@ -403,6 +403,67 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
   }
 }
 </style>
+
+<style>
+/* STEP 2·3 카드 보조 CTA — padding·font-size 는 .btn-cta-blue 와 동일 */
+.card-cta{
+  display:block;
+  margin-top:18px;
+  padding:18px 42px;
+  font-family:"Noto Sans KR",sans-serif;
+  font-size:17px;
+  font-weight:700;
+  text-align:center;
+  text-decoration:none;
+  border-radius:6px;
+  transition:background .18s ease,border-color .18s ease;
+}
+/* STEP 2 — 골드 테두리형 (주 CTA인 STEP 1과 위계 구분) */
+.card-cta--report{
+  color:#D4AF5F;
+  border:1px solid rgba(212,175,95,.55);
+  background:transparent;
+}
+.card-cta--report:hover{
+  background:rgba(212,175,95,.10);
+  border-color:#D4AF5F;
+}
+/* STEP 3 — 저채도 테두리형 (가장 낮은 위계) */
+.card-cta--consult{
+  color:#C6D2E6;
+  border:1px solid rgba(198,210,230,.30);
+  background:transparent;
+}
+.card-cta--consult:hover{
+  background:rgba(198,210,230,.08);
+  border-color:rgba(198,210,230,.55);
+}
+.card-cta:focus-visible{
+  outline:3px solid #2E9BD6;
+  outline-offset:3px;
+}
+.card-note{
+  margin-top:10px;
+  font-size:13px;
+  color:#8FA0BC;
+  text-align:center;
+  line-height:1.6;
+}
+/* 카드 하단 정렬 — CTA 를 카드 바닥에 붙인다 */
+.roadmap-card .btn-cta-blue,
+.roadmap-card .card-cta{
+  margin-top:auto;
+}
+/* .roadmap-card p 규칙(font-size:16px·flex-grow:1)이 .card-note 를 덮지 않도록 */
+.roadmap-card p.card-note{
+  font-size:13px;
+  color:#8FA0BC;
+  line-height:1.6;
+  flex-grow:0;
+  margin-top:10px;
+  margin-bottom:0;
+}
+</style>
 </head>
 <body>
 
@@ -551,7 +612,8 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
         <div class="step-price">9.9만원</div>
         <p>가장 위험한 선택 Top 5, 절대 중단 리스트, 현실적 옵션 2~3안</p>
         <div class="step-time">24시간 내 전달</div>
-        <div class="step-note">STEP 1 진단 먼저 진행해주세요</div>
+        <a href="https://bizbuild.kr/judgment.html" class="card-cta card-cta--report">리포트 안내 보기 →</a>
+        <p class="card-note">자가진단 없이 바로 신청하셔도 됩니다</p>
       </div>
       <div class="roadmap-card fade-up" style="transition-delay:0.3s">
         <div class="step-num">STEP 3</div>
@@ -559,7 +621,8 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
         <div class="step-price">59만원</div>
         <p>자금계획·손익분석·운영시스템·리스크관리 1:1 진행</p>
         <div class="step-time">4주 진행</div>
-        <div class="step-note">STEP 1 진단 먼저 진행해주세요</div>
+        <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener" class="card-cta card-cta--consult">상담 신청하기 →</a>
+        <p class="card-note">4주 1:1 과정은 상담 후 진행합니다</p>
       </div>
     </div>
   </div>
