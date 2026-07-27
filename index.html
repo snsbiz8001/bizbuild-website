@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -94,15 +94,10 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   max-width:1200px;width:100%;
   display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
 }
-.hero-text .eyebrow{
-  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:1.5px;color:var(--label-color);opacity:1;
-  text-transform:uppercase;margin-bottom:24px;
-  display:flex;align-items:center;gap:12px;
-}
-.hero-slogan-ko{font-family:'Noto Sans KR',sans-serif;font-size:16px;font-weight:500;color:#D8DEE8;letter-spacing:-0.2px;margin-bottom:10px;}
+.hero-eyebrow-ko{font-family:'Noto Sans KR',sans-serif;font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);letter-spacing:-0.2px;margin-bottom:20px;}
 .hero-text h1{
   font-family:'Noto Serif KR',serif;
-  font-size:clamp(32px,4vw,56px);font-weight:900;
+  font-size:clamp(27px,3vw,44px);font-weight:900;
   line-height:1.15;letter-spacing:-1px;
   margin-bottom:28px;
 }
@@ -110,6 +105,11 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .hero-text p{
   font-size:17px;line-height:1.8;color:var(--gray);
   margin-bottom:44px;max-width:480px;
+}
+.hero-text p.hero-sub{max-width:520px;margin-bottom:14px;}
+.hero-text p.hero-basis{
+  font-size:16px;font-weight:400;line-height:1.6;color:var(--gray);
+  max-width:520px;margin-bottom:36px;
 }
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
 .hero-note{margin-top:14px;font-size:15px;color:#B8C2D4;letter-spacing:.02em;}
@@ -545,6 +545,7 @@ footer{
 /* ── 반응형 ── */
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr;gap:48px;}
+  .hero-text h1{font-size:clamp(30px,5.4vw,44px);}
   .hero-image{max-width:260px;margin:0 auto;order:2;}
   .hero-text{order:1;}
   .system-grid{grid-template-columns:1fr;}
@@ -556,6 +557,8 @@ footer{
   .hamburger{display:flex;}
 }
 @media(max-width:600px){
+  /* H1 3줄 고정 유지 — 3번째 줄이 4줄로 넘어가지 않게 폭에 비례 축소 */
+  .hero-text h1{font-size:clamp(23px,6.9vw,32px);}
   .hero-badges{grid-template-columns:1fr;gap:12px;margin-top:36px;padding-top:28px;}
   .badge-item{text-align:left;}
   .trust-stats{grid-template-columns:1fr 1fr;}
@@ -641,10 +644,10 @@ footer{
   <div class="hero-bg"></div>
   <div class="hero-inner">
     <div class="hero-text fade-up">
-      <div class="hero-slogan-ko">당신의 사업을 구축하라, 당신의 미래를 설계하라</div>
-      <div class="eyebrow">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</div>
-      <h1>퇴직금 1억 5천,<br>준비 없이 시작하면<br><span class="accent">6개월이면 사라집니다.</span></h1>
-      <p>저는 창업을 권유하지 않습니다. 망할 창업을 계약 전에 막습니다.<br>3분이면 지금 시작해도 되는지, 진행인지 중단인지 확인됩니다.</p>
+      <div class="hero-eyebrow-ko">사업은 감이 아니라 설계입니다</div>
+      <h1>퇴직금 <span class="accent">1억 5천</span>,<br>기준 없이 시작하면<br><span class="accent">하루 85만 원</span>씩 사라집니다.</h1>
+      <p class="hero-sub">우리는 무조건 창업을 권하지 않습니다.<br>계약 전에 진행·보류·중단으로 판정합니다.<br>3분이면 지금 시작할지, 조건을 다시 볼지, 멈출지 알 수 있습니다.</p>
+      <p class="hero-basis">6개월 내 철수 기준 직접손실 1억 5,300만 원 ÷ 180일</p>
       <div class="hero-btns">
         <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">
           창업판정 시작하기 →
