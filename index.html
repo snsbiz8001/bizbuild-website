@@ -43,7 +43,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .brand-logo-main{font-family:'Noto Serif KR',serif;font-weight:700;font-size:32px;color:#D4AF5F;letter-spacing:0.2px;}
 .brand-logo-sub{font-family:'Noto Sans KR',sans-serif;font-size:8px;color:#D4AF5F;opacity:0.7;letter-spacing:1.5px;margin-top:3px;white-space:nowrap;}
 /* 헤더(nav) 로고 영역 가독성 강화 — 헤더 한정, 푸터 미영향 */
-.nav-logo .brand-logo-main{color:#E0C078;font-weight:800;opacity:1;}
+.nav-logo .brand-logo-main{color:var(--gold);font-weight:800;opacity:1;}
 .nav-logo .brand-logo-sub{color:#E8EBF0;opacity:1;letter-spacing:1.5px;font-weight:500;}
 .nav-menu{display:flex;gap:36px;list-style:none;align-items:center;}
 .nav-menu a{
@@ -277,8 +277,13 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   font-family:'Noto Serif KR',serif;
   font-size:clamp(28px,4vw,44px);font-weight:700;letter-spacing:-0.2px;
   line-height:1.3;
+  color:var(--white);
 }
 .section-title .accent{color:var(--gold);}
+#why-fail .section-title{
+  color:#FFFFFF;font-weight:800;
+  text-shadow:0 2px 14px rgba(0,0,0,0.45);
+}
 .section-sub{font-size:16px;color:var(--gray);margin-top:16px;line-height:1.7;}
 .system-grid{
   max-width:1200px;margin:0 auto;
@@ -420,7 +425,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;
   margin-top:auto;
 }
-.review-highlight{font-size:14px;font-weight:700;color:#E0C078;}
+.review-highlight{font-size:14px;font-weight:700;color:var(--label-color);}
 .review-avatar{
   width:40px;height:40px;border-radius:50%;
   background:linear-gradient(135deg,var(--gold-dim),var(--gold));
@@ -430,7 +435,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .review-name{font-size:13px;font-weight:700;color:var(--white);}
 .review-role{font-size:11px;color:var(--gold-dim);margin-top:2px;}
 .review-stage{
-  font-size:15px;letter-spacing:2px;color:#E0C078;font-weight:700;opacity:1;
+  font-size:15px;letter-spacing:2px;color:var(--label-color);font-weight:700;opacity:1;
   background:rgba(201,169,97,0.1);
   padding:3px 10px;border-radius:20px;
   margin-bottom:16px;display:inline-block;
@@ -500,7 +505,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .cta-inner{position:relative;z-index:2;max-width:700px;margin:0 auto;}
 .cta-inner .eyebrow{
-  font-size:17px;font-weight:700;letter-spacing:0.5px;color:#E0C078;opacity:1;
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:0.5px;color:var(--label-color);opacity:1;
   text-transform:uppercase;margin-bottom:24px;
 }
 .cta-inner h2{
