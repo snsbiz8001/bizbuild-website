@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>환불 규정 | 비즈빌드</title>
+<meta name="description" content="비즈빌드 창업판정 리포트·창업설계 스쿨 환불 규정 안내">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --navy:#152C5B;
+  --navy-mid:#0E1F45;
+  --navy-light:#1E3A6E;
+  --gold:#D4AF5F;
+  --gold-light:#E8CB82;
+  --gold-dim:#8B6F3A;
+  --cta-blue:#2E9BD6;
+  --white:#FFFFFF;
+  --gray:#D8DEE8;
+  --gray-light:#E8EBF0;
+  --label-size:16px;
+  --label-weight:800;
+  --label-color:#E0BD6E;
+  /* refund 전용 추가 토큰 — 리터럴 하드코딩 금지 조건 충족용 */
+  --card-bg:#20345F;
+  --card-border:rgba(201,169,97,0.28);
+  --card-border-strong:rgba(201,169,97,0.5);
+  --cta-blue-hover:#245ba3;
+  --kakao-bg:#FEE500;
+  --kakao-bg-hover:#F5DA00;
+  --kakao-fg:#3C1E1E;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
+
+/* ── 네비게이션 ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(21,44,91,0.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(201,169,97,0.2);
+  padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;
+  transition:all 0.3s;
+}
+nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4);}
+.brand-logo{display:inline-flex;flex-direction:column;line-height:1;text-decoration:none;}
+.brand-logo-main{font-family:'Noto Serif KR',serif;font-weight:700;font-size:27px;color:var(--gold);letter-spacing:0.2px;}
+.brand-logo-sub{font-family:'Noto Sans KR',sans-serif;font-size:8px;color:var(--gold);opacity:0.7;letter-spacing:1.5px;margin-top:3px;white-space:nowrap;}
+/* 헤더(nav) 로고 영역 가독성 강화 — 헤더 한정, 푸터 미영향 */
+.nav-logo .brand-logo-main{color:var(--gold);font-weight:800;opacity:1;}
+.nav-logo .brand-logo-sub{color:var(--gray-light);opacity:1;letter-spacing:1.5px;font-weight:500;}
+.nav-menu{display:flex;gap:36px;list-style:none;align-items:center;}
+.nav-menu a{
+  color:var(--gray-light);font-size:14px;font-weight:500;
+  text-decoration:none;letter-spacing:0.5px;
+  transition:color 0.2s;position:relative;
+}
+.nav-menu a:hover{color:var(--gold);}
+.nav-menu .dropdown{position:relative;}
+.nav-menu .dropdown-menu{
+  display:none;position:absolute;top:100%;left:0;
+  background:var(--navy-mid);border:1px solid rgba(201,169,97,0.3);
+  border-radius:8px;padding:8px 0;min-width:200px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.4);margin-top:8px;
+}
+.nav-menu .dropdown.open .dropdown-menu{display:block;}
+.nav-menu .dropdown-menu a{
+  display:block;padding:10px 20px;font-size:13px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.nav-menu .dropdown-menu a:last-child{border-bottom:none;}
+.nav-cta{
+  background:var(--gold);color:var(--navy)!important;
+  padding:10px 22px!important;border-radius:4px;
+  font-weight:700!important;font-size:13px!important;
+  transition:background 0.2s!important;
+}
+.nav-cta:hover{background:var(--gold-light)!important;color:var(--navy)!important;}
+.nav-cta-blue{background:var(--cta-blue)!important;color:var(--white)!important;}
+.nav-cta-blue:hover{background:var(--cta-blue-hover)!important;color:var(--white)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:24px;height:2px;background:var(--white);border-radius:2px;}
+
+/* ── 공통 유틸 ── */
+.fade-up{opacity:0;transform:translateY(28px);transition:all 0.7s ease;}
+.fade-up.visible{opacity:1;transform:none;}
+.eyebrow{font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:0.5px;color:var(--label-color);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.label-std{font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);letter-spacing:0.02em;}
+
+/* ── 페이지 헤더 ── */
+#refund-hero{
+  padding:160px 5% 60px;
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);
+  position:relative;overflow:hidden;
+}
+.refund-hero-radial{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 30% 40%,rgba(201,169,97,0.07) 0%,transparent 70%);}
+.refund-hero-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;}
+.refund-hero-inner h1{
+  font-family:'Noto Serif KR',serif;
+  font-size:clamp(32px,4.4vw,52px);font-weight:900;letter-spacing:-0.2px;
+  line-height:1.25;margin-bottom:20px;color:var(--white);
+}
+.refund-hero-inner .refund-sub{
+  font-size:18px;line-height:1.8;color:var(--gray);
+  letter-spacing:-0.2px;margin-bottom:24px;
+}
+.refund-revised{
+  display:inline-block;
+  font-size:16px;font-weight:700;color:var(--label-color);
+  background:rgba(201,169,97,0.08);
+  border:1px solid var(--card-border);
+  border-radius:100px;padding:8px 18px;letter-spacing:0.02em;
+}
+
+/* ── 본문 ── */
+#refund-body{padding:20px 5% 110px;background:var(--navy);}
+.refund-wrap{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:28px;}
+.refund-card{
+  background:var(--card-bg);
+  border:1.5px solid var(--card-border);
+  border-radius:12px;
+  padding:44px 40px;
+}
+.refund-card--primary{border-color:var(--card-border-strong);}
+.refund-card h2{
+  font-family:'Noto Serif KR',serif;
+  font-size:clamp(24px,3vw,34px);font-weight:700;letter-spacing:-0.2px;
+  line-height:1.35;color:var(--white);margin-bottom:14px;
+}
+.refund-card--primary h2{font-size:clamp(28px,3.6vw,42px);}
+.refund-card > p{
+  font-size:17px;line-height:1.9;color:var(--gray);
+  letter-spacing:-0.2px;margin-bottom:24px;word-break:keep-all;
+}
+.refund-card .label-std{display:block;margin-bottom:14px;}
+
+/* 목록 — 표 대신 ul/li */
+.refund-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:28px;}
+.refund-list:last-child{margin-bottom:0;}
+.refund-list li{
+  position:relative;padding-left:22px;
+  font-size:17px;line-height:1.9;color:var(--gray);
+  letter-spacing:-0.2px;word-break:keep-all;
+}
+.refund-list li::before{
+  content:'';position:absolute;left:0;top:14px;
+  width:7px;height:7px;border-radius:50%;
+  background:var(--gold);
+}
+.refund-list li strong{color:var(--white);font-weight:700;}
+
+/* 환불 라벨 */
+.refund-badge{
+  display:inline-block;
+  font-size:16px;font-weight:700;letter-spacing:0.02em;
+  border:1.5px solid currentColor;border-radius:100px;
+  padding:2px 12px;margin-right:8px;
+  background:transparent;white-space:nowrap;
+}
+.refund-badge--full{color:var(--cta-blue);}
+.refund-badge--none{color:var(--gray-light);}
+
+/* 하위 블록 (2-A / 2-B) */
+.refund-sub-block{
+  border-top:1px solid rgba(255,255,255,0.08);
+  padding-top:28px;margin-top:28px;
+}
+.refund-sub-block:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+.refund-sub-block > summary{
+  list-style:none;cursor:pointer;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+  margin-bottom:20px;
+}
+.refund-sub-block > summary::-webkit-details-marker{display:none;}
+.refund-sub-block h3{
+  font-family:'Noto Serif KR',serif;
+  font-size:22px;font-weight:700;color:var(--white);letter-spacing:-0.2px;
+}
+.refund-price{
+  font-size:17px;font-weight:700;color:var(--gold);letter-spacing:0.02em;
+}
+.refund-sub-block > summary:hover h3{color:var(--gold);}
+
+/* 사업자 정보 */
+.refund-info{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.refund-info li{
+  font-size:17px;line-height:1.8;color:var(--gray);letter-spacing:-0.2px;
+  display:flex;gap:14px;flex-wrap:wrap;
+}
+.refund-info .info-key{
+  min-width:132px;font-weight:700;color:var(--label-color);
+}
+.refund-info a{color:var(--gold);text-decoration:underline;transition:color 0.2s;}
+.refund-info a:hover{color:var(--gold-light);}
+
+.refund-note{
+  font-size:16px;line-height:1.9;color:var(--gray);
+  letter-spacing:-0.2px;margin-top:24px;
+  padding:20px 24px;
+  background:rgba(255,255,255,0.03);
+  border:1px dashed rgba(255,255,255,0.12);
+  border-radius:8px;word-break:keep-all;
+}
+.refund-note a{color:var(--gold);text-decoration:underline;transition:color 0.2s;}
+.refund-note a:hover{color:var(--gold-light);}
+
+/* ── 푸터 ── */
+footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid rgba(201,169,97,0.1);}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:48px;}
+.footer-brand .brand-logo{margin-bottom:16px;}
+.footer-brand .brand-logo-main{font-size:24px;}
+.footer-brand p{font-size:15px;color:var(--gray);line-height:1.9;}
+.footer-col h4{font-size:17px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:22px;}
+.footer-col a{display:block;font-size:16px;color:var(--gray);text-decoration:none;margin-bottom:14px;transition:color 0.2s;}
+.footer-col a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:24px;padding-right:180px;}
+.footer-bottom p{font-size:12px;color:var(--gray);opacity:0.5;line-height:1.8;}
+
+/* ── 반응형 ── */
+@media(max-width:768px){
+  #refund-hero{padding:120px 5% 48px;}
+  .refund-card{padding:32px 24px;}
+  .footer-inner{grid-template-columns:1fr 1fr;}
+  .footer-bottom{padding-right:0;}
+  .nav-menu{display:none;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(21,44,91,0.98);padding:20px;border-bottom:1px solid rgba(201,169,97,0.2);}
+  .nav-menu.open{display:flex;}
+  .hamburger{display:flex;}
+  .refund-info .info-key{min-width:100%;}
+}
+@media(max-width:480px){
+  .footer-inner{grid-template-columns:1fr;}
+}
+
+/* ── 카톡 상담 플로팅 버튼 ── */
+.kakao-float-btn{
+  position:fixed;
+  bottom:24px;
+  right:24px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  background:var(--kakao-bg);
+  color:var(--kakao-fg);
+  border:none;
+  border-radius:999px;
+  padding:12px 20px;
+  font-size:15px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 4px 14px rgba(0,0,0,0.3);
+  transition:transform 0.2s ease,background 0.2s ease,box-shadow 0.2s ease;
+}
+.kakao-float-btn:hover{
+  background:var(--kakao-bg-hover);
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(0,0,0,0.35);
+}
+.kakao-float-icon svg{display:block;fill:currentColor;}
+.kakao-float-icon{
+  font-size:16px;
+  line-height:1;
+}
+@media(max-width:480px){
+  .kakao-float-btn{
+    bottom:16px;
+    right:16px;
+    padding:9px 14px;
+    font-size:12px;
+    gap:4px;
+  }
+  .kakao-float-icon{
+    font-size:13px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- 네비게이션 -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <a href="index.html" class="brand-logo"><span class="brand-logo-main">BizBuild</span><span class="brand-logo-sub">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</span></a>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="dropdown">
+      <a href="#">비즈빌드 사업설계전략연구소 ▾</a>
+      <div class="dropdown-menu">
+        <a href="stage1.html">1단계 창업판정</a>
+        <a href="stage2.html">2단계 사업설계</a>
+        <a href="stage3.html">3단계 증식설계</a>
+      </div>
+    </li>
+    <li><a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">마켓플로우</a></li>
+    <li><a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">정책자금</a></li>
+    <li><a href="https://blog.naver.com/snsbiz81" target="_blank" rel="noopener">인사이트</a></li>
+    <li><a href="https://quiz.bizbuild.kr" target="_blank" rel="noopener" class="nav-cta nav-cta-blue">무료 자가진단</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- 1) 페이지 헤더 -->
+<section id="refund-hero">
+  <div class="refund-hero-radial"></div>
+  <div class="refund-hero-inner">
+    <div class="eyebrow fade-up">REFUND POLICY</div>
+    <h1 class="fade-up">환불 규정</h1>
+    <p class="refund-sub fade-up">결제 전 반드시 확인해 주십시오.</p>
+    <div class="refund-revised fade-up">최종 개정 2026-07-28</div>
+  </div>
+</section>
+
+<!-- 본문 -->
+<section id="refund-body">
+  <div class="refund-wrap">
+
+    <!-- 2) 섹션 1 — 공통 환불 원칙 -->
+    <div class="refund-card refund-card--primary fade-up">
+      <span class="label-std">SECTION 01</span>
+      <h2>공통 환불 원칙</h2>
+      <p>아래 원칙은 비즈빌드가 제공하는 모든 유료 상품에 공통으로 적용됩니다. 상품별 세부 기준이 공통 원칙과 다를 경우, 고객에게 더 유리한 쪽을 적용합니다.</p>
+      <ul class="refund-list">
+        <li><span class="refund-badge refund-badge--full">전액 환불</span> 결제일로부터 <strong>7일 이내</strong>이고 서비스 제공이 시작되지 않았다면, 사유를 묻지 않고 전액 환불해 드립니다.</li>
+        <li>서비스 제공이 시작된 뒤에는 <strong>진행된 부분에 해당하는 금액을 공제</strong>한 뒤 환불합니다. 공제 기준은 아래 섹션 2의 상품별 기준을 따릅니다.</li>
+        <li>환불은 <strong>결제하신 수단으로 되돌려 드리는 것을 원칙</strong>으로 하며, 환불 신청이 접수된 날부터 <strong>영업일 기준 3일 이내</strong>에 처리합니다.</li>
+        <li>신용카드 결제는 카드사 승인 취소 절차가 필요하므로, 실제 반영까지 <strong>카드사 정책에 따라 추가 시일</strong>이 소요될 수 있습니다.</li>
+        <li>비즈빌드의 사정(일정 취소·담당자 변경 불가 등)으로 서비스를 제공할 수 없게 된 경우에는 <strong>진행 여부와 무관하게 잔여 금액을 전액 환불</strong>합니다.</li>
+        <li>본 규정에 명시되지 않은 사항은 <strong>「전자상거래 등에서의 소비자보호에 관한 법률」과 「콘텐츠 이용자 보호지침」</strong>을 따릅니다.</li>
+      </ul>
+      <span class="label-std">환불 신청 방법</span>
+      <ul class="refund-list">
+        <li>카카오톡 상담 채널로 신청 → <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">pf.kakao.com/_egHPX/chat</a></li>
+        <li>이메일로 신청 → <a href="mailto:grant@bizbuild.kr">grant@bizbuild.kr</a></li>
+        <li>신청 시 <strong>결제자 성함 · 결제일 · 상품명 · 환불 사유</strong>를 함께 알려주시면 처리가 빠릅니다.</li>
+      </ul>
+    </div>
+
+    <!-- 3) 섹션 2 — 상품별 세부 기준 (기본 펼침) -->
+    <div class="refund-card fade-up">
+      <span class="label-std">SECTION 02</span>
+      <h2>상품별 세부 기준</h2>
+      <p>상품의 성격이 다르므로 공제 기준도 다릅니다. 결제하신 상품에 해당하는 항목을 확인해 주십시오.</p>
+
+      <details class="refund-sub-block" open>
+        <summary>
+          <h3>2-A. 창업판정 리포트</h3>
+          <span class="refund-price">99,000원</span>
+        </summary>
+        <p>고객이 제출한 자료를 바탕으로 개별 제작되는 <strong>주문제작형 디지털 콘텐츠</strong>입니다. 제작 착수 이후에는 재판매가 불가능하므로 아래 기준을 적용합니다.</p>
+        <ul class="refund-list">
+          <li><span class="refund-badge refund-badge--full">전액 환불</span> 결제 후 <strong>리포트 작성에 착수하기 전</strong>까지.</li>
+          <li>작성 착수 이후 ~ 전달 전: 결제 금액의 <strong>50%</strong>를 환불합니다.</li>
+          <li><span class="refund-badge refund-badge--none">환불 불가</span> 리포트가 전달되어 <strong>열람 또는 다운로드가 완료된 이후</strong>.</li>
+          <li>다만 <strong>결제한 상품과 다른 내용이 전달</strong>되었거나 리포트에 중대한 하자가 있는 경우에는, 전달 이후라도 전액 환불합니다.</li>
+          <li>작성 착수 시점은 담당자가 자료 검토를 시작한 시각을 기준으로 하며, 착수 시 고객에게 안내드립니다.</li>
+        </ul>
+      </details>
+
+      <details class="refund-sub-block" open>
+        <summary>
+          <h3>2-B. 창업설계 스쿨</h3>
+          <span class="refund-price">590,000원</span>
+        </summary>
+        <p>4주 1:1로 진행되는 과정입니다. 총 4회차를 기준으로, <strong>진행된 회차만큼 공제</strong>한 뒤 환불합니다.</p>
+        <ul class="refund-list">
+          <li><span class="refund-badge refund-badge--full">전액 환불</span> <strong>1회차 세션이 시작되기 전</strong>까지.</li>
+          <li>1회차 종료 후 ~ 2회차 종료 전 (총 과정의 1/3 미만 경과): 결제 금액의 <strong>2/3</strong>를 환불합니다.</li>
+          <li>2회차 종료 후 ~ 3회차 종료 전 (총 과정의 1/2 미만 경과): 결제 금액의 <strong>1/2</strong>를 환불합니다.</li>
+          <li><span class="refund-badge refund-badge--none">환불 불가</span> <strong>총 과정의 1/2을 초과해 진행된 이후</strong>.</li>
+          <li>워크북·템플릿·스프레드시트 등 <strong>디지털 자료를 이미 내려받으신 경우</strong>, 해당 자료의 상당액을 환불액에서 공제할 수 있습니다.</li>
+          <li>고객 사정으로 세션에 불참한 회차도 <strong>진행된 회차로 산정</strong>합니다. 다만 사전에 협의된 일정 변경은 진행 회차로 보지 않습니다.</li>
+        </ul>
+      </details>
+
+      <p class="refund-note">※ 무료 자가진단은 결제가 발생하지 않으므로 환불 대상이 아닙니다. 결제 여부가 불분명하시면 <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">카카오톡 상담 채널</a>로 문의해 주십시오.</p>
+    </div>
+
+    <!-- 4) 섹션 3 — 사업자 정보 -->
+    <div class="refund-card fade-up">
+      <span class="label-std">SECTION 03</span>
+      <h2>사업자 정보</h2>
+      <p>본 환불 규정의 이행 주체이자 결제 대금의 수취인입니다.</p>
+      <ul class="refund-info">
+        <li><span class="info-key">상호</span><span>비즈빌드</span></li>
+        <li><span class="info-key">대표자</span><span>김건우</span></li>
+        <li><span class="info-key">사업자등록번호</span><span>557-13-01131</span></li>
+        <li><span class="info-key">이메일</span><span><a href="mailto:grant@bizbuild.kr">grant@bizbuild.kr</a></span></li>
+        <li><span class="info-key">상담 채널</span><span><a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">카카오톡 상담 바로가기</a></span></li>
+        <li><span class="info-key">웹사이트</span><span><a href="index.html">bizbuild.kr</a></span></li>
+      </ul>
+      <p class="refund-note">환불 처리 과정에서 분쟁이 발생한 경우, 소비자기본법에 따른 소비자분쟁조정위원회의 조정을 신청하실 수 있습니다.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- 푸터 -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand-logo"><span class="brand-logo-main">BizBuild</span><span class="brand-logo-sub">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</span></div>
+      <p>창업을 판정하고, 사업을 설계하며,<br>지속 가능한 성장을 설계하는 비즈니스 시스템</p>
+    </div>
+    <div class="footer-col">
+      <h4>프로그램</h4>
+      <a href="stage1.html">창업판정</a>
+      <a href="stage2.html">사업설계</a>
+      <a href="stage3.html">증식설계</a>
+    </div>
+    <div class="footer-col">
+      <h4>서비스</h4>
+      <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">마켓플로우</a>
+      <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">정책자금</a>
+      <a href="https://blog.naver.com/snsbiz81" target="_blank" rel="noopener">인사이트</a>
+    </div>
+    <div class="footer-col">
+      <h4>상담</h4>
+      <a href="https://quiz.bizbuild.kr" target="_blank">무료 자가진단</a>
+      <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">상담 신청</a>
+      <a href="https://blog.naver.com/snsbiz81" target="_blank">네이버 블로그</a>
+      <a href="refund.html">환불 규정</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 BizBuild. All rights reserved. | 상호: 비즈빌드 | 사업자등록번호: 557-13-01131 | 대표: 김건우</p>
+    <p>bizbuild.kr | grant@bizbuild.kr</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+});
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.08});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+document.querySelectorAll('.nav-menu .dropdown > a').forEach(function(toggle){
+  toggle.addEventListener('click',function(e){
+    e.preventDefault();
+    toggle.parentElement.classList.toggle('open');
+  });
+});
+document.addEventListener('click',function(e){
+  document.querySelectorAll('.nav-menu .dropdown.open').forEach(function(dd){
+    if(!dd.contains(e.target))dd.classList.remove('open');
+  });
+});
+function toggleMenu(){document.getElementById('navMenu').classList.toggle('open');}
+</script>
+<a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener" class="kakao-float-btn" aria-label="카카오톡 상담 채널로 이동">
+  <span class="kakao-float-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="1.1em" height="1.1em" fill="currentColor" role="img" aria-hidden="true"><path d="M12 3.2C6.6 3.2 2.2 6.7 2.2 11c0 2.75 1.85 5.17 4.66 6.57-.21.73-.75 2.6-.86 3.04-.13.55.2.54.42.4.17-.11 2.7-1.83 3.8-2.58.57.08 1.16.12 1.76.12 5.4 0 9.8-3.5 9.8-7.55S17.4 3.2 12 3.2z"/></svg></span>
+  <span>카톡 상담</span>
+</a>
+</body>
+</html>
