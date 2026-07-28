@@ -40,10 +40,10 @@ nav{
 }
 nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4);}
 .brand-logo{display:inline-flex;flex-direction:column;line-height:1;text-decoration:none;}
-.brand-logo-main{font-family:'Noto Serif KR',serif;font-weight:700;font-size:27px;color:#D4AF5F;letter-spacing:0.2px;}
-.brand-logo-sub{font-family:'Noto Sans KR',sans-serif;font-size:8px;color:#D4AF5F;opacity:0.7;letter-spacing:1.5px;margin-top:3px;white-space:nowrap;}
+.brand-logo-main{font-family:'Noto Serif KR',serif;font-weight:700;font-size:27px;color:var(--gold);letter-spacing:0.2px;}
+.brand-logo-sub{font-family:'Noto Sans KR',sans-serif;font-size:8px;color:var(--gold);opacity:0.7;letter-spacing:1.5px;margin-top:3px;white-space:nowrap;}
 /* 헤더(nav) 로고 영역 가독성 강화 — 헤더 한정, 푸터 미영향 */
-.nav-logo .brand-logo-main{color:#E0C078;font-weight:800;opacity:1;}
+.nav-logo .brand-logo-main{color:var(--gold);font-weight:800;opacity:1;}
 .nav-logo .brand-logo-sub{color:#E8EBF0;opacity:1;letter-spacing:1.5px;font-weight:500;}
 .nav-menu{display:flex;gap:36px;list-style:none;align-items:center;}
 .nav-menu a{
@@ -112,12 +112,12 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .hero-inner{position:relative;z-index:2;max-width:880px;width:100%;text-align:center;}
 .hero-stage-badge{
   display:inline-flex;align-items:center;gap:12px;
-  background:transparent;border:1.5px solid #D4AF5F;
+  background:transparent;border:1.5px solid var(--gold);
   border-radius:30px;padding:10px 22px;margin-bottom:36px;
 }
-.hero-stage-badge .stage-num{font-size:14px !important;letter-spacing:0.15em;color:#E0C078 !important;font-weight:700 !important;opacity:1 !important;}
-.hero-stage-badge .stage-dot{width:5px;height:5px;background:#D4AF5F;border-radius:50%;}
-.hero-stage-badge .stage-name{font-size:17px !important;color:#D4AF5F !important;letter-spacing:1px;font-weight:700 !important;opacity:1 !important;}
+.hero-stage-badge .stage-num{font-size:14px !important;letter-spacing:0.15em;color:var(--label-color) !important;font-weight:700 !important;opacity:1 !important;}
+.hero-stage-badge .stage-dot{width:5px;height:5px;background:var(--gold);border-radius:50%;}
+.hero-stage-badge .stage-name{font-size:17px !important;color:var(--gold) !important;letter-spacing:1px;font-weight:700 !important;opacity:1 !important;}
 .hero-inner h1{
   font-family:'Noto Serif KR',serif;
   font-size:clamp(36px,5vw,60px);font-weight:900;letter-spacing:-0.2px;
@@ -176,7 +176,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .overview-text p{font-size:16px;color:var(--gray);line-height:1.9;margin-bottom:18px;letter-spacing:-0.2px;word-break:keep-all;}
 .overview-pillars{display:flex;flex-direction:column;gap:16px;}
 .pillar{display:flex;align-items:flex-start;gap:16px;padding:20px 24px;background:var(--navy-mid);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;}
-.pillar .p-num{font-size:15px;font-weight:700;letter-spacing:0.05em;color:#E0C078;opacity:1;margin-top:2px;white-space:nowrap;}
+.pillar .p-num{font-size:15px;font-weight:700;letter-spacing:0.05em;color:var(--label-color);opacity:1;margin-top:2px;white-space:nowrap;}
 .pillar h4{font-size:15px;font-weight:700;margin-bottom:4px;}
 .pillar p{font-size:15px;color:var(--gray);line-height:1.7;word-break:keep-all;}
 
@@ -186,7 +186,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .roadmap-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:56px;line-height:1.4;}
 .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;}
 .roadmap-card{display:flex;flex-direction:column;background:var(--navy);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:36px 28px;text-align:center;}
-.roadmap-card .step-num{display:inline-block;font-size:15px;font-weight:700;letter-spacing:0.08em;color:#E0C078;opacity:1;background:rgba(201,169,97,0.08);border-radius:100px;padding:4px 14px;margin:0 auto 16px;}
+.roadmap-card .step-num{display:inline-block;font-size:15px;font-weight:700;letter-spacing:0.08em;color:var(--label-color);opacity:1;background:rgba(201,169,97,0.08);border-radius:100px;padding:4px 14px;margin:0 auto 16px;}
 .roadmap-card h3{font-size:18px;font-weight:700;color:var(--white);margin-bottom:12px;}
 .roadmap-card .step-price{font-size:26px;font-weight:700;color:var(--gold);margin-bottom:16px;}
 .roadmap-card p{font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:16px;flex-grow:1;letter-spacing:-0.2px;}
@@ -250,8 +250,8 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .review-text{font-size:16px;color:var(--gray-light);line-height:1.9;margin-bottom:24px;letter-spacing:-0.2px;}
 .review-author{display:flex;align-items:center;gap:12px;}
 .review-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy-light);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:var(--gold);flex-shrink:0;}
-.review-name{font-size:15px;font-weight:700;color:#E0C078;opacity:1;}
-.review-role{font-size:15px;font-weight:600;color:#E0C078;opacity:1;margin-top:2px;}
+.review-name{font-size:15px;font-weight:700;color:var(--label-color);opacity:1;}
+.review-role{font-size:15px;font-weight:600;color:var(--label-color);opacity:1;margin-top:2px;}
 
 /* ── 프로그램 상세 ── */
 #program-details{padding:100px 5%;background:var(--navy);}
