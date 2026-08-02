@@ -109,11 +109,17 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,#152C5B 100%);
   position:relative;overflow:hidden;
 }
-/* 히어로 A — stats 제거로 남은 하단 여백 축소 (히어로 B는 100vh 유지) */
+/* 히어로 A — stats 제거로 남은 하단 여백 축소 */
 #hero{min-height:0;padding-bottom:72px;}
 #hero .hero-cta-note{margin-bottom:0;}
 @media(max-width:900px){
   #hero{padding-bottom:48px;}
+}
+/* 히어로 B — 중간 배치 섹션이므로 100vh 중앙정렬 해제·상하 여백 축소 */
+#hero-b{min-height:0;padding-top:72px;padding-bottom:72px;}
+#hero-b .hero-stats{padding-top:28px;}
+@media(max-width:900px){
+  #hero-b{padding-top:48px;padding-bottom:48px;}
 }
 .hero-bg-radial{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 30% 50%,rgba(201,169,97,0.07) 0%,transparent 70%);}
 .hero-grid-line{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 99px,rgba(201,169,97,0.025) 99px,rgba(201,169,97,0.025) 100px);}
