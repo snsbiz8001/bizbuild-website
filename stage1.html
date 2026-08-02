@@ -22,6 +22,7 @@
   --white:#FFFFFF;
   --gray:#D8DEE8;
   --gray-light:#E8EBF0;
+  --text:var(--gray);
   --label-size:16px;
   --label-weight:800;
   --label-color:#E0BD6E;
@@ -307,9 +308,15 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .cd-block ul li::before{content:'·';position:absolute;left:3px;color:var(--gold);font-weight:700;}
 .cd-block>p{font-size:16px;color:var(--gray);line-height:1.7;letter-spacing:-0.2px;}
 .cd-verdict-box{margin-top:18px;padding:16px 18px;background:rgba(178,59,59,0.12);border:1px solid rgba(178,59,59,0.5);border-left:4px solid #B23B3B;border-radius:8px;font-size:16px;color:var(--gray-light);line-height:1.7;letter-spacing:-0.2px;}
-.cd-final{margin-top:40px;padding:36px;text-align:center;background:rgba(201,169,97,0.06);border:1px solid rgba(201,169,97,0.2);border-radius:12px;}
+.cd-final{margin-top:40px;padding:48px 36px;text-align:center;background:color-mix(in srgb,var(--gold) 12%,transparent);border:1.5px solid var(--gold);border-radius:12px;}
 .cd-final-label{margin-bottom:12px;}
 .cd-final-title{font-family:'Noto Serif KR',serif;font-size:28px;font-weight:700;color:var(--gold);letter-spacing:-0.2px;}
+.cd-final-body{max-width:520px;margin:20px auto 0;font-size:16px;color:var(--text);line-height:1.8;letter-spacing:-0.2px;word-break:keep-all;}
+.cd-final-close{margin-top:16px;font-size:18px;font-weight:700;color:var(--gold);}
+@media(max-width:900px){
+  .cd-final{padding:36px 20px;}
+  .cd-final-body{font-size:15px;}
+}
 
 /* ── FAQ ── */
 #faq{padding:80px 5%;background:var(--navy-mid);}
@@ -819,6 +826,8 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <div class="cd-final fade-up">
       <div class="cd-final-label label-std">4주 뒤 손에 쥐는 것</div>
       <div class="cd-final-title">창업 실행 계획서 1부</div>
+      <p class="cd-final-body">아이템·상권·자금·손익·리스크가 하나의 문서로 정리됩니다. 계약서 앞에서 무엇을 확인해야 하는지, 어떤 숫자가 무너지면 멈춰야 하는지를 대표님 스스로 판단할 수 있게 됩니다.</p>
+      <p class="cd-final-close">감이 아니라 기준으로 시작합니다.</p>
     </div>
   </div>
 </section>
