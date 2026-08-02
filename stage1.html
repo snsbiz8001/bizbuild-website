@@ -17,6 +17,8 @@
   --gold-light:#E8CB82;
   --gold-dim:#8B6F3A;
   --cta-blue:#2E9BD6;
+  --go:#1E7A5A;
+  --go-light:#3DBF90;
   --white:#FFFFFF;
   --gray:#D8DEE8;
   --gray-light:#E8EBF0;
@@ -120,12 +122,14 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .hero-stage-badge .stage-name{font-size:17px !important;color:var(--gold) !important;letter-spacing:1px;font-weight:700 !important;opacity:1 !important;}
 .hero-inner h1{
   font-family:'Noto Serif KR',serif;
-  font-size:clamp(36px,5vw,60px);font-weight:900;letter-spacing:-0.2px;
+  font-size:clamp(21px,5.6vw,54px);font-weight:900;letter-spacing:-0.2px;
   line-height:1.3;margin-bottom:28px;color:var(--white);
+  word-break:keep-all;
 }
 .hero-inner h1 .accent{color:var(--gold);}
 .hero-inner .hero-sub{font-size:17px;color:var(--gray);line-height:1.9;max-width:600px;margin:0 auto 44px;}
-.hero-cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:60px;}
+.hero-cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;}
+.hero-cta-note{font-size:14px;color:var(--gray);letter-spacing:0.3px;margin-bottom:60px;}
 .hero-stats{
   display:flex;gap:48px;justify-content:center;flex-wrap:wrap;
   padding-top:48px;border-top:1px solid rgba(201,169,97,0.12);
@@ -193,6 +197,11 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .roadmap-card .step-time{font-size:15px;color:var(--gray);margin-bottom:20px;}
 .roadmap-card .step-note{font-size:15px;color:var(--gray);font-style:italic;}
 .roadmap-featured{background:var(--navy-mid);border:1.5px solid var(--cta-blue);box-shadow:0 8px 32px rgba(29,78,137,0.25);}
+.roadmap-current{border:1.5px solid var(--gold);box-shadow:0 8px 32px color-mix(in srgb,var(--gold) 22%,transparent);}
+.step-badge{display:block;width:fit-content;font-size:13px;font-weight:700;letter-spacing:0.05em;border-radius:100px;padding:4px 12px;margin:0 auto 12px;}
+.step-badge--done{color:var(--go-light);border:1px solid var(--go);background:color-mix(in srgb,var(--go) 14%,transparent);}
+.step-badge--current{color:var(--gold);border:1px solid var(--gold);background:color-mix(in srgb,var(--gold) 12%,transparent);}
+.step-badge--next{color:var(--gray);border:1px solid color-mix(in srgb,var(--gray) 35%,transparent);}
 
 /* ── 대상 ── */
 #target{padding:100px 5%;background:var(--navy);}
@@ -500,28 +509,65 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
       <span class="stage-dot"></span>
       <span class="stage-name">창업판정</span>
     </div>
-    <h1 class="fade-up"><span class="accent">창업자금</span>을 투자하기 전,<br>시작 가능성부터 <span class="accent">판정</span>합니다</h1>
-    <p class="hero-sub fade-up">퇴사를 앞두고 있거나, 창업을 준비 중이라면 — 입지, 수익구조, 자금까지<br>문 열기 전에 검증하는 4주 1:1 창업설계 스쿨입니다.</p>
+    <h1 class="fade-up">자가진단은 신호를 보여줍니다<br><span class="accent">숫자는 아직 계산되지 않았습니다</span></h1>
+    <p class="hero-sub fade-up">3분 자가진단으로 지금 상태를 확인하셨습니다.<br>다음은 그 판단이 맞는지 숫자로 검증하는 단계입니다.</p>
     <div class="hero-cta-row fade-up">
-      <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">창업판정 시작하기 →</a>
+      <a href="https://bizbuild.kr/judgment.html" class="btn-primary">창업판정 리포트 받기 →</a>
       <a href="#curriculum" class="btn-outline">커리큘럼 보기</a>
     </div>
+    <p class="hero-cta-note fade-up">9.9만원 · 24시간 내 전달 · 환불 규정 확인</p>
     <div class="hero-stats fade-up">
       <div class="hero-stat">
-        <div class="num">4주</div>
-        <div class="lbl">1:1 창업설계 스쿨</div>
+        <div class="num">자가진단 완료</div>
+        <div class="lbl">3분 · 무료</div>
       </div>
       <div class="hero-stat">
-        <div class="num">1:1</div>
-        <div class="lbl">개인 맞춤 진행</div>
+        <div class="num">다음 단계</div>
+        <div class="lbl">창업판정 리포트</div>
       </div>
       <div class="hero-stat">
-        <div class="num">25년+</div>
-        <div class="lbl">현역 자영업 강사</div>
+        <div class="num">24시간 내</div>
+        <div class="lbl">전자파일 전달</div>
       </div>
-      <div class="hero-stat">
-        <div class="num">3단계</div>
-        <div class="lbl">판정·설계·증식</div>
+    </div>
+  </div>
+</section>
+
+<!-- 커리큘럼 -->
+<section id="curriculum">
+  <div class="roadmap-inner">
+    <div class="eyebrow fade-up" style="justify-content:center;">3단계</div>
+    <h2 class="fade-up">3단계로 설계합니다</h2>
+    <div class="roadmap-grid">
+      <div class="roadmap-card fade-up">
+        <div class="step-badge step-badge--done">✓ 완료</div>
+        <div class="step-num">STEP 1</div>
+        <h3>3분 자가진단</h3>
+        <div class="step-price">무료</div>
+        <p>지금 상태가 진행·보류·중단인지 즉시 확인</p>
+        <div class="step-time">소요 3분</div>
+        <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">창업판정 시작하기 →</a>
+        <p class="card-note">무료 · 3분 · 강매 없음</p>
+      </div>
+      <div class="roadmap-card roadmap-current fade-up" style="transition-delay:0.15s">
+        <div class="step-badge step-badge--current">● 지금 여기</div>
+        <div class="step-num">STEP 2</div>
+        <h3>창업판정 리포트</h3>
+        <div class="step-price">9.9만원</div>
+        <p>손익분기점 · 자금 생존기간 · 고정비 부담률 · 현금흐름 · 계약 전 리스크 체크</p>
+        <div class="step-time">24시간 내 전달</div>
+        <a href="judgment.html" class="card-cta card-cta--report">리포트 안내 보기 →</a>
+        <p class="card-note">자가진단 없이 바로 신청하셔도 됩니다</p>
+      </div>
+      <div class="roadmap-card fade-up" style="transition-delay:0.3s">
+        <div class="step-badge step-badge--next">다음 단계</div>
+        <div class="step-num">STEP 3</div>
+        <h3>창업설계 스쿨</h3>
+        <div class="step-price">59만원</div>
+        <p>자금계획·손익분석·운영시스템·리스크관리 1:1 진행</p>
+        <div class="step-time">4주 진행</div>
+        <a href="https://apply.bizbuild.kr/" target="_blank" rel="noopener" class="card-cta card-cta--consult">상담 신청하기 →</a>
+        <p class="card-note">4주 1:1 과정은 상담 후 진행합니다</p>
       </div>
     </div>
   </div>
@@ -583,43 +629,6 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <div class="verdict-cta fade-up">
       <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">창업판정 시작하기 →</a>
       <p class="verdict-note">무료 · 3분 · 강매 없음</p>
-    </div>
-  </div>
-</section>
-
-<!-- 커리큘럼 -->
-<section id="curriculum">
-  <div class="roadmap-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">3단계</div>
-    <h2 class="fade-up">3단계로 설계합니다</h2>
-    <div class="roadmap-grid">
-      <div class="roadmap-card roadmap-featured fade-up">
-        <div class="step-num">STEP 1</div>
-        <h3>3분 자가진단</h3>
-        <div class="step-price">무료</div>
-        <p>지금 상태가 진행·보류·중단인지 즉시 확인</p>
-        <div class="step-time">소요 3분</div>
-        <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">창업판정 시작하기 →</a>
-        <p class="card-note">무료 · 3분 · 강매 없음</p>
-      </div>
-      <div class="roadmap-card fade-up" style="transition-delay:0.15s">
-        <div class="step-num">STEP 2</div>
-        <h3>창업판정 리포트</h3>
-        <div class="step-price">9.9만원</div>
-        <p>손익분기점 · 자금 생존기간 · 고정비 부담률 · 현금흐름 · 계약 전 리스크 체크</p>
-        <div class="step-time">24시간 내 전달</div>
-        <a href="judgment.html" class="card-cta card-cta--report">리포트 안내 보기 →</a>
-        <p class="card-note">자가진단 없이 바로 신청하셔도 됩니다</p>
-      </div>
-      <div class="roadmap-card fade-up" style="transition-delay:0.3s">
-        <div class="step-num">STEP 3</div>
-        <h3>창업설계 스쿨</h3>
-        <div class="step-price">59만원</div>
-        <p>자금계획·손익분석·운영시스템·리스크관리 1:1 진행</p>
-        <div class="step-time">4주 진행</div>
-        <a href="https://apply.bizbuild.kr/" target="_blank" rel="noopener" class="card-cta card-cta--consult">상담 신청하기 →</a>
-        <p class="card-note">4주 1:1 과정은 상담 후 진행합니다</p>
-      </div>
     </div>
   </div>
 </section>
