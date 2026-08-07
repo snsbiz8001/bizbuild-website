@@ -742,6 +742,21 @@ footer{
   .nd-close{font-size:16px;}
   .nd-close .nd-hl{font-size:21px;}
 }
+
+/* ── 클로징 3연타 ── */
+.cta-before{
+  max-width:560px;margin:0 auto 30px;
+  display:flex;flex-direction:column;gap:8px;
+}
+.cta-before span{
+  font-family:'Noto Serif KR',serif;
+  font-size:19px;font-weight:700;color:var(--gold);
+  letter-spacing:-0.2px;
+}
+@media(max-width:600px){
+  .cta-before{margin-bottom:24px;gap:6px;}
+  .cta-before span{font-size:17px;}
+}
 </style>
 </head>
 <body>
@@ -1131,6 +1146,11 @@ footer{
 <section id="cta">
   <div class="cta-inner">
     <div class="eyebrow fade-up">지금 시작하기</div>
+    <div class="cta-before fade-up">
+      <span>사업계획서보다 먼저.</span>
+      <span>점포 계약보다 먼저.</span>
+      <span>가맹계약보다 먼저.</span>
+    </div>
     <h2 class="fade-up">고민만 하다,<br>또 1년이 지나갑니다</h2>
     <p class="fade-up">막연한 불안은 진단되지 않으면 사라지지 않습니다.<br>내 사업의 현재 위치를 확인하는 데 딱 3분이면 됩니다.</p>
     <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue fade-up">
