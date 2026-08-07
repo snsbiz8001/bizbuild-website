@@ -804,6 +804,52 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
   footer{padding-top:44px;}
   .faq-cta{margin-top:36px;padding-top:28px;}
 }
+
+/* ── 모바일 여백 통일 체계 ── */
+@media(max-width:600px){
+  /* 1. 섹션 상하 여백 */
+  #verdict-bridge, #five-q, #why-fail, #bsi,
+  #system, #trust, #not-do, #reviews, #faq{
+    padding-top:56px;
+    padding-bottom:56px;
+  }
+  #hero{padding-bottom:40px;}
+  #cta{padding-top:56px;padding-bottom:44px;}
+  footer{padding-top:44px;}
+
+  /* 2. 헤드라인 블록 ↔ 콘텐츠 */
+  .section-header{margin-bottom:32px;}
+  .vb-eyebrow{margin-bottom:10px;}
+  .vb-title{margin-bottom:32px;}
+
+  /* 3. 카드·리스트 항목 간격 */
+  .vb-grid, .fq-list, .wf-grid, .bsi-grid,
+  .nd-list, .system-grid, .faq-list{
+    gap:14px;
+  }
+  .faq-item{margin-bottom:14px;}
+  .system-card, .wf-card{margin-bottom:0;}
+
+  /* 4. 문단 간격 */
+  .wf-para{margin-bottom:14px;}
+  .wf-para:last-child{margin-bottom:0;}
+  .trust-content p{margin-bottom:14px;}
+
+  /* 5. 콘텐츠 ↔ 마무리 문구 */
+  .fq-close, .bsi-close, .nd-close,
+  .st-close, .wf-punch{margin-top:40px;}
+  .wf-intro{margin-top:0;}
+  .faq-cta{margin-top:40px;padding-top:32px;}
+
+  /* 6. 마무리 문구 하단 여백 제거 */
+  .fq-close, .bsi-close, .nd-close, .st-close{margin-bottom:0;}
+
+  /* 7. CTA 블록 간격 */
+  .cta-zone, .vb-cta, .system-bottom{margin-top:32px;}
+  .hero-image{margin-bottom:0;}
+  .hero-badges{margin-top:32px;padding-top:28px;}
+  .trust-stats{margin-top:32px;}
+}
 </style>
 </head>
 <body>
