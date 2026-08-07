@@ -709,6 +709,39 @@ footer{
   .st-close{font-size:16px;}
   .st-close .st-hl{font-size:21px;}
 }
+
+/* ── 하지 않는 것 ── */
+#not-do{padding:120px 5%;background:linear-gradient(180deg,var(--navy-mid) 0%,var(--navy) 100%);}
+.nd-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
+.nd-item{
+  background:var(--navy-mid);
+  border:1px solid rgba(212,175,95,0.15);
+  border-radius:12px;padding:24px 30px;
+  display:flex;align-items:center;gap:18px;
+  transition:all .3s;
+}
+.nd-item:hover{border-color:rgba(212,175,95,0.4);}
+.nd-x{
+  font-family:'Noto Serif KR',serif;font-size:22px;font-weight:900;
+  color:#B23B3B;line-height:1;flex-shrink:0;
+}
+.nd-text{font-size:17px;color:#D8DEE8;line-height:1.6;letter-spacing:-0.2px;}
+.nd-close{
+  max-width:720px;margin:56px auto 0;text-align:center;
+  font-size:17px;color:#D8DEE8;line-height:1.9;
+}
+.nd-close span{display:block;}
+.nd-close .nd-hl{
+  font-family:'Noto Serif KR',serif;
+  font-size:24px;font-weight:700;color:#fff;margin-top:14px;
+}
+@media(max-width:600px){
+  #not-do{padding:80px 5%;}
+  .nd-item{padding:20px 22px;gap:14px;}
+  .nd-text{font-size:16px;}
+  .nd-close{font-size:16px;}
+  .nd-close .nd-hl{font-size:21px;}
+}
 </style>
 </head>
 <body>
@@ -974,6 +1007,26 @@ footer{
       </div>
     </div>
   </div>
+</section>
+
+<!-- 하지 않는 것 -->
+<section id="not-do">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">비즈빌드의 원칙</div>
+    <h2 class="section-title">비즈빌드가 <span class="accent">하지 않는 것</span>도 있습니다</h2>
+  </div>
+  <div class="nd-list">
+    <div class="nd-item fade-up"><div class="nd-x">✕</div><div class="nd-text">무조건 창업을 권하지 않습니다.</div></div>
+    <div class="nd-item fade-up" style="transition-delay:.1s"><div class="nd-x">✕</div><div class="nd-text">진단했다고 결제를 강요하지 않습니다.</div></div>
+    <div class="nd-item fade-up" style="transition-delay:.2s"><div class="nd-x">✕</div><div class="nd-text">좋지 않은 조건을 좋다고 말하지 않습니다.</div></div>
+    <div class="nd-item fade-up" style="transition-delay:.3s"><div class="nd-x">✕</div><div class="nd-text">없는 성공사례를 만들어내지 않습니다.</div></div>
+    <div class="nd-item fade-up" style="transition-delay:.4s"><div class="nd-x">✕</div><div class="nd-text">모든 사람에게 같은 답을 주지 않습니다.</div></div>
+  </div>
+  <p class="nd-close fade-up">
+    <span>비즈빌드가 팔아야 할 것은</span>
+    <span>창업이 아니라</span>
+    <span class="nd-hl">판단의 신뢰이기 때문입니다.</span>
+  </p>
 </section>
 
 <!-- 후기 섹션 -->
