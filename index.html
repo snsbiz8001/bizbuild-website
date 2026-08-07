@@ -612,6 +612,36 @@ footer{
     font-size:13px;
   }
 }
+
+/* ── 다섯 질문 자가점검 ── */
+#five-q{padding:120px 5%;background:var(--navy);}
+.fq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+.fq-item{
+  background:var(--navy-mid);
+  border:1px solid rgba(212,175,95,0.15);
+  border-radius:12px;padding:26px 30px;
+  display:flex;align-items:center;gap:18px;
+  transition:all .3s;
+}
+.fq-item:hover{border-color:rgba(212,175,95,0.45);transform:translateX(4px);}
+.fq-mark{
+  font-family:'Noto Serif KR',serif;font-size:26px;font-weight:900;
+  color:var(--gold);line-height:1;flex-shrink:0;
+}
+.fq-text{font-size:17px;font-weight:500;color:#fff;line-height:1.6;letter-spacing:-0.2px;}
+.fq-item.fq-key{border-color:rgba(212,175,95,0.5);background:linear-gradient(135deg,var(--navy-mid),rgba(212,175,95,0.06));}
+.fq-close{
+  max-width:720px;margin:52px auto 0;text-align:center;
+  font-size:17px;color:var(--gray);line-height:1.9;
+}
+.fq-close span{display:block;}
+.fq-close .fq-hl{color:var(--gold);font-size:20px;font-weight:700;margin-top:14px;}
+@media(max-width:600px){
+  #five-q{padding:80px 5%;}
+  .fq-item{padding:22px 20px;gap:14px;}
+  .fq-text{font-size:16px;}
+  .fq-mark{font-size:22px;}
+}
 </style>
 </head>
 <body>
@@ -705,6 +735,26 @@ footer{
       <p class="vb-subtext">내 창업, 제대로 판정받으려면 → <a href="stage1.html">창업판정 자세히 보기</a></p>
     </div>
   </div>
+</section>
+
+<!-- 다섯 질문 자가점검 -->
+<section id="five-q">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">잠깐만요</div>
+    <h2 class="section-title">이 다섯 질문에 <span class="accent">바로 답할 수 있습니까?</span></h2>
+  </div>
+  <div class="fq-list">
+    <div class="fq-item fade-up"><div class="fq-mark">Q1</div><div class="fq-text">하루 몇 명이 와야 손익분기점을 넘습니까?</div></div>
+    <div class="fq-item fade-up" style="transition-delay:.1s"><div class="fq-mark">Q2</div><div class="fq-text">첫 고객 100명은 어디에서 데려올 겁니까?</div></div>
+    <div class="fq-item fade-up" style="transition-delay:.2s"><div class="fq-mark">Q3</div><div class="fq-text">매출이 예상보다 30% 적게 나와도 버틸 수 있습니까?</div></div>
+    <div class="fq-item fade-up" style="transition-delay:.3s"><div class="fq-mark">Q4</div><div class="fq-text">오픈 후 6개월을 버틸 운영자금이 따로 있습니까?</div></div>
+    <div class="fq-item fq-key fade-up" style="transition-delay:.4s"><div class="fq-mark">Q5</div><div class="fq-text">얼마를 잃으면 "여기서 멈춘다"는 기준이 있습니까?</div></div>
+  </div>
+  <p class="fq-close fade-up">
+    <span>한 질문이라도 "그건 아직……"이라는 생각이 들었다면,</span>
+    <span>창업을 하면 안 되는 사람이어서가 아닙니다.</span>
+    <span class="fq-hl">아직 창업을 '판정하지 않은 상태'인 겁니다.</span>
+  </p>
 </section>
 
 <!-- COI: 판단 지연 손실 -->
