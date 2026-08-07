@@ -777,6 +777,33 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
   word-break:keep-all;
   overflow-wrap:break-word;
 }
+
+/* ── 한국어 줄바꿈 · 모바일 전용 br ── */
+h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+.br-m{display:none;}
+.wf-para{margin-bottom:14px;}
+.wf-para:last-child{margin-bottom:0;}
+
+@media(max-width:600px){
+  .br-m{display:inline;}
+  #hero{padding-bottom:36px;}
+  .hero-image{margin-bottom:0;}
+  #verdict-bridge{padding:56px 5%;}
+  #five-q{padding:56px 5%;}
+  #why-fail{padding:56px 5%;}
+  #bsi{padding:56px 5%;}
+  #system{padding:56px 5%;}
+  #trust{padding:56px 5%;}
+  #not-do{padding:56px 5%;}
+  #reviews{padding:56px 5%;}
+  #faq{padding:56px 5%;}
+  #cta{padding:56px 5% 44px;}
+  footer{padding-top:44px;}
+  .faq-cta{margin-top:36px;padding-top:28px;}
+}
 </style>
 </head>
 <body>
@@ -867,7 +894,7 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
         내 창업판정 받기 →
       </a>
       <p class="hero-note">질문 10개 · 즉시 결과</p>
-      <p class="vb-subtext">내 창업, 제대로 판정받으려면 → <a href="stage1.html">창업판정 자세히 보기</a></p>
+      <p class="vb-subtext">내 창업, 제대로 판정받으려면 →<br class="br-m"> <a href="stage1.html">창업판정 자세히 보기</a></p>
     </div>
   </div>
 </section>
@@ -876,7 +903,7 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
 <section id="five-q">
   <div class="section-header fade-up">
     <div class="section-eyebrow">잠깐만요</div>
-    <h2 class="section-title">이 다섯 질문에 <span class="accent">바로 답할 수 있습니까?</span></h2>
+    <h2 class="section-title">이 다섯 질문에<br class="br-m"> <span class="accent">바로 답할 수 있습니까?</span></h2>
   </div>
   <div class="fq-list">
     <div class="fq-item fade-up"><div class="fq-mark">Q1</div><div class="fq-text">하루 몇 명이 와야 손익분기점을 넘습니까?</div></div>
@@ -888,7 +915,7 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
   <p class="fq-close fade-up">
     <span>한 질문이라도 "그건 아직……"이라는 생각이 들었다면,</span>
     <span>창업을 하면 안 되는 사람이어서가 아닙니다.</span>
-    <span class="fq-hl">아직 창업을 '판정하지 않은 상태'인 겁니다.</span>
+    <span class="fq-hl">아직 창업을<br class="br-m"> '판정하지 않은 상태'인 겁니다.</span>
   </p>
 </section>
 
@@ -898,10 +925,10 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
     <div class="section-eyebrow">판단이 늦어질 때</div>
     <h2 class="section-title">가장 비싼 실수는 실패가 아니라<br><span class="accent">실패할 구조를 모르고</span> 돈부터 넣는 겁니다</h2>
     <p class="wf-intro">
-      <span>예상했던 고객이 오지 않습니다. 처음엔 "오픈 초기니까 조금만 더" 하고 버팁니다.</span>
-      <span>매출은 오르지 않는데 임대료와 인건비는 하루도 기다려주지 않습니다.</span>
-      <span class="wf-highlight">그러다 "조금만 더"가 "여기까지 넣었는데 어떻게 그만둬"로 바뀝니다.</span>
-      <span>그때부터는 사업을 판단하는 것이 아니라, 이미 넣은 돈 때문에 버티게 됩니다.</span>
+      <span class="wf-para">예상했던 고객이 오지 않습니다.<br class="br-m"> "오픈 초기니까 조금만 더" 하고 버팁니다.</span>
+      <span class="wf-para">매출은 오르지 않는데 임대료와 인건비는<br class="br-m"> 하루도 기다려주지 않습니다.</span>
+      <span class="wf-para wf-highlight">그러다 "조금만 더"가<br class="br-m"> "여기까지 넣었는데 어떻게 그만둬"로 바뀝니다.</span>
+      <span class="wf-para">그때부터는 사업을 판단하는 것이 아니라,<br class="br-m"> 이미 넣은 돈 때문에 버티게 됩니다.</span>
     </p>
   </div>
   <div class="wf-grid">
@@ -925,10 +952,10 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
     </div>
   </div>
   <p class="wf-intro fade-up" style="text-align:center;margin-top:48px;">
-    <span>물론 모든 창업이 이 금액을 잃는다는 뜻은 아닙니다.</span>
-    <span>업종·투자금·임대조건·고정비에 따라 손실 규모는 전부 달라집니다.</span>
-    <span>중요한 건 금액이 아닙니다.</span>
-    <span class="wf-punch">시작 전에 계산하는 것과<br>돈을 잃으면서 배우는 것은 완전히 다릅니다.</span>
+    <span class="wf-para">물론 모든 창업이<br class="br-m"> 이 금액을 잃는다는 뜻은 아닙니다.</span>
+    <span class="wf-para">업종·투자금·임대조건·고정비에 따라<br class="br-m"> 손실 규모는 전부 달라집니다.</span>
+    <span class="wf-para">중요한 건 금액이 아닙니다.</span>
+    <span class="wf-punch">시작 전에 계산하는 것과<br>돈을 잃으면서 배우는 것은<br class="br-m"> 완전히 다릅니다.</span>
   </p>
 </section>
 
@@ -936,7 +963,7 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
 <section id="bsi">
   <div class="section-header fade-up">
     <div class="section-eyebrow">창업생존지수</div>
-    <h2 class="section-title">당신의 창업생존지수는 <span class="accent">몇 점입니까?</span></h2>
+    <h2 class="section-title">당신의 창업생존지수는<br class="br-m"> <span class="accent">몇 점입니까?</span></h2>
     <div class="bsi-en">BSI · Business Survival Index</div>
     <p class="bsi-lead">
       <span>창업은 용기로 판정하지 않습니다.</span>
@@ -1021,8 +1048,8 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
       <div class="eyebrow">사업시스템 설계자</div>
       <h2>25년째 현장에 있는<br>사람이 설계합니다</h2>
       <p>저는 지금도 매장을 운영하며 현장에서 경험을 쌓고 있습니다.</p>
-      <p>경영학을 전공했지만, 진짜 배움은 25년간 현장에서 얻었습니다. 매출이 흔들리던 시기, 사람이 빠져나가던 아침, 고정비 앞에서의 막막함 — 책에는 없는 그 시간들을 직접 통과했습니다.</p>
-      <p>그리고 그 경험을 시스템으로 정리해, 지금은 프랜차이즈 본부를 키우는 일을 합니다. 비즈빌드는 해본 적 없는 사람이 가르치는 곳이 아닙니다.</p>
+      <p>경영학을 전공했지만, 진짜 배움은 25년간 현장에서 얻었습니다. 매출이 흔들리던 시기, 사람이 빠져나가던 아침, 고정비 앞에서의 막막함.<br class="br-m"> 책에는 없는 그 시간들을 직접 통과했습니다.</p>
+      <p>그리고 그 경험을 시스템으로 정리해, 지금은 프랜차이즈 본부를 키우는 일을 합니다.<br class="br-m"> 비즈빌드는 해본 적 없는 사람이 가르치는 곳이 아닙니다.</p>
       <div class="trust-stats">
         <div class="trust-stat">
           <div class="t-num">경영학 전공</div>
@@ -1049,10 +1076,10 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
 <section id="not-do">
   <div class="section-header fade-up">
     <div class="section-eyebrow">비즈빌드의 원칙</div>
-    <h2 class="section-title">비즈빌드가 <span class="accent">하지 않는 것</span>도 있습니다</h2>
+    <h2 class="section-title">비즈빌드가<br class="br-m"> <span class="accent">하지 않는 것</span>도 있습니다</h2>
   </div>
   <div class="nd-list">
-    <div class="nd-item fade-up"><div class="nd-x">✕</div><div class="nd-text">무조건 창업을 권하지 않습니다.</div></div>
+    <div class="nd-item fade-up"><div class="nd-x">✕</div><div class="nd-text">무조건 창업을 권하지<br class="br-m"> 않습니다.</div></div>
     <div class="nd-item fade-up" style="transition-delay:.1s"><div class="nd-x">✕</div><div class="nd-text">진단했다고 결제를 강요하지 않습니다.</div></div>
     <div class="nd-item fade-up" style="transition-delay:.2s"><div class="nd-x">✕</div><div class="nd-text">좋지 않은 조건을 좋다고 말하지 않습니다.</div></div>
     <div class="nd-item fade-up" style="transition-delay:.3s"><div class="nd-x">✕</div><div class="nd-text">없는 성공사례를 만들어내지 않습니다.</div></div>
@@ -1105,7 +1132,7 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
   <div class="faq-list fade-up">
     <div class="faq-item">
       <button class="faq-q" type="button" aria-expanded="false">
-        <span class="faq-q-text">진단받으면 상담이나 결제를 강요받나요?</span>
+        <span class="faq-q-text">진단 후 결제를 강요받나요?</span>
         <span class="faq-icon" aria-hidden="true"></span>
       </button>
       <div class="faq-a">
@@ -1123,7 +1150,7 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
     </div>
     <div class="faq-item">
       <button class="faq-q" type="button" aria-expanded="false">
-        <span class="faq-q-text">아직 아이템도 확실하지 않은데 받아도 되나요?</span>
+        <span class="faq-q-text">아이템을 못 정했는데 되나요?</span>
         <span class="faq-icon" aria-hidden="true"></span>
       </button>
       <div class="faq-a">
@@ -1132,7 +1159,7 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
     </div>
     <div class="faq-item">
       <button class="faq-q" type="button" aria-expanded="false">
-        <span class="faq-q-text">이미 창업해서 운영 중인데 늦었나요?</span>
+        <span class="faq-q-text">이미 창업했는데 늦었나요?</span>
         <span class="faq-icon" aria-hidden="true"></span>
       </button>
       <div class="faq-a">
@@ -1159,7 +1186,7 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
     </div>
   </div>
   <div class="faq-cta fade-up">
-    <p>더 궁금하시면, 말보다 진단이 빠릅니다</p>
+    <p>더 궁금하시면,<br class="br-m"> 말보다 진단이 빠릅니다</p>
   </div>
 </section>
 
@@ -1173,7 +1200,7 @@ h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
       <span>가맹계약보다 먼저.</span>
     </div>
     <h2 class="fade-up">고민만 하다,<br>또 1년이 지나갑니다</h2>
-    <p class="fade-up">막연한 불안은 진단되지 않으면 사라지지 않습니다.<br>내 사업의 현재 위치를 확인하는 데 딱 3분이면 됩니다.</p>
+    <p class="fade-up">막연한 불안은 진단되지 않으면 사라지지 않습니다.<br>내 사업의 현재 위치를 확인하는 데<br class="br-m"> 딱 3분이면 됩니다.</p>
     <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue fade-up">
       내 창업판정 받기 →
     </a>
