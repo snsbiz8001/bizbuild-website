@@ -642,6 +642,42 @@ footer{
   .fq-text{font-size:16px;}
   .fq-mark{font-size:22px;}
 }
+
+/* ── BSI 창업생존지수 ── */
+#bsi{padding:120px 5%;background:linear-gradient(180deg,var(--navy) 0%,var(--navy-mid) 100%);}
+.bsi-en{
+  font-family:'Noto Serif KR',serif;font-size:19px;font-weight:700;
+  color:var(--gold);letter-spacing:1.5px;margin-top:14px;
+}
+.bsi-lead{max-width:720px;margin:26px auto 0;font-size:17px;color:var(--gray);line-height:1.9;}
+.bsi-lead span{display:block;}
+.bsi-grid{
+  max-width:1100px;margin:56px auto 0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+}
+.bsi-cell{
+  background:var(--navy-mid);
+  border:1px solid rgba(212,175,95,0.15);
+  border-radius:12px;padding:28px 24px;
+  transition:all .3s;
+}
+.bsi-cell:hover{border-color:rgba(212,175,95,0.45);transform:translateY(-4px);}
+.bsi-cell-t{
+  font-family:'Noto Serif KR',serif;font-size:19px;font-weight:700;
+  color:var(--gold);margin-bottom:12px;
+}
+.bsi-cell-q{font-size:15px;color:#D8DEE8;line-height:1.7;letter-spacing:-0.2px;}
+.bsi-close{
+  max-width:720px;margin:52px auto 0;text-align:center;
+  font-size:19px;font-weight:700;color:#fff;line-height:1.8;
+}
+@media(max-width:900px){.bsi-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){
+  #bsi{padding:80px 5%;}
+  .bsi-grid{grid-template-columns:1fr;gap:14px;}
+  .bsi-cell{padding:22px 20px;}
+  .bsi-close{font-size:17px;}
+}
 </style>
 </head>
 <body>
@@ -794,6 +830,30 @@ footer{
     <span>업종·투자금·임대조건·고정비에 따라 손실 규모는 전부 달라집니다.</span>
     <span class="wf-highlight">중요한 건 금액이 아니라, 시작 전에 계산하는 것과 돈을 잃으면서 배우는 것이 완전히 다르다는 사실입니다.</span>
   </p>
+</section>
+
+<!-- BSI 창업생존지수 -->
+<section id="bsi">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">창업생존지수</div>
+    <h2 class="section-title">당신의 창업생존지수는 <span class="accent">몇 점입니까?</span></h2>
+    <div class="bsi-en">BSI · Business Survival Index</div>
+    <p class="bsi-lead">
+      <span>창업은 용기로 판정하지 않습니다.</span>
+      <span>현재 준비상태를 10개의 핵심 질문으로 확인합니다.</span>
+    </p>
+  </div>
+  <div class="bsi-grid">
+    <div class="bsi-cell fade-up"><div class="bsi-cell-t">아이템</div><p class="bsi-cell-q">고객이 실제로 돈을 낼 이유가 있는가?</p></div>
+    <div class="bsi-cell fade-up" style="transition-delay:.05s"><div class="bsi-cell-t">시장·경쟁</div><p class="bsi-cell-q">내가 들어갈 시장과 경쟁구조를 알고 있는가?</p></div>
+    <div class="bsi-cell fade-up" style="transition-delay:.1s"><div class="bsi-cell-t">고객</div><p class="bsi-cell-q">첫 고객이 누구인지 구체적으로 정의되어 있는가?</p></div>
+    <div class="bsi-cell fade-up" style="transition-delay:.15s"><div class="bsi-cell-t">고객 유입</div><p class="bsi-cell-q">오픈 후 고객을 어디에서 확보할 것인가?</p></div>
+    <div class="bsi-cell fade-up" style="transition-delay:.2s"><div class="bsi-cell-t">수익구조</div><p class="bsi-cell-q">몇 개를 팔아야 손익분기점을 넘는가?</p></div>
+    <div class="bsi-cell fade-up" style="transition-delay:.25s"><div class="bsi-cell-t">자금</div><p class="bsi-cell-q">오픈 비용이 아니라 버틸 돈까지 준비되어 있는가?</p></div>
+    <div class="bsi-cell fade-up" style="transition-delay:.3s"><div class="bsi-cell-t">운영</div><p class="bsi-cell-q">내가 실제로 지속할 수 있는 운영구조인가?</p></div>
+    <div class="bsi-cell fade-up" style="transition-delay:.35s"><div class="bsi-cell-t">위험</div><p class="bsi-cell-q">어떤 상황이 오면 멈출 것인지 기준이 있는가?</p></div>
+  </div>
+  <p class="bsi-close fade-up">돈을 넣고 확인하지 마십시오.<br>먼저 확인하고 결정하십시오.</p>
 </section>
 
 <!-- 3단계 시스템 -->
