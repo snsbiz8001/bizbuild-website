@@ -92,8 +92,9 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .hero-inner{
   position:relative;z-index:2;
   max-width:1200px;width:100%;
-  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+  display:grid;grid-template-columns:1fr;align-items:center;
 }
+.hero-text{max-width:760px;}
 .hero-eyebrow-ko{font-family:'Noto Sans KR',sans-serif;font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);letter-spacing:-0.2px;margin-bottom:20px;}
 .hero-text h1{
   font-family:'Noto Serif KR',serif;
@@ -138,18 +139,55 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   font-size:32px;font-weight:900;color:var(--gold);
 }
 .badge-item .label{font-size:12px;color:var(--gray);margin-top:4px;letter-spacing:0.5px;}
-.hero-image{position:relative;width:100%;max-width:380px;justify-self:end;}
-.hero-image img{
-  width:100%;max-width:380px;
-  border-radius:12px;
-  border:1px solid rgba(201,169,97,0.2);
-  filter:brightness(0.95);
+
+/* ── 스토리 섹션 ── */
+#story{
+  padding:120px 5%;
+  background:linear-gradient(180deg,var(--navy) 0%,var(--navy-mid) 100%);
 }
-.hero-image::before{
-  content:'';position:absolute;
-  inset:-12px;border-radius:16px;
-  border:1px solid rgba(201,169,97,0.15);
-  pointer-events:none;
+.story-inner{max-width:720px;margin:0 auto;}
+.story-eyebrow{
+  font-size:var(--label-size);font-weight:var(--label-weight);letter-spacing:1.5px;
+  color:var(--label-color);opacity:1;margin-bottom:16px;
+}
+.story-title{
+  font-family:'Noto Serif KR',serif;
+  font-size:clamp(26px,3.6vw,40px);font-weight:700;letter-spacing:-0.2px;
+  line-height:1.3;margin-bottom:48px;
+}
+.story-body p{
+  font-size:17px;line-height:1.9;color:var(--gray);
+  letter-spacing:-0.2px;margin-bottom:1.6em;
+}
+.story-body p:last-child{margin-bottom:0;}
+.story-photo{
+  display:block;width:100%;max-width:560px;
+  margin:2.4em auto;border-radius:8px;
+}
+.story-quote{
+  padding-left:20px;border-left:2px solid var(--gold);
+  color:var(--gray-light);
+}
+.story-em{font-weight:700;color:var(--white);}
+.story-gold{color:var(--gold);}
+.story-hr{
+  border:0;border-top:1px solid rgba(201,169,97,0.15);
+  margin:2.8em 0;
+}
+.story-stats{margin-top:48px;}
+.story-stats .num{font-size:clamp(22px,2.6vw,30px);}
+.story-stats .label{font-size:16px;margin-top:6px;letter-spacing:-0.2px;}
+.story-bridge{
+  max-width:720px;margin:44px auto 0;
+  font-size:17px;line-height:1.9;color:var(--gray-light);letter-spacing:-0.2px;
+}
+.story-bridge p{margin-bottom:1.5em;}
+.story-bridge p:last-child{margin-bottom:0;}
+@media(max-width:600px){
+  #story{padding:56px 5%;}
+  .story-title{margin-bottom:32px;}
+  .story-body p{font-size:16px;}
+  .story-bridge{font-size:16px;}
 }
 
 /* ── 판정 3단계 브리지 섹션 ── */
@@ -219,6 +257,12 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .wf-intro span{display:block;}
 .wf-intro .wf-highlight{color:var(--gold);}
+.wf-assume{
+  max-width:720px;margin:0 auto 36px;text-align:center;
+  font-size:16px;line-height:1.8;letter-spacing:-0.2px;
+  color:var(--gray);opacity:0.72;
+  word-break:keep-all;overflow-wrap:break-word;
+}
 .wf-grid{
   max-width:1200px;margin:0 auto;
   display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
@@ -389,7 +433,11 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   font-family:'Noto Serif KR',serif;
   font-size:28px;font-weight:900;color:var(--gold);
 }
-.trust-stat .t-label{font-size:12px;color:var(--gray);margin-top:4px;}
+.trust-stat .t-label{font-size:15px;line-height:1.5;color:var(--gray);margin-top:4px;}
+.trust-stat .t-num{font-size:clamp(20px,2.6vw,28px);}
+.trust-content p.trust-em{font-weight:700;color:var(--white);}
+.trust-content p.trust-pair{margin-bottom:12px;}
+.trust-content p.trust-pair-last{margin-bottom:16px;}
 
 /* ── 후기 섹션 ── */
 #reviews{
@@ -545,10 +593,7 @@ footer{
 
 /* ── 반응형 ── */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:48px;}
   .hero-text h1{font-size:clamp(30px,5.4vw,44px);}
-  .hero-image{max-width:260px;margin:0 auto;order:2;}
-  .hero-text{order:1;}
   .system-grid{grid-template-columns:1fr;}
   .trust-inner{grid-template-columns:1fr;}
   .reviews-grid{grid-template-columns:1fr;}
@@ -790,7 +835,6 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
 @media(max-width:600px){
   .br-m{display:inline;}
   #hero{padding-bottom:36px;}
-  .hero-image{margin-bottom:0;}
   #verdict-bridge{padding:56px 5%;}
   #five-q{padding:56px 5%;}
   #why-fail{padding:56px 5%;}
@@ -808,7 +852,7 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
 /* ── 모바일 여백 통일 체계 ── */
 @media(max-width:600px){
   /* 1. 섹션 상하 여백 */
-  #verdict-bridge, #five-q, #why-fail, #bsi,
+  #story, #verdict-bridge, #five-q, #why-fail, #bsi,
   #system, #trust, #not-do, #reviews, #faq{
     padding-top:56px;
     padding-bottom:56px;
@@ -851,7 +895,6 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
 
   /* 8. CTA 블록 간격 */
   .cta-zone, .vb-cta, .system-bottom{margin-top:32px;}
-  .hero-image{margin-bottom:0;}
   .hero-badges{margin-top:32px;padding-top:28px;}
   .trust-stats{margin-top:32px;}
 }
@@ -897,32 +940,82 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
   <div class="hero-inner">
     <div class="hero-text fade-up">
       <div class="hero-eyebrow-ko">사업은 감이 아니라 설계입니다</div>
-      <h1>지금 이 선택,<br><span class="accent">해도 되는 상태</span>입니까?</h1>
-      <p class="hero-sub">비즈빌드는 무조건 창업을 권하지 않습니다.<br>사업계획서보다 먼저,<br class="br-m"> 점포·가맹계약보다 먼저.</p>
-      <p class="hero-sub">당신의 창업을<br class="br-m"> 진행·보류·중단으로 판정합니다.</p>
+      <h1><span class="accent">퇴직금 1억 5천</span>,<br>도장 찍기 전에 3분만 멈추십시오.</h1>
+      <p class="hero-sub">비즈빌드는 무조건 창업을 권하지 않습니다.<br>사업계획서보다 먼저,<br class="br-m"> 점포·가맹계약보다 먼저.<br>당신의 창업을<br class="br-m"> 진행·보류·중단으로 판정합니다.</p>
       <div class="hero-btns">
         <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">
           내 창업판정 받기 →
         </a>
       </div>
       <p class="hero-note">무료 · 3분 · 강매 없음</p>
-      <div class="hero-badges">
-        <div class="badge-item">
-          <div class="num">25년+</div>
-          <div class="label">자영업 실전경험</div>
-        </div>
-        <div class="badge-item">
-          <div class="num">4개+</div>
-          <div class="label">직영점 운영</div>
-        </div>
-        <div class="badge-item">
-          <div class="num">FC 본부</div>
-          <div class="label">프랜차이즈 COO·CMO</div>
-        </div>
+    </div>
+  </div>
+</section>
+
+<!-- 스토리 섹션 -->
+<section id="story">
+  <div class="story-inner">
+    <div class="story-eyebrow fade-up">사업시스템 설계자</div>
+    <h2 class="story-title fade-up">저는 25년째 현장에 있습니다</h2>
+    <div class="story-body fade-up">
+      <p>코로나로 쓰던 사무실을 접었을 때,<br>사무실이 필요했습니다.</p>
+      <p>비용만 나가는 공간 말고<br>돈도 벌면서 쓸 수 있는 공간을 찾았습니다.</p>
+      <p>그래서 스터디카페를 열었습니다.</p>
+      <p>다른 업종에서 기존에 해왔던 방식을<br>새로운 사업에 그대로 적용해봤습니다.</p>
+      <p>처음 해보는 업종이었는데,<br>저 또한 놀랐습니다.</p>
+      <p>오픈한 지 3개월 만에 손익분기점을 넘겼습니다.<br>그 뒤로는 계속 그 위에 있었습니다.</p>
+      <p>그때 알았습니다.<br>업종은 바뀌어도, 구조는 같더군요.</p>
+      <p>그때는 코로나 한복판이었습니다.</p>
+      <p>얼마 뒤 본사에서 제안이 왔습니다.<br>가맹점 교육 시스템을 만들어 달라고.</p>
+      <p>그때 본사와 점주들 사이는 좋지 않았습니다.<br>말을 꺼내기도 전에 원망부터 듣는 자리였습니다.</p>
+      <p>그래서 첫 시간에는 아무것도 가르치지 않았습니다.<br>그냥 다 들었습니다.</p>
+      <p>저도 매장을 하는 사람이었으니까,<br>그 답답함이 어디서 오는지 알았습니다.</p>
+      <p>먼저 4개 가맹점에서 직접 시험했습니다.<br>되는 것만 남기고, 안 되는 건 버렸습니다.</p>
+      <p>점주님들께는 노트북과 매장 휴대폰을 가져오시게 했습니다.<br>듣고 가시라고 부른 게 아니라,<br>그 자리에서 같이 고치려고 부른 거였습니다.</p>
+      <p>교육이 끝날 때는 숙제를 드렸습니다.<br>"열심히 하세요"가 아니라<br>리뷰 3명, 채널 친구 10명, 제휴 1군데.<br>오늘 안에 끝나는 크기로.</p>
+      <img class="story-photo" src="images/training.jpg" alt="가맹점 실전교육 현장">
+      <p>6월에 결과를 확인했습니다.</p>
+      <p>교육을 마친 56개 매장 중 80%가 매출이 올랐습니다.<br>같은 기간, 교육받지 않은 185개 매장은<br>절반이 오히려 떨어졌습니다.</p>
+      <p>저는 이 숫자를 자랑하려고 꺼낸 게 아닙니다.<br>비교 대상 없는 숫자는 믿을 게 못 되기 때문에,<br>비교 대상까지 함께 보여드리는 겁니다.</p>
+      <p>처음에는 본사로 오시게 했습니다.<br>지방 점주님들까지 올라오셨습니다.</p>
+      <p>그러다 대전에서 오신 한 분이 말씀하셨습니다.</p>
+      <p class="story-quote">"우리 지역엔 시간을 못 내서 못 오는 분들이 많습니다.<br>내가 모아놓을 테니 직접 와주시면 안 되겠습니까."</p>
+      <p>그래서 대전에 갔습니다.<br>그날 반응이 좋아서, 그다음은 부산이었고,<br>그렇게 전국을 돌게 됐습니다.</p>
+      <p>제가 모객한 게 아닙니다.<br>교육받은 분들이 다음 사람을 데려왔습니다.</p>
+      <p>마지막에 세어보니 100개 매장이었습니다.</p>
+      <p>그중에는 이미 문을 닫기로 마음먹은 분들도 있었습니다.</p>
+      <p>한 분은 남편분까지 함께 만나<br>밤 열한 시까지 이야기했습니다.<br>그분은 다시 문을 열기로 하셨습니다.</p>
+      <p>점주였을 때 저는 열심히 하면 된다고 믿었습니다.<br>100개를 보고 나서야 알았습니다.</p>
+      <p>매출이 오른 매장과 떨어진 매장의 차이는<br>노력이 아니라 구조였습니다.</p>
+      <p>제 매장도 예외가 아니었습니다.</p>
+      <p>같은 층에 같은 업종이 들어왔습니다.<br>25년 만에 처음 겪는 일이었습니다.</p>
+      <p>제가 게을러진 게 아니었습니다.<br>구조가 바뀐 겁니다.</p>
+      <p>그리고 그 구조는,<br>문을 연 뒤에는 거의 바꾸지 못합니다.<br>바꿀 수 있었던 시점은 계약 전이었습니다.</p>
+      <p class="story-em">그래서 비즈빌드는 창업을 팔지 않습니다.<br><span class="story-gold">판정을 팝니다.</span></p>
+      <hr class="story-hr">
+      <p>그런데 이미 문을 여신 분은 어떻게 합니까.</p>
+      <p>저희 건물엔 지금 같은 업종이 다섯 개 있습니다.<br>바로 옆에서 가격 할인까지 시작했습니다.</p>
+      <p>매출은 떨어졌습니다. 다만 덜 떨어졌습니다.</p>
+      <p>바뀐 환경에 맞게 구조를 다시 짰기 때문입니다.<br>그대로 뒀다면 훨씬 크게 무너졌을 겁니다.</p>
+      <p class="story-em">계약 전이라면 판정으로 막습니다.<br>이미 열었다면 구조로 버팁니다.</p>
+    </div>
+    <div class="hero-badges story-stats fade-up">
+      <div class="badge-item">
+        <div class="num">25년+</div>
+        <div class="label">자영업 현장</div>
+      </div>
+      <div class="badge-item">
+        <div class="num">100개 매장</div>
+        <div class="label">가맹점 실전교육 (2022)</div>
+      </div>
+      <div class="badge-item">
+        <div class="num">80%</div>
+        <div class="label">교육 후 매출 상승 (미교육군 49%)</div>
       </div>
     </div>
-    <div class="hero-image fade-up" style="transition-delay:0.2s">
-      <img src="images/main.jpg" alt="김건우 대표">
+    <div class="story-bridge fade-up">
+      <p>계약 전에 판정하고,<br>문을 연 뒤에는 구조를 설계하고,<br>자리를 잡으면 늘립니다.</p>
+      <p>비즈빌드가 하는 일은 이 세 가지입니다.</p>
     </div>
   </div>
 </section>
@@ -991,30 +1084,29 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
       <span class="wf-para">그때부터는 사업을 판단하는 것이 아니라,<br class="br-m"> 이미 넣은 돈 때문에 버티게 됩니다.</span>
     </p>
   </div>
+  <p class="wf-assume fade-up">퇴직금 1억 5천으로 시작해<br class="br-m"> 6개월 안에 손익분기를 넘긴다고 가정한 계산입니다.</p>
   <div class="wf-grid">
     <div class="wf-card fade-up">
       <div class="wf-num">1일</div>
       <h3 class="wf-title">약 85만 원</h3>
-      <p class="wf-desc">하루 늦게 판단할 때 사라지는 금액입니다.</p>
+      <p class="wf-desc">판단을 하루 미룰 때 소진되는 종잣돈입니다.</p>
       <div class="wf-brand">1억 5,300만 원 ÷ 180일</div>
     </div>
     <div class="wf-card fade-up" style="transition-delay:0.15s">
       <div class="wf-num">1주</div>
       <h3 class="wf-title">약 595만 원</h3>
-      <p class="wf-desc">일주일만 미뤄도 이만큼이 사라집니다.</p>
+      <p class="wf-desc">일주일이면 이만큼이 줄어듭니다.</p>
       <div class="wf-brand">85만 원 × 7일</div>
     </div>
     <div class="wf-card fade-up" style="transition-delay:0.3s">
       <div class="wf-num">1달</div>
       <h3 class="wf-title">약 2,550만 원</h3>
-      <p class="wf-desc">한 달이면 창업자금의 상당 부분입니다.</p>
+      <p class="wf-desc">한 달이면 종잣돈의 상당 부분입니다.</p>
       <div class="wf-brand">85만 원 × 30일</div>
     </div>
   </div>
   <p class="wf-intro fade-up" style="text-align:center;margin-top:48px;">
-    <span class="wf-para">물론 모든 창업이<br class="br-m"> 이 금액을 잃는다는 뜻은 아닙니다.</span>
-    <span class="wf-para">업종·투자금·임대조건·고정비에 따라<br class="br-m"> 손실 규모는 전부 달라집니다.</span>
-    <span class="wf-para">중요한 건 금액이 아닙니다.</span>
+    <span class="wf-para">업종·투자금·임대조건에 따라 규모는 달라집니다.<br>달라지는 건 규모지, 방향이 아닙니다.</span>
     <span class="wf-punch">시작 전에 계산하는 것과<br>돈을 잃으면서 배우는 것은<br class="br-m"> 완전히 다릅니다.</span>
   </p>
 </section>
@@ -1105,11 +1197,33 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
       <img src="images/main.jpg" alt="김건우 대표">
     </div>
     <div class="trust-content fade-up" style="transition-delay:0.2s">
-      <div class="eyebrow">사업시스템 설계자</div>
+      <div class="eyebrow">비즈빌드 대표</div>
       <h2>25년째 현장에 있는<br>사람이 설계합니다</h2>
-      <p>저는 지금도 매장을 운영하며 현장에서 경험을 쌓고 있습니다.</p>
-      <p>경영학을 전공했지만, 진짜 배움은 25년간 현장에서 얻었습니다. 매출이 흔들리던 시기, 사람이 빠져나가던 아침, 고정비 앞에서의 막막함.<br class="br-m"> 책에는 없는 그 시간들을 직접 통과했습니다.</p>
-      <p>그리고 그 경험을 시스템으로 정리해, 지금은 프랜차이즈 본부를 키우는 일을 합니다.</p>
+      <p>제 이름은 건우(建佑)입니다. 세울 건, 도울 우.</p>
+      <p>세우고 돕는다는 뜻입니다. 회사 이름을 비즈빌드로 지은 이유이기도 합니다.</p>
+      <p>저는 지금도 매장을 운영하고 있습니다.</p>
+      <p>스물여덟에 휴대폰 매장을 열었습니다. 하나가 자리를 잡자 네 개까지 늘렸습니다.</p>
+      <p>그때 알았습니다. 하나를 잘하는 것과 넷을 운영하는 것은 아예 다른 일이라는 걸.</p>
+      <p>하나일 때는 제가 다 하면 됐지만, 넷이 되자 사람과 시스템이 없으면 제가 아무리 뛰어도 안 되더군요.</p>
+      <p>언젠가 프랜차이즈 본부를 만들고 싶었습니다.</p>
+      <p>그래서 자영업을 오래 하면서 매장을 늘려도 봤고, 마지막엔 가맹본부에 직접 들어갔습니다. 밖에서 보는 것과 안에서 보는 건 다르니까요.</p>
+      <p>그곳에서 100개 가맹점의 교육을 설계했습니다.</p>
+      <p>그 뒤 다른 본부로 옮겨 부대표를 맡았습니다. 운영과 마케팅 전반을 총괄했습니다.</p>
+      <p>가맹점을 직접 해봤고,<br>가맹점주를 가르쳐봤고,<br>가맹본부 안에서 일했습니다.</p>
+      <p>세 자리에서 무엇이 다른지 압니다.</p>
+      <p>일은 늘 현장에서 배웠습니다.</p>
+      <p>한 점주님 매장에는 세 번 갔습니다. 마지막엔 새벽 한 시까지 같이 앉아 설정 하나하나를 함께 만졌습니다.</p>
+      <p>책상에서 정리한 방법은 현장에서 대부분 안 먹혔습니다.</p>
+      <p>경영학을 전공했지만, 진짜 배움은 25년간 현장에서 얻었습니다.</p>
+      <p>매출이 흔들리던 시기, 사람이 빠져나가던 아침, 고정비 앞에서의 막막함.<br class="br-m"> 책에는 없는 그 시간들을 직접 통과했습니다.</p>
+      <p>그 시간이 가르쳐준 건 하나였습니다.</p>
+      <p class="trust-em">장사와 사업은 다릅니다.</p>
+      <p class="trust-pair">장사는 내가 열심히 하면 됩니다.<br>사업은 내가 없어도 굴러가야 합니다.</p>
+      <p class="trust-pair">장사는 오늘 매출을 봅니다.<br>사업은 다음 달 구조를 봅니다.</p>
+      <p class="trust-pair trust-pair-last">장사는 안 되면 더 오래 문을 엽니다.<br>사업은 안 되면 무엇이 잘못됐는지 찾습니다.</p>
+      <p>둘 다 필요합니다. 다만 순서가 있습니다.</p>
+      <p>장사만 하고 있으면 아무리 성실해도 어느 지점에서 멈춥니다.</p>
+      <p class="trust-em">비즈빌드의 3단계는 만들어낸 이론이 아닙니다. 제가 지나온 순서입니다.</p>
       <p>비즈빌드는 해본 적 없는 사람이 가르치는 곳이 아닙니다.</p>
       <div class="trust-stats">
         <div class="trust-stat">
@@ -1121,12 +1235,12 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
           <div class="t-label">자영업 현역 운영</div>
         </div>
         <div class="trust-stat">
-          <div class="t-num">FC 본부</div>
-          <div class="t-label">COO / CMO</div>
+          <div class="t-num">프랜차이즈 본부</div>
+          <div class="t-label">교육팀장 · 부대표</div>
         </div>
         <div class="trust-stat">
-          <div class="t-num">4개+</div>
-          <div class="t-label">직영점 운영</div>
+          <div class="t-num">4개</div>
+          <div class="t-label">휴대폰 체인 직영점</div>
         </div>
       </div>
     </div>
@@ -1243,6 +1357,15 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
       </button>
       <div class="faq-a">
         <p>25년간 직접 매장을 운영하고 프랜차이즈 본부를 세운 실전 데이터에 기반합니다. 잘될 것 같다는 감이 아니라, 실패하는 창업이 공통으로 놓친 기준으로 판정합니다. 그래서 듣기 좋은 말 대신 냉정한 결과가 나올 수도 있습니다.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">
+        <span class="faq-q-text">대표님은 지금 얼마나 버시나요?</span>
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a">
+        <p>말씀드리지 않습니다. 제가 얼마 버는지와 대표님 창업이 되는지는 별개이기 때문입니다.<br><br>대신 검증 가능한 숫자를 드립니다. 2022년 프랜차이즈 본부에서 100개 가맹점을 교육했고, 교육을 마친 56개 매장의 80%가 매출이 올랐습니다. 같은 기간 교육받지 않은 185개 매장은 절반이 하락했습니다.<br><br>비즈빌드가 증명해야 할 것은 제 소득이 아니라, 제 판단이 맞았는지입니다.</p>
       </div>
     </div>
   </div>
