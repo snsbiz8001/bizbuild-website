@@ -781,6 +781,13 @@ footer{
   margin-top:6px;
 }
 .footer-brand .brand-logo{display:flex;margin-bottom:24px;}
+/* 좌우 바닥선 정렬 — 설명문만 열 하단으로 */
+.footer-brand{display:flex;flex-direction:column;}
+.footer-brand > p{margin-top:auto;margin-bottom:14px;}
+@media(max-width:900px){
+  .footer-brand{display:block;}
+  .footer-brand > p{margin-top:0;margin-bottom:0;}
+}
 @media(max-width:600px){
   .footer-brand .brand-logo-sub{font-size:12px;}
   .footer-brand .footer-vision-ko{font-size:12px;}
