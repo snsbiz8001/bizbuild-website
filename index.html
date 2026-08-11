@@ -497,6 +497,28 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .trust-content p.trust-pair{margin-bottom:12px;}
 .trust-content p.trust-pair-last{margin-bottom:16px;}
 
+/* ── 대표 소개 본문 (3블록) ── */
+.bio-subtitle{
+  font-family:'Noto Serif KR',serif;
+  font-size:20px;font-weight:700;
+  color:#E8EBF0;margin:40px 0 16px;
+}
+.bio-body p{
+  font-size:19px;line-height:1.9;
+  color:#D8DEE8;margin-bottom:1.4em;
+}
+.bio-body p.contrast-pair{margin-bottom:1.2em;}
+.contrast-pair .c-jangsa{
+  display:block;color:#B8C2D4;font-weight:450;margin-bottom:2px;
+}
+.contrast-pair .c-saeop{
+  display:block;color:#E0BD6E;font-weight:700;
+}
+@media(max-width:600px){
+  .bio-subtitle{font-size:19px;}
+  .bio-body p{font-size:18px;}
+}
+
 /* ── 후기 섹션 ── */
 #reviews{
   padding:120px 5%;
@@ -1256,32 +1278,37 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
     <div class="trust-content fade-up" style="transition-delay:0.2s">
       <div class="eyebrow">비즈빌드 대표</div>
       <h2>25년째 현장에 있는<br>사람이 설계합니다</h2>
-      <p>제 이름은 건우(建佑)입니다. 세울 건, 도울 우.</p>
-      <p>세우고 돕는다는 뜻입니다. 회사 이름을 비즈빌드로 지은 이유이기도 합니다.</p>
-      <p>저는 지금도 매장을 운영하고 있습니다.</p>
-      <p>스물여덟에 휴대폰 매장을 열었습니다. 하나가 자리를 잡자 네 개까지 늘렸습니다.</p>
-      <p>그때 알았습니다. 하나를 잘하는 것과 넷을 운영하는 것은 아예 다른 일이라는 걸.</p>
-      <p>하나일 때는 제가 다 하면 됐지만, 넷이 되자 사람과 시스템이 없으면 제가 아무리 뛰어도 안 되더군요.</p>
-      <p>언젠가 프랜차이즈 본부를 만들고 싶었습니다.</p>
-      <p>그래서 자영업을 오래 하면서 매장을 늘려도 봤고, 마지막엔 가맹본부에 직접 들어갔습니다. 밖에서 보는 것과 안에서 보는 건 다르니까요.</p>
-      <p>그곳에서 100개 가맹점의 교육을 설계했습니다.</p>
-      <p>그 뒤 다른 본부로 옮겨 부대표를 맡았습니다. 운영과 마케팅 전반을 총괄했습니다.</p>
-      <p>가맹점을 직접 해봤고,<br>가맹점주를 가르쳐봤고,<br>가맹본부 안에서 일했습니다.</p>
-      <p>세 자리에서 무엇이 다른지 압니다.</p>
-      <p>일은 늘 현장에서 배웠습니다.</p>
-      <p>한 점주님 매장에는 세 번 갔습니다. 마지막엔 새벽 한 시까지 같이 앉아 설정 하나하나를 함께 만졌습니다.</p>
-      <p>책상에서 정리한 방법은 현장에서 대부분 안 먹혔습니다.</p>
-      <p>경영학을 전공했지만, 진짜 배움은 25년간 현장에서 얻었습니다.</p>
-      <p>매출이 흔들리던 시기, 사람이 빠져나가던 아침, 고정비 앞에서의 막막함.<br class="br-m"> 책에는 없는 그 시간들을 직접 통과했습니다.</p>
-      <p>그 시간이 가르쳐준 건 하나였습니다.</p>
-      <p class="trust-em">장사와 사업은 다릅니다.</p>
-      <p class="trust-pair">장사는 내가 열심히 하면 됩니다.<br>사업은 내가 없어도 굴러가야 합니다.</p>
-      <p class="trust-pair">장사는 오늘 매출을 봅니다.<br>사업은 다음 달 구조를 봅니다.</p>
-      <p class="trust-pair trust-pair-last">장사는 안 되면 더 오래 문을 엽니다.<br>사업은 안 되면 무엇이 잘못됐는지 찾습니다.</p>
-      <p>둘 다 필요합니다. 다만 순서가 있습니다.</p>
-      <p>장사만 하고 있으면 아무리 성실해도 어느 지점에서 멈춥니다.</p>
-      <p class="trust-em">비즈빌드의 3단계는 만들어낸 이론이 아닙니다. 제가 지나온 순서입니다.</p>
-      <p>비즈빌드는 해본 적 없는 사람이 가르치는 곳이 아닙니다.</p>
+      <h3 class="bio-subtitle">세우고, 돕는다</h3>
+      <div class="bio-body">
+        <p>제 이름은 건우(建佑)입니다. 세울 건, 도울 우 — 회사 이름을 비즈빌드로 지은 이유입니다.</p>
+        <p>저는 지금도 매장을 운영하고 있습니다.</p>
+      </div>
+      <h3 class="bio-subtitle">세 자리에서 봤습니다</h3>
+      <div class="bio-body">
+        <p>스물여덟에 휴대폰 매장을 열어 네 개까지 늘렸습니다. 하나를 잘하는 것과 넷을 운영하는 것은 아예 다른 일이었습니다.</p>
+        <p>그 뒤 가맹본부에 들어가 100개 가맹점의 교육을 설계했고, 다른 본부에서 부대표로 운영과 마케팅을 총괄했습니다.</p>
+        <p>가맹점을 직접 해봤고, 가맹점주를 가르쳐봤고, 가맹본부 안에서 일했습니다. 세 자리에서 무엇이 다른지 압니다.</p>
+        <p>한 점주님 매장에는 세 번 갔습니다. 마지막엔 새벽 한 시까지 같이 앉아 설정 하나하나를 함께 만졌습니다. 책상에서 정리한 방법은 현장에서 대부분 안 먹혔으니까요.</p>
+      </div>
+      <h3 class="bio-subtitle">장사와 사업은 다릅니다</h3>
+      <div class="bio-body">
+        <p>25년이 가르쳐준 건 하나였습니다.</p>
+        <p class="contrast-pair">
+          <span class="c-jangsa">장사는 내가 열심히 하면 됩니다.</span>
+          <span class="c-saeop">사업은 내가 없어도 굴러가야 합니다.</span>
+        </p>
+        <p class="contrast-pair">
+          <span class="c-jangsa">장사는 오늘 매출을 봅니다.</span>
+          <span class="c-saeop">사업은 다음 달 구조를 봅니다.</span>
+        </p>
+        <p class="contrast-pair">
+          <span class="c-jangsa">장사는 안 되면 더 오래 문을 엽니다.</span>
+          <span class="c-saeop">사업은 안 되면 무엇이 잘못됐는지 찾습니다.</span>
+        </p>
+        <p>둘 다 필요합니다. 다만 순서가 있습니다.</p>
+        <p>비즈빌드의 3단계는 만들어낸 이론이 아닙니다. 제가 지나온 순서입니다.</p>
+        <p>비즈빌드는 해본 적 없는 사람이 가르치는 곳이 아닙니다.</p>
+      </div>
       <div class="trust-stats">
         <div class="trust-stat">
           <div class="t-num">경영학 전공</div>
