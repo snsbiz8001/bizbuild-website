@@ -134,30 +134,11 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   font-size:21px;line-height:1.8;margin-top:28px;
 }
 .hero-sub .hero-sub-em{color:#FFFFFF;font-weight:700;}
-.hero-text p.hero-basis{
-  font-size:16px;font-weight:400;line-height:1.6;color:var(--gray);
-  max-width:520px;margin-bottom:36px;
-}
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px;}
 .hero-note{margin-top:14px;font-size:15px;color:#B8C2D4;letter-spacing:.02em;}
 /* 위 .hero-note 의 color 는 .hero-text p (0,1,1) 에 우선순위로 밀린다.
    실제로 색을 결정하는 것은 아래 규칙이므로 지우면 안 된다. */
 #hero .hero-note{color:#B8C2D4;}
-.btn-primary{
-  background:var(--gold);color:var(--navy);
-  padding:16px 32px;border-radius:4px;
-  font-size:15px;font-weight:700;text-decoration:none;
-  letter-spacing:0.3px;transition:all 0.2s;
-  display:inline-flex;align-items:center;gap:8px;
-}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,175,95,0.3);}
-.btn-secondary{
-  border:1px solid rgba(212,175,95,0.4);color:var(--gold);
-  padding:16px 32px;border-radius:4px;
-  font-size:15px;font-weight:500;text-decoration:none;
-  transition:all 0.2s;
-}
-.btn-secondary:hover{border-color:var(--gold);background:rgba(212,175,95,0.08);}
 .hero-badges{
   display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;
   margin-top:52px;padding-top:44px;
@@ -246,20 +227,6 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   color:#D8DEE8;font-family:'Noto Sans KR',sans-serif;
 }
 .story-body p:last-child{margin-bottom:0;}
-.story-photo{
-  display:block;width:100%;max-width:560px;
-  margin:2.4em auto;border-radius:8px;
-}
-.story-quote{
-  padding-left:20px;border-left:2px solid var(--gold);
-  color:var(--gray-light);
-}
-.story-em{font-weight:700;color:var(--white);}
-.story-gold{color:var(--gold);}
-.story-hr{
-  border:0;border-top:1px solid rgba(212,175,95,0.15);
-  margin:2.8em 0;
-}
 .story-stats{margin-top:48px;}
 .story-stats .num{font-size:clamp(22px,2.6vw,30px);}
 .story-stats .label{font-size:16px;margin-top:6px;letter-spacing:-0.2px;}
@@ -418,55 +385,6 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .wf-intro span{display:block;}
 .wf-intro .wf-highlight{color:var(--gold);}
-.wf-assume{
-  max-width:720px;margin:0 auto 36px;text-align:center;
-  font-size:16px;line-height:1.8;letter-spacing:-0.2px;
-  color:var(--gray);opacity:0.72;
-  word-break:keep-all;overflow-wrap:break-word;
-}
-.wf-grid{
-  max-width:1200px;margin:0 auto;
-  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
-}
-.wf-card{
-  background:var(--navy-mid);
-  border:1px solid rgba(212,175,95,0.15);
-  border-radius:12px;padding:44px 36px;
-  position:relative;overflow:hidden;
-  transition:all 0.3s;
-  display:flex;flex-direction:column;
-}
-.wf-card:hover{
-  border-color:rgba(212,175,95,0.5);
-  transform:translateY(-6px);
-  box-shadow:0 20px 60px rgba(0,0,0,0.3);
-}
-.wf-card::before{
-  content:'';position:absolute;
-  top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--gold-dim),var(--gold));
-  opacity:0;transition:opacity 0.3s;
-}
-.wf-card:hover::before{opacity:1;}
-.wf-num{
-  font-family:'Noto Serif KR',serif;
-  font-size:44px;font-weight:900;color:var(--gold);
-  line-height:1;margin-bottom:20px;
-}
-.wf-title{
-  font-family:'Noto Serif KR',serif;
-  font-size:21px;font-weight:700;letter-spacing:-0.2px;color:var(--white);
-  margin-bottom:14px;
-}
-.wf-desc{font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:28px;letter-spacing:-0.2px;}
-.wf-brand{
-  font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);opacity:1;letter-spacing:1.5px;
-  border-top:1px solid rgba(255,255,255,0.06);
-  padding-top:18px;margin-top:auto;
-}
-@media(max-width:900px){
-  .wf-grid{grid-template-columns:1fr;}
-}
 #why-fail .fq-list{margin-top:40px;}
 
 /* ── 3단계 시스템 섹션 ── */
@@ -603,9 +521,6 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   font-size:clamp(20px,2.6vw,28px);font-weight:900;color:var(--gold);
 }
 .trust-stat .t-label{font-size:15px;line-height:1.5;color:var(--gray);margin-top:4px;}
-.trust-content p.trust-em{font-weight:700;color:var(--white);}
-.trust-content p.trust-pair{margin-bottom:12px;}
-.trust-content p.trust-pair-last{margin-bottom:16px;}
 
 /* ── 대표 소개 본문 (3블록) ── */
 .bio-subtitle{
@@ -658,51 +573,9 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   .vision-ko{font-size:13px;}
 }
 
-/* ── 후기 섹션 ── */
-#reviews{
-  padding:120px 5%;
-  background:var(--navy);
-}
-.reviews-grid{
-  max-width:1100px;margin:0 auto;
-  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
-}
-.review-card{
-  background:var(--navy-mid);
-  border:1px solid rgba(212,175,95,0.1);
-  border-radius:12px;padding:32px;
-  transition:border-color 0.3s;
-  display:flex;flex-direction:column;
-}
-.review-card:hover{border-color:rgba(212,175,95,0.3);}
-.review-quote{
-  font-size:36px;color:var(--gold);opacity:0.8;
-  font-family:serif;line-height:1;margin-bottom:16px;
-}
-.review-text{
-  font-size:16px;line-height:1.9;color:#D8DEE8;
-  margin-bottom:24px;letter-spacing:-0.2px;word-break:keep-all;
-}
-.review-author{
-  display:flex;align-items:center;gap:12px;
-  border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;
-  margin-top:auto;
-}
-.review-highlight{font-size:14px;font-weight:700;color:var(--label-color);}
-.review-avatar{
-  width:40px;height:40px;border-radius:50%;
-  background:linear-gradient(135deg,var(--gold-dim),var(--gold));
-  display:flex;align-items:center;justify-content:center;
-  font-size:14px;font-weight:700;color:var(--navy);
-}
-.review-name{font-size:13px;font-weight:700;color:var(--white);}
-.review-role{font-size:11px;color:var(--gold-dim);margin-top:2px;}
-.review-stage{
-  font-size:15px;letter-spacing:2px;color:var(--label-color);font-weight:700;opacity:1;
-  background:rgba(212,175,95,0.1);
-  padding:3px 10px;border-radius:20px;
-  margin-bottom:16px;display:inline-block;
-}
+/* 후기 섹션 CSS 는 제거했다. 본문에서 "지어낸 후기 대신 초기 고객을 모신다"고
+   밝히고 섹션 자체를 뺐기 때문이다. 나중에 실제 후기가 생기면 그때의 마크업에
+   맞춰 새로 쓰는 편이 낫다. 옛 규칙이 필요하면 git 이력에서 꺼내면 된다. */
 
 /* ── FAQ 섹션 ── */
 #faq{
@@ -777,7 +650,6 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   line-height:1.25;margin-bottom:20px;
 }
 .cta-inner p{font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:44px;}
-.cta-inner .btn-primary{font-size:16px;padding:18px 40px;}
 .cta-note{font-size:15px;color:#B8C2D4;margin-top:16px;}
 
 /* ── 푸터 ── */
@@ -838,7 +710,6 @@ footer{
   .hero-text h1{font-size:clamp(30px,5.4vw,44px);}
   .system-grid{grid-template-columns:1fr;}
   .trust-inner{grid-template-columns:1fr;}
-  .reviews-grid{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;}
   .footer-bottom{padding-right:0;}
   .nav-menu{display:none;}
@@ -942,23 +813,6 @@ footer{
 }
 .bsi-lead{max-width:720px;margin:26px auto 0;font-size:17px;color:#D8DEE8;line-height:1.9;}
 .bsi-lead span{display:block;}
-.bsi-grid{
-  max-width:960px;margin:56px auto 0;
-  display:grid;grid-template-columns:repeat(2,1fr);gap:16px;
-}
-.bsi-cell{
-  background:var(--navy-mid);
-  border:1px solid rgba(212,175,95,0.15);
-  border-radius:12px;padding:24px 28px;
-  display:flex;align-items:baseline;gap:16px;
-  transition:all .3s;
-}
-.bsi-cell:hover{border-color:rgba(212,175,95,0.45);transform:translateY(-4px);}
-.bsi-cell-t{
-  font-family:'Noto Serif KR',serif;font-size:17px;font-weight:700;
-  color:var(--gold);flex-shrink:0;min-width:104px;
-}
-.bsi-cell-q{font-size:16px;color:#D8DEE8;line-height:1.7;letter-spacing:-0.2px;}
 .bsi-chips{
   max-width:820px;margin:48px auto 0;
   display:flex;flex-direction:column;gap:12px;
@@ -995,12 +849,8 @@ footer{
   #proof .proof-stats{margin-top:0;}
   .proof-note{margin-top:32px;font-size:16px;}
 }
-@media(max-width:900px){.bsi-grid{grid-template-columns:1fr;}}
 @media(max-width:600px){
   #bsi{padding:80px 5%;}
-  .bsi-cell{padding:22px 20px;}
-  .bsi-cell{flex-direction:column;align-items:flex-start;gap:8px;}
-  .bsi-cell-t{min-width:auto;}
   .bsi-chips{gap:10px;margin-top:32px;}
   .bsi-chip-row{gap:10px;}
   .bsi-chip{font-size:15px;padding:10px 16px;}
@@ -1101,8 +951,8 @@ footer{
 @media(max-width:600px){#cta .eyebrow{font-size:18px;}}
 
 /* ── 한국어 줄바꿈 ── */
-h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
-.wf-desc, .wf-brand, .vb-desc, .section-title, .section-sub,
+h1, h2, h3, p, span, .fq-text, .nd-text, .card-q, .card-desc,
+.vb-desc, .section-title, .section-sub,
 .fq-close, .bsi-lead, .bsi-close, .nd-close, .st-close, .wf-intro, .wf-punch{
   word-break:keep-all;
   overflow-wrap:break-word;
@@ -1133,12 +983,12 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
   .vb-title{margin-bottom:32px;}
 
   /* 3. 카드·리스트 항목 간격 */
-  .vb-grid, .fq-list, .wf-grid, .bsi-grid,
+  .vb-grid, .fq-list,
   .nd-list, .system-grid, .faq-list{
     gap:14px;
   }
   .faq-item{margin-bottom:14px;}
-  .system-card, .wf-card{margin-bottom:0;}
+  .system-card{margin-bottom:0;}
 
   /* 4. 문단 간격 — .wf-para 는 기본 규칙과 값이 같아 생략 */
   .trust-content p{margin-bottom:14px;}
