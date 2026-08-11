@@ -613,6 +613,26 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   margin-top:32px;
 }
 
+/* ── 비전 슬로건 카드 ── */
+.vision-card{
+  border-top:2px solid #D4AF5F;
+  background:rgba(212,175,95,0.06);
+  border-radius:0 0 10px 10px;
+  padding:24px 22px;text-align:center;
+}
+.trust-photo .vision-card{width:100%;max-width:360px;margin-top:24px;}
+.vision-en{
+  font-family:'Noto Serif KR',serif;
+  font-size:17px;font-weight:700;
+  color:#E0BD6E;letter-spacing:0.08em;
+  line-height:1.6;margin-bottom:10px;
+}
+.vision-ko{font-size:14px;font-weight:450;color:#B8C2D4;letter-spacing:-0.2px;}
+@media(max-width:600px){
+  .vision-en{font-size:15px;}
+  .vision-ko{font-size:13px;}
+}
+
 /* ── 후기 섹션 ── */
 #reviews{
   padding:120px 5%;
@@ -1405,6 +1425,10 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
           <div class="t-num">4개</div>
           <div class="t-label">휴대폰 체인 직영점</div>
         </div>
+      </div>
+      <div class="vision-card fade-up">
+        <p class="vision-en">BUILD YOUR BUSINESS,<br>DESIGN YOUR FUTURE</p>
+        <p class="vision-ko">당신의 사업을 구축하라, 당신의 미래를 설계하라</p>
       </div>
     </div>
     <div class="trust-content fade-up" style="transition-delay:0.2s">
