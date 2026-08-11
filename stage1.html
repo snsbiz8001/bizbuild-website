@@ -346,16 +346,42 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .cta-badge-meta{font-size:12px;color:var(--gray);margin-top:2px;}
 
 /* ── 푸터 ── */
-footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid rgba(201,169,97,0.1);}
+footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba(212,175,95,0.1);}
 .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:48px;}
 .footer-brand .brand-logo{margin-bottom:16px;}
 .footer-brand .brand-logo-main{font-size:24px;}
-.footer-brand p{font-size:15px;color:var(--gray);line-height:1.9;}
+.footer-brand p{font-size:16px;color:var(--gray);line-height:1.9;}
+/* ── 푸터 브랜드 슬로건 ── */
+.footer-brand .brand-logo-sub{
+  font-size:13px;font-weight:700;
+  color:#E0BD6E;opacity:1;
+}
+.footer-brand .footer-vision-ko{
+  font-size:15px;font-weight:450;
+  color:#B8C2D4;line-height:1.5;
+  letter-spacing:0.11em;
+  margin-top:6px;
+}
+.footer-brand .brand-logo{display:flex;margin-bottom:24px;}
+/* 좌우 바닥선 정렬 — 설명문만 열 하단으로 */
+.footer-brand{display:flex;flex-direction:column;}
+.footer-brand > p{margin-top:auto;margin-bottom:14px;}
+@media(max-width:768px){
+  .footer-brand{display:block;}
+  .footer-brand > p{margin-top:0;margin-bottom:0;}
+}
+@media(max-width:600px){
+  footer{padding-top:44px;}
+  .footer-brand .brand-logo-sub{font-size:12px;}
+  .footer-brand .footer-vision-ko{font-size:12px;}
+  .footer-brand p{font-size:15px;}
+  .footer-bottom p{font-size:13px;}
+}
 .footer-col h4{font-size:17px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:22px;}
 .footer-col a{display:block;font-size:16px;color:#D8DEE8;text-decoration:none;margin-bottom:14px;transition:color 0.2s;}
 .footer-col a:hover{color:var(--gold);}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:24px;padding-right:180px;}
-.footer-bottom p{font-size:12px;color:var(--gray);opacity:0.5;line-height:1.8;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:28px;padding-right:180px;}
+.footer-bottom p{font-size:14px;color:#B8C2D4;opacity:1;line-height:1.8;}
 
 /* ── 반응형 ── */
 /* 일반 섹션 — 모바일 상하 여백 통일 (섹션 규칙보다 뒤에 있어야 적용됨) */
@@ -510,6 +536,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
     <a href="index.html" class="brand-logo"><span class="brand-logo-main">BizBuild</span><span class="brand-logo-sub">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</span></a>
   </div>
   <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html#trust">소개</a></li>
     <li class="dropdown">
       <a href="#">비즈빌드 사업설계전략연구소 ▾</a>
       <div class="dropdown-menu">
@@ -518,9 +545,6 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
         <a href="stage3.html">3단계 증식설계</a>
       </div>
     </li>
-    <li><a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">마켓플로우</a></li>
-    <li><a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">정책자금</a></li>
-    <li><a href="https://blog.naver.com/snsbiz81" target="_blank" rel="noopener">인사이트</a></li>
     <li><a href="https://quiz.bizbuild.kr" target="_blank" rel="noopener" class="nav-cta nav-cta-blue">무료 자가진단</a></li>
   </ul>
   <div class="hamburger" onclick="toggleMenu()">
@@ -1108,28 +1132,28 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="brand-logo"><span class="brand-logo-main">BizBuild</span><span class="brand-logo-sub">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</span></div>
-      <p>창업을 판정하고, 사업을 설계하며,<br>지속 가능한 성장을 설계하는 비즈니스 시스템</p>
+      <div class="brand-logo"><span class="brand-logo-main">BizBuild</span><span class="brand-logo-sub">BUILD YOUR BUSINESS, DESIGN YOUR FUTURE</span><p class="footer-vision-ko">당신의 사업을 구축하라, 당신의 미래를 설계하라</p></div>
+      <p>창업을 판정하고,<br>사업을 설계하며,<br>성장을 증식합니다</p>
     </div>
     <div class="footer-col">
-      <h4>프로그램</h4>
+      <h4>시스템</h4>
       <a href="stage1.html">창업판정</a>
       <a href="stage2.html">사업설계</a>
       <a href="stage3.html">증식설계</a>
     </div>
     <div class="footer-col">
       <h4>서비스</h4>
-      <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">마켓플로우</a>
-      <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">정책자금</a>
+      <a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener">마켓플로우</a>
+      <a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener">정책자금</a>
       <a href="https://blog.naver.com/snsbiz81" target="_blank" rel="noopener">인사이트</a>
     </div>
     <div class="footer-col">
       <h4>상담</h4>
       <a href="https://quiz.bizbuild.kr" target="_blank">무료 자가진단</a>
-      <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">상담 신청</a>
+      <a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener">상담 신청</a>
       <a href="https://blog.naver.com/snsbiz81" target="_blank">네이버 블로그</a>
-      <a href="https://bizbuild.kr/refund.html">환불 규정</a>
-      <a href="https://bizbuild.kr/privacy.html">개인정보처리방침</a>
+      <a href="refund.html">환불 규정</a>
+      <a href="privacy.html">개인정보처리방침</a>
     </div>
   </div>
   <div class="footer-bottom">
