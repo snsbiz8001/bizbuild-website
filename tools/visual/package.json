@@ -1,0 +1,18 @@
+{
+  "name": "bizbuild-visual",
+  "version": "1.0.0",
+  "private": true,
+  "description": "bizbuild.kr 시각 회귀 테스트 — CSS·마크업 수정 전후를 픽셀 단위로 대조한다",
+  "scripts": {
+    "setup": "npm install && npx playwright install chromium",
+    "shot": "node shot.js",
+    "compare": "node compare.js",
+    "locate": "node locate.js",
+    "verify-live": "node verify-live.js"
+  },
+  "dependencies": {
+    "pixelmatch": "^7.1.0",
+    "playwright": "^1.57.0",
+    "pngjs": "^7.0.0"
+  }
+}

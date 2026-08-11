@@ -1,2 +1,8 @@
 CLAUDE.md
 .vscode/
+
+# 시각 회귀 테스트 생성물 (tools/visual/README.md 참고)
+node_modules/
+tools/visual/shots/
+tools/visual/.fontcache/
+tools/visual/package-lock.json
