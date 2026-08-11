@@ -945,6 +945,9 @@ footer{
 .bsi-cell-q{font-size:16px;color:#D8DEE8;line-height:1.7;letter-spacing:-0.2px;}
 .bsi-chips{
   max-width:820px;margin:48px auto 0;
+  display:flex;flex-direction:column;gap:12px;
+}
+.bsi-chip-row{
   display:flex;flex-wrap:wrap;justify-content:center;gap:12px;
 }
 .bsi-chip{
@@ -984,6 +987,7 @@ footer{
   .bsi-cell{flex-direction:column;align-items:flex-start;gap:8px;}
   .bsi-cell-t{min-width:auto;}
   .bsi-chips{gap:10px;margin-top:32px;}
+  .bsi-chip-row{gap:10px;}
   .bsi-chip{font-size:15px;padding:10px 16px;}
   .bsi-note{margin-top:32px;}
   .bsi-close{font-size:17px;}
@@ -1333,16 +1337,20 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
     </p>
   </div>
   <div class="bsi-chips fade-up">
-    <span class="bsi-chip">총자금</span>
-    <span class="bsi-chip">고정비</span>
-    <span class="bsi-chip">버틸 개월</span>
-    <span class="bsi-chip">손익분기</span>
-    <span class="bsi-chip">독립검증</span>
-    <span class="bsi-chip">계약 압박</span>
-    <span class="bsi-chip">가족 동의</span>
-    <span class="bsi-chip">업종 경험</span>
-    <span class="bsi-chip">대응 계획</span>
-    <span class="bsi-chip">확신</span>
+    <div class="bsi-chip-row">
+      <span class="bsi-chip">총자금</span>
+      <span class="bsi-chip">고정비</span>
+      <span class="bsi-chip">버틸 개월</span>
+      <span class="bsi-chip">손익분기</span>
+      <span class="bsi-chip">독립검증</span>
+    </div>
+    <div class="bsi-chip-row">
+      <span class="bsi-chip">계약 압박</span>
+      <span class="bsi-chip">가족 동의</span>
+      <span class="bsi-chip">업종 경험</span>
+      <span class="bsi-chip">대응 계획</span>
+      <span class="bsi-chip">확신</span>
+    </div>
   </div>
   <p class="bsi-lead bsi-note fade-up">
     <span>중요한 것은 몇 개에 "예"라고 답하느냐가 아닙니다.</span>
