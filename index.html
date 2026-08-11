@@ -955,6 +955,20 @@ footer{
   font-size:19px;font-weight:700;color:#fff;line-height:1.8;
 }
 #bsi .vb-cta{margin-top:36px;}
+
+/* ── 증거: 현장 기록 ── */
+#proof{padding:120px 5%;background:linear-gradient(180deg,var(--navy-mid) 0%,var(--navy) 100%);}
+#proof .proof-stats{max-width:1000px;margin:0 auto;padding-top:0;border-top:none;}
+.proof-note{
+  max-width:720px;margin:40px auto 0;text-align:center;
+  font-size:17px;color:#D8DEE8;line-height:1.9;
+  word-break:keep-all;overflow-wrap:break-word;
+}
+.proof-note span{display:block;}
+@media(max-width:600px){
+  #proof .proof-stats{margin-top:0;}
+  .proof-note{margin-top:32px;font-size:16px;}
+}
 @media(max-width:900px){.bsi-grid{grid-template-columns:1fr;}}
 @media(max-width:600px){
   #bsi{padding:80px 5%;}
@@ -1077,6 +1091,7 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
   #five-q{padding:56px 5%;}
   #why-fail{padding:56px 5%;}
   #bsi{padding:56px 5%;}
+  #proof{padding:56px 5%;}
   #system{padding:56px 5%;}
   #trust{padding:56px 5%;}
   #not-do{padding:56px 5%;}
@@ -1090,7 +1105,7 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
 /* ── 모바일 여백 통일 체계 ── */
 @media(max-width:600px){
   /* 1. 섹션 상하 여백 */
-  #story, #verdict-bridge, #five-q, #why-fail, #bsi,
+  #story, #verdict-bridge, #five-q, #why-fail, #bsi, #proof,
   #system, #trust, #not-do, #reviews, #faq{
     padding-top:56px;
     padding-bottom:56px;
@@ -1329,6 +1344,33 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
   </div>
 </section>
 
+<!-- 증거: 현장 기록 -->
+<section id="proof">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">판정의 기준은 책상에서 만들지 않았습니다</div>
+    <h2 class="section-title">현장에서 보고,<br class="br-m"> 숫자로 확인했습니다</h2>
+  </div>
+  <div class="hero-badges story-stats proof-stats fade-up">
+    <div class="badge-item">
+      <div class="num">25년+</div>
+      <div class="label">자영업 현장</div>
+    </div>
+    <div class="badge-item">
+      <div class="num">100개 매장</div>
+      <div class="label">가맹점 실전교육 (2022)</div>
+    </div>
+    <div class="badge-item">
+      <div class="num">80%</div>
+      <div class="label">교육매장 56곳 중 매출 상승</div>
+    </div>
+  </div>
+  <figure id="chart-80vs49" class="story-chart" style="display:none"><!-- TODO: 80% vs 49% SVG 시안 수령 후 삽입 --><figcaption>가맹점 실전교육 결과 (2022) — 교육군 56개 vs 미교육군 185개</figcaption></figure>
+  <p class="proof-note fade-up">
+    <span>같은 기간, 교육받지 않은 185개 매장은 절반이 하락했습니다.</span>
+    <span>비교 대상 없는 숫자는 믿을 게 못 되기에, 비교군까지 함께 보여드립니다.</span>
+  </p>
+</section>
+
 <!-- 스토리 섹션 -->
 <section id="story">
   <div class="story-inner">
@@ -1338,10 +1380,9 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
       <span class="chapter-label">CHAPTER 01</span>
       <h3>업종은 바뀌어도, 구조는 같습니다</h3>
       <div class="story-body">
-        <p>코로나로 사무실을 접고, 비용만 나가는 공간 대신 돈도 벌면서 쓸 공간을 찾아 스터디카페를 열었습니다.</p>
-        <p>처음 해보는 업종이었지만, 다른 업종에서 검증한 방식을 그대로 적용했습니다.</p>
-        <p>3개월 만에 손익분기점을 넘겼고, 그 뒤로 계속 그 위에 있었습니다.</p>
-        <p>그때 알았습니다. 업종은 바뀌어도, 구조는 같습니다.</p>
+        <p>코로나로 사무실을 접고 스터디카페를 열었습니다.</p>
+        <p>처음 해보는 업종이었지만, 다른 업종에서 검증한 구조를 그대로 적용해<br class="pc-only"> 3개월 만에 손익분기점을 넘겼습니다.</p>
+        <p>그때 알았습니다.<br class="pc-only"> 업종은 바뀌어도, 구조는 같습니다.</p>
       </div>
     </section>
     <section class="story-chapter story-chapter-alt fade-up">
@@ -1349,10 +1390,8 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
       <h3>숫자로 확인했습니다</h3>
       <div class="story-body">
         <p>얼마 뒤 프랜차이즈 본부에서 가맹점 교육 시스템을 만들어 달라는 제안이 왔습니다.</p>
-        <p>먼저 4개 매장에서 직접 시험해 되는 것만 남겼고, 교육이 끝날 때마다 오늘 안에 끝나는 숙제를 드렸습니다. 리뷰 3명, 채널 친구 10명, 제휴 1군데.</p>
-        <p>결과 — 교육받은 56개 매장 중 80%가 매출이 올랐습니다.<br class="pc-only"> 같은 기간, 교육받지 않은 185개 매장은 절반이 떨어졌습니다.</p>
-        <p>비교 대상 없는 숫자는 믿을 게 못 되기에, 비교군까지 함께 보여드립니다.</p>
-        <figure id="chart-80vs49" class="story-chart" style="display:none"><!-- TODO: 80% vs 49% SVG 시안 수령 후 삽입 --><figcaption>가맹점 실전교육 결과 (2022) — 교육군 56개 vs 미교육군 185개</figcaption></figure>
+        <p>4개 매장에서 직접 시험해 되는 것만 남겼고, 교육마다 오늘 안에 끝나는 숙제를 드렸습니다.<br class="pc-only"> 리뷰 3명, 채널 친구 10명, 제휴 1군데.</p>
+        <p>결과 — 교육받은 56개 매장 중 80%가 매출이 올랐습니다.</p>
       </div>
     </section>
     <section class="story-chapter fade-up">
@@ -1360,9 +1399,8 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
       <h3>차이는 노력이 아니라 구조였습니다</h3>
       <div class="story-body">
         <p>교육받은 분들이 다음 사람을 데려와, 전국 100개 매장을 만났습니다.</p>
-        <p>문을 닫기로 마음먹은 분과 밤 열한 시까지 이야기해, 다시 문을 열게 한 날도 있었습니다.</p>
-        <p>100개를 보고 나서야 알았습니다.<br class="pc-only"> 오른 매장과 떨어진 매장의 차이는 노력이 아니라 구조였습니다.</p>
-        <p>그리고 그 구조는 문을 연 뒤에는 거의 바꾸지 못합니다.<br class="pc-only"> 바꿀 수 있는 시점은 계약 전입니다.</p>
+        <p>문을 닫기로 마음먹은 분을 다시 열게 한 날도 있었습니다.</p>
+        <p>오른 매장과 떨어진 매장의 차이는 구조였고, 그 구조는 문을 연 뒤에는 거의 바꾸지 못합니다.<br class="pc-only"> 바꿀 수 있는 시점은 계약 전입니다.</p>
       </div>
     </section>
     <section class="story-chapter story-chapter-alt fade-up">
@@ -1370,25 +1408,11 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
       <h3>그래서 판정을 팝니다</h3>
       <div class="story-body">
         <p>제 매장도 예외가 아니었습니다.<br class="pc-only"> 같은 층에 같은 업종이 들어왔고, 지금 이 건물엔 다섯 개가 있습니다.</p>
-        <p>매출은 떨어졌습니다. 다만 덜 떨어졌습니다.<br class="pc-only"> 바뀐 환경에 맞게 구조를 다시 짰기 때문입니다.</p>
+        <p>매출은 떨어졌지만, 덜 떨어졌습니다.<br class="pc-only"> 구조를 다시 짰기 때문입니다.</p>
         <p>계약 전이라면 판정으로 막고, 이미 열었다면 구조로 버팁니다.</p>
         <p>그래서 비즈빌드는 창업을 팔지 않습니다. 판정을 팝니다.</p>
       </div>
     </section>
-    <div class="hero-badges story-stats fade-up">
-      <div class="badge-item">
-        <div class="num">25년+</div>
-        <div class="label">자영업 현장</div>
-      </div>
-      <div class="badge-item">
-        <div class="num">100개 매장</div>
-        <div class="label">가맹점 실전교육 (2022)</div>
-      </div>
-      <div class="badge-item">
-        <div class="num">80%</div>
-        <div class="label">교육 후 매출 상승 (미교육군 49%)</div>
-      </div>
-    </div>
     <div class="story-bridge fade-up">
       <p class="story-closing">계약 전에 판정하고,<br>문을 연 뒤에는 구조를 설계하고,<br>자리를 잡으면 늘립니다.</p>
       <p class="story-closing-sub">비즈빌드가 하는 일은 이 세 가지입니다.</p>
