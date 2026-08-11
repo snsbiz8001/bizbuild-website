@@ -121,8 +121,8 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .btn-outline:hover{background:rgba(201,169,97,0.1);transform:translateY(-2px);}
 
 /* ── 히어로 ── */
+/* min-height 는 아래에서 #hero·#hero-b 가 각각 0 으로 덮으므로 여기서 정하지 않는다 */
 #hero,#hero-b{
-  min-height:100vh;
   display:flex;align-items:center;justify-content:center;
   padding:140px 5% 100px;
   background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,#152C5B 100%);
@@ -285,7 +285,6 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .review-card{background:rgba(21,44,91,0.6);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:32px;transition:all 0.3s;}
 .review-card:hover{border-color:rgba(201,169,97,0.3);}
-.review-quote{font-size:40px;color:rgba(201,169,97,0.25);line-height:1;margin-bottom:-8px;}
 .review-text{font-size:16px;color:var(--gray-light);line-height:1.9;margin-bottom:24px;letter-spacing:-0.2px;}
 .review-author{display:flex;align-items:center;gap:12px;}
 .review-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy-light);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:var(--gold);flex-shrink:0;}
@@ -367,7 +366,6 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 /* ── 푸터 ── */
 footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba(212,175,95,0.1);}
 .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:48px;}
-.footer-brand .brand-logo{margin-bottom:16px;}
 .footer-brand .brand-logo-main{font-size:24px;}
 .footer-brand p{font-size:16px;color:var(--gray);line-height:1.9;}
 /* ── 푸터 브랜드 슬로건 ── */
@@ -394,7 +392,6 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
   .footer-brand .brand-logo-sub{font-size:12px;}
   .footer-brand .footer-vision-ko{font-size:12px;}
   .footer-brand p{font-size:15px;}
-  .footer-bottom p{font-size:13px;}
 }
 .footer-col h4{font-size:17px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:22px;}
 .footer-col a{display:block;font-size:16px;color:#D8DEE8;text-decoration:none;margin-bottom:14px;transition:color 0.2s;}
@@ -478,9 +475,7 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
     font-size:13px;
   }
 }
-</style>
 
-<style>
 /* STEP 2·3 카드 보조 CTA — padding·font-size 는 .btn-cta-blue 와 동일 */
 .card-cta{
   display:block;
