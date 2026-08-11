@@ -1108,16 +1108,10 @@ footer{
 #cta .eyebrow{font-size:20px;letter-spacing:2px;}
 @media(max-width:600px){#cta .eyebrow{font-size:18px;}}
 
-/* ── 한국어 줄바꿈 규칙 ── */
-h1, h2, h3, p, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
+/* ── 한국어 줄바꿈 ── */
+h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q, .card-desc,
 .wf-desc, .wf-brand, .vb-desc, .section-title, .section-sub,
 .fq-close, .bsi-lead, .bsi-close, .nd-close, .st-close, .wf-intro, .wf-punch{
-  word-break:keep-all;
-  overflow-wrap:break-word;
-}
-
-/* ── 한국어 줄바꿈 · 모바일 전용 br ── */
-h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
   word-break:keep-all;
   overflow-wrap:break-word;
 }
@@ -1125,29 +1119,15 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
 .wf-para{margin-bottom:14px;}
 .wf-para:last-child{margin-bottom:0;}
 
+/* ── 모바일 여백 통일 체계 ──
+   주의: 좌우 여백(5%)은 각 섹션의 기본 규칙(padding:120px 5%)에서 상속된다.
+   여기서는 상하 여백만 덮어쓴다. */
 @media(max-width:600px){
   .br-m{display:inline;}
-  #hero{padding-bottom:36px;}
-  #verdict-bridge{padding:56px 5%;}
-  #five-q{padding:56px 5%;}
-  #why-fail{padding:56px 5%;}
-  #bsi{padding:56px 5%;}
-  #proof{padding:56px 5%;}
-  #system{padding:56px 5%;}
-  #trust{padding:56px 5%;}
-  #not-do{padding:56px 5%;}
-  #reviews{padding:56px 5%;}
-  #faq{padding:56px 5%;}
-  #cta{padding:56px 5% 44px;}
-  footer{padding-top:44px;}
-  .faq-cta{margin-top:36px;padding-top:28px;}
-}
 
-/* ── 모바일 여백 통일 체계 ── */
-@media(max-width:600px){
   /* 1. 섹션 상하 여백 */
   #story, #verdict-bridge, #five-q, #why-fail, #bsi, #proof,
-  #system, #trust, #not-do, #reviews, #faq{
+  #system, #trust, #not-do, #faq{
     padding-top:56px;
     padding-bottom:56px;
   }
@@ -1168,9 +1148,7 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
   .faq-item{margin-bottom:14px;}
   .system-card, .wf-card{margin-bottom:0;}
 
-  /* 4. 문단 간격 */
-  .wf-para{margin-bottom:14px;}
-  .wf-para:last-child{margin-bottom:0;}
+  /* 4. 문단 간격 — .wf-para 는 기본 규칙과 값이 같아 생략 */
   .trust-content p{margin-bottom:14px;}
 
   /* 5. 콘텐츠 ↔ 마무리 문구 */
