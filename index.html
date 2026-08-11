@@ -593,6 +593,14 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   .bio-body p:not(.contrast-pair){margin-bottom:1.4em;}
 }
 
+/* ── 대표 소개 통계 카드 (좌측 열 배치) ── */
+.trust-photo{display:flex;flex-direction:column;}
+.trust-photo .trust-stats{
+  width:100%;max-width:360px;
+  grid-template-columns:1fr;
+  margin-top:32px;
+}
+
 /* ── 후기 섹션 ── */
 #reviews{
   padding:120px 5%;
@@ -1367,6 +1375,24 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
   <div class="trust-inner">
     <div class="trust-photo fade-up">
       <img src="images/main.jpg" alt="김건우 대표">
+      <div class="trust-stats">
+        <div class="trust-stat">
+          <div class="t-num">경영학 전공</div>
+          <div class="t-label">이론 기반</div>
+        </div>
+        <div class="trust-stat">
+          <div class="t-num">25년+</div>
+          <div class="t-label">자영업 현역 운영</div>
+        </div>
+        <div class="trust-stat">
+          <div class="t-num">프랜차이즈 본부</div>
+          <div class="t-label">교육팀장 · 부대표</div>
+        </div>
+        <div class="trust-stat">
+          <div class="t-num">4개</div>
+          <div class="t-label">휴대폰 체인 직영점</div>
+        </div>
+      </div>
     </div>
     <div class="trust-content fade-up" style="transition-delay:0.2s">
       <div class="eyebrow">비즈빌드 대표</div>
@@ -1401,24 +1427,6 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
         <p>둘 다 필요합니다. 다만 순서가 있습니다.</p>
         <p>비즈빌드의 3단계는 만들어낸 이론이 아닙니다.<br class="pc-only"> 제가 지나온 순서입니다.</p>
         <p>비즈빌드는 해본 적 없는 사람이 가르치는 곳이 아닙니다.</p>
-      </div>
-      <div class="trust-stats">
-        <div class="trust-stat">
-          <div class="t-num">경영학 전공</div>
-          <div class="t-label">이론 기반</div>
-        </div>
-        <div class="trust-stat">
-          <div class="t-num">25년+</div>
-          <div class="t-label">자영업 현역 운영</div>
-        </div>
-        <div class="trust-stat">
-          <div class="t-num">프랜차이즈 본부</div>
-          <div class="t-label">교육팀장 · 부대표</div>
-        </div>
-        <div class="trust-stat">
-          <div class="t-num">4개</div>
-          <div class="t-label">휴대폰 체인 직영점</div>
-        </div>
       </div>
     </div>
   </div>
