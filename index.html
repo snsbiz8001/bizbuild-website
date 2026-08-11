@@ -1135,6 +1135,7 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
     <a href="#hero" class="brand-logo"><span class="brand-logo-main">BizBuild</span></a>
   </div>
   <ul class="nav-menu">
+    <li><a href="#trust">소개</a></li>
     <li class="dropdown">
       <a href="#system">비즈빌드 사업설계전략연구소 ▾</a>
       <div class="dropdown-menu">
@@ -1143,9 +1144,6 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
         <a href="stage3.html">3단계 증식설계</a>
       </div>
     </li>
-    <li><a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener">마켓플로우</a></li>
-    <li><a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener">정책자금</a></li>
-    <li><a href="https://blog.naver.com/snsbiz81" target="_blank" rel="noopener">인사이트</a></li>
     <li><a href="https://quiz.bizbuild.kr" target="_blank" rel="noopener" class="nav-cta nav-cta-blue">무료 진단·상담</a></li>
   </ul>
   <div class="hamburger" onclick="toggleMenu()">
@@ -1742,6 +1740,12 @@ function toggleMenu(){
   menu.style.padding='20px';
   menu.style.borderBottom='1px solid rgba(212,175,95,0.2)';
 }
+// 모바일: 페이지 내 앵커 클릭 시 메뉴 닫기
+document.querySelectorAll('.nav-menu > li:not(.dropdown) > a[href^="#"]').forEach(function(link){
+  link.addEventListener('click',function(){
+    if(window.innerWidth<=900)document.querySelector('.nav-menu').style.display='none';
+  });
+});
 </script>
 <a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener" class="kakao-float-btn" aria-label="카카오톡 상담 채널로 이동">
   <span class="kakao-float-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="1.1em" height="1.1em" fill="#3C1E1E" role="img" aria-hidden="true"><path d="M12 3.2C6.6 3.2 2.2 6.7 2.2 11c0 2.75 1.85 5.17 4.66 6.57-.21.73-.75 2.6-.86 3.04-.13.55.2.54.42.4.17-.11 2.7-1.83 3.8-2.58.57.08 1.16.12 1.76.12 5.4 0 9.8-3.5 9.8-7.55S17.4 3.2 12 3.2z"/></svg></span>
