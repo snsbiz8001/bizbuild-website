@@ -231,6 +231,23 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   .story-chart{max-width:100%;}
 }
 
+/* ── 스토리 마무리 문구 ── */
+.story-closing{
+  font-family:'Noto Serif KR',serif;
+  font-size:24px;font-weight:700;
+  color:#E8EBF0;line-height:1.7;
+}
+.story-bridge p.story-closing{margin-bottom:0;}
+.story-closing-sub{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:17px;font-weight:450;
+  color:#B8C2D4;margin-top:20px;
+}
+@media(max-width:600px){
+  .story-closing{font-size:21px;}
+  .story-closing-sub{font-size:16px;}
+}
+
 /* ── 판정 3단계 브리지 섹션 ── */
 #verdict-bridge{
   padding:100px 5%;
@@ -1054,8 +1071,8 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
       </div>
     </div>
     <div class="story-bridge fade-up">
-      <p>계약 전에 판정하고,<br>문을 연 뒤에는 구조를 설계하고,<br>자리를 잡으면 늘립니다.</p>
-      <p>비즈빌드가 하는 일은 이 세 가지입니다.</p>
+      <p class="story-closing">계약 전에 판정하고,<br>문을 연 뒤에는 구조를 설계하고,<br>자리를 잡으면 늘립니다.</p>
+      <p class="story-closing-sub">비즈빌드가 하는 일은 이 세 가지입니다.</p>
     </div>
   </div>
 </section>
