@@ -352,8 +352,10 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
 /* ── 반응형 ── */
 @media(max-width:960px){
   .overview-grid{grid-template-columns:1fr;}
-  .instructor-inner{grid-template-columns:1fr;}
-  .inst-photo-wrap{display:none;}
+  /* 사진이 위로 올라가므로 크기·간격을 모바일에 맞게 줄인다 */
+  .instructor-inner{grid-template-columns:1fr;gap:28px;}
+  .inst-avatar{width:120px;height:120px;max-width:120px;}
+  .inst-name-tag{margin-top:14px;}
 }
 @media(max-width:768px){
   .problem-grid{grid-template-columns:1fr;}
