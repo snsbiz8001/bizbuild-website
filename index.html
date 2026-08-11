@@ -288,6 +288,11 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
   .story-chart{max-width:100%;}
 }
 
+/* ── 스토리 본문 의도 줄바꿈 (데스크톱 한정) ── */
+@media(max-width:600px){
+  .pc-only{display:none;}
+}
+
 /* ── 스토리 마무리 문구 ── */
 .story-closing{
   font-family:'Noto Serif KR',serif;
@@ -1136,7 +1141,7 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
       <div class="story-body">
         <p>얼마 뒤 프랜차이즈 본사에서 가맹점 교육 시스템을 만들어 달라는 제안이 왔습니다.</p>
         <p>먼저 4개 매장에서 직접 시험해 되는 것만 남겼고, 교육이 끝날 때마다 오늘 안에 끝나는 숙제를 드렸습니다. 리뷰 3명, 채널 친구 10명, 제휴 1군데.</p>
-        <p>결과 — 교육받은 56개 매장 중 80%가 매출이 올랐습니다. 같은 기간, 교육받지 않은 185개 매장은 절반이 떨어졌습니다.</p>
+        <p>결과 — 교육받은 56개 매장 중 80%가 매출이 올랐습니다.<br class="pc-only"> 같은 기간, 교육받지 않은 185개 매장은 절반이 떨어졌습니다.</p>
         <p>비교 대상 없는 숫자는 믿을 게 못 되기에, 비교군까지 함께 보여드립니다.</p>
         <figure id="chart-80vs49" class="story-chart" style="display:none"><!-- TODO: 80% vs 49% SVG 시안 수령 후 삽입 --><figcaption>가맹점 실전교육 결과 (2022) — 교육군 56개 vs 미교육군 185개</figcaption></figure>
       </div>
@@ -1147,16 +1152,16 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
       <div class="story-body">
         <p>교육받은 분들이 다음 사람을 데려와, 전국 100개 매장을 만났습니다.</p>
         <p>문을 닫기로 마음먹은 분과 밤 열한 시까지 이야기해, 다시 문을 열게 한 날도 있었습니다.</p>
-        <p>100개를 보고 나서야 알았습니다. 오른 매장과 떨어진 매장의 차이는 노력이 아니라 구조였습니다.</p>
-        <p>그리고 그 구조는 문을 연 뒤에는 거의 바꾸지 못합니다. 바꿀 수 있는 시점은 계약 전입니다.</p>
+        <p>100개를 보고 나서야 알았습니다.<br class="pc-only"> 오른 매장과 떨어진 매장의 차이는 노력이 아니라 구조였습니다.</p>
+        <p>그리고 그 구조는 문을 연 뒤에는 거의 바꾸지 못합니다.<br class="pc-only"> 바꿀 수 있는 시점은 계약 전입니다.</p>
       </div>
     </section>
     <section class="story-chapter story-chapter-alt fade-up">
       <span class="chapter-label">CHAPTER 04</span>
       <h3>그래서 판정을 팝니다</h3>
       <div class="story-body">
-        <p>제 매장도 예외가 아니었습니다. 같은 층에 같은 업종이 들어왔고, 지금 이 건물엔 다섯 개가 있습니다.</p>
-        <p>매출은 떨어졌습니다. 다만 덜 떨어졌습니다. 바뀐 환경에 맞게 구조를 다시 짰기 때문입니다.</p>
+        <p>제 매장도 예외가 아니었습니다.<br class="pc-only"> 같은 층에 같은 업종이 들어왔고, 지금 이 건물엔 다섯 개가 있습니다.</p>
+        <p>매출은 떨어졌습니다. 다만 덜 떨어졌습니다.<br class="pc-only"> 바뀐 환경에 맞게 구조를 다시 짰기 때문입니다.</p>
         <p>계약 전이라면 판정으로 막고, 이미 열었다면 구조로 버팁니다.</p>
         <p>그래서 비즈빌드는 창업을 팔지 않습니다. 판정을 팝니다.</p>
       </div>
