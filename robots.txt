@@ -1,0 +1,9 @@
+# bizbuild.kr — 검색엔진 수집 규칙
+# 기본적으로 모든 페이지 수집을 허용하고, 사이트 콘텐츠가 아닌 경로만 막는다.
+
+User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /404.html
+
+Sitemap: https://bizbuild.kr/sitemap.xml
