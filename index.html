@@ -159,8 +159,8 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .vp-card{
   justify-self:end;width:100%;max-width:440px;
-  background:#20345F;
-  border:1px solid rgba(212,175,95,0.4);
+  background:#14213F;
+  border:1px solid rgba(212,175,95,0.5);
   border-radius:14px;padding:32px 30px;
   box-shadow:0 16px 40px rgba(0,0,0,0.3);
 }
@@ -176,9 +176,13 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .vp-unit{font-size:20px;color:#B8C2D4;margin-left:4px;}
 .vp-gauge{position:relative;margin-bottom:8px;}
 .vp-track{
-  height:12px;border-radius:5px;
-  background:linear-gradient(90deg,#D65C5C 0%,#D65C5C 39%,#E8AB45 39%,#E8AB45 69%,#2FA57C 69%,#2FA57C 100%);
+  display:flex;gap:5px;
+  height:12px;background:none;
 }
+.vp-seg{height:12px;border-radius:6px;}
+.vp-seg-stop{flex:39;background:#D65C5C;opacity:0.55;}
+.vp-seg-hold{flex:30;background:#E8AB45;box-shadow:0 0 10px rgba(232,171,69,0.55);}
+.vp-seg-go{flex:31;background:#2FA57C;opacity:0.55;}
 .vp-marker{
   position:absolute;top:-6px;left:61%;
   width:4px;height:24px;background:#FFFFFF;
@@ -1109,7 +1113,7 @@ h1, h2, h3, p, span, .fq-text, .bsi-cell-q, .nd-text, .card-q{
         <div class="vp-score">61<span class="vp-unit">점</span></div>
       </div>
       <div class="vp-gauge">
-        <div class="vp-track"></div>
+        <div class="vp-track"><span class="vp-seg vp-seg-stop"></span><span class="vp-seg vp-seg-hold"></span><span class="vp-seg vp-seg-go"></span></div>
         <div class="vp-marker"></div>
       </div>
       <div class="vp-zones"><span>중단 ~39</span><span>보류 40~69</span><span>진행 70~</span></div>
