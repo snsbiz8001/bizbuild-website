@@ -600,10 +600,9 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .trust-stat .t-num{
   font-family:'Noto Serif KR',serif;
-  font-size:28px;font-weight:900;color:var(--gold);
+  font-size:clamp(20px,2.6vw,28px);font-weight:900;color:var(--gold);
 }
 .trust-stat .t-label{font-size:15px;line-height:1.5;color:var(--gray);margin-top:4px;}
-.trust-stat .t-num{font-size:clamp(20px,2.6vw,28px);}
 .trust-content p.trust-em{font-weight:700;color:var(--white);}
 .trust-content p.trust-pair{margin-bottom:12px;}
 .trust-content p.trust-pair-last{margin-bottom:16px;}
@@ -792,7 +791,6 @@ footer{
   display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;
   margin-bottom:48px;
 }
-.footer-brand .brand-logo{margin-bottom:16px;}
 .footer-brand .brand-logo-main{font-size:24px;}
 .footer-brand p{font-size:16px;color:var(--gray);line-height:1.9;}
 /* ── 푸터 브랜드 슬로건 ── */
@@ -818,7 +816,6 @@ footer{
   .footer-brand .brand-logo-sub{font-size:12px;}
   .footer-brand .footer-vision-ko{font-size:12px;}
   .footer-brand p{font-size:15px;}
-  .footer-bottom p{font-size:13px;}
 }
 .footer-col h4{
   font-size:17px;letter-spacing:2px;color:var(--gold);
@@ -850,7 +847,8 @@ footer{
 @media(max-width:600px){
   /* H1 3줄 고정 유지 — 3번째 줄이 4줄로 넘어가지 않게 폭에 비례 축소 */
   .hero-text h1{font-size:clamp(23px,6.9vw,32px);}
-  .hero-badges{grid-template-columns:1fr;gap:12px;margin-top:36px;padding-top:28px;}
+  /* margin-top·padding-top 은 아래 "모바일 여백 통일" 블록에서 정한다 */
+  .hero-badges{grid-template-columns:1fr;gap:12px;}
   .badge-item{text-align:left;}
   .trust-stats{grid-template-columns:1fr 1fr;}
   .footer-inner{grid-template-columns:1fr;}
@@ -1000,7 +998,6 @@ footer{
 @media(max-width:900px){.bsi-grid{grid-template-columns:1fr;}}
 @media(max-width:600px){
   #bsi{padding:80px 5%;}
-  .bsi-grid{gap:12px;}
   .bsi-cell{padding:22px 20px;}
   .bsi-cell{flex-direction:column;align-items:flex-start;gap:8px;}
   .bsi-cell-t{min-width:auto;}
@@ -1096,7 +1093,7 @@ footer{
   margin-top:16px;
 }
 @media(max-width:600px){
-  .wf-punch{font-size:20px;margin-top:14px;}
+  .wf-punch{font-size:20px;}
 }
 
 /* ── 클로징 아이브로우 ── */
