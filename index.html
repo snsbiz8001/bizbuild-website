@@ -847,9 +847,14 @@ footer{
   word-break:keep-all;overflow-wrap:break-word;
 }
 .proof-note span{display:block;}
+/* 차트 상하 여백 72px. 위는 .proof-stats(margin-bottom 0)와, 아래는 .proof-note(margin-top 40px)와
+   인접 형제 마진 상쇄되므로 figure 쪽 72px 이 그대로 실효 간격이 된다. id 로 잡아 타 섹션 불변. */
+#chart-80vs49{margin:72px auto;}
 @media(max-width:600px){
   #proof .proof-stats{margin-top:0;}
   .proof-note{margin-top:32px;font-size:16px;}
+  /* 아래쪽은 .proof-note 32px 과 상쇄되어 48px 유지 */
+  #chart-80vs49{margin:48px auto;}
 }
 @media(max-width:600px){
   #bsi{padding:80px 5%;}
