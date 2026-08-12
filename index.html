@@ -444,7 +444,10 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .card-num{
   font-family:'Noto Serif KR',serif;
-  font-size:56px;font-weight:900;color:rgba(212,175,95,0.1);
+  /* 배경 장식 숫자. 흰색이 아니라 골드(--gold)에 알파를 먹인 값이라 0.1 에서는
+     카드 배경(#0E1F45)과 대비 1.18:1 로 거의 묻혔다. 알파를 2배로 올려 1.46:1.
+     카드 우상단에 홀로 있어 .card-step·.card-title 과 겹치지 않는다. */
+  font-size:56px;font-weight:900;color:rgba(212,175,95,0.2);
   position:absolute;top:24px;right:28px;line-height:1;
 }
 .card-title{
