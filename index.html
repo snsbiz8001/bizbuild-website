@@ -653,7 +653,10 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 .cta-inner h2{
   font-family:'Noto Serif KR',serif;
-  font-size:clamp(28px,1.1818rem + 2.4242vw,48px);font-weight:900;letter-spacing:-0.2px;
+  /* 모바일 하한만 28→27px. 첫 행 "계약하고 확인하지 마십시오." 가 375px 에서
+     28px 이면 345.0px 로 컨테이너(337.5px)를 넘어 3행이 됐다. 27px 이면 332.5px 다.
+     데스크톱 48px 은 그대로다. */
+  font-size:clamp(27px,1.0909rem + 2.5455vw,48px);font-weight:900;letter-spacing:-0.2px;
   line-height:1.25;margin-bottom:20px;
 }
 .cta-inner p{font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:44px;}
