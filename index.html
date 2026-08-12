@@ -720,6 +720,9 @@ footer{
   .footer-bottom{padding-right:0;}
   .nav-menu{display:none;}
   .hamburger{display:flex;}
+  /* 모바일 드롭다운: 문서 흐름 안에서 펼쳐 아래 항목을 밀어낸다(absolute 겹침 제거) */
+  .nav-menu .dropdown-menu{position:static;width:100%;min-width:0;margin-top:6px;box-shadow:none;}
+  .nav-menu .dropdown-menu a{padding-left:32px;}
 }
 @media(max-width:600px){
   /* H1 3줄 고정 유지 — 3번째 줄이 4줄로 넘어가지 않게 폭에 비례 축소 */
