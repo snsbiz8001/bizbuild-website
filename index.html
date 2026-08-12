@@ -569,11 +569,13 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .trust-photo .vision-card{width:100%;max-width:360px;margin-top:24px;}
 .vision-en{
   font-family:'Noto Serif KR',serif;
-  font-size:clamp(15px,0.8807rem + 0.2424vw,17px);font-weight:700;
+  font-size:clamp(18px,1.0682rem + 0.2424vw,20px);font-weight:700;
   color:#E0BD6E;letter-spacing:0.08em;
   line-height:1.6;margin-bottom:10px;
 }
-.vision-ko{font-size:clamp(13px,0.7841rem + 0.1212vw,14px);font-weight:450;color:#B8C2D4;letter-spacing:-0.2px;line-height:1.6;}
+/* 국문은 영문보다 글자수가 적어 같은 크기면 행이 훨씬 짧아진다. 자간 0.22em 으로
+   벌려 두 블록의 최장 행폭을 맞춘다(375px·1200px 양쪽에서 영문의 90.8%). */
+.vision-ko{font-size:clamp(18px,1.0682rem + 0.2424vw,20px);font-weight:450;color:#B8C2D4;letter-spacing:0.22em;line-height:1.6;}
 
 /* 후기 섹션 CSS 는 제거했다. 본문에서 "지어낸 후기 대신 초기 고객을 모신다"고
    밝히고 섹션 자체를 뺐기 때문이다. 나중에 실제 후기가 생기면 그때의 마크업에
@@ -810,8 +812,12 @@ footer{
 /* ── BSI 창업생존지수 ── */
 #bsi{padding:var(--sec-pad) 5%;background:linear-gradient(180deg,var(--navy) 0%,var(--navy-mid) 100%);}
 .bsi-en{
-  font-family:'Noto Serif KR',serif;font-size:19px;font-weight:700;
-  color:var(--gold);letter-spacing:1.5px;margin-top:14px;
+  font-family:'Noto Serif KR',serif;font-size:clamp(17px,1.0057rem + 0.2424vw,19px);font-weight:700;
+  color:var(--gold);letter-spacing:0.0789em;margin-top:14px;
+  /* 전 화면 1행. nowrap 이라 넘치면 줄바꿈이 아니라 잘리므로, 모바일 하한을 17px 로
+     잡아 320px 화면까지 여유를 둔다. 19px 이면 359px 미만에서 잘린다.
+     자간 0.0789em 은 19px 에서 1.5px — 데스크톱 종전과 같은 값이다. */
+  white-space:nowrap;
 }
 .bsi-lead{max-width:720px;margin:26px auto 0;font-size:17px;color:#D8DEE8;line-height:1.9;}
 .bsi-lead span{display:block;}
@@ -1115,7 +1121,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
 <section id="verdict-bridge">
   <div class="vb-inner">
     <div class="vb-eyebrow fade-up">창업판정 자가진단</div>
-    <h2 class="vb-title fade-up">지금 <span class="accent">이 선택</span>,<br class="pc-only"> 해도 되는 상태입니까?</h2>
+    <h2 class="vb-title fade-up">지금 <span class="accent">이 선택</span>,<br> 해도 되는 상태입니까?</h2>
     <p class="vb-sub fade-up">결론은 세 가지 중 하나입니다.</p>
     <div class="vb-grid">
       <div class="vb-card fade-up" style="--vb-color:#1E7A5A;">
@@ -1243,7 +1249,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
     <rect x="0" y="220" width="206" height="28" rx="6" fill="#5A6272"/>
     <text x="220" y="242" font-family="'Noto Serif KR',serif" font-size="24" font-weight="700" fill="#B8C2D4">49%</text>
     </svg>
-    <figcaption>가맹점 실전교육 결과 (2022) — 교육군 56개 vs 미교육군 185개</figcaption>
+    <figcaption>가맹점 실전교육 결과 (2022)<br class="br-m"> — 교육군 56개 vs 미교육군 185개</figcaption>
   </figure>
   <p class="proof-note fade-up">
     <span>같은 기간, 교육받지 않은 185개 매장은 절반이 하락했습니다.</span>
@@ -1386,14 +1392,14 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
       <h2>25년째 현장에 있는 사람이 설계합니다</h2>
       <h3 class="bio-subtitle">세우고, 돕는다</h3>
       <div class="bio-body">
-        <p>제 이름은 건우(建佑)입니다. 세울 건, 도울 우.<br class="pc-only"> 회사 이름을 비즈빌드로 지은 이유입니다.</p>
+        <p>제 이름은 건우(建佑)입니다.<br class="br-m"> 세울 건, 도울 우.<br class="br-m"> 회사 이름을 비즈빌드로 지은 이유입니다.</p>
         <p>저는 지금도 매장을 운영하고 있습니다.</p>
       </div>
       <h3 class="bio-subtitle">세 자리에서 봤습니다</h3>
       <div class="bio-body">
         <p>스물여덟에 휴대폰 매장을 열어 네 개까지 늘렸습니다.</p>
         <p>그 뒤 가맹본부에서 100개 가맹점의 교육을 설계했고, 다른 본부에서 부대표로 운영과 마케팅을 총괄했습니다.</p>
-        <p>가맹점을 직접 해봤고, 가맹점주를 가르쳐봤고, 가맹본부 안에서 일했습니다.<br class="pc-only"> 세 자리에서 무엇이 다른지 압니다.</p>
+        <p>가맹점을 직접 해봤고,<br class="br-m"> 가맹점주를 가르쳐봤고,<br class="br-m"> 가맹본부 안에서 일했습니다.<br class="br-m"> 세 자리에서 무엇이 다른지 압니다.</p>
         <p>한 점주님 매장에는 세 번 갔습니다. 마지막엔 새벽 한 시까지 같이 앉아 설정 하나하나를 함께 만졌습니다.</p>
       </div>
       <h3 class="bio-subtitle">장사와 사업은 다릅니다</h3>
@@ -1532,7 +1538,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
       <span>점포 계약보다 먼저.</span>
       <span>가맹계약보다 먼저.</span>
     </div>
-    <h2 class="fade-up">계약하고 확인하지 마십시오.<br class="pc-only"> <span class="accent">확인하고 결정하십시오.</span></h2>
+    <h2 class="fade-up">계약하고 확인하지 마십시오.<br> <span class="accent">확인하고 결정하십시오.</span></h2>
     <p class="fade-up">고민만 하다, 또 1년이 지나갑니다.</p>
     <p class="fade-up">내 사업의 현재 위치를 확인하는 데<br class="br-m"> 딱 3분이면 됩니다.</p>
     <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue fade-up">
