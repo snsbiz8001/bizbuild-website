@@ -46,7 +46,11 @@
   --label-color:#E0BD6E;
 }
 html{scroll-behavior:smooth;}
-body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--white);}
+/* 가로 오버플로우 방어선(근본 원인 제거가 우선이고 이건 2차 방어선이다).
+   clip 은 hidden 과 달리 스크롤 컨테이너를 만들지 않아 sticky·스크롤 앵커링을 깨지 않는다.
+   clip 미지원 브라우저(iOS Safari 15 이하)에서는 앞줄의 hidden 이 대신 적용된다. 순서 바꾸지 말 것. */
+html,body{overflow-x:hidden;overflow-x:clip;}
 
 /* ── 네비게이션 ── */
 nav{
@@ -419,6 +423,16 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
     font-size:13px;
   }
 }
+
+/* ── 한국어 줄바꿈(어절 단위 유지) + 오버플로우 방지 ── */
+h1, h2, h3, h4, p, span, .eyebrow{
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+/* 데스크톱 전용 의도 줄바꿈: 모바일에서는 호흡용 br 해제 */
+@media(max-width:600px){
+  .pc-only{display:none;}
+}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -480,7 +494,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
       <span class="stage-name">사업설계</span>
     </div>
     <h1 class="fade-up">열었는데 매출이 안 오릅니다<br><span class="accent">문제는 아이템이 아니라 구조입니다</span></h1>
-    <p class="hero-sub fade-up">이미 창업했지만 매출이 정체됐다면 — 고객 유입·재구매·마케팅·운영을<br>다시 설계하는 사업설계입니다.</p>
+    <p class="hero-sub fade-up">이미 창업했지만 매출이 정체됐다면 — 고객 유입·재구매·마케팅·운영을<br class="pc-only"> 다시 설계하는 사업설계입니다.</p>
     <div class="hero-cta-row fade-up">
       <a href="#cta" class="btn-primary">수강 신청하기 →</a>
       <a href="#curriculum" class="btn-outline">커리큘럼 보기</a>
@@ -902,7 +916,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
   <div class="cta-inner">
     <div class="eyebrow fade-up" style="justify-content:center;">지금 시작하기</div>
     <h2 class="fade-up">매출이 안 오르는 채로,<br>또 1년이 지나갑니다</h2>
-    <p class="fade-up">정체된 매출은 구조를 바꾸지 않으면 저절로 풀리지 않습니다.<br>지금 내 매출이 구조로 나오는지, 3분 자가진단으로 먼저 확인하세요.</p>
+    <p class="fade-up">정체된 매출은 구조를 바꾸지 않으면 저절로 풀리지 않습니다.<br class="pc-only"> 지금 내 매출이 구조로 나오는지, 3분 자가진단으로 먼저 확인하세요.</p>
     <div class="cta-btns fade-up">
       <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">내 창업판정 받기 →</a>
       <a href="https://pf.kakao.com/_egHPX" target="_blank" class="btn-outline">수강 문의하기</a>
