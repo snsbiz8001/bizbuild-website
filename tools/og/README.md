@@ -26,3 +26,4 @@ node tools/og/render.js
 ## 주의
 - 파일명·경로(`images/og-cover.jpg`)를 바꾸면 전 페이지의 `og:image`/`twitter:image` 참조를 함께 고쳐야 한다. 그대로 덮어쓰는 것이 원칙.
 - 크기 1200×630은 og:image 선언값(`og:image:width`/`height`)과 일치해야 한다.
+- 이미지 재생성 시 각 페이지 `og:image`/`twitter:image` URL의 `?v=` 숫자를 올려야 카카오 캐시가 갱신됨.
