@@ -48,7 +48,11 @@
   --label-color:#E0BD6E;
 }
 html{scroll-behavior:smooth;}
-body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--navy);color:var(--white);}
+/* 가로 오버플로우 방어선(근본 원인 제거가 우선이고 이건 2차 방어선이다).
+   clip 은 hidden 과 달리 스크롤 컨테이너를 만들지 않아 sticky·스크롤 앵커링을 깨지 않는다.
+   clip 미지원 브라우저(iOS Safari 15 이하)에서는 앞줄의 hidden 이 대신 적용된다. 순서 바꾸지 말 것. */
+html,body{overflow-x:hidden;overflow-x:clip;}
 
 /* ── 네비게이션 ── */
 nav{
@@ -537,6 +541,16 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
   margin-top:10px;
   margin-bottom:0;
 }
+
+/* ── 한국어 줄바꿈(어절 단위 유지) + 오버플로우 방지 ── */
+h1, h2, h3, h4, p, span, .eyebrow, .cd-final-title{
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+/* 데스크톱 전용 의도 줄바꿈: 모바일에서는 호흡용 br 해제 */
+@media(max-width:600px){
+  .pc-only{display:none;}
+}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -598,7 +612,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
       <span class="stage-name">창업판정</span>
     </div>
     <h1 class="fade-up"><span class="accent">창업자금</span>을 투자하기 전,<br>시작 가능성부터 <span class="accent">판정</span>합니다</h1>
-    <p class="hero-sub fade-up">퇴사를 앞두고 있거나, 창업을 준비 중이라면 — 입지, 수익구조, 자금까지<br>문 열기 전에 검증하는 무료 자가진단부터 시작합니다.</p>
+    <p class="hero-sub fade-up">퇴사를 앞두고 있거나, 창업을 준비 중이라면 — 입지, 수익구조, 자금까지<br class="pc-only"> 문 열기 전에 검증하는 무료 자가진단부터 시작합니다.</p>
     <div class="hero-cta-row fade-up">
       <a href="https://quiz.bizbuild.kr" target="_blank" class="btn-cta-blue">내 창업판정 받기 →</a>
       <a href="#curriculum" class="btn-outline">커리큘럼 보기</a>
@@ -639,7 +653,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
   <div class="hero-grid-line"></div>
   <div class="hero-inner">
     <h2 class="fade-up">자가진단은 신호를 보여줍니다<br><span class="accent">숫자는 아직 계산되지 않았습니다</span></h2>
-    <p class="hero-sub fade-up">3분 자가진단으로 지금 상태를 확인하셨습니다.<br>다음은 그 판단이 맞는지 숫자로 검증하는 단계입니다.</p>
+    <p class="hero-sub fade-up">3분 자가진단으로 지금 상태를 확인하셨습니다.<br class="pc-only"> 다음은 그 판단이 맞는지 숫자로 검증하는 단계입니다.</p>
     <div class="hero-cta-row fade-up">
       <a href="judgment.html" target="_blank" rel="noopener" class="btn-primary">창업판정 리포트 받기 →</a>
       <a href="#curriculum" class="btn-outline">커리큘럼 보기</a>
@@ -1147,7 +1161,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
   <div class="cta-inner">
     <div class="eyebrow fade-up" style="justify-content:center;">지금 시작하기</div>
     <h2 class="fade-up">고민만 하다,<br>또 1년이 지나갑니다</h2>
-    <p class="fade-up">막연한 불안은 설계되지 않으면 사라지지 않습니다.<br>지금 내 창업이 진행 가능한지, 3분 자가진단으로 먼저 확인하세요.</p>
+    <p class="fade-up">막연한 불안은 설계되지 않으면 사라지지 않습니다.<br class="pc-only"> 지금 내 창업이 진행 가능한지, 3분 자가진단으로 먼저 확인하세요.</p>
     <div class="cta-badge fade-up">
       <div class="cta-badge-text">
         <div class="cta-badge-name">김건우 · 사업시스템 설계자</div>
