@@ -426,7 +426,7 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
   .cd-weeks{grid-template-columns:1fr;}
   /* 1단으로 접히는 구간에서만 주차 제목을 1줄로 고정한다.
      769px 이상은 2단이라 카드가 좁아져 nowrap 이 넘치므로 기본 22px 자동 줄바꿈을 유지한다. */
-  .cd-week-head h3{font-size:clamp(15px,2.4vw + 6px,22px);white-space:nowrap;word-break:keep-all;}
+  .cd-week-head h3{font-size:clamp(16px,2.4vw + 7px,22px);white-space:nowrap;word-break:keep-all;}
   .includes-list{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;}
   .footer-bottom{padding-right:0;}
@@ -442,6 +442,10 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
 @media(max-width:480px){
   .footer-inner{grid-template-columns:1fr;}
   .cta-btns{flex-direction:column;align-items:center;}
+}
+@media(max-width:340px){
+  /* 340px 이하 초소형 기기에서는 1줄 고정을 풀어 넘침 대신 2줄로 접는다 */
+  .cd-week-head h3{white-space:normal;font-size:15px;}
 }
 
 /* ── 카톡 상담 플로팅 버튼 ── */
