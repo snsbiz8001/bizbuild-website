@@ -424,6 +424,9 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
   .reviews-grid{grid-template-columns:1fr;}
   .pd-grid{grid-template-columns:1fr;}
   .cd-weeks{grid-template-columns:1fr;}
+  /* 1단으로 접히는 구간에서만 주차 제목을 1줄로 고정한다.
+     769px 이상은 2단이라 카드가 좁아져 nowrap 이 넘치므로 기본 22px 자동 줄바꿈을 유지한다. */
+  .cd-week-head h3{font-size:clamp(15px,2.4vw + 6px,22px);white-space:nowrap;word-break:keep-all;}
   .includes-list{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;}
   .footer-bottom{padding-right:0;}
