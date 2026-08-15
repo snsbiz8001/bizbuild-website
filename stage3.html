@@ -320,14 +320,14 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba(212,175,95,0.1);}
 .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:48px;}
 .footer-brand .brand-logo-main{font-size:24px;}
-.footer-brand p{font-size:16px;color:var(--gray);line-height:1.9;}
+.footer-brand p{font-size:clamp(15px,0.9091rem + 0.1212vw,16px);color:var(--gray);line-height:1.9;}
 /* ── 푸터 브랜드 슬로건 ── */
 .footer-brand .brand-logo-sub{
-  font-size:13px;font-weight:700;
+  font-size:clamp(11px,0.6307rem + 0.2424vw,13px);font-weight:700;
   color:#E0BD6E;opacity:1;
 }
 .footer-brand .footer-vision-ko{
-  font-size:15px;font-weight:450;
+  font-size:clamp(12px,0.6648rem + 0.3636vw,15px);font-weight:450;
   color:#B8C2D4;line-height:1.5;
   letter-spacing:0.11em;
   margin-top:6px;
@@ -342,9 +342,8 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
 }
 @media(max-width:600px){
   footer{padding-top:44px;}
-  .footer-brand .brand-logo-sub{font-size:11px;letter-spacing:1px;}
-  .footer-brand .footer-vision-ko{font-size:12px;}
-  .footer-brand p{font-size:15px;}
+  /* letter-spacing 은 font-size 가 아니므로 지시대로 그대로 둔다 */
+  .footer-brand .brand-logo-sub{letter-spacing:1px;}
 }
 .footer-col h4{font-size:17px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:22px;}
 .footer-col a{display:block;font-size:16px;color:#D8DEE8;text-decoration:none;margin-bottom:14px;transition:color 0.2s;}

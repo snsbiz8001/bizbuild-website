@@ -247,7 +247,7 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 .footer-brand p{font-size:16px;color:var(--gray);line-height:1.9;}
 /* ── 푸터 브랜드 슬로건 ── */
 .footer-brand .brand-logo-sub{
-  font-size:13px;font-weight:700;
+  font-size:clamp(11px,0.6307rem + 0.2424vw,13px);font-weight:700;
   color:#E0BD6E;opacity:1;
 }
 .footer-brand .footer-vision-ko{
@@ -260,7 +260,8 @@ footer{background:rgba(5,10,30,0.95);padding:56px 5% 32px;border-top:1px solid r
 .br-m{display:none;}
 @media(max-width:600px){
   .br-m{display:inline;}
-  .footer-brand .brand-logo-sub{font-size:11px;letter-spacing:1px;}
+  /* letter-spacing 은 font-size 가 아니므로 지시대로 그대로 둔다 */
+  .footer-brand .brand-logo-sub{letter-spacing:1px;}
 }
 .footer-col h4{font-size:17px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:22px;}
 .footer-col a{display:block;font-size:16px;color:var(--gray);text-decoration:none;margin-bottom:14px;transition:color 0.2s;}
