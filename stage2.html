@@ -262,23 +262,11 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .inst-stat .n{font-size:22px;font-weight:700;color:var(--gold);}
 .inst-stat .l{font-size:11px;color:var(--gray);margin-top:4px;letter-spacing:0.5px;}
 
-/* ── 후기 ── */
-#reviews{padding:100px 5%;background:var(--navy-mid);}
-.reviews-inner{max-width:1100px;margin:0 auto;}
-.reviews-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:12px;}
-.reviews-inner .rev-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.review-card{background:rgba(21,44,91,0.6);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:32px;transition:all 0.3s;}
-.review-card:hover{border-color:rgba(212,175,95,0.3);}
-.review-quote{font-size:40px;color:rgba(212,175,95,0.25);line-height:1;margin-bottom:-8px;}
-.review-text{font-size:16px;color:var(--gray-light);line-height:1.9;margin-bottom:24px;letter-spacing:-0.2px;}
-.review-author{display:flex;align-items:center;gap:12px;}
-.review-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy-light);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:var(--gold);flex-shrink:0;}
-.review-name{font-size:15px;font-weight:700;color:var(--label-color);opacity:1;}
-.review-role{font-size:15px;font-weight:600;color:var(--label-color);opacity:1;margin-top:2px;}
-
+/* 후기 섹션 CSS 는 제거했다. 실제 수강생 없이 지어낸 자리표시자 후기였고,
+   사실과 다른 표기라 섹션째 뺐기 때문이다. 나중에 실제 후기가 생기면 그때의
+   마크업에 맞춰 새로 쓰는 편이 낫다. 옛 규칙이 필요하면 git 이력에서 꺼내면 된다. */
 /* ── 프로그램 상세 ── */
-#program-details{padding:100px 5%;background:var(--navy);}
+#program-details{padding:100px 5%;background:var(--navy-mid);}
 .pd-inner{max-width:900px;margin:0 auto;}
 .pd-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:12px;}
 .pd-inner .pd-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
@@ -293,7 +281,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .next-period .np-note{font-size:16px;color:var(--gray);}
 
 /* ── FAQ ── */
-#faq{padding:100px 5%;background:var(--navy-mid);}
+#faq{padding:100px 5%;background:var(--navy);}
 .faq-inner{max-width:760px;margin:0 auto;}
 .faq-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:12px;}
 .faq-inner .faq-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
@@ -364,7 +352,6 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
   .verdict-grid{grid-template-columns:1fr;}
   .target-grid{grid-template-columns:1fr;}
   .outcomes-grid{grid-template-columns:1fr;}
-  .reviews-grid{grid-template-columns:1fr;}
   .pd-grid{grid-template-columns:1fr;}
   .includes-list{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;}
@@ -765,50 +752,6 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
         <div class="inst-stat"><div class="n">경영학 전공</div><div class="l">이론 기반</div></div>
         <div class="inst-stat"><div class="n">FC 본부</div><div class="l">COO / CMO</div></div>
         <div class="inst-stat"><div class="n">4개+</div><div class="l">직영점 운영</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 후기 -->
-<section id="reviews">
-  <div class="reviews-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">수강 후기</div>
-    <h2 class="fade-up">수강생 후기</h2>
-    <p class="rev-sub fade-up">사업설계로 매출 구조를 바꾼 분들의 실제 이야기입니다</p>
-    <div class="reviews-grid">
-      <div class="review-card fade-up">
-        <div class="review-quote">"</div>
-        <p class="review-text">오픈 2년 차인데 매출이 딱 정체돼 있었어요. 한 번 온 손님이 다시 안 온다는 걸 진단에서 처음 숫자로 봤습니다. 재구매 구조를 만들고 나서 단골 비중이 눈에 띄게 올랐어요.</p>
-        <div class="review-author">
-          <div class="review-avatar">김</div>
-          <div>
-            <div class="review-name">김○○</div>
-            <div class="review-role">카페 운영 2년 차</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card fade-up" style="transition-delay:0.15s">
-        <div class="review-quote">"</div>
-        <p class="review-text">마케팅을 그때그때 감으로만 돌리다 보니 어떤 달은 되고 어떤 달은 안 됐어요. 반복되는 유입 흐름을 시스템으로 짜고 나서는, 매출이 이벤트에 의존하지 않고 꾸준해졌습니다.</p>
-        <div class="review-author">
-          <div class="review-avatar">박</div>
-          <div>
-            <div class="review-name">박○○</div>
-            <div class="review-role">외식업 운영 · 매출 정체 극복</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card fade-up" style="transition-delay:0.3s">
-        <div class="review-quote">"</div>
-        <p class="review-text">제가 매장에 없으면 매출이 흔들리는 게 가장 큰 고민이었어요. 운영을 사람이 아니라 구조에 맡기는 방법을 배우고 나서, 자리를 비워도 돌아가는 매장이 됐습니다.</p>
-        <div class="review-author">
-          <div class="review-avatar">이</div>
-          <div>
-            <div class="review-name">이○○</div>
-            <div class="review-role">매장 2곳 운영</div>
-          </div>
-        </div>
       </div>
     </div>
   </div>

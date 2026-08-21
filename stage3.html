@@ -262,23 +262,11 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .inst-stat .n{font-size:22px;font-weight:700;color:var(--gold);}
 .inst-stat .l{font-size:11px;color:var(--gray);margin-top:4px;letter-spacing:0.5px;}
 
-/* ── 후기 ── */
-#reviews{padding:100px 5%;background:var(--navy-mid);}
-.reviews-inner{max-width:1100px;margin:0 auto;}
-.reviews-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:12px;}
-.reviews-inner .rev-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.review-card{background:rgba(21,44,91,0.6);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:32px;transition:all 0.3s;}
-.review-card:hover{border-color:rgba(212,175,95,0.3);}
-.review-quote{font-size:40px;color:rgba(212,175,95,0.25);line-height:1;margin-bottom:-8px;}
-.review-text{font-size:16px;color:var(--gray-light);line-height:1.9;margin-bottom:24px;letter-spacing:-0.2px;}
-.review-author{display:flex;align-items:center;gap:12px;}
-.review-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy-light);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:var(--gold);flex-shrink:0;}
-.review-name{font-size:15px;font-weight:700;color:var(--label-color);opacity:1;}
-.review-role{font-size:15px;font-weight:600;color:var(--label-color);opacity:1;margin-top:2px;}
-
+/* 후기 섹션 CSS 는 제거했다. 실제 수강생 없이 지어낸 자리표시자 후기였고,
+   사실과 다른 표기라 섹션째 뺐기 때문이다. 나중에 실제 후기가 생기면 그때의
+   마크업에 맞춰 새로 쓰는 편이 낫다. 옛 규칙이 필요하면 git 이력에서 꺼내면 된다. */
 /* ── 프로그램 상세 ── */
-#program-details{padding:100px 5%;background:var(--navy);}
+#program-details{padding:100px 5%;background:var(--navy-mid);}
 .pd-inner{max-width:900px;margin:0 auto;}
 .pd-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:12px;}
 .pd-inner .pd-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
@@ -293,7 +281,7 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .next-period .np-note{font-size:16px;color:var(--gray);}
 
 /* ── FAQ ── */
-#faq{padding:100px 5%;background:var(--navy-mid);}
+#faq{padding:100px 5%;background:var(--navy);}
 .faq-inner{max-width:760px;margin:0 auto;}
 .faq-inner h2{font-family:'Noto Serif KR',serif;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-0.2px;text-align:center;margin-bottom:12px;}
 .faq-inner .faq-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:56px;line-height:1.8;}
@@ -364,7 +352,6 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
   .verdict-grid{grid-template-columns:1fr;}
   .target-grid{grid-template-columns:1fr;}
   .outcomes-grid{grid-template-columns:1fr;}
-  .reviews-grid{grid-template-columns:1fr;}
   .pd-grid{grid-template-columns:1fr;}
   .includes-list{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;}
@@ -766,50 +753,6 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
         <div class="inst-stat"><div class="n">FC 본부</div><div class="l">가맹본부 COO</div></div>
         <div class="inst-stat"><div class="n">100개+</div><div class="l">매장 구조 방법론</div></div>
         <div class="inst-stat"><div class="n">다점포</div><div class="l">직영·가맹 운영</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 후기 -->
-<section id="reviews">
-  <div class="reviews-inner">
-    <div class="eyebrow fade-up" style="justify-content:center;">수강 후기</div>
-    <h2 class="fade-up">수강생 후기</h2>
-    <p class="rev-sub fade-up">증식설계로 2호점·다점포 확장에 성공한 분들의 실제 이야기입니다</p>
-    <div class="reviews-grid">
-      <div class="review-card fade-up">
-        <div class="review-quote">"</div>
-        <p class="review-text">1호점이 잘 돼서 2호점을 냈다가 품질이 흔들려 고생했어요. 이번에 운영을 매뉴얼로 표준화하고 나서는, 새 매장도 첫 달부터 1호점과 같은 품질이 나왔습니다.</p>
-        <div class="review-author">
-          <div class="review-avatar">김</div>
-          <div>
-            <div class="review-name">김○○</div>
-            <div class="review-role">외식업 · 2호점 오픈</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card fade-up" style="transition-delay:0.15s">
-        <div class="review-quote">"</div>
-        <p class="review-text">직원을 뽑아도 제 눈높이만큼 못 따라와서 결국 제가 다 했어요. 교육 커리큘럼을 짜고 나서는 점장이 매장을 맡을 수 있게 됐고, 그제서야 세 번째 매장을 준비할 수 있었습니다.</p>
-        <div class="review-author">
-          <div class="review-avatar">박</div>
-          <div>
-            <div class="review-name">박○○</div>
-            <div class="review-role">다점포 운영 · 3개 매장</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card fade-up" style="transition-delay:0.3s">
-        <div class="review-quote">"</div>
-        <p class="review-text">가맹 문의는 들어오는데 남에게 넘길 만한 운영 체계가 없어서 못 받고 있었어요. 표준화와 위임 구조를 갖추고 나니, 이제 가맹본부로 넘어갈 준비가 됐습니다.</p>
-        <div class="review-author">
-          <div class="review-avatar">이</div>
-          <div>
-            <div class="review-name">이○○</div>
-            <div class="review-role">가맹본부 준비 중</div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
