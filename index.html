@@ -186,6 +186,11 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .vp-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;}
 .vp-label{font-size:15px;font-weight:800;color:#E0BD6E;letter-spacing:0.12em;}
 .vp-sample{font-size:12px;color:#B8C2D4;border:1px solid #3A4A72;border-radius:4px;padding:2px 8px;white-space:nowrap;}
+/* 라벨(14px)과 점수(58px)를 한 줄에 놓는다. .vp-head 와 같은 배치 패턴이고,
+   크기 차가 커서 center 대신 baseline 으로 글자 밑선을 맞춘다.
+   좁은 폭에서는 wrap 으로 종전의 세로 배치로 되돌아간다. */
+.vp-score-row{display:flex;flex-wrap:wrap;align-items:baseline;
+  justify-content:space-between;gap:4px 12px;}
 .vp-score-label{display:block;font-size:14px;color:#D8DEE8;margin-bottom:4px;}
 .vp-score{
   font-family:'Noto Serif KR',serif;
