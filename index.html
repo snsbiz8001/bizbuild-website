@@ -383,6 +383,14 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 
 /* ── COI: 판단 지연 손실 ── */
+/* 앞뒤 섹션이 모두 navy-mid 로 맞물리는 지점이라 단색으로 이음새를 유지한다 */
+#difference{padding:var(--sec-pad) 5%;background:var(--navy-mid);}
+/* 초협폭에서 제목 2줄 유지. section-title 의 clamp 최솟값 24px 로는
+   둘째 줄("창업을 판정하는 것은 다릅니다")이 가용폭을 넘어 3줄로 밀린다. */
+@media(max-width:374px){
+  #difference .section-title{font-size:20px;}
+}
+
 #why-fail{
   padding:var(--sec-pad) 5%;
   background:linear-gradient(180deg,var(--navy-mid) 0%,var(--navy) 100%);
@@ -1254,6 +1262,26 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
       <p class="vb-subtext">내 창업, 제대로 판정받으려면 →<br class="br-m"> <a href="stage1.html">창업판정 자세히 보기</a></p>
     </div>
   </div>
+</section>
+
+<!-- 차별화: 사업계획서와 무엇이 다른가 -->
+<section id="difference">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">판정보다 먼저 하는 실수</div>
+    <h2 class="section-title">사업계획서를 만드는 것과<br> <span class="accent">창업을 판정하는 것</span>은 다릅니다</h2>
+  </div>
+  <p class="wf-intro fade-up" style="text-align:center;">
+    <span class="wf-para">사업계획서는 "이 사업을 어떻게 할 것인가"를 정리합니다.<br> 하지만 그보다 먼저 필요한 질문이 있습니다.</span>
+  </p>
+  <p class="wf-intro fade-up" style="text-align:center;margin-top:36px;">
+    <span class="wf-punch wf-highlight">"이 사업을 지금 시작해도 되는가?"</span>
+  </p>
+  <p class="wf-intro fade-up" style="text-align:center;margin-top:36px;">
+    <span class="wf-para">아무리 잘 만든 사업계획서라도<br> 자금이 부족하거나, 손익분기점이 지나치게 높거나,<br> 고객 확보 방법이 없거나, 매출이 예상보다 떨어졌을 때 버틸 수 없다면<br> 시작 자체를 다시 생각해야 합니다.</span>
+  </p>
+  <p class="wf-intro fade-up" style="text-align:center;margin-top:44px;">
+    <span class="wf-punch">그래서 비즈빌드는 계획보다 먼저 판정합니다.</span>
+  </p>
 </section>
 
 <!-- COI: 판단 지연 손실 -->
