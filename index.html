@@ -403,6 +403,131 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .wf-intro .wf-highlight{color:var(--gold);}
 #why-fail .fq-list{margin-top:40px;}
 
+/* ══ 매몰비용 타임라인 (bb-coi) ══ */
+#why-fail .bb-coi-lead{max-width:720px;margin:0 auto 44px;text-align:center;
+  font-size:17px;color:#D8DEE8;line-height:1.9;letter-spacing:-.2px;word-break:keep-all;}
+#why-fail .bb-coi-lead span{display:block;}
+#why-fail .bb-coi-lead strong{color:#FFFFFF;font-weight:700;}
+
+#why-fail .bb-coi-panel{max-width:980px;margin:0 auto;background:var(--navy-mid);
+  border:1px solid rgba(212,175,95,.18);border-radius:14px;padding:32px 30px 26px;}
+
+/* ── 슬라이더 사용 안내 ── */
+#why-fail .bb-coi-guide{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(212,175,95,.09);
+  border:1px solid rgba(212,175,95,.42);
+  border-radius:10px;padding:13px 17px;margin-bottom:24px;
+  font-size:15px;color:#E8EBF0;line-height:1.6;letter-spacing:-.2px;word-break:keep-all;
+}
+#why-fail .bb-coi-guide b{color:var(--gold);font-weight:700;}
+#why-fail .bb-coi-guide-ico{
+  flex-shrink:0;width:30px;height:30px;border-radius:50%;
+  background:var(--gold);color:#20180A;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:900;
+  animation:coiSway 1.5s ease-in-out infinite;
+}
+@keyframes coiSway{0%,100%{transform:translateX(-3px);}50%{transform:translateX(3px);}}
+#why-fail .bb-coi-panel.is-touched .bb-coi-guide{
+  opacity:0;transform:translateY(-6px);pointer-events:none;
+  height:0;padding:0;margin:0;border-width:0;overflow:hidden;
+  transition:all .45s ease;
+}
+
+#why-fail .bb-coi-inputs{display:flex;gap:30px;flex-wrap:wrap;margin-bottom:28px;}
+#why-fail .bb-coi-fld{flex:1 1 240px;}
+#why-fail .bb-coi-fld label{display:flex;justify-content:space-between;align-items:baseline;
+  gap:10px;font-size:14px;font-weight:500;color:#B8C2D4;margin-bottom:10px;letter-spacing:-.2px;}
+#why-fail .bb-coi-fld label b{font-family:'Noto Serif KR',serif;color:var(--gold);
+  font-size:19px;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums;}
+#why-fail input[type=range]{width:100%;-webkit-appearance:none;appearance:none;
+  height:5px;border-radius:999px;background:rgba(255,255,255,.09);outline:none;}
+#why-fail input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;
+  width:20px;height:20px;border-radius:50%;background:var(--gold);cursor:pointer;
+  box-shadow:0 2px 8px rgba(0,0,0,.45);}
+#why-fail input[type=range]::-moz-range-thumb{width:20px;height:20px;border:0;
+  border-radius:50%;background:var(--gold);cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.45);}
+#why-fail input[type=range]:focus-visible{outline:2px solid var(--gold);outline-offset:6px;}
+
+/* 손잡이 펄스 — 조작 전까지만 */
+#why-fail .bb-coi-panel:not(.is-touched) input[type=range]::-webkit-slider-thumb{
+  animation:coiPulse 1.7s ease-out infinite;}
+#why-fail .bb-coi-panel:not(.is-touched) input[type=range]::-moz-range-thumb{
+  animation:coiPulse 1.7s ease-out infinite;}
+@keyframes coiPulse{
+  0%{box-shadow:0 2px 8px rgba(0,0,0,.45),0 0 0 0 rgba(212,175,95,.55);}
+  70%{box-shadow:0 2px 8px rgba(0,0,0,.45),0 0 0 13px rgba(212,175,95,0);}
+  100%{box-shadow:0 2px 8px rgba(0,0,0,.45),0 0 0 0 rgba(212,175,95,0);}
+}
+#why-fail .bb-coi-panel.is-demo input[type=range]::-webkit-slider-thumb{transform:scale(1.18);}
+
+/* 슬라이더 하단 범위 + 조작 안내 */
+#why-fail .bb-coi-scale{display:flex;justify-content:space-between;align-items:center;
+  margin-top:9px;font-size:11.5px;color:#8B96AC;letter-spacing:-.2px;}
+#why-fail .bb-coi-scale .bb-coi-drag{color:var(--gold);font-weight:700;
+  animation:coiFade 1.9s ease-in-out infinite;}
+@keyframes coiFade{0%,100%{opacity:.45;}50%{opacity:1;}}
+#why-fail .bb-coi-panel.is-touched .bb-coi-scale .bb-coi-drag{
+  color:#8B96AC;font-weight:400;animation:none;}
+
+#why-fail .bb-coi-chart{width:100%;height:auto;display:block;}
+
+#why-fail .bb-coi-stages{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px;}
+#why-fail .bb-coi-st{background:var(--navy);border:1px solid rgba(212,175,95,.14);
+  border-radius:11px;padding:18px 16px;}
+#why-fail .bb-coi-st.is-free{border-color:rgba(212,175,95,.55);background:#16305F;}
+#why-fail .bb-coi-st .bb-coi-tag{font-size:12px;font-weight:800;letter-spacing:.06em;
+  color:var(--gold);margin-bottom:10px;}
+#why-fail .bb-coi-st .bb-coi-say{font-size:14px;line-height:1.65;color:#FFFFFF;
+  font-weight:500;letter-spacing:-.2px;word-break:keep-all;min-height:46px;}
+#why-fail .bb-coi-st .bb-coi-amt{margin-top:13px;padding-top:12px;
+  border-top:1px solid rgba(212,175,95,.14);font-size:12px;color:#A8B2C4;}
+#why-fail .bb-coi-st .bb-coi-amt b{display:block;margin-top:5px;
+  font-family:'Noto Serif KR',serif;font-size:17px;font-weight:700;color:#FFFFFF;
+  font-variant-numeric:tabular-nums;}
+#why-fail .bb-coi-st.is-free .bb-coi-amt b{color:var(--gold);}
+#why-fail .bb-coi-st.is-hot .bb-coi-amt b{color:#D9645C;}
+
+#why-fail .bb-coi-three{max-width:980px;margin:56px auto 0;}
+#why-fail .bb-coi-three h3{font-family:'Noto Serif KR',serif;font-size:clamp(19px,1.1rem + .5vw,23px);
+  font-weight:700;text-align:center;line-height:1.55;margin-bottom:8px;
+  letter-spacing:-.2px;word-break:keep-all;}
+#why-fail .bb-coi-three .bb-coi-sub{text-align:center;color:#A8B2C4;font-size:15px;
+  margin-bottom:22px;letter-spacing:-.2px;}
+#why-fail .bb-coi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+#why-fail .bb-coi-card{background:var(--navy-mid);border:1px solid rgba(212,175,95,.15);
+  border-left:3px solid var(--gold);border-radius:11px;padding:20px 19px;transition:border-color .3s;}
+#why-fail .bb-coi-card:hover{border-color:rgba(212,175,95,.45);}
+#why-fail .bb-coi-card .bb-coi-n{font-family:'Noto Serif KR',serif;color:var(--gold);
+  font-size:14px;font-weight:900;letter-spacing:.08em;margin-bottom:9px;}
+#why-fail .bb-coi-card .bb-coi-q{font-size:16px;font-weight:500;line-height:1.6;
+  color:#FFFFFF;letter-spacing:-.2px;word-break:keep-all;}
+#why-fail .bb-coi-card .bb-coi-map{margin-top:12px;font-size:12px;color:#A8B2C4;letter-spacing:-.2px;}
+
+#why-fail .bb-coi-close{text-align:center;margin-top:52px;}
+#why-fail .bb-coi-punch{font-family:'Noto Serif KR',serif;
+  font-size:clamp(21px,1.2273rem + .3636vw,26px);font-weight:700;color:#E8EBF0;
+  line-height:1.7;letter-spacing:-.2px;margin-bottom:28px;word-break:keep-all;}
+#why-fail .bb-coi-punch em{font-style:normal;color:var(--gold);}
+#why-fail .bb-coi-note{max-width:640px;margin:20px auto 0;font-size:12.5px;color:#8B96AC;
+  line-height:1.8;letter-spacing:-.2px;word-break:keep-all;}
+
+@media(prefers-reduced-motion:reduce){
+  #why-fail .bb-coi-guide-ico,
+  #why-fail .bb-coi-scale .bb-coi-drag,
+  #why-fail .bb-coi-panel:not(.is-touched) input[type=range]::-webkit-slider-thumb,
+  #why-fail .bb-coi-panel:not(.is-touched) input[type=range]::-moz-range-thumb{animation:none;}
+}
+@media(max-width:760px){#why-fail .bb-coi-stages,#why-fail .bb-coi-row{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){
+  #why-fail .bb-coi-stages,#why-fail .bb-coi-row{grid-template-columns:1fr;}
+  #why-fail .bb-coi-panel{padding:24px 18px 20px;}
+  #why-fail .bb-coi-st .bb-coi-say{min-height:0;}
+  #why-fail .bb-coi-guide{font-size:14px;padding:12px 14px;gap:10px;}
+  #why-fail .bb-coi-guide-ico{width:26px;height:26px;font-size:14px;}
+}
+
 /* ── 3단계 시스템 섹션 ── */
 #system{
   padding:var(--sec-pad) 5%;
@@ -1289,25 +1414,116 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
   <div class="section-header fade-up">
     <div class="section-eyebrow">판단이 늦어질 때</div>
     <h2 class="section-title">가장 비싼 실수는<br class="br-m"> 실패가 아니라<br><span class="accent">실패할 구조를 모르고</span><br class="br-m"> 돈부터 넣는 겁니다</h2>
-    <p class="wf-intro">
-      <span class="wf-para">예상했던 고객이 오지 않습니다.<br class="br-m"> "오픈 초기니까 조금만 더" 하고 버팁니다.</span>
-      <span class="wf-para">매출은 오르지 않는데 임대료와 인건비는<br class="br-m"> 하루도 기다려주지 않습니다.</span>
-      <span class="wf-para wf-highlight">그러다 "조금만 더"가<br class="br-m"> "여기까지 넣었는데 어떻게 그만둬"로 바뀝니다.</span>
-      <span class="wf-para">그때부터는 사업을 판단하는 것이 아니라,<br class="br-m"> 이미 넣은 돈 때문에 버티게 됩니다.</span>
-    </p>
   </div>
-  <p class="wf-intro fade-up" style="text-align:center;">
-    <span class="wf-para">계약 후에는 매출이 없어도 임대료, 인건비, 관리비는 매일 나갑니다.</span>
-    <span class="wf-para">그래서 계약 전에 확인할 것은 "얼마나 벌 수 있는가"가 아니라 이 세 가지입니다.</span>
+
+  <p class="bb-coi-lead fade-up">
+    <span>손실이 커지는 것이 문제가 아닙니다.</span>
+    <span><strong>멈출 수 있는 선택권이 사라지는 것</strong>이 문제입니다.</span>
   </p>
-  <div class="fq-list">
-    <div class="fq-item fade-up"><div class="fq-text">예상보다 덜 벌어도, 몇 개월을 버틸 수 있는가.</div></div>
-    <div class="fq-item fade-up" style="transition-delay:.15s"><div class="fq-text">얼마를 팔아야, 적자를 벗어나는가.</div></div>
-    <div class="fq-item fade-up" style="transition-delay:.3s"><div class="fq-text">얼마를 잃으면, 멈출 것인가.</div></div>
+
+  <div class="bb-coi-panel fade-up" id="coiPanel">
+
+    <div class="bb-coi-guide" id="coiGuide">
+      <span class="bb-coi-guide-ico" aria-hidden="true">↔</span>
+      <span><b>내 숫자를 넣어보십시오.</b> 아래 손잡이를 좌우로 끌면 금액과 곡선이 함께 바뀝니다. 입력값은 저장되지 않습니다.</span>
+    </div>
+
+    <div class="bb-coi-inputs">
+      <div class="bb-coi-fld">
+        <label for="coiInit">초기 투자금 · 보증금·권리금·시설 <b id="coiV1">8,000만원</b></label>
+        <input type="range" id="coiInit" min="1000" max="30000" step="500" value="8000" aria-label="초기 투자금">
+        <div class="bb-coi-scale">
+          <span>1,000만원</span>
+          <span class="bb-coi-drag">← 끌어서 조절 →</span>
+          <span>3억원</span>
+        </div>
+      </div>
+      <div class="bb-coi-fld">
+        <label for="coiMon">월 적자 · 매출로 못 덮는 고정비 <b id="coiV2">300만원</b></label>
+        <input type="range" id="coiMon" min="50" max="1500" step="50" value="300" aria-label="월 적자">
+        <div class="bb-coi-scale">
+          <span>50만원</span>
+          <span class="bb-coi-drag">← 끌어서 조절 →</span>
+          <span>1,500만원</span>
+        </div>
+      </div>
+    </div>
+
+    <svg class="bb-coi-chart" viewBox="0 0 760 256" width="760" height="256"
+         role="img" aria-label="서명 시점부터 8개월까지 누적 손실 곡선">
+      <defs>
+        <linearGradient id="coiFade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#D9645C" stop-opacity=".34"/>
+          <stop offset="100%" stop-color="#D9645C" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <line x1="52" y1="206" x2="742" y2="206" stroke="rgba(212,175,95,0.22)" stroke-width="1"/>
+      <line x1="132" y1="24" x2="132" y2="216" stroke="#D4AF5F" stroke-width="1" stroke-dasharray="4 4"/>
+      <text x="128" y="18" fill="#D4AF5F" font-family="'Noto Sans KR',sans-serif"
+            font-size="12" font-weight="700" text-anchor="end">서명</text>
+      <text x="60" y="196" fill="#D4AF5F" font-family="'Noto Sans KR',sans-serif"
+            font-size="12" font-weight="700">손실 0 · 선택 자유</text>
+      <path id="coiArea" fill="url(#coiFade)"></path>
+      <path id="coiFree" stroke="#D4AF5F" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+      <path id="coiPaid" stroke="#D9645C" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+      <g id="coiDots"></g>
+      <g id="coiXlab"></g>
+    </svg>
+
+    <div class="bb-coi-stages">
+      <div class="bb-coi-st is-free">
+        <div class="bb-coi-tag">서명 전</div>
+        <div class="bb-coi-say">"조건이 안 맞으면, 안 하면 됩니다."</div>
+        <div class="bb-coi-amt">지금 멈추면 잃는 돈<b>0원</b></div>
+      </div>
+      <div class="bb-coi-st">
+        <div class="bb-coi-tag">오픈 1개월</div>
+        <div class="bb-coi-say">"오픈 초기니까 조금만 더."</div>
+        <div class="bb-coi-amt">지금 멈추면 잃는 돈<b id="coiA1">—</b></div>
+      </div>
+      <div class="bb-coi-st">
+        <div class="bb-coi-tag">4개월</div>
+        <div class="bb-coi-say">"여기까지 넣었는데 어떻게 그만둬."</div>
+        <div class="bb-coi-amt">지금 멈추면 잃는 돈<b id="coiA4">—</b></div>
+      </div>
+      <div class="bb-coi-st is-hot">
+        <div class="bb-coi-tag">8개월</div>
+        <div class="bb-coi-say">판단해서 버티는 것이 아니라, 넣은 돈 때문에 버티는 상태.</div>
+        <div class="bb-coi-amt">지금 멈추면 잃는 돈<b id="coiA8">—</b></div>
+      </div>
+    </div>
   </div>
-  <p class="wf-intro fade-up" style="text-align:center;margin-top:48px;">
-    <span class="wf-punch">시작 전에 계산하는 것과<br>돈을 잃으면서 배우는 것은<br class="br-m"> 완전히 다릅니다.</span>
-  </p>
+
+  <div class="bb-coi-three fade-up">
+    <h3>그래서 계약 전에 확인할 것은<br class="br-m"> "얼마나 벌 수 있는가"가 아닙니다</h3>
+    <p class="bb-coi-sub">이 세 가지입니다. 셋 다 창업생존지수 BSI의 판정 영역입니다.</p>
+    <div class="bb-coi-row">
+      <div class="bb-coi-card">
+        <div class="bb-coi-n">01</div>
+        <div class="bb-coi-q">예상보다 덜 벌어도, 몇 개월을 버틸 수 있는가.</div>
+        <div class="bb-coi-map">BSI 영역 · 버틸 개월</div>
+      </div>
+      <div class="bb-coi-card">
+        <div class="bb-coi-n">02</div>
+        <div class="bb-coi-q">얼마를 팔아야, 적자를 벗어나는가.</div>
+        <div class="bb-coi-map">BSI 영역 · 손익분기</div>
+      </div>
+      <div class="bb-coi-card">
+        <div class="bb-coi-n">03</div>
+        <div class="bb-coi-q">얼마를 잃으면, 멈출 것인가.</div>
+        <div class="bb-coi-map">BSI 영역 · 대응 계획</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bb-coi-close fade-up">
+    <p class="bb-coi-punch">시작 전에 계산하는 것과<br><em>돈을 잃으면서 배우는 것은 완전히 다릅니다.</em></p>
+    <a href="https://quiz.bizbuild.kr" class="btn-cta-blue">
+      내 창업판정 받기 →
+    </a>
+    <p class="hero-note">3분 · 강매 없음</p>
+    <p class="bb-coi-note">위 금액은 입력한 두 숫자의 단순 누적입니다. 회수 가능한 보증금·시설 잔존가치는 반영하지 않았습니다.</p>
+  </div>
 </section>
 
 <!-- BSI 창업생존지수 -->
@@ -1785,6 +2001,109 @@ document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
       setTimeout(function(){ res.scrollIntoView({behavior:'smooth',block:'center'}); },280);
     }
   }
+})();
+
+// 매몰비용 타임라인 (bb-coi)
+(function(){
+  var s1=document.getElementById('coiInit'), s2=document.getElementById('coiMon');
+  var panel=document.getElementById('coiPanel');
+  if(!s1||!s2||!panel) return;
+  var NS='http://www.w3.org/2000/svg';
+  var XS=132, X1=742, X0=52, Y0=206, YT=34, M=8;
+
+  function fmt(man){
+    if(man<=0) return '0원';
+    var eok=Math.floor(man/10000), rest=man%10000;
+    if(eok>0) return rest ? eok+'억 '+rest.toLocaleString()+'만원' : eok+'억원';
+    return man.toLocaleString()+'만원';
+  }
+
+  function draw(){
+    var init=+s1.value, mon=+s2.value, max=init+mon*M;
+    document.getElementById('coiV1').textContent=fmt(init);
+    document.getElementById('coiV2').textContent=mon.toLocaleString()+'만원';
+    var y=function(v){return Y0-(v/max)*(Y0-YT);};
+    var x=function(m){return XS+((X1-XS)/M)*m;};
+
+    document.getElementById('coiFree').setAttribute('d','M'+X0+' '+Y0+' L'+XS+' '+Y0);
+    var d='M'+XS+' '+Y0+' L'+XS+' '+y(init);
+    for(var m=1;m<=M;m++) d+=' L'+x(m)+' '+y(init+mon*m);
+    document.getElementById('coiPaid').setAttribute('d',d);
+    document.getElementById('coiArea').setAttribute('d',d+' L'+x(M)+' '+Y0+' L'+XS+' '+Y0+' Z');
+
+    var dots=document.getElementById('coiDots'); dots.textContent='';
+    var xl=document.getElementById('coiXlab'); xl.textContent='';
+    [0,1,4,8].forEach(function(m){
+      var c=document.createElementNS(NS,'circle');
+      c.setAttribute('cx',x(m)); c.setAttribute('cy',y(init+mon*m)); c.setAttribute('r',5);
+      c.setAttribute('fill', m===0?'#D4AF5F':'#D9645C');
+      c.setAttribute('stroke','#0E1F45'); c.setAttribute('stroke-width','2.5');
+      dots.appendChild(c);
+      var t=document.createElementNS(NS,'text');
+      t.setAttribute('x',x(m)); t.setAttribute('y',228);
+      t.setAttribute('fill','#A8B2C4'); t.setAttribute('font-size','12');
+      t.setAttribute('font-family',"'Noto Sans KR',sans-serif");
+      t.setAttribute('text-anchor','middle');
+      t.textContent = m===0 ? '오픈' : m+'개월';
+      xl.appendChild(t);
+    });
+    var top=document.createElementNS(NS,'text');
+    top.setAttribute('x',x(M)); top.setAttribute('y',y(max)-14);
+    top.setAttribute('fill','#D9645C'); top.setAttribute('font-size','14');
+    top.setAttribute('font-family',"'Noto Serif KR',serif");
+    top.setAttribute('font-weight','700'); top.setAttribute('text-anchor','end');
+    top.textContent=fmt(max); dots.appendChild(top);
+
+    document.getElementById('coiA1').textContent=fmt(init+mon);
+    document.getElementById('coiA4').textContent=fmt(init+mon*4);
+    document.getElementById('coiA8').textContent=fmt(max);
+  }
+
+  s1.addEventListener('input',draw);
+  s2.addEventListener('input',draw);
+
+  /* ── 조작 안내 · 자동 시연 ── */
+  var touched=false, demoRan=false, demoTimer=null;
+
+  function markTouched(){
+    if(touched) return;
+    touched=true;
+    if(demoTimer){cancelAnimationFrame(demoTimer);demoTimer=null;}
+    panel.classList.remove('is-demo');
+    panel.classList.add('is-touched');
+    try{ document.dispatchEvent(new CustomEvent('bb:coi_slide')); }catch(e){}
+  }
+  ['pointerdown','touchstart','keydown','input'].forEach(function(ev){
+    [s1,s2].forEach(function(el){ el.addEventListener(ev,markTouched,{passive:true}); });
+  });
+
+  function runDemo(){
+    if(demoRan||touched) return;
+    demoRan=true;
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    if(reduce) return;
+    var base=+s1.value, peak=Math.min(base+5500,+s1.max), t0=null, DUR=1400;
+    panel.classList.add('is-demo');
+    function step(ts){
+      if(touched) return;
+      if(!t0) t0=ts;
+      var p=Math.min((ts-t0)/DUR,1);
+      s1.value=Math.round((base+(peak-base)*Math.sin(Math.PI*p))/500)*500;
+      draw();
+      if(p<1) demoTimer=requestAnimationFrame(step);
+      else{ s1.value=base; draw(); panel.classList.remove('is-demo'); demoTimer=null; }
+    }
+    demoTimer=requestAnimationFrame(step);
+  }
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ setTimeout(runDemo,420); io.disconnect(); } });
+    },{threshold:.45});
+    io.observe(panel);
+  }else{ setTimeout(runDemo,900); }
+
+  draw();
 })();
 
 // FAQ 아코디언
