@@ -1738,9 +1738,10 @@ document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
     head.textContent='';
     if(no===0){
       head.textContent='다섯 개 모두 답하셨습니다.';
-      body.innerHTML='숫자까지 맞는지는 다른 문제입니다. '+
-        '<strong>창업생존지수 BSI는 10가지 영역의 조합으로 진행·보류·중단을 판정합니다.</strong> '+
-        '확인만 하고 가셔도 됩니다.';
+      body.innerHTML='창업은 답하지 못한 질문보다 '+
+        '<strong>답할 수 있다고 믿었던 질문</strong>에서 무너집니다. '+
+        '창업생존지수 BSI는 10개 영역의 숫자를 서로 맞춰봅니다. '+
+        '어긋나는 곳이 있다면 3분 안에 나옵니다.';
     }else{
       var b=document.createElement('b'); b.textContent=no+'개';
       head.appendChild(b);
