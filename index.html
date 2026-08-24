@@ -150,8 +150,11 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .hero-text p.hero-sub{
   max-width:520px;margin-bottom:14px;
   font-size:clamp(18px,1.0398rem + 0.3636vw,21px);line-height:1.8;margin-top:28px;
+  color:var(--gray-light);font-weight:500;
 }
-.hero-sub .hero-sub-em{color:#FFFFFF;font-weight:700;}
+/* 위 .hero-text p.hero-sub 가 (0,2,1) 이라 종전 .hero-sub .hero-sub-em (0,2,0) 을
+   이겨버린다. 흰색 강조가 밀리지 않도록 선택자를 (0,3,0) 으로 올린다. 값은 그대로. */
+.hero-text .hero-sub .hero-sub-em{color:#FFFFFF;font-weight:700;}
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px;}
 .hero-note{margin-top:14px;font-size:15px;color:#B8C2D4;letter-spacing:.02em;}
 /* 위 .hero-note 의 color 는 .hero-text p (0,1,1) 에 우선순위로 밀린다.
