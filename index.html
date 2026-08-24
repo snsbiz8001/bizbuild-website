@@ -532,8 +532,10 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 }
 
 /* ── 3단계 시스템 섹션 ── */
-/* 앞 #story 가 navy-mid 로 끝나므로 단색으로 이어받고, 뒤 #system(navy)에서 밝아진다 */
-#sell-judgment{padding:var(--sec-pad) 5%;background:var(--navy-mid);}
+/* 앞 #story 가 navy-mid 로 끝나고 뒤 #system 이 navy 로 시작한다.
+   양쪽 이음매를 모두 살리려면 그 사이를 그라데이션으로 건너가야 한다. */
+#sell-judgment{padding:var(--sec-pad) 5%;
+  background:linear-gradient(180deg,var(--navy-mid) 0%,var(--navy) 100%);}
 
 #system{
   padding:var(--sec-pad) 5%;
