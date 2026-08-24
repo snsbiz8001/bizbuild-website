@@ -816,11 +816,15 @@ footer{
 
 /* ══ 다섯 질문 직접 체크 (bb-q5) ══ */
 #five-q .bb-q5-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
-#five-q .bb-q5-bar{max-width:820px;margin:0 auto 28px;height:5px;border-radius:999px;
+#five-q .bb-q5-bar{max-width:820px;margin:0 auto 10px;height:5px;border-radius:999px;
   background:rgba(255,255,255,.07);overflow:hidden;}
 #five-q .bb-q5-bar>i{display:block;height:100%;width:0;border-radius:999px;
   background:linear-gradient(90deg,var(--gold-dim),var(--gold));
   transition:width .45s cubic-bezier(.2,.8,.2,1);}
+#five-q .bb-q5-count{max-width:820px;margin:0 auto 28px;text-align:center;
+  font-size:16px;font-weight:800;color:var(--label-color);letter-spacing:-.2px;
+  white-space:nowrap;transition:color .3s;}
+#five-q .bb-q5-count.is-full{color:var(--gold);}
 #five-q .bb-q5-hint{max-width:820px;margin:0 auto 14px;text-align:center;
   font-size:15px;color:#B8C2D4;letter-spacing:-.2px;}
 #five-q .bb-q5-item{background:var(--navy-mid);
@@ -1156,8 +1160,9 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
     <div class="section-eyebrow">창업을 결심하기 전에</div>
     <h2 class="section-title">이 다섯 질문에<br class="br-m"> <span class="accent">바로 답할 수 있습니까?</span></h2>
   </div>
-  <p class="bb-q5-hint">읽지 말고 눌러보십시오. 지금 몇 개가 비어 있는지 보입니다.</p>
+  <p class="bb-q5-hint">다섯 개 전부 눌러보십시오. 지나치면 아무것도 확인되지 않습니다.</p>
   <div class="bb-q5-bar" role="presentation"><i id="bbQ5Fill"></i></div>
+  <p class="bb-q5-count" id="bbQ5Count" aria-live="polite">0/5 확인함</p>
 
   <div class="bb-q5-list" id="bbQ5List">
     <div class="bb-q5-item">
@@ -1694,6 +1699,7 @@ document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
   if(!sec||!list) return;
   var items=[].slice.call(list.querySelectorAll('.bb-q5-item'));
   var fill=document.getElementById('bbQ5Fill');
+  var count=document.getElementById('bbQ5Count');
   var res=document.getElementById('bbQ5Res');
   var head=document.getElementById('bbQ5Head');
   var body=document.getElementById('bbQ5Body');
@@ -1720,6 +1726,10 @@ document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
       if(a){done++; if(a==='no') no++;}
     });
     fill.style.width=(done/items.length*100)+'%';
+    if(count){
+      count.textContent=done+'/'+items.length+' 확인함';
+      count.classList.toggle('is-full',done===items.length);
+    }
     if(done<items.length){
       res.classList.remove('is-on');
       sec.classList.remove('bb-q5-done');
