@@ -218,6 +218,33 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .roadmap-card p{font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:16px;flex-grow:1;letter-spacing:-0.2px;word-break:keep-all;}
 .roadmap-card .step-time{font-size:15px;color:var(--gray);margin-bottom:20px;}
 .roadmap-card .step-note{font-size:15px;color:var(--gray);font-style:italic;}
+/* 3단 카드 보조 CTA — stage1.html 정의 그대로 복사 */
+.card-cta{
+  display:block;
+  margin-top:18px;
+  padding:18px 42px;
+  font-family:"Noto Sans KR",sans-serif;
+  font-size:17px;
+  font-weight:700;
+  text-align:center;
+  text-decoration:none;
+  border-radius:4px;
+  transition:background .18s ease,border-color .18s ease;
+}
+/* 3단 — 저채도 테두리형 (가장 낮은 위계) */
+.card-cta--consult{
+  color:#C6D2E6;
+  border:1px solid rgba(198,210,230,.30);
+  background:transparent;
+}
+.card-cta--consult:hover{
+  background:rgba(198,210,230,.08);
+  border-color:rgba(198,210,230,.55);
+}
+.card-cta:focus-visible{
+  outline:3px solid #2E9BD6;
+  outline-offset:3px;
+}
 .roadmap-featured{background:var(--navy-mid);border:1.5px solid var(--cta-blue);box-shadow:0 8px 32px rgba(29,78,137,0.25);}
 
 /* ── 대상 ── */
@@ -277,6 +304,15 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .pd-item .pd-label{font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);letter-spacing:0.02em;margin-bottom:8px;}
 .pd-item .pd-value{font-size:20px;font-weight:700;color:var(--white);}
 .pd-item .pd-note{font-size:16px;color:var(--gray);margin-top:6px;line-height:1.7;}
+/* 스쿨 안내 하단 분기 — pd-item 다크 카드 스타일 계승 (stage1.html 정의 그대로 복사) */
+.pd-branch{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.pd-branch-card{padding:28px;background:var(--navy-mid);border:1px solid rgba(255,255,255,0.06);border-radius:10px;}
+.pd-branch-card a{display:block;width:100%;padding:18px 24px;border-radius:4px;font-family:'Noto Sans KR',sans-serif;font-size:17px;font-weight:700;line-height:1.6;text-align:center;text-decoration:none;word-break:keep-all;overflow-wrap:break-word;transition:all 0.2s;}
+.pd-branch-card a:focus-visible{outline:3px solid #2E9BD6;outline-offset:3px;}
+.pd-branch-consult{background:var(--gold);color:var(--navy);}
+.pd-branch-consult:hover{background:var(--gold-light);}
+.pd-branch-quiz{background:var(--cta-blue);color:var(--white);}
+.pd-branch-quiz:hover{filter:brightness(1.1);}
 .next-period{padding:36px;text-align:center;background:rgba(212,175,95,0.06);border:1px solid rgba(212,175,95,0.2);border-radius:12px;}
 .next-period .np-label{font-size:var(--label-size);font-weight:var(--label-weight);color:var(--label-color);letter-spacing:0.02em;margin-bottom:12px;}
 .next-period .np-date{font-size:24px;font-weight:700;margin-bottom:8px;}
@@ -357,6 +393,7 @@ footer{background:rgba(0,0,0,0.4);padding:60px 5% 40px;border-top:1px solid rgba
   .target-grid{grid-template-columns:1fr;}
   .outcomes-grid{grid-template-columns:1fr;}
   .pd-grid{grid-template-columns:1fr;}
+  .pd-branch{grid-template-columns:1fr;}
   .includes-list{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;}
   .footer-bottom{padding-right:0;}
@@ -650,6 +687,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
         <div class="step-price">297만원<span class="vat">부가세 별도</span></div>
         <p>매출구조·고객흐름·마케팅·운영 재설계 1:1 진행</p>
         <div class="step-time">6주 진행</div>
+        <a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener" class="card-cta card-cta--consult">상담 신청하기 →</a>
         <div class="step-note">1단 진단 먼저 진행해주세요</div>
       </div>
     </div>
@@ -787,10 +825,13 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
         <div class="pd-note">부가세 별도 · 분납 가능 — 착수 50% / 3주차 50%</div>
       </div>
     </div>
-    <div class="next-period fade-up">
-      <div class="np-label">HOW TO START</div>
-      <div class="np-date">STEP 1 무료 진단부터 시작하세요</div>
-      <div class="np-note">진단 후 담당자가 안내해 드립니다</div>
+    <div class="pd-branch fade-up">
+      <div class="pd-branch-card">
+        <a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener" class="pd-branch-consult">리포트 이미 받으셨나요? → 상담 신청하기</a>
+      </div>
+      <div class="pd-branch-card">
+        <a href="https://quiz.bizbuild.kr/business.html" class="pd-branch-quiz">아직 진단 전이신가요? → 사업구조 진단 시작하기</a>
+      </div>
     </div>
   </div>
 </section>
