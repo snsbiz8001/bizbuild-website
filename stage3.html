@@ -429,6 +429,10 @@ h1, h2, h3, h4, p, span, .eyebrow{
 }
 /* 데스크톱 전용 의도 줄바꿈: 모바일에서는 호흡용 br 해제 */
 .br-m{display:none;}
+/* 초협폭(≤374px) 전용 줄바꿈. 28px 제목이 360px 이하에서만 깨져
+   375px 이상의 2줄 구성을 지키면서 그 아래만 교정한다. */
+.br-xs{display:none;}
+@media(max-width:374px){.br-xs{display:inline;}}
 @media(max-width:600px){
   .pc-only{display:none;}
   .br-m{display:inline;}
@@ -523,7 +527,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
 <section id="problem">
   <div class="problem-inner">
     <div class="eyebrow fade-up" style="justify-content:center;">왜 중요한가</div>
-    <h2 class="fade-up">다점포 확장 실패의 90%는<br>시스템이 없어서입니다</h2>
+    <h2 class="fade-up">다점포 확장<br class="br-xs"> 실패의 90%는<br>시스템이 없어서입니다</h2>
     <p class="prob-sub fade-up">혼자 잘하는 것과 시스템으로 여러 개를 키우는 것은 다릅니다</p>
     <div class="problem-grid">
       <div class="problem-card fade-up">
@@ -671,8 +675,8 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
       <div class="target-card fade-up">
         <div class="t-check">✓</div>
         <div>
-          <h4>1호점은 자리 잡았고 2호점을 고민 중인 분</h4>
-          <p>매출은 안정됐지만 늘려도 될지 확신이 없는 분. 확장의 성공·실패 조건을 먼저 알고 싶은 분.</p>
+          <h4>1호점은 자리 잡았고<br class="br-m"> 2호점을 고민 중인 분</h4>
+          <p>매출은 안정됐지만<br class="br-m"> 늘려도 될지 확신이 없는 분. 확장의 성공·실패 조건을 먼저 알고 싶은 분.</p>
         </div>
       </div>
       <div class="target-card fade-up" style="transition-delay:0.1s">
@@ -698,7 +702,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
       </div>
     </div>
     <div class="not-for fade-up">
-      ※ 아직 1개 매장 매출이 안정되지 않았다면 <a href="stage2.html" style="color:var(--gold);text-decoration:none;"><strong>2단계 사업설계</strong></a>가 먼저입니다
+      ※ 아직 1개 매장 매출이<br class="br-m"> 안정되지 않았다면<br class="br-m"> <a href="stage2.html" style="color:var(--gold);text-decoration:none;"><strong>2단계 사업설계</strong></a>가 먼저입니다
     </div>
   </div>
 </section>
@@ -751,7 +755,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
     </div>
     <div class="inst-content fade-up" style="transition-delay:0.15s">
       <div class="eyebrow">설계자 소개</div>
-      <h2>매장 하나를 시스템으로 바꿔<br>여러 개로 키워 본 사람이 설계합니다</h2>
+      <h2>매장 하나를<br class="br-xs"> 시스템으로 바꿔<br>여러 개로 키워 본<br class="br-m"> 사람이 설계합니다</h2>
       <p>저는 지금도 매장을 운영하면서, 프랜차이즈 가맹본부를 함께 키웁니다.</p>
       <p>경영학을 전공했지만, 진짜 배움은 25년간 현장에서 얻었습니다. 직영점을 늘리고, 가맹점을 붙이고, 대표 없이도 돌아가는 매장을 만들던 시간 — 책에는 없는 그 과정을 직접 통과했습니다.</p>
       <p>그 경험을 가맹본부 COO로서 100개 매장까지 확장 가능한 구조 방법론으로 정리했습니다. 매장을 늘려 본 적 없는 사람이 가르치는 곳이 아닙니다.</p>
@@ -785,7 +789,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
       <div class="pd-item fade-up" style="transition-delay:0.15s">
         <div class="pd-label">진행방식</div>
         <div class="pd-value">1:1 전담 진행</div>
-        <div class="pd-note">담당 컨설턴트가 처음부터 끝까지 전담</div>
+        <div class="pd-note">담당 컨설턴트가<br class="br-m"> 처음부터 끝까지 전담</div>
       </div>
       <div class="pd-item fade-up" style="transition-delay:0.2s">
         <div class="pd-label">수강료</div>
@@ -795,10 +799,10 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
     </div>
     <div class="pd-branch fade-up">
       <div class="pd-branch-card">
-        <a href="stage2.html" class="pd-branch-lead">아직 1호점이 정체됐나요? → 2단계 사업설계 먼저</a>
+        <a href="stage2.html" class="pd-branch-lead">아직 1호점이 정체됐나요?<br class="br-m"> → 2단계 사업설계 먼저</a>
       </div>
       <div class="pd-branch-card">
-        <a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener" class="pd-branch-consult">확장 준비 되셨나요? → 상담 신청하기</a>
+        <a href="https://pf.kakao.com/_egHPX" target="_blank" rel="noopener" class="pd-branch-consult">확장 준비 되셨나요?<br class="br-m"> → 상담 신청하기</a>
       </div>
     </div>
   </div>
@@ -809,7 +813,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
   <div class="faq-inner">
     <div class="eyebrow fade-up" style="justify-content:center;">FAQ</div>
     <h2 class="fade-up">자주 묻는 질문</h2>
-    <p class="faq-sub fade-up">더 궁금한 점은 하단 상담 신청으로 문의해 주세요</p>
+    <p class="faq-sub fade-up">더 궁금한 점은<br class="br-m"> 하단 상담 신청으로 문의해 주세요</p>
     <div class="faq-list">
       <div class="faq-item fade-up">
         <div class="faq-q" onclick="toggleFaq(this)">
@@ -873,7 +877,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
 <section id="cta">
   <div class="cta-inner">
     <div class="eyebrow fade-up" style="justify-content:center;">지금 시작하기</div>
-    <h2 class="fade-up">확장을 미루는 사이,<br>경쟁자가 먼저 2호점을 냅니다</h2>
+    <h2 class="fade-up">확장을 미루는 사이,<br>경쟁자가 먼저<br class="br-m"> 2호점을 냅니다</h2>
     <p class="fade-up">좋은 자리도, 좋은 사람도 나를 기다려 주지 않습니다.<br class="pc-only"> 지금 내 매장이 늘려도 되는 구조인지, 무료 상담으로 먼저 확인하세요.</p>
     <div class="cta-btns fade-up">
       <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener" class="btn-cta-blue">상담 신청하기 →</a>
@@ -911,8 +915,8 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 BizBuild. All rights reserved. | 상호: 비즈빌드 | 사업자등록번호: 557-13-01131 | 통신판매업신고번호: 2026-서울은평-0936 | 대표: 김건우</p>
-    <p>주소: 서울특별시 은평구 증산로7길 30-1 | bizbuild.kr | grant@bizbuild.kr | 010-8970-0001 | 카카오채널 <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">@bizbuild</a></p>
+    <p>© 2026 BizBuild. All rights reserved. |<br class="br-m"> 상호: 비즈빌드 |<br class="br-m"> 사업자등록번호: 557-13-01131 |<br class="br-m"> 통신판매업신고번호: 2026-서울은평-0936 |<br class="br-m"> 대표: 김건우</p>
+    <p>주소: 서울특별시 은평구 증산로7길 30-1 |<br class="br-m"> bizbuild.kr |<br class="br-m"> grant@bizbuild.kr |<br class="br-m"> 010-8970-0001 |<br class="br-m"> 카카오채널 <a href="https://pf.kakao.com/_egHPX/chat" target="_blank" rel="noopener">@bizbuild</a></p>
   </div>
 </footer>
 
