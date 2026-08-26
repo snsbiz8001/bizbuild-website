@@ -1167,6 +1167,11 @@ h1, h2, h3, p, span, .fq-text, .nd-text, .card-q, .card-desc,
   overflow-wrap:break-word;
 }
 .br-m{display:none;}
+/* 협폭(≤480px) 전용 줄바꿈. 아래 4곳은 481~600px 에서는 한 줄에 들어가므로
+   br-m(≤600px)이면 불필요하게 두 줄로 갈렸다. 480px 아래에서만 끊어
+   "넘습니까?" "빠릅니다." 가 홀로 떨어지는 것을 막는다. */
+.br-s{display:none;}
+@media(max-width:480px){.br-s{display:inline;}}
 /* 초협폭(≤374px) 전용 줄바꿈. 3단계 카드 본문은 좌우 패딩 36px 가 모바일에서도
    유지돼 가용폭이 좁다. 375px 에서는 자동 줄바꿈이 잘 맞지만 그 아래에서
    "시스템." 이 한 줄에 홀로 떨어져 이 클래스로만 교정한다. */
@@ -1320,7 +1325,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
   <div class="bb-q5-list" id="bbQ5List">
     <div class="bb-q5-item">
       <div class="bb-q5-mark">Q1</div>
-      <div class="bb-q5-text" id="bbQ5T1">하루 몇 명이 와야<br class="br-m"> 손익분기점을 넘습니까?</div>
+      <div class="bb-q5-text" id="bbQ5T1">하루 몇 명이 와야<br class="br-s"> 손익분기점을 넘습니까?</div>
       <div class="bb-q5-btns" role="group" aria-labelledby="bbQ5T1">
         <button type="button" class="bb-q5-btn" data-v="yes" aria-pressed="false">답할 수 있다</button>
         <button type="button" class="bb-q5-btn" data-v="no" aria-pressed="false">아직</button>
@@ -1328,7 +1333,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
     </div>
     <div class="bb-q5-item">
       <div class="bb-q5-mark">Q2</div>
-      <div class="bb-q5-text" id="bbQ5T2">첫 고객 100명은<br class="br-m"> 어디에서 데려올 겁니까?</div>
+      <div class="bb-q5-text" id="bbQ5T2">첫 고객 100명은<br class="br-s"> 어디에서 데려올 겁니까?</div>
       <div class="bb-q5-btns" role="group" aria-labelledby="bbQ5T2">
         <button type="button" class="bb-q5-btn" data-v="yes" aria-pressed="false">답할 수 있다</button>
         <button type="button" class="bb-q5-btn" data-v="no" aria-pressed="false">아직</button>
@@ -1810,7 +1815,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
     <h2 class="section-title">비즈빌드가<br class="br-m"> <span class="accent">하지 않는 것</span>도 있습니다</h2>
   </div>
   <div class="nd-list">
-    <div class="nd-item fade-up"><div class="nd-x">✕</div><div class="nd-text">무조건 창업을 권하지<br class="br-m"> 않습니다.</div></div>
+    <div class="nd-item fade-up"><div class="nd-x">✕</div><div class="nd-text">무조건 창업을 권하지<br class="br-s"> 않습니다.</div></div>
     <div class="nd-item fade-up" style="transition-delay:.1s"><div class="nd-x">✕</div><div class="nd-text">진단했다고 결제를 강요하지 않습니다.</div></div>
     <div class="nd-item fade-up" style="transition-delay:.2s"><div class="nd-x">✕</div><div class="nd-text">좋지 않은 조건을 좋다고 말하지 않습니다.</div></div>
     <div class="nd-item fade-up" style="transition-delay:.3s"><div class="nd-x">✕</div><div class="nd-text">없는 성공사례를 만들어내지 않습니다.</div></div>
@@ -1893,7 +1898,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
     </div>
   </div>
   <div class="faq-cta fade-up">
-    <p>더 궁금하시면,<br class="br-m"> 말보다 진단이 빠릅니다.</p>
+    <p>더 궁금하시면,<br class="br-s"> 말보다 진단이 빠릅니다.</p>
   </div>
 </section>
 
