@@ -1166,6 +1166,11 @@ h1, h2, h3, p, span, .fq-text, .nd-text, .card-q, .card-desc,
   overflow-wrap:break-word;
 }
 .br-m{display:none;}
+/* 초협폭(≤374px) 전용 줄바꿈. 3단계 카드 본문은 좌우 패딩 36px 가 모바일에서도
+   유지돼 가용폭이 좁다. 375px 에서는 자동 줄바꿈이 잘 맞지만 그 아래에서
+   "시스템." 이 한 줄에 홀로 떨어져 이 클래스로만 교정한다. */
+.br-xs{display:none;}
+@media(max-width:374px){.br-xs{display:inline;}}
 .wf-para{margin-bottom:14px;}
 .wf-para:last-child{margin-bottom:0;}
 
@@ -1691,7 +1696,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
       <h3 class="card-title">창업판정</h3>
       <p class="card-q">이 사업은<br>시작해도 되는가?</p>
       <div class="card-target">예비창업자</div>
-      <p class="card-desc">퇴사를 앞두고 있다면,<br class="br-m"> 가게를 열기 전에 설계부터. 입지·수익구조·자금까지 검증해, 진행·보류·중단으로 결론 냅니다. 판정이 나온 뒤에<br class="br-m"> 서명해도 늦지 않습니다.</p>
+      <p class="card-desc">퇴사를 앞두고 있다면,<br class="br-m"> 가게를 열기 전에 설계부터. 입지·수익구조·자금까지 검증해, 진행·보류·중단으로 결론 냅니다.<br class="br-m"> 판정이 나온 뒤에<br class="br-m"> 서명해도 늦지 않습니다.</p>
       <div class="card-type">📦 창업설계 스쿨</div>
       <a href="stage1.html" class="card-link">1단계 자세히 보기 →</a>
     </div>
@@ -1701,7 +1706,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
       <h3 class="card-title">사업설계</h3>
       <p class="card-q">시작했다면<br>어떻게 살아남을 것인가?</p>
       <div class="card-target">자영업·소상공인</div>
-      <p class="card-desc">장사는 하는데 손님이 없다면,<br class="br-m"> 문제는 노력이 아니라 구조. 매출구조·고객흐름·마케팅을 다시 설계해, 고객이 들어오는<br class="br-m"> 흐름을 만듭니다.</p>
+      <p class="card-desc">장사는 하는데 손님이 없다면,<br class="br-m"> 문제는 노력이 아니라 구조. 매출구조·고객흐름·마케팅을<br class="br-m"> 다시 설계해, 고객이 들어오는<br class="br-m"> 흐름을 만듭니다.</p>
       <div class="card-type">📈 자영업자·소상공인 매출구조 설계</div>
       <a href="stage2.html" class="card-link card-link-sub">2단계 자세히 보기</a>
     </div>
@@ -1711,7 +1716,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
       <h3 class="card-title">증식설계</h3>
       <p class="card-q">살아남았다면<br>어떻게 나 없이 커지게 할 것인가?</p>
       <div class="card-target">다점포·프랜차이즈 준비</div>
-      <p class="card-desc">매장 하나는 성공했는데 두 번째가 두렵다면, 필요한 건 시스템. 표준화·교육·자동화·위임을 갖춰, 사장 없이도 돌아가는<br class="br-m"> 확장 구조를 만듭니다.</p>
+      <p class="card-desc">매장 하나는 성공했는데<br class="br-xs"> 두 번째가 두렵다면,<br class="br-xs"> 필요한 건 시스템. 표준화·교육·자동화·위임을<br class="br-m"> 갖춰, 사장 없이도 돌아가는<br class="br-m"> 확장 구조를 만듭니다.</p>
       <div class="card-type">🏢 다점포·프랜차이즈 확장 설계</div>
       <a href="stage3.html" class="card-link card-link-sub">3단계 자세히 보기</a>
     </div>
