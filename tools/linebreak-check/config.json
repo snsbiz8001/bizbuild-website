@@ -1,0 +1,13 @@
+{
+  "selectors": [
+    ".bb-q5-text",
+    ".wf-para",
+    ".wf-punch",
+    ".bb-coi-note",
+    ".bb-coi-sub",
+    ".story-body p",
+    ".bio-body p",
+    ".footer-bottom p"
+  ],
+  "widths": [320, 375, 480, 481, 600, 601, 768, 1200]
+}

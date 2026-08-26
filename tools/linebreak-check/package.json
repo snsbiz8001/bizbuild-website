@@ -1,0 +1,13 @@
+{
+  "name": "bizbuild-linebreak-check",
+  "version": "1.0.0",
+  "private": true,
+  "description": "bizbuild.kr 줄바꿈 측정 — 폭별로 각 요소가 몇 줄에 어떻게 끊기는지 텍스트로만 출력한다",
+  "scripts": {
+    "setup": "npm install && npx playwright install chromium",
+    "check": "node check.js"
+  },
+  "dependencies": {
+    "playwright": "^1.57.0"
+  }
+}
