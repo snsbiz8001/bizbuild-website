@@ -17,7 +17,19 @@
     ".target-card p",
     ".cd-week-q",
     ".review-text",
-    ".faq-a-inner"
+    ".faq-a-inner",
+    ".pd-note",
+    ".pillar p",
+    ".outcome-card p",
+    ".verdict-sub",
+    ".prob-sub",
+    ".target-sub",
+    ".out-sub",
+    ".rev-sub",
+    ".pd-sub",
+    ".faq-sub",
+    ".not-for",
+    ".cd-verdict-box"
   ],
   "widths": [320, 375, 480, 481, 600, 601, 768, 1200]
 }
