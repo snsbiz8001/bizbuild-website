@@ -475,6 +475,10 @@ h1, h2, h3, h4, p, span, .eyebrow{
 }
 /* 데스크톱 전용 의도 줄바꿈: 모바일에서는 호흡용 br 해제 */
 .br-m{display:none;}
+/* 초협폭(≤374px) 전용 줄바꿈. 추천 대상 카드 본문이 320px 에서 "분" 한 글자만
+   남기고 갈리는 것을 막는다. 375px 이상은 종전 2줄 구성을 그대로 유지한다. */
+.br-xs{display:none;}
+@media(max-width:374px){.br-xs{display:inline;}}
 @media(max-width:600px){
   .pc-only{display:none;}
   .br-m{display:inline;}
@@ -786,14 +790,14 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
         <div class="t-check">✓</div>
         <div>
           <h4>한 달만 매출이 흔들려도 불안한 분</h4>
-          <p>지금 현금으로 몇 개월 버티는지 계산해본 적 없는 분<br>흔들리기 전에 방어선을 확인하고 싶은 분</p>
+          <p>지금 현금으로 몇 개월 버티는지<br class="br-xs">계산해본 적 없는 분<br>흔들리기 전에<br class="br-xs">방어선을 확인하고 싶은 분</p>
         </div>
       </div>
       <div class="target-card fade-up" style="transition-delay:0.1s">
         <div class="t-check">✓</div>
         <div>
           <h4>파는데 남지 않는 분</h4>
-          <p>매출은 나오는데 통장에 안 남는 분<br>원가가 오른 만큼 가격을 못 올린 분</p>
+          <p>매출은 나오는데<br class="br-xs">통장에 안 남는 분<br>원가가 오른 만큼<br class="br-xs">가격을 못 올린 분</p>
         </div>
       </div>
       <div class="target-card fade-up" style="transition-delay:0.15s">
