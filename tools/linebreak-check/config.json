@@ -29,7 +29,11 @@
     ".pd-sub",
     ".faq-sub",
     ".not-for",
-    ".cd-verdict-box"
+    ".cd-verdict-box",
+    ".weekly-card p",
+    ".weekly-card .w-q",
+    ".weekly-card .w-out",
+    ".weekly-notice p"
   ],
   "widths": [320, 375, 480, 481, 600, 601, 768, 1200]
 }
