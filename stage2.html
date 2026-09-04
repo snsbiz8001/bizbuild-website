@@ -204,6 +204,24 @@ nav.scrolled{background:rgba(21,44,91,0.99);box-shadow:0 4px 30px rgba(0,0,0,0.4
 .pillar h4{font-size:15px;font-weight:700;margin-bottom:4px;}
 .pillar p{font-size:15px;color:var(--gray);line-height:1.7;word-break:keep-all;}
 
+#weekly{padding:100px 5%;background:var(--navy);}
+.weekly-inner{max-width:1100px;margin:0 auto;text-align:center;}
+.weekly-sub{font-size:16px;color:var(--gray);line-height:1.8;max-width:640px;margin:0 auto 60px;word-break:keep-all;}
+.weekly-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left;margin-bottom:48px;}
+.weekly-card{display:flex;align-items:flex-start;gap:16px;padding:24px;background:var(--navy-mid);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;}
+.weekly-card .w-num{font-size:15px;font-weight:700;letter-spacing:0.05em;color:var(--label-color);white-space:nowrap;margin-top:2px;}
+.weekly-card h4{font-size:15px;font-weight:700;margin-bottom:6px;}
+.weekly-card .w-q{font-size:13px;color:var(--gold);font-style:italic;margin-bottom:6px;word-break:keep-all;}
+.weekly-card .w-out{font-size:13px;color:var(--gray);line-height:1.6;word-break:keep-all;}
+.weekly-notice{max-width:700px;margin:0 auto;padding:24px 28px;background:var(--navy-mid);border-left:3px solid #D65C5C;border-radius:0 8px 8px 0;text-align:left;}
+.weekly-notice h4{font-size:16px;font-weight:700;margin-bottom:10px;}
+.weekly-notice p{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:8px;word-break:keep-all;}
+.weekly-notice-em{font-weight:700;color:var(--white);margin-bottom:0;}
+
+@media(max-width:768px){
+  .weekly-grid{grid-template-columns:1fr;}
+}
+
 /* ── 3단계 로드맵 ── */
 #curriculum{padding:100px 5%;background:var(--navy-mid);}
 .roadmap-inner{max-width:1100px;margin:0 auto;}
@@ -524,7 +542,7 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
     <p class="hero-sub fade-up">이미 창업했지만 매출이 정체됐다면<br class="br-m"> — 버티는 힘·남는 구조·운영·고객 흐름을 다시 설계하는 사업설계입니다.</p>
     <div class="hero-cta-row fade-up">
       <a href="https://quiz.bizbuild.kr/business.html?src=stage2-hero" class="btn-primary">사업구조 진단 시작하기 →</a>
-      <a href="#curriculum" class="btn-outline">커리큘럼 보기</a>
+      <a href="#weekly" class="btn-outline">커리큘럼 보기</a>
     </div>
     <div class="hero-stats fade-up">
       <div class="hero-stat">
@@ -653,7 +671,72 @@ src="https://www.facebook.com/tr?id=994102320733900&ev=PageView&noscript=1"/></n
   </div>
 </section>
 
-<!-- 커리큘럼 -->
+<section id="weekly">
+  <div class="weekly-inner">
+    <div class="eyebrow fade-up" style="justify-content:center;">6주 커리큘럼</div>
+    <h2 class="fade-up">6주 동안 설계하고, 90일 동안 실행합니다</h2>
+    <p class="weekly-sub fade-up">6주 안에 매출이 오른다고 말하지 않습니다.<br class="br-m"> 6주는 무엇을 바꿀지 확정하는 기간이고, 바뀌는 것은 그 다음 90일입니다.</p>
+
+    <div class="weekly-grid">
+      <div class="weekly-card fade-up">
+        <div class="w-num">1주차</div>
+        <div>
+          <h4>현재 사업 해부</h4>
+          <p class="w-q">지금 이 구조, 버티고 있습니까</p>
+          <p class="w-out">현재 사업 진단표 · 개선 우선순위</p>
+        </div>
+      </div>
+      <div class="weekly-card fade-up" style="transition-delay:0.05s">
+        <div class="w-num">2주차</div>
+        <div>
+          <h4>현금 런웨이 재설계</h4>
+          <p class="w-q">매출이 흔들리면 몇 개월 버팁니까</p>
+          <p class="w-out">현금흐름 시나리오표 · 런웨이 개선안</p>
+        </div>
+      </div>
+      <div class="weekly-card fade-up" style="transition-delay:0.1s">
+        <div class="w-num">3주차</div>
+        <div>
+          <h4>수익·가격 구조 재설계</h4>
+          <p class="w-q">파는 만큼 남고 있습니까</p>
+          <p class="w-out">상품별 기여이익표 · 가격 조정안</p>
+        </div>
+      </div>
+      <div class="weekly-card fade-up" style="transition-delay:0.15s">
+        <div class="w-num">4주차</div>
+        <div>
+          <h4>운영 효율 설계</h4>
+          <p class="w-q">대표가 빠져도 돌아갑니까</p>
+          <p class="w-out">업무 3분류표 · 매뉴얼 초안 · 위임 로드맵</p>
+        </div>
+      </div>
+      <div class="weekly-card fade-up" style="transition-delay:0.2s">
+        <div class="w-num">5주차</div>
+        <div>
+          <h4>고객 흐름 재설계</h4>
+          <p class="w-q">손님이 어디서 오고 왜 다시 옵니까</p>
+          <p class="w-out">고객흐름 설계도 · 재구매 전환 시나리오</p>
+        </div>
+      </div>
+      <div class="weekly-card fade-up" style="transition-delay:0.25s">
+        <div class="w-num">6주차</div>
+        <div>
+          <h4>사업 설계서 완성</h4>
+          <p class="w-q">무엇부터 바꾸겠습니까</p>
+          <p class="w-out">사업 설계서 · 90일 실행 계획 · 중단 기준</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="weekly-notice fade-up">
+      <h4>1주차에 중단 판정이 나올 수 있습니다</h4>
+      <p>실측 숫자가 생존선을 넘지 못하면 남은 5주를 진행하지 않습니다. 현금 런웨이 2개월 미만, 팔수록 손해인 구조, 대출 상환이 순이익을 넘는 경우가 여기에 해당합니다. 이때는 사업 재설계보다 자금 조치가 먼저입니다.</p>
+      <p class="weekly-notice-em">판정하는 회사는 자기 상품에도 판정을 합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3단 사다리 -->
 <section id="curriculum">
   <div class="roadmap-inner">
     <div class="eyebrow fade-up" style="justify-content:center;">설계 로드맵</div>
