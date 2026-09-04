@@ -36,7 +36,10 @@
     ".weekly-notice p",
     ".hero-inner h1",
     ".inc-item",
-    ".problem-inner h2"
+    ".problem-inner h2",
+    ".weekly-sub",
+    ".roadmap-card .step-note",
+    ".roadmap-card p"
   ],
   "widths": [320, 375, 480, 481, 600, 601, 768, 1200]
 }
