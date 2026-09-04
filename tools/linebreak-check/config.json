@@ -33,7 +33,9 @@
     ".weekly-card p",
     ".weekly-card .w-q",
     ".weekly-card .w-out",
-    ".weekly-notice p"
+    ".weekly-notice p",
+    ".hero-inner h1",
+    ".inc-item"
   ],
   "widths": [320, 375, 480, 481, 600, 601, 768, 1200]
 }
